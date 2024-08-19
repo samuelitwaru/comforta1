@@ -1,0 +1,190 @@
+<?xml-stylesheet type='text/xsl' href='prgs.xsl'?><Objects>
+  <Charset>UTF-8</Charset>
+  <Path>file:///C:/Program Files (x86)/GeneXus/GeneXus18/</Path>
+  <Object>
+    <ObjCls>0</ObjCls>
+    <ObjName>WWPBaseObjects.UserCustomizations</ObjName>
+    <ObjDesc>WWPBaseObjects.User Custom</ObjDesc>
+    <ObjLink>wwpbaseobjects.usercustomizations.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>0</ObjCls>
+    <ObjName>LocationEvent</ObjName>
+    <ObjDesc>Location Event</ObjDesc>
+    <ObjLink>locationevent.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>GAMExampleLogin</ObjName>
+    <ObjDesc>Login</ObjDesc>
+    <ObjLink>gamexamplelogin.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>GAMNotAuthorized</ObjName>
+    <ObjDesc>Not Authorized</ObjDesc>
+    <ObjLink>gamnotauthorized.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>GAMHome</ObjName>
+    <ObjDesc>Home</ObjDesc>
+    <ObjLink>gamhome.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>GAMRegisterUser</ObjName>
+    <ObjDesc>Register user</ObjDesc>
+    <ObjLink>gamregisteruser.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>GAMSSOLogin</ObjName>
+    <ObjDesc>Single Sign-On</ObjDesc>
+    <ObjLink>gamssologin.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>Home</ObjName>
+    <ObjDesc>Home</ObjDesc>
+    <ObjLink>home.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>WorkWithPlus.WWP_ParameterWW</ObjName>
+    <ObjDesc>WorkWithPlus.Parameter</ObjDesc>
+    <ObjLink>workwithplus.wwp_parameterww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>CustomerWW</ObjName>
+    <ObjDesc> Customer</ObjDesc>
+    <ObjLink>customerww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>ResidentWW</ObjName>
+    <ObjDesc> Resident</ObjDesc>
+    <ObjLink>residentww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>Supplier_AgbWW</ObjName>
+    <ObjDesc> AGB Suppliers</ObjDesc>
+    <ObjLink>supplier_agbww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>Supplier_GenWW</ObjName>
+    <ObjDesc> Generic Supplier</ObjDesc>
+    <ObjLink>supplier_genww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>ProductServiceTypeWW</ObjName>
+    <ObjDesc> Product Service Type</ObjDesc>
+    <ObjLink>productservicetypeww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>ProductServiceWW</ObjName>
+    <ObjDesc> Product Service</ObjDesc>
+    <ObjLink>productserviceww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>CustomerTypeWW</ObjName>
+    <ObjDesc> Customer Type</ObjDesc>
+    <ObjLink>customertypeww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>ResidentTypeWW</ObjName>
+    <ObjDesc> Resident Type</ObjDesc>
+    <ObjLink>residenttypeww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>CustomerLocations</ObjName>
+    <ObjDesc>Customer Locations</ObjDesc>
+    <ObjLink>customerlocations.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>LocationReceptionists</ObjName>
+    <ObjDesc>Receptionists</ObjDesc>
+    <ObjLink>locationreceptionists.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>LocationGenSuppliers</ObjName>
+    <ObjDesc>General Suppliers</ObjDesc>
+    <ObjLink>locationgensuppliers.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>AddGenSuppliers</ObjName>
+    <ObjDesc>Add General Suppliers</ObjDesc>
+    <ObjLink>addgensuppliers.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>LocationAgbSuppliers</ObjName>
+    <ObjDesc>AGB Suppliers</ObjDesc>
+    <ObjLink>locationagbsuppliers.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>AddAgbSuppliers</ObjName>
+    <ObjDesc>Add AGB Suppliers</ObjDesc>
+    <ObjLink>addagbsuppliers.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>AppToolBox</ObjName>
+    <ObjDesc>App Tool Box</ObjDesc>
+    <ObjLink>apptoolbox.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>PageWW</ObjName>
+    <ObjDesc> Pages</ObjDesc>
+    <ObjLink>pageww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>NotAuthorized</ObjName>
+    <ObjDesc>Not Authorized</ObjDesc>
+    <ObjLink>notauthorized.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>AmenitiesWW</ObjName>
+    <ObjDesc> Amenities</ObjDesc>
+    <ObjLink>amenitiesww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>AmenitiesTypeWW</ObjName>
+    <ObjDesc> Amenities Type</ObjDesc>
+    <ObjLink>amenitiestypeww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>CustomerCustomizationWW</ObjName>
+    <ObjDesc> Customer Customization</ObjDesc>
+    <ObjLink>customercustomizationww.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>AgendaCalendar</ObjName>
+    <ObjDesc>Agenda Calendar</ObjDesc>
+    <ObjLink>agendacalendar.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>1</ObjCls>
+    <ObjName>WWPBaseObjects.WWP_DownloadReport</ObjName>
+    <ObjDesc>WWPBaseObjects.Download Report</ObjDesc>
+    <ObjLink>wwpbaseobjects.wwp_downloadreport.aspx</ObjLink>
+  </Object>
+</Objects>

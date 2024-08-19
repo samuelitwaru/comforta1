@@ -1,0 +1,24 @@
+
+<div class="panel__top" style="padding: 0;
+	width: 100%;
+	display: flex;
+	position: initial;
+	justify-content: center;
+	justify-content: space-between;">
+		<div class="panel__basic-actions"></div>
+</div>
+<div id="gjs" class="container-gjs" >
+	<h1>Hello World Component!</h1>
+	<div class="row container">
+		<div class='col-xs-6'>dfdf</div>
+		<div class='col-xs-6'>dfdfd</div>
+		<div class='col-xs-6'>dfdfd</div>
+	</div>
+	
+	<div class="row container">
+		<div style="width: 50%">dfdf</div>
+		<div style="width: 50%">dfdf</div>
+	</div>
+	
+</div>
+<div id="blocks"></div>

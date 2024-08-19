@@ -1,0 +1,12 @@
+CREATE SEQUENCE CustomerCustomizationId MINVALUE 1 INCREMENT 1;
+CREATE TABLE CustomerCustomization (CustomerCustomizationId smallint NOT NULL DEFAULT nextval('CustomerCustomizationId'), CustomerCustomizationLogo BYTEA NOT NULL , CustomerCustomizationLogo_GXI VARCHAR(2048) , CustomerCustomizationFavicon BYTEA NOT NULL , CustomerCustomizationFavicon_G VARCHAR(2048) , CustomerCustomizationBaseColor VARCHAR(40) NOT NULL , CustomerCustomizationFontSize VARCHAR(40) NOT NULL , CustomerId smallint NOT NULL , PRIMARY KEY(CustomerCustomizationId));
+CREATE INDEX ICUSTOMERCUSTOMIZATION1 ON CustomerCustomization (CustomerId );
+
+CREATE SEQUENCE LocationEventId MINVALUE 1 INCREMENT 1;
+CREATE TABLE LocationEvent (LocationEventId smallint NOT NULL DEFAULT nextval('LocationEventId'), LocationEventStartDate timestamp without time zone NOT NULL , LocationEventEndDate timestamp without time zone NOT NULL , LocationEventTitle VARCHAR(100) NOT NULL , LocationEventDisplay VARCHAR(40) NOT NULL , LocationEventBackgroundColor VARCHAR(40) NOT NULL , LocationEventDescription TEXT NOT NULL , LocationEventBorderColor VARCHAR(40) NOT NULL , LocationEventTextColor VARCHAR(40) NOT NULL , LocationEventUrl VARCHAR(1000) NOT NULL , LocationEventAllDay BOOLEAN NOT NULL , LocationEventRecurring BOOLEAN NOT NULL , LocationEventRecuringDays TEXT NOT NULL , CustomerId smallint NOT NULL , CustomerLocationId smallint NOT NULL , PRIMARY KEY(LocationEventId));
+CREATE INDEX ILOCATIONEVENT1 ON LocationEvent (CustomerId ,CustomerLocationId );
+
+ALTER TABLE LocationEvent ADD CONSTRAINT ILOCATIONEVENT1 FOREIGN KEY (CustomerId, CustomerLocationId) REFERENCES CustomerLocation (CustomerId, CustomerLocationId);
+
+ALTER TABLE CustomerCustomization ADD CONSTRAINT ICUSTOMERCUSTOMIZATION1 FOREIGN KEY (CustomerId) REFERENCES Customer (CustomerId);
+

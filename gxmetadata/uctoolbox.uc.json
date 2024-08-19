@@ -1,0 +1,33 @@
+{
+	"Name": "UCToolBox",
+	"Target": "",
+	"IsControlType": false,
+	"Template": "<div id=\"gjs\" class=\"container-gjs\">			<div class=\"drop-area\" style=\"border: 1px solid #ddd; padding: 20px; min-height: 200px;\">      Drop here    </div></div>", 
+	"Events": [
+	],
+	"Properties": [
+	],
+	"Methods": {
+		"Public": [
+		],
+		"Private": [
+		]
+	},
+	"Scripts": {
+		"AfterShow": [
+			{
+				"Name": "Start",
+				"Source": "		const escapeName = (name) =&gt; `${name}`.trim().replace(/([^a-z0-9\w-:/]+)/gi, \'-\');		const editor = grapesjs.init({			cssComposer: {},			container: \'#gjs\',		  	fromElement: true,		  	storageManager: false,		  	selectorManager: { escapeName },		  	plugins: [\'grapesjs-tailwind\'],			  deviceManager: {				devices: [				{					name: \'Mobile\',					width: \'375px\', // Example width for mobile					height: \'667px\', // Example height for mobile					widthMedia: \'480px\', // Media query for mobile view				},				],			},		});	",
+				"AngularLocation": ""
+			} 
+		],
+		"BeforeShow": [
+		]
+	},
+	"Dependencies": [
+	],
+	"Imports": [
+	],
+	"Styles": [
+	]
+}

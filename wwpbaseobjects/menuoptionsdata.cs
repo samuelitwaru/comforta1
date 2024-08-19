@@ -1,0 +1,318 @@
+using System;
+using System.Collections;
+using GeneXus.Utils;
+using GeneXus.Resources;
+using GeneXus.Application;
+using GeneXus.Metadata;
+using GeneXus.Cryptography;
+using com.genexus;
+using GeneXus.Data.ADO;
+using GeneXus.Data.NTier;
+using GeneXus.Data.NTier.ADO;
+using GeneXus.WebControls;
+using GeneXus.Http;
+using GeneXus.Procedure;
+using GeneXus.XML;
+using GeneXus.Search;
+using GeneXus.Encryption;
+using GeneXus.Http.Client;
+using System.Threading;
+using System.Xml.Serialization;
+using System.Runtime.Serialization;
+namespace GeneXus.Programs.wwpbaseobjects {
+   public class menuoptionsdata : GXProcedure
+   {
+      protected override bool IntegratedSecurityEnabled
+      {
+         get {
+            return true ;
+         }
+
+      }
+
+      protected override GAMSecurityLevel IntegratedSecurityLevel
+      {
+         get {
+            return GAMSecurityLevel.SecurityHigh ;
+         }
+
+      }
+
+      public menuoptionsdata( )
+      {
+         context = new GxContext(  );
+         DataStoreUtil.LoadDataStores( context);
+         IsMain = true;
+         context.SetDefaultTheme("WorkWithPlusDS", true);
+      }
+
+      public menuoptionsdata( IGxContext context )
+      {
+         this.context = context;
+         IsMain = false;
+      }
+
+      public void execute( out GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item> aP0_Gxm2rootcol )
+      {
+         this.Gxm2rootcol = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item>( context, "Item", "Comforta11") ;
+         initialize();
+         executePrivate();
+         aP0_Gxm2rootcol=this.Gxm2rootcol;
+      }
+
+      public GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item> executeUdp( )
+      {
+         execute(out aP0_Gxm2rootcol);
+         return Gxm2rootcol ;
+      }
+
+      public void executeSubmit( out GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item> aP0_Gxm2rootcol )
+      {
+         menuoptionsdata objmenuoptionsdata;
+         objmenuoptionsdata = new menuoptionsdata();
+         objmenuoptionsdata.Gxm2rootcol = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item>( context, "Item", "Comforta11") ;
+         objmenuoptionsdata.context.SetSubmitInitialConfig(context);
+         objmenuoptionsdata.initialize();
+         Submit( executePrivateCatch,objmenuoptionsdata);
+         aP0_Gxm2rootcol=this.Gxm2rootcol;
+      }
+
+      void executePrivateCatch( object stateInfo )
+      {
+         try
+         {
+            ((menuoptionsdata)stateInfo).executePrivate();
+         }
+         catch ( Exception e )
+         {
+            GXUtil.SaveToEventLog( "Design", e);
+            throw;
+         }
+      }
+
+      void executePrivate( )
+      {
+         /* GeneXus formulas */
+         /* Output device settings */
+         AV5id = 0;
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         Gxm1dvelop_menu.gxTpr_Link = formatLink("home.aspx") ;
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fa fa-home";
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "Dashboard", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         Gxm1dvelop_menu.gxTpr_Link = formatLink("agendacalendar.aspx") ;
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fa fa-calendar-days";
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "Agenda", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         Gxm1dvelop_menu.gxTpr_Link = formatLink("customerww.aspx") ;
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fa fa-people-roof";
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "Customers", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         Gxm1dvelop_menu.gxTpr_Link = formatLink("customerlocations.aspx") ;
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fas fa-map-marker-alt";
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "Locations", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         Gxm1dvelop_menu.gxTpr_Link = formatLink("locationreceptionists.aspx") ;
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon far fa-address-card";
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "Receptionists", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         Gxm1dvelop_menu.gxTpr_Link = formatLink("residentww.aspx") ;
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fa fa-users";
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "Residents", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         Gxm1dvelop_menu.gxTpr_Link = "";
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fa fa-truck-field";
+         Gxm1dvelop_menu.gxTpr_Caption = "Suppliers";
+         Gxm3dvelop_menu_subitems = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm1dvelop_menu.gxTpr_Subitems.Add(Gxm3dvelop_menu_subitems, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm3dvelop_menu_subitems.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm3dvelop_menu_subitems.gxTpr_Tooltip = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Link = formatLink("locationgensuppliers.aspx") ;
+         Gxm3dvelop_menu_subitems.gxTpr_Linktarget = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Iconclass = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Caption = context.GetMessage( "My Suppliers (General)", "");
+         Gxm3dvelop_menu_subitems = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm1dvelop_menu.gxTpr_Subitems.Add(Gxm3dvelop_menu_subitems, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm3dvelop_menu_subitems.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm3dvelop_menu_subitems.gxTpr_Tooltip = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Link = formatLink("locationagbsuppliers.aspx") ;
+         Gxm3dvelop_menu_subitems.gxTpr_Linktarget = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Iconclass = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Caption = context.GetMessage( "My Suppliers (AGB)", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         Gxm1dvelop_menu.gxTpr_Link = "";
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fas fa-cog";
+         Gxm1dvelop_menu.gxTpr_Caption = "Settings";
+         Gxm3dvelop_menu_subitems = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm1dvelop_menu.gxTpr_Subitems.Add(Gxm3dvelop_menu_subitems, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm3dvelop_menu_subitems.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm3dvelop_menu_subitems.gxTpr_Tooltip = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Link = formatLink("customertypeww.aspx") ;
+         Gxm3dvelop_menu_subitems.gxTpr_Linktarget = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Iconclass = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Caption = context.GetMessage( "Customer Types", "");
+         Gxm3dvelop_menu_subitems = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm1dvelop_menu.gxTpr_Subitems.Add(Gxm3dvelop_menu_subitems, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm3dvelop_menu_subitems.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm3dvelop_menu_subitems.gxTpr_Tooltip = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Link = formatLink("residenttypeww.aspx") ;
+         Gxm3dvelop_menu_subitems.gxTpr_Linktarget = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Iconclass = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Caption = context.GetMessage( "Resident Types", "");
+         Gxm3dvelop_menu_subitems = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm1dvelop_menu.gxTpr_Subitems.Add(Gxm3dvelop_menu_subitems, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm3dvelop_menu_subitems.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm3dvelop_menu_subitems.gxTpr_Tooltip = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Link = formatLink("productservicetypeww.aspx") ;
+         Gxm3dvelop_menu_subitems.gxTpr_Linktarget = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Iconclass = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Caption = context.GetMessage( "Product/Service Types", "");
+         Gxm3dvelop_menu_subitems = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm1dvelop_menu.gxTpr_Subitems.Add(Gxm3dvelop_menu_subitems, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm3dvelop_menu_subitems.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm3dvelop_menu_subitems.gxTpr_Tooltip = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Link = formatLink("supplier_genww.aspx") ;
+         Gxm3dvelop_menu_subitems.gxTpr_Linktarget = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Iconclass = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Caption = context.GetMessage( "General Suppliers", "");
+         Gxm3dvelop_menu_subitems = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm1dvelop_menu.gxTpr_Subitems.Add(Gxm3dvelop_menu_subitems, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm3dvelop_menu_subitems.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm3dvelop_menu_subitems.gxTpr_Tooltip = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Link = formatLink("supplier_agbww.aspx") ;
+         Gxm3dvelop_menu_subitems.gxTpr_Linktarget = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Iconclass = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Caption = context.GetMessage( "AGB Suppliers", "");
+         Gxm3dvelop_menu_subitems = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm1dvelop_menu.gxTpr_Subitems.Add(Gxm3dvelop_menu_subitems, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm3dvelop_menu_subitems.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm3dvelop_menu_subitems.gxTpr_Tooltip = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Link = formatLink("productserviceww.aspx") ;
+         Gxm3dvelop_menu_subitems.gxTpr_Linktarget = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Iconclass = "";
+         Gxm3dvelop_menu_subitems.gxTpr_Caption = context.GetMessage( "Products/Services", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         Gxm1dvelop_menu.gxTpr_Link = formatLink("pagetemplateww.aspx") ;
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fas fa-file";
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "Page Templates", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         Gxm1dvelop_menu.gxTpr_Link = formatLink("pageww.aspx") ;
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fas fa-mobile-alt";
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "Application Design", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = "";
+         GXt_char1 = "";
+         new getcustomercustomizationtrnmode(context ).execute( ref  GXt_char1) ;
+         GXt_int2 = 0;
+         new getcustomercustomizationid(context ).execute( out  GXt_int2) ;
+         Gxm1dvelop_menu.gxTpr_Link = formatLink("customercustomization.aspx", new object[] {GXUtil.UrlEncode(StringUtil.RTrim(GXt_char1)),GXUtil.UrlEncode(StringUtil.LTrimStr(GXt_int2,4,0))}, new string[] {"Mode","CustomerCustomizationId"}) ;
+         Gxm1dvelop_menu.gxTpr_Linktarget = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fas fa-eye-dropper";
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "Customization", "");
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm2rootcol.Add(Gxm1dvelop_menu, 0);
+         AV5id = (short)(AV5id+1);
+         Gxm1dvelop_menu.gxTpr_Id = StringUtil.Str( (decimal)(AV5id), 4, 0);
+         Gxm1dvelop_menu.gxTpr_Tooltip = context.GetMessage( "WWP_GAM_SecurityOfTheApplication", "");
+         Gxm1dvelop_menu.gxTpr_Link = formatLink(context.GetMessage( "gam_dashboard.aspx", "")) ;
+         Gxm1dvelop_menu.gxTpr_Linktarget = "_blank";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "";
+         Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fa fa-key";
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "WWP_GAM_GAMSecurity", "");
+         Gxm1dvelop_menu.gxTpr_Authorizationkey = "is_gam_administrator";
+         this.cleanup();
+      }
+
+      public override void cleanup( )
+      {
+         CloseOpenCursors();
+         if ( IsMain )
+         {
+            context.CloseConnections();
+         }
+         ExitApp();
+      }
+
+      protected void CloseOpenCursors( )
+      {
+      }
+
+      public override void initialize( )
+      {
+         Gxm1dvelop_menu = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         Gxm3dvelop_menu_subitems = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
+         GXt_char1 = "";
+         /* GeneXus formulas. */
+      }
+
+      private short AV5id ;
+      private short GXt_int2 ;
+      private string GXt_char1 ;
+      private GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item> aP0_Gxm2rootcol ;
+      private GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item> Gxm2rootcol ;
+      private GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item Gxm1dvelop_menu ;
+      private GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item Gxm3dvelop_menu_subitems ;
+   }
+
+}

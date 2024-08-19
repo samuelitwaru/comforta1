@@ -1,0 +1,7 @@
+<div id="gjs" class="container-gjs">
+		
+	<div class="drop-area" style="border: 1px solid #ddd; padding: 20px; min-height: 200px;">
+      Drop here
+    </div>
+
+</div>
