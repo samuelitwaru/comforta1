@@ -81,17 +81,26 @@ namespace GeneXus.Programs {
          GXt_SdtGAMUser1 = AV8GAMUser;
          new getloggedinuser(context ).execute( out  GXt_SdtGAMUser1) ;
          AV8GAMUser = GXt_SdtGAMUser1;
-         if ( AV8GAMUser.checkrole(context.GetMessage( "Receptionist", "")) )
+         if ( AV8GAMUser.checkrole("Receptionist") )
          {
-            AV11UserRoleName = context.GetMessage( "Receptionist", "");
+            AV11UserRoleName = "Receptionist";
          }
-         if ( AV8GAMUser.checkrole(context.GetMessage( "Customer Manager", "")) )
+         else if ( AV8GAMUser.checkrole("Customer Manager") )
          {
-            AV11UserRoleName = context.GetMessage( "Customer Manager", "");
+            AV11UserRoleName = "Customer Manager";
+         }
+         else if ( AV8GAMUser.checkrole("Comforta Manager") )
+         {
+            AV11UserRoleName = "Comforta Manager";
+         }
+         else
+         {
+            AV11UserRoleName = "Resident";
          }
          GXt_objcol_SdtHomeModulesSDT_HomeModulesSDTItem2 = AV10DashboardItems;
          new getdashboarditemsdp(context ).execute( out  GXt_objcol_SdtHomeModulesSDT_HomeModulesSDTItem2) ;
          AV10DashboardItems = GXt_objcol_SdtHomeModulesSDT_HomeModulesSDTItem2;
+         new logtofile(context ).execute(  AV10DashboardItems.ToJSonString(false)) ;
          AV13GXV1 = 1;
          while ( AV13GXV1 <= AV10DashboardItems.Count )
          {
@@ -102,7 +111,7 @@ namespace GeneXus.Programs {
             }
             else
             {
-               if ( String.IsNullOrEmpty(StringUtil.RTrim( AV9DashboardItem.gxTpr_Rolename)) || ( StringUtil.StrCmp(AV9DashboardItem.gxTpr_Rolename, context.GetMessage( "All", "")) == 0 ) )
+               if ( ( String.IsNullOrEmpty(StringUtil.RTrim( AV9DashboardItem.gxTpr_Rolename)) || ( StringUtil.StrCmp(AV9DashboardItem.gxTpr_Rolename, "All") == 0 ) ) && ( StringUtil.StrCmp(AV11UserRoleName, "Comforta Manager") != 0 ) )
                {
                   AV12FilteredDashboardItems.Add(AV9DashboardItem, 0);
                }

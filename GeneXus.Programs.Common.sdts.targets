@@ -35,6 +35,7 @@
  	<Compile Include="$(WebDirectory)\type_SdtGxMap_Line_Point.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtGxMap_RoutePoint.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtLocationAGBSuppliersSDT.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtLocationAmenitiesSDT.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtLocationGenSuppliersSDT.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtLocationReceptionistSDT.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtLoginResidentResponseSDT.cs" />

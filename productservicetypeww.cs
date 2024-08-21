@@ -160,7 +160,6 @@ namespace GeneXus.Programs {
          AV14OrderedDsc = StringUtil.StrToBool( GetPar( "OrderedDsc"));
          AV37IsAuthorized_Update = StringUtil.StrToBool( GetPar( "IsAuthorized_Update"));
          AV39IsAuthorized_Delete = StringUtil.StrToBool( GetPar( "IsAuthorized_Delete"));
-         AV40IsAuthorized_ProductServiceTypeName = StringUtil.StrToBool( GetPar( "IsAuthorized_ProductServiceTypeName"));
          AV41IsAuthorized_Insert = StringUtil.StrToBool( GetPar( "IsAuthorized_Insert"));
          setAjaxCallMode();
          if ( ! IsValidAjaxCall( true) )
@@ -168,7 +167,7 @@ namespace GeneXus.Programs {
             GxWebError = 1;
             return  ;
          }
-         gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV40IsAuthorized_ProductServiceTypeName, AV41IsAuthorized_Insert) ;
+         gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV41IsAuthorized_Insert) ;
          AddString( context.getJSONResponse( )) ;
          /* End function gxgrGrid_refresh_invoke */
       }
@@ -346,8 +345,6 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_UPDATE", GetSecureSignedToken( "", AV37IsAuthorized_Update, context));
          GxWebStd.gx_boolean_hidden_field( context, "vISAUTHORIZED_DELETE", AV39IsAuthorized_Delete);
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_DELETE", GetSecureSignedToken( "", AV39IsAuthorized_Delete, context));
-         GxWebStd.gx_boolean_hidden_field( context, "vISAUTHORIZED_PRODUCTSERVICETYPENAME", AV40IsAuthorized_ProductServiceTypeName);
-         GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_PRODUCTSERVICETYPENAME", GetSecureSignedToken( "", AV40IsAuthorized_ProductServiceTypeName, context));
          GxWebStd.gx_boolean_hidden_field( context, "vISAUTHORIZED_INSERT", AV41IsAuthorized_Insert);
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_INSERT", GetSecureSignedToken( "", AV41IsAuthorized_Insert, context));
          GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -397,8 +394,6 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_UPDATE", GetSecureSignedToken( "", AV37IsAuthorized_Update, context));
          GxWebStd.gx_boolean_hidden_field( context, "vISAUTHORIZED_DELETE", AV39IsAuthorized_Delete);
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_DELETE", GetSecureSignedToken( "", AV39IsAuthorized_Delete, context));
-         GxWebStd.gx_boolean_hidden_field( context, "vISAUTHORIZED_PRODUCTSERVICETYPENAME", AV40IsAuthorized_ProductServiceTypeName);
-         GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_PRODUCTSERVICETYPENAME", GetSecureSignedToken( "", AV40IsAuthorized_ProductServiceTypeName, context));
          if ( context.isAjaxRequest( ) )
          {
             context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vGRIDSTATE", AV11GridState);
@@ -553,7 +548,7 @@ namespace GeneXus.Programs {
 
       public override string GetPgmdesc( )
       {
-         return context.GetMessage( " Product Service Type", "") ;
+         return context.GetMessage( " Product Service Types", "") ;
       }
 
       protected void WB1N0( )
@@ -823,7 +818,7 @@ namespace GeneXus.Programs {
                Form.Meta.addItem("generator", "GeneXus .NET 18_0_6-177934", 0) ;
             }
          }
-         Form.Meta.addItem("description", context.GetMessage( " Product Service Type", ""), 0) ;
+         Form.Meta.addItem("description", context.GetMessage( " Product Service Types", ""), 0) ;
          context.wjLoc = "";
          context.nUserReturn = 0;
          context.wbHandled = 0;
@@ -1064,7 +1059,6 @@ namespace GeneXus.Programs {
                                        bool AV14OrderedDsc ,
                                        bool AV37IsAuthorized_Update ,
                                        bool AV39IsAuthorized_Delete ,
-                                       bool AV40IsAuthorized_ProductServiceTypeName ,
                                        bool AV41IsAuthorized_Insert )
       {
          initialize_formulas( ) ;
@@ -1189,8 +1183,6 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_UPDATE", GetSecureSignedToken( "", AV37IsAuthorized_Update, context));
          GxWebStd.gx_boolean_hidden_field( context, "vISAUTHORIZED_DELETE", AV39IsAuthorized_Delete);
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_DELETE", GetSecureSignedToken( "", AV39IsAuthorized_Delete, context));
-         GxWebStd.gx_boolean_hidden_field( context, "vISAUTHORIZED_PRODUCTSERVICETYPENAME", AV40IsAuthorized_ProductServiceTypeName);
-         GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_PRODUCTSERVICETYPENAME", GetSecureSignedToken( "", AV40IsAuthorized_ProductServiceTypeName, context));
          GxWebStd.gx_boolean_hidden_field( context, "vISAUTHORIZED_INSERT", AV41IsAuthorized_Insert);
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_INSERT", GetSecureSignedToken( "", AV41IsAuthorized_Insert, context));
          GxWebStd.gx_hidden_field( context, "gxhash_PRODUCTSERVICETYPEID"+"_"+sGXsfl_37_idx, GetSecureSignedToken( sGXsfl_37_idx, context.localUtil.Format( (decimal)(A71ProductServiceTypeId), "ZZZ9"), context));
@@ -1256,7 +1248,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV40IsAuthorized_ProductServiceTypeName, AV41IsAuthorized_Insert) ;
+            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV41IsAuthorized_Insert) ;
          }
          send_integrity_footer_hashes( ) ;
          return 0 ;
@@ -1280,7 +1272,7 @@ namespace GeneXus.Programs {
          GridContainer.AddObjectProperty("GRID_nFirstRecordOnPage", GRID_nFirstRecordOnPage);
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV40IsAuthorized_ProductServiceTypeName, AV41IsAuthorized_Insert) ;
+            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV41IsAuthorized_Insert) ;
          }
          send_integrity_footer_hashes( ) ;
          return (short)(((GRID_nEOF==0) ? 0 : 2)) ;
@@ -1302,7 +1294,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV40IsAuthorized_ProductServiceTypeName, AV41IsAuthorized_Insert) ;
+            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV41IsAuthorized_Insert) ;
          }
          send_integrity_footer_hashes( ) ;
          return 0 ;
@@ -1332,7 +1324,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV40IsAuthorized_ProductServiceTypeName, AV41IsAuthorized_Insert) ;
+            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV41IsAuthorized_Insert) ;
          }
          send_integrity_footer_hashes( ) ;
          return 0 ;
@@ -1354,7 +1346,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV40IsAuthorized_ProductServiceTypeName, AV41IsAuthorized_Insert) ;
+            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV42Pgmname, AV27TFProductServiceTypeName, AV28TFProductServiceTypeName_Sel, AV14OrderedDsc, AV37IsAuthorized_Update, AV39IsAuthorized_Delete, AV41IsAuthorized_Insert) ;
          }
          send_integrity_footer_hashes( ) ;
          return (int)(0) ;
@@ -1507,17 +1499,12 @@ namespace GeneXus.Programs {
                if (true) return;
             }
          }
-         GXt_boolean1 = AV40IsAuthorized_ProductServiceTypeName;
-         new GeneXus.Programs.wwpbaseobjects.secgamisauthbyfunctionalitykey(context ).execute(  "productservicetypeview_Execute", out  GXt_boolean1) ;
-         AV40IsAuthorized_ProductServiceTypeName = GXt_boolean1;
-         AssignAttri("", false, "AV40IsAuthorized_ProductServiceTypeName", AV40IsAuthorized_ProductServiceTypeName);
-         GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_PRODUCTSERVICETYPENAME", GetSecureSignedToken( "", AV40IsAuthorized_ProductServiceTypeName, context));
          AV30GAMSession = new GeneXus.Programs.genexussecurity.SdtGAMSession(context).get(out  AV31GAMErrors);
          Ddo_grid_Gridinternalname = subGrid_Internalname;
          ucDdo_grid.SendProperty(context, "", false, Ddo_grid_Internalname, "GridInternalName", Ddo_grid_Gridinternalname);
          Ddo_grid_Gamoauthtoken = AV30GAMSession.gxTpr_Token;
          ucDdo_grid.SendProperty(context, "", false, Ddo_grid_Internalname, "GAMOAuthToken", Ddo_grid_Gamoauthtoken);
-         Form.Caption = context.GetMessage( " Product Service Type", "");
+         Form.Caption = context.GetMessage( " Product Service Types", "");
          AssignProp("", false, "FORM", "Caption", Form.Caption, true);
          /* Execute user subroutine: 'PREPARETRANSACTION' */
          S122 ();
@@ -1533,9 +1520,9 @@ namespace GeneXus.Programs {
             returnInSub = true;
             if (true) return;
          }
-         GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons2 = AV29DDO_TitleSettingsIcons;
-         new GeneXus.Programs.wwpbaseobjects.getwwptitlesettingsicons(context ).execute( out  GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons2) ;
-         AV29DDO_TitleSettingsIcons = GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons2;
+         GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons1 = AV29DDO_TitleSettingsIcons;
+         new GeneXus.Programs.wwpbaseobjects.getwwptitlesettingsicons(context ).execute( out  GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons1) ;
+         AV29DDO_TitleSettingsIcons = GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons1;
          Ddo_gridcolumnsselector_Titlecontrolidtoreplace = bttBtneditcolumns_Internalname;
          ucDdo_gridcolumnsselector.SendProperty(context, "", false, Ddo_gridcolumnsselector_Internalname, "TitleControlIdToReplace", Ddo_gridcolumnsselector_Titlecontrolidtoreplace);
          Gridpaginationbar_Rowsperpageselectedvalue = subGrid_Rows;
@@ -1604,9 +1591,9 @@ namespace GeneXus.Programs {
          AssignAttri("", false, "AV33GridCurrentPage", StringUtil.LTrimStr( (decimal)(AV33GridCurrentPage), 10, 0));
          AV34GridPageCount = subGrid_fnc_Pagecount( );
          AssignAttri("", false, "AV34GridPageCount", StringUtil.LTrimStr( (decimal)(AV34GridPageCount), 10, 0));
-         GXt_char3 = AV35GridAppliedFilters;
-         new GeneXus.Programs.wwpbaseobjects.wwp_getappliedfiltersdescription(context ).execute(  AV42Pgmname, out  GXt_char3) ;
-         AV35GridAppliedFilters = GXt_char3;
+         GXt_char2 = AV35GridAppliedFilters;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getappliedfiltersdescription(context ).execute(  AV42Pgmname, out  GXt_char2) ;
+         AV35GridAppliedFilters = GXt_char2;
          AssignAttri("", false, "AV35GridAppliedFilters", AV35GridAppliedFilters);
          AV43Productservicetypewwds_1_filterfulltext = AV16FilterFullText;
          AV44Productservicetypewwds_2_tfproductservicetypename = AV27TFProductServiceTypeName;
@@ -1693,10 +1680,6 @@ namespace GeneXus.Programs {
          {
             edtavDelete_Link = formatLink("productservicetype.aspx", new object[] {UrlEncode(StringUtil.RTrim("DLT")),UrlEncode(StringUtil.LTrimStr(A71ProductServiceTypeId,4,0))}, new string[] {"Mode","ProductServiceTypeId"}) ;
          }
-         if ( AV40IsAuthorized_ProductServiceTypeName )
-         {
-            edtProductServiceTypeName_Link = formatLink("productservicetypeview.aspx", new object[] {UrlEncode(StringUtil.LTrimStr(A71ProductServiceTypeId,4,0)),UrlEncode(StringUtil.RTrim(""))}, new string[] {"ProductServiceTypeId","TabCode"}) ;
-         }
          /* Load Method */
          if ( wbStart != -1 )
          {
@@ -1763,9 +1746,9 @@ namespace GeneXus.Programs {
          }
          else
          {
-            GXt_char3 = AV23ManageFiltersXml;
-            new GeneXus.Programs.wwpbaseobjects.getfilterbyname(context ).execute(  "ProductServiceTypeWWFilters",  Ddo_managefilters_Activeeventkey, out  GXt_char3) ;
-            AV23ManageFiltersXml = GXt_char3;
+            GXt_char2 = AV23ManageFiltersXml;
+            new GeneXus.Programs.wwpbaseobjects.getfilterbyname(context ).execute(  "ProductServiceTypeWWFilters",  Ddo_managefilters_Activeeventkey, out  GXt_char2) ;
+            AV23ManageFiltersXml = GXt_char2;
             if ( String.IsNullOrEmpty(StringUtil.RTrim( AV23ManageFiltersXml)) )
             {
                GX_msglist.addItem(context.GetMessage( "WWP_FilterNotExist", ""));
@@ -1840,9 +1823,9 @@ namespace GeneXus.Programs {
          returnInSub = false;
          AV19ColumnsSelector = new GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector(context);
          new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "ProductServiceTypeName",  "",  "Name",  true,  "") ;
-         GXt_char3 = AV18UserCustomValue;
-         new GeneXus.Programs.wwpbaseobjects.loadcolumnsselectorstate(context ).execute(  "ProductServiceTypeWWColumnsSelector", out  GXt_char3) ;
-         AV18UserCustomValue = GXt_char3;
+         GXt_char2 = AV18UserCustomValue;
+         new GeneXus.Programs.wwpbaseobjects.loadcolumnsselectorstate(context ).execute(  "ProductServiceTypeWWColumnsSelector", out  GXt_char2) ;
+         AV18UserCustomValue = GXt_char2;
          if ( ! ( String.IsNullOrEmpty(StringUtil.RTrim( AV18UserCustomValue)) ) )
          {
             AV20ColumnsSelectorAux.FromXml(AV18UserCustomValue, null, "", "");
@@ -1854,9 +1837,9 @@ namespace GeneXus.Programs {
       {
          /* 'CHECKSECURITYFORACTIONS' Routine */
          returnInSub = false;
-         GXt_boolean1 = AV37IsAuthorized_Update;
-         new GeneXus.Programs.wwpbaseobjects.secgamisauthbyfunctionalitykey(context ).execute(  "productservicetype_Update", out  GXt_boolean1) ;
-         AV37IsAuthorized_Update = GXt_boolean1;
+         GXt_boolean3 = AV37IsAuthorized_Update;
+         new GeneXus.Programs.wwpbaseobjects.secgamisauthbyfunctionalitykey(context ).execute(  "productservicetype_Update", out  GXt_boolean3) ;
+         AV37IsAuthorized_Update = GXt_boolean3;
          AssignAttri("", false, "AV37IsAuthorized_Update", AV37IsAuthorized_Update);
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_UPDATE", GetSecureSignedToken( "", AV37IsAuthorized_Update, context));
          if ( ! ( AV37IsAuthorized_Update ) )
@@ -1864,9 +1847,9 @@ namespace GeneXus.Programs {
             edtavUpdate_Visible = 0;
             AssignProp("", false, edtavUpdate_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtavUpdate_Visible), 5, 0), !bGXsfl_37_Refreshing);
          }
-         GXt_boolean1 = AV39IsAuthorized_Delete;
-         new GeneXus.Programs.wwpbaseobjects.secgamisauthbyfunctionalitykey(context ).execute(  "productservicetype_Delete", out  GXt_boolean1) ;
-         AV39IsAuthorized_Delete = GXt_boolean1;
+         GXt_boolean3 = AV39IsAuthorized_Delete;
+         new GeneXus.Programs.wwpbaseobjects.secgamisauthbyfunctionalitykey(context ).execute(  "productservicetype_Delete", out  GXt_boolean3) ;
+         AV39IsAuthorized_Delete = GXt_boolean3;
          AssignAttri("", false, "AV39IsAuthorized_Delete", AV39IsAuthorized_Delete);
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_DELETE", GetSecureSignedToken( "", AV39IsAuthorized_Delete, context));
          if ( ! ( AV39IsAuthorized_Delete ) )
@@ -1874,9 +1857,9 @@ namespace GeneXus.Programs {
             edtavDelete_Visible = 0;
             AssignProp("", false, edtavDelete_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtavDelete_Visible), 5, 0), !bGXsfl_37_Refreshing);
          }
-         GXt_boolean1 = AV41IsAuthorized_Insert;
-         new GeneXus.Programs.wwpbaseobjects.secgamisauthbyfunctionalitykey(context ).execute(  "productservicetype_Insert", out  GXt_boolean1) ;
-         AV41IsAuthorized_Insert = GXt_boolean1;
+         GXt_boolean3 = AV41IsAuthorized_Insert;
+         new GeneXus.Programs.wwpbaseobjects.secgamisauthbyfunctionalitykey(context ).execute(  "productservicetype_Insert", out  GXt_boolean3) ;
+         AV41IsAuthorized_Insert = GXt_boolean3;
          AssignAttri("", false, "AV41IsAuthorized_Insert", AV41IsAuthorized_Insert);
          GxWebStd.gx_hidden_field( context, "gxhash_vISAUTHORIZED_INSERT", GetSecureSignedToken( "", AV41IsAuthorized_Insert, context));
          if ( ! ( AV41IsAuthorized_Insert ) )
@@ -1972,13 +1955,13 @@ namespace GeneXus.Programs {
             }
             AV46GXV1 = (int)(AV46GXV1+1);
          }
-         GXt_char3 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV28TFProductServiceTypeName_Sel)),  AV28TFProductServiceTypeName_Sel, out  GXt_char3) ;
-         Ddo_grid_Selectedvalue_set = GXt_char3;
+         GXt_char2 = "";
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV28TFProductServiceTypeName_Sel)),  AV28TFProductServiceTypeName_Sel, out  GXt_char2) ;
+         Ddo_grid_Selectedvalue_set = GXt_char2;
          ucDdo_grid.SendProperty(context, "", false, Ddo_grid_Internalname, "SelectedValue_set", Ddo_grid_Selectedvalue_set);
-         GXt_char3 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV27TFProductServiceTypeName)),  AV27TFProductServiceTypeName, out  GXt_char3) ;
-         Ddo_grid_Filteredtext_set = GXt_char3;
+         GXt_char2 = "";
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV27TFProductServiceTypeName)),  AV27TFProductServiceTypeName, out  GXt_char2) ;
+         Ddo_grid_Filteredtext_set = GXt_char2;
          ucDdo_grid.SendProperty(context, "", false, Ddo_grid_Internalname, "FilteredText_set", Ddo_grid_Filteredtext_set);
       }
 
@@ -2048,7 +2031,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915574218", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119582899", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2064,7 +2047,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("productservicetypeww.js", "?202481915574220", false, true);
+         context.AddJavascriptSource("productservicetypeww.js", "?20248211958291", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -2176,7 +2159,7 @@ namespace GeneXus.Programs {
             }
             /* Single line edit */
             ROClassString = "Attribute";
-            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceTypeName_Internalname,(string)A72ProductServiceTypeName,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)edtProductServiceTypeName_Link,(string)"",(string)"",(string)"",(string)edtProductServiceTypeName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(int)edtProductServiceTypeName_Visible,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)37,(short)0,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"start",(bool)true,(string)""});
+            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceTypeName_Internalname,(string)A72ProductServiceTypeName,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceTypeName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(int)edtProductServiceTypeName_Visible,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)37,(short)0,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"start",(bool)true,(string)""});
             /* Subfile cell */
             if ( GridContainer.GetWrapped() == 1 )
             {
@@ -2284,7 +2267,6 @@ namespace GeneXus.Programs {
             GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( A72ProductServiceTypeName));
-            GridColumn.AddObjectProperty("Link", StringUtil.RTrim( edtProductServiceTypeName_Link));
             GridColumn.AddObjectProperty("Visible", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeName_Visible), 5, 0, ".", "")));
             GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
@@ -2354,7 +2336,6 @@ namespace GeneXus.Programs {
          edtavUpdate_Link = "";
          edtavUpdate_Enabled = 0;
          edtProductServiceTypeName_Jsonclick = "";
-         edtProductServiceTypeName_Link = "";
          edtProductServiceTypeId_Jsonclick = "";
          subGrid_Class = "GridWithPaginationBar WorkWith";
          subGrid_Backcolorstyle = 0;
@@ -2411,7 +2392,7 @@ namespace GeneXus.Programs {
          Form.Background = "";
          Form.Textcolor = 0;
          Form.Backcolor = (int)(0xFFFFFF);
-         Form.Caption = context.GetMessage( " Product Service Type", "");
+         Form.Caption = context.GetMessage( " Product Service Types", "");
          subGrid_Rows = 0;
          context.GX_msglist.DisplayMode = 1;
          if ( context.isSpaRequest( ) )
@@ -2427,21 +2408,21 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV40IsAuthorized_ProductServiceTypeName',fld:'vISAUTHORIZED_PRODUCTSERVICETYPENAME',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true}]");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true}]");
          setEventMetadata("REFRESH",",oparms:[{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'edtProductServiceTypeName_Visible',ctrl:'PRODUCTSERVICETYPENAME',prop:'Visible'},{av:'AV33GridCurrentPage',fld:'vGRIDCURRENTPAGE',pic:'ZZZZZZZZZ9'},{av:'AV34GridPageCount',fld:'vGRIDPAGECOUNT',pic:'ZZZZZZZZZ9'},{av:'AV35GridAppliedFilters',fld:'vGRIDAPPLIEDFILTERS',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'edtavUpdate_Visible',ctrl:'vUPDATE',prop:'Visible'},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'edtavDelete_Visible',ctrl:'vDELETE',prop:'Visible'},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{ctrl:'BTNINSERT',prop:'Visible'},{av:'AV22ManageFiltersData',fld:'vMANAGEFILTERSDATA',pic:''},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]}");
-         setEventMetadata("GRIDPAGINATIONBAR.CHANGEPAGE","{handler:'E121N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV40IsAuthorized_ProductServiceTypeName',fld:'vISAUTHORIZED_PRODUCTSERVICETYPENAME',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'Gridpaginationbar_Selectedpage',ctrl:'GRIDPAGINATIONBAR',prop:'SelectedPage'}]");
+         setEventMetadata("GRIDPAGINATIONBAR.CHANGEPAGE","{handler:'E121N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'Gridpaginationbar_Selectedpage',ctrl:'GRIDPAGINATIONBAR',prop:'SelectedPage'}]");
          setEventMetadata("GRIDPAGINATIONBAR.CHANGEPAGE",",oparms:[]}");
-         setEventMetadata("GRIDPAGINATIONBAR.CHANGEROWSPERPAGE","{handler:'E131N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV40IsAuthorized_ProductServiceTypeName',fld:'vISAUTHORIZED_PRODUCTSERVICETYPENAME',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'Gridpaginationbar_Rowsperpageselectedvalue',ctrl:'GRIDPAGINATIONBAR',prop:'RowsPerPageSelectedValue'}]");
+         setEventMetadata("GRIDPAGINATIONBAR.CHANGEROWSPERPAGE","{handler:'E131N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'Gridpaginationbar_Rowsperpageselectedvalue',ctrl:'GRIDPAGINATIONBAR',prop:'RowsPerPageSelectedValue'}]");
          setEventMetadata("GRIDPAGINATIONBAR.CHANGEROWSPERPAGE",",oparms:[{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'}]}");
-         setEventMetadata("DDO_GRID.ONOPTIONCLICKED","{handler:'E141N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV40IsAuthorized_ProductServiceTypeName',fld:'vISAUTHORIZED_PRODUCTSERVICETYPENAME',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'Ddo_grid_Activeeventkey',ctrl:'DDO_GRID',prop:'ActiveEventKey'},{av:'Ddo_grid_Selectedcolumn',ctrl:'DDO_GRID',prop:'SelectedColumn'},{av:'Ddo_grid_Filteredtext_get',ctrl:'DDO_GRID',prop:'FilteredText_get'},{av:'Ddo_grid_Selectedvalue_get',ctrl:'DDO_GRID',prop:'SelectedValue_get'}]");
+         setEventMetadata("DDO_GRID.ONOPTIONCLICKED","{handler:'E141N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'Ddo_grid_Activeeventkey',ctrl:'DDO_GRID',prop:'ActiveEventKey'},{av:'Ddo_grid_Selectedcolumn',ctrl:'DDO_GRID',prop:'SelectedColumn'},{av:'Ddo_grid_Filteredtext_get',ctrl:'DDO_GRID',prop:'FilteredText_get'},{av:'Ddo_grid_Selectedvalue_get',ctrl:'DDO_GRID',prop:'SelectedValue_get'}]");
          setEventMetadata("DDO_GRID.ONOPTIONCLICKED",",oparms:[{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'Ddo_grid_Sortedstatus',ctrl:'DDO_GRID',prop:'SortedStatus'}]}");
-         setEventMetadata("GRID.LOAD","{handler:'E191N2',iparms:[{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'A71ProductServiceTypeId',fld:'PRODUCTSERVICETYPEID',pic:'ZZZ9',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV40IsAuthorized_ProductServiceTypeName',fld:'vISAUTHORIZED_PRODUCTSERVICETYPENAME',pic:'',hsh:true}]");
-         setEventMetadata("GRID.LOAD",",oparms:[{av:'AV36Update',fld:'vUPDATE',pic:''},{av:'edtavUpdate_Link',ctrl:'vUPDATE',prop:'Link'},{av:'AV38Delete',fld:'vDELETE',pic:''},{av:'edtavDelete_Link',ctrl:'vDELETE',prop:'Link'},{av:'edtProductServiceTypeName_Link',ctrl:'PRODUCTSERVICETYPENAME',prop:'Link'}]}");
-         setEventMetadata("DDO_GRIDCOLUMNSSELECTOR.ONCOLUMNSCHANGED","{handler:'E151N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV40IsAuthorized_ProductServiceTypeName',fld:'vISAUTHORIZED_PRODUCTSERVICETYPENAME',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'Ddo_gridcolumnsselector_Columnsselectorvalues',ctrl:'DDO_GRIDCOLUMNSSELECTOR',prop:'ColumnsSelectorValues'}]");
+         setEventMetadata("GRID.LOAD","{handler:'E191N2',iparms:[{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'A71ProductServiceTypeId',fld:'PRODUCTSERVICETYPEID',pic:'ZZZ9',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true}]");
+         setEventMetadata("GRID.LOAD",",oparms:[{av:'AV36Update',fld:'vUPDATE',pic:''},{av:'edtavUpdate_Link',ctrl:'vUPDATE',prop:'Link'},{av:'AV38Delete',fld:'vDELETE',pic:''},{av:'edtavDelete_Link',ctrl:'vDELETE',prop:'Link'}]}");
+         setEventMetadata("DDO_GRIDCOLUMNSSELECTOR.ONCOLUMNSCHANGED","{handler:'E151N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'Ddo_gridcolumnsselector_Columnsselectorvalues',ctrl:'DDO_GRIDCOLUMNSSELECTOR',prop:'ColumnsSelectorValues'}]");
          setEventMetadata("DDO_GRIDCOLUMNSSELECTOR.ONCOLUMNSCHANGED",",oparms:[{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'edtProductServiceTypeName_Visible',ctrl:'PRODUCTSERVICETYPENAME',prop:'Visible'},{av:'AV33GridCurrentPage',fld:'vGRIDCURRENTPAGE',pic:'ZZZZZZZZZ9'},{av:'AV34GridPageCount',fld:'vGRIDPAGECOUNT',pic:'ZZZZZZZZZ9'},{av:'AV35GridAppliedFilters',fld:'vGRIDAPPLIEDFILTERS',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'edtavUpdate_Visible',ctrl:'vUPDATE',prop:'Visible'},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'edtavDelete_Visible',ctrl:'vDELETE',prop:'Visible'},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{ctrl:'BTNINSERT',prop:'Visible'},{av:'AV22ManageFiltersData',fld:'vMANAGEFILTERSDATA',pic:''},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]}");
-         setEventMetadata("DDO_MANAGEFILTERS.ONOPTIONCLICKED","{handler:'E111N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV40IsAuthorized_ProductServiceTypeName',fld:'vISAUTHORIZED_PRODUCTSERVICETYPENAME',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'Ddo_managefilters_Activeeventkey',ctrl:'DDO_MANAGEFILTERS',prop:'ActiveEventKey'},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]");
+         setEventMetadata("DDO_MANAGEFILTERS.ONOPTIONCLICKED","{handler:'E111N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'Ddo_managefilters_Activeeventkey',ctrl:'DDO_MANAGEFILTERS',prop:'ActiveEventKey'},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]");
          setEventMetadata("DDO_MANAGEFILTERS.ONOPTIONCLICKED",",oparms:[{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'Ddo_grid_Selectedvalue_set',ctrl:'DDO_GRID',prop:'SelectedValue_set'},{av:'Ddo_grid_Filteredtext_set',ctrl:'DDO_GRID',prop:'FilteredText_set'},{av:'Ddo_grid_Sortedstatus',ctrl:'DDO_GRID',prop:'SortedStatus'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'edtProductServiceTypeName_Visible',ctrl:'PRODUCTSERVICETYPENAME',prop:'Visible'},{av:'AV33GridCurrentPage',fld:'vGRIDCURRENTPAGE',pic:'ZZZZZZZZZ9'},{av:'AV34GridPageCount',fld:'vGRIDPAGECOUNT',pic:'ZZZZZZZZZ9'},{av:'AV35GridAppliedFilters',fld:'vGRIDAPPLIEDFILTERS',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'edtavUpdate_Visible',ctrl:'vUPDATE',prop:'Visible'},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'edtavDelete_Visible',ctrl:'vDELETE',prop:'Visible'},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{ctrl:'BTNINSERT',prop:'Visible'},{av:'AV22ManageFiltersData',fld:'vMANAGEFILTERSDATA',pic:''}]}");
-         setEventMetadata("'DOINSERT'","{handler:'E161N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV40IsAuthorized_ProductServiceTypeName',fld:'vISAUTHORIZED_PRODUCTSERVICETYPENAME',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'A71ProductServiceTypeId',fld:'PRODUCTSERVICETYPEID',pic:'ZZZ9',hsh:true}]");
+         setEventMetadata("'DOINSERT'","{handler:'E161N2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV42Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFProductServiceTypeName',fld:'vTFPRODUCTSERVICETYPENAME',pic:''},{av:'AV28TFProductServiceTypeName_Sel',fld:'vTFPRODUCTSERVICETYPENAME_SEL',pic:''},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{av:'A71ProductServiceTypeId',fld:'PRODUCTSERVICETYPEID',pic:'ZZZ9',hsh:true}]");
          setEventMetadata("'DOINSERT'",",oparms:[{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'edtProductServiceTypeName_Visible',ctrl:'PRODUCTSERVICETYPENAME',prop:'Visible'},{av:'AV33GridCurrentPage',fld:'vGRIDCURRENTPAGE',pic:'ZZZZZZZZZ9'},{av:'AV34GridPageCount',fld:'vGRIDPAGECOUNT',pic:'ZZZZZZZZZ9'},{av:'AV35GridAppliedFilters',fld:'vGRIDAPPLIEDFILTERS',pic:''},{av:'AV37IsAuthorized_Update',fld:'vISAUTHORIZED_UPDATE',pic:'',hsh:true},{av:'edtavUpdate_Visible',ctrl:'vUPDATE',prop:'Visible'},{av:'AV39IsAuthorized_Delete',fld:'vISAUTHORIZED_DELETE',pic:'',hsh:true},{av:'edtavDelete_Visible',ctrl:'vDELETE',prop:'Visible'},{av:'AV41IsAuthorized_Insert',fld:'vISAUTHORIZED_INSERT',pic:'',hsh:true},{ctrl:'BTNINSERT',prop:'Visible'},{av:'AV22ManageFiltersData',fld:'vMANAGEFILTERSDATA',pic:''},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]}");
          setEventMetadata("NULL","{handler:'Validv_Delete',iparms:[]");
          setEventMetadata("NULL",",oparms:[]}");
@@ -2528,7 +2509,7 @@ namespace GeneXus.Programs {
          AV8HTTPRequest = new GxHttpRequest( context);
          AV30GAMSession = new GeneXus.Programs.genexussecurity.SdtGAMSession(context);
          AV31GAMErrors = new GXExternalCollection<GeneXus.Programs.genexussecurity.SdtGAMError>( context, "GeneXus.Programs.genexussecurity.SdtGAMError", "GeneXus.Programs");
-         GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons2 = new GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons(context);
+         GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons1 = new GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons(context);
          AV6WWPContext = new GeneXus.Programs.wwpbaseobjects.SdtWWPContext(context);
          AV21Session = context.GetSession();
          AV17ColumnsSelectorXML = "";
@@ -2538,7 +2519,7 @@ namespace GeneXus.Programs {
          AV20ColumnsSelectorAux = new GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector(context);
          GXt_objcol_SdtDVB_SDTDropDownOptionsData_Item4 = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsData_Item>( context, "Item", "");
          AV12GridStateFilterValue = new GeneXus.Programs.wwpbaseobjects.SdtWWPGridState_FilterValue(context);
-         GXt_char3 = "";
+         GXt_char2 = "";
          AV9TrnContext = new GeneXus.Programs.wwpbaseobjects.SdtWWPTransactionContext(context);
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
@@ -2707,8 +2688,7 @@ namespace GeneXus.Programs {
       private string scmdbuf ;
       private string edtavUpdate_Link ;
       private string edtavDelete_Link ;
-      private string edtProductServiceTypeName_Link ;
-      private string GXt_char3 ;
+      private string GXt_char2 ;
       private string sGXsfl_37_fel_idx="0001" ;
       private string subGrid_Class ;
       private string subGrid_Linesclass ;
@@ -2723,7 +2703,6 @@ namespace GeneXus.Programs {
       private bool AV14OrderedDsc ;
       private bool AV37IsAuthorized_Update ;
       private bool AV39IsAuthorized_Delete ;
-      private bool AV40IsAuthorized_ProductServiceTypeName ;
       private bool AV41IsAuthorized_Insert ;
       private bool Gridpaginationbar_Showfirst ;
       private bool Gridpaginationbar_Showprevious ;
@@ -2739,7 +2718,7 @@ namespace GeneXus.Programs {
       private bool gxdyncontrolsrefreshing ;
       private bool returnInSub ;
       private bool gx_refresh_fired ;
-      private bool GXt_boolean1 ;
+      private bool GXt_boolean3 ;
       private string AV17ColumnsSelectorXML ;
       private string AV23ManageFiltersXml ;
       private string AV18UserCustomValue ;
@@ -2782,7 +2761,7 @@ namespace GeneXus.Programs {
       private GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector AV19ColumnsSelector ;
       private GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector AV20ColumnsSelectorAux ;
       private GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons AV29DDO_TitleSettingsIcons ;
-      private GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons2 ;
+      private GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons1 ;
       private GeneXus.Programs.genexussecurity.SdtGAMSession AV30GAMSession ;
    }
 

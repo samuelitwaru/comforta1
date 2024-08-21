@@ -471,7 +471,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtavResidentbsnnumber_Internalname+"\"", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtavResidentbsnnumber_Internalname, context.GetMessage( "Bsn Number", ""), " AttributeLabel", 1, true, "");
+            GxWebStd.gx_label_element( context, edtavResidentbsnnumber_Internalname, context.GetMessage( "BSN Number", ""), " AttributeLabel", 1, true, "");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
             /* Single line edit */
@@ -1258,7 +1258,7 @@ namespace GeneXus.Programs {
          AssignAttri(sPrefix, false, "AV22CheckRequiredFieldsResult", AV22CheckRequiredFieldsResult);
          if ( String.IsNullOrEmpty(StringUtil.RTrim( AV13ResidentBsnNumber)) )
          {
-            GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "",  StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "Bsn Number", ""), "", "", "", "", "", "", "", ""),  "error",  edtavResidentbsnnumber_Internalname,  "true",  ""));
+            GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "",  StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "BSN Number", ""), "", "", "", "", "", "", "", ""),  "error",  edtavResidentbsnnumber_Internalname,  "true",  ""));
             AV22CheckRequiredFieldsResult = false;
             AssignAttri(sPrefix, false, "AV22CheckRequiredFieldsResult", AV22CheckRequiredFieldsResult);
          }
@@ -1288,7 +1288,7 @@ namespace GeneXus.Programs {
          }
          if ( (0==AV19ResidentTypeId) )
          {
-            GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "",  StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "Type", ""), "", "", "", "", "", "", "", ""),  "error",  dynavResidenttypeid_Internalname,  "true",  ""));
+            GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "",  context.GetMessage( "Resident Type is required", ""),  "error",  dynavResidenttypeid_Internalname,  "true",  ""));
             AV22CheckRequiredFieldsResult = false;
             AssignAttri(sPrefix, false, "AV22CheckRequiredFieldsResult", AV22CheckRequiredFieldsResult);
          }
@@ -1544,7 +1544,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248191555875", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119573059", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1560,7 +1560,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("createresidentstep1.js", "?20248191555876", false, true);
+         context.AddJavascriptSource("createresidentstep1.js", "?202482119573060", false, true);
          /* End function include_jscripts */
       }
 

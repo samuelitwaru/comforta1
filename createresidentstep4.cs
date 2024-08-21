@@ -1226,7 +1226,7 @@ namespace GeneXus.Programs {
          gxdynajaxctrlcodr.Clear();
          gxdynajaxctrldescr.Clear();
          gxdynajaxctrlcodr.Add(StringUtil.Str( (decimal)(0), 1, 0));
-         gxdynajaxctrldescr.Add(context.GetMessage( "GX_EmptyItemText", ""));
+         gxdynajaxctrldescr.Add(context.GetMessage( "Select Option", ""));
          /* Using cursor H002X2 */
          pr_default.execute(0);
          while ( (pr_default.getStatus(0) != 101) )
@@ -1962,7 +1962,7 @@ namespace GeneXus.Programs {
             AV26ResidentProductServiceSDTs.Clear();
             gx_BV30 = true;
             AV8AddedProductsServices.Clear();
-            CallWebObject(formatLink("residentww.aspx") );
+            CallWebObject(formatLink("locationresidents.aspx") );
             context.wjLocDisableFrm = 1;
          }
          else
@@ -2261,7 +2261,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915553322", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119574743", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2277,7 +2277,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("createresidentstep4.js", "?202481915553323", false, true);
+         context.AddJavascriptSource("createresidentstep4.js", "?202482119574744", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/DVPaginationBar/DVPaginationBarRender.js", "", false, true);

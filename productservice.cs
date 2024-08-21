@@ -137,7 +137,7 @@ namespace GeneXus.Programs {
                Form.Meta.addItem("generator", "GeneXus .NET 18_0_6-177934", 0) ;
             }
          }
-         Form.Meta.addItem("description", context.GetMessage( "Product Service", ""), 0) ;
+         Form.Meta.addItem("description", context.GetMessage( "Product/Service", ""), 0) ;
          context.wjLoc = "";
          context.nUserReturn = 0;
          context.wbHandled = 0;
@@ -1124,7 +1124,7 @@ namespace GeneXus.Programs {
          pr_default.close(2);
          if ( (0==A71ProductServiceTypeId) )
          {
-            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "Product Service Type Id", ""), "", "", "", "", "", "", "", ""), 1, "PRODUCTSERVICETYPEID");
+            GX_msglist.addItem(context.GetMessage( "Product/Service Type is required", ""), 1, "PRODUCTSERVICETYPEID");
             AnyError = 1;
             GX_FocusControl = edtProductServiceTypeId_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -2028,7 +2028,7 @@ namespace GeneXus.Programs {
 
       public override string GetPgmdesc( )
       {
-         return context.GetMessage( "Product Service", "") ;
+         return context.GetMessage( "Product/Service", "") ;
       }
 
       protected void InitializeNonKey0611( )
@@ -2078,7 +2078,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915564324", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119581573", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2094,7 +2094,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("productservice.js", "?202481915564326", false, true);
+         context.AddJavascriptSource("productservice.js", "?202482119581575", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -2140,7 +2140,7 @@ namespace GeneXus.Programs {
          Form.Background = "";
          Form.Textcolor = 0;
          Form.Backcolor = (int)(0xFFFFFF);
-         Form.Caption = context.GetMessage( "Product Service", "");
+         Form.Caption = context.GetMessage( "Product/Service", "");
          edtProductServiceId_Jsonclick = "";
          edtProductServiceId_Enabled = 0;
          edtProductServiceId_Visible = 1;
@@ -2220,7 +2220,7 @@ namespace GeneXus.Programs {
          pr_default.close(13);
          if ( (0==A71ProductServiceTypeId) )
          {
-            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "Product Service Type Id", ""), "", "", "", "", "", "", "", ""), 1, "PRODUCTSERVICETYPEID");
+            GX_msglist.addItem(context.GetMessage( "Product/Service Type is required", ""), 1, "PRODUCTSERVICETYPEID");
             AnyError = 1;
             GX_FocusControl = edtProductServiceTypeId_Internalname;
          }

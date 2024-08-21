@@ -228,8 +228,6 @@ namespace GeneXus.Programs {
             if ( ( GxWebError == 0 ) && ! isAjaxCallMode( ) )
             {
                /* GeneXus formulas. */
-               edtavDeleterecord_Enabled = 0;
-               AssignProp(sPrefix, false, edtavDeleterecord_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavDeleterecord_Enabled), 5, 0), !bGXsfl_43_Refreshing);
                edtavResidentincompanysdts__residentincompanykvknumber_Enabled = 0;
                AssignProp(sPrefix, false, edtavResidentincompanysdts__residentincompanykvknumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavResidentincompanysdts__residentincompanykvknumber_Enabled), 5, 0), !bGXsfl_43_Refreshing);
                edtavResidentincompanysdts__residentincompanyname_Enabled = 0;
@@ -238,6 +236,8 @@ namespace GeneXus.Programs {
                AssignProp(sPrefix, false, edtavResidentincompanysdts__residentincompanyemail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavResidentincompanysdts__residentincompanyemail_Enabled), 5, 0), !bGXsfl_43_Refreshing);
                edtavResidentincompanysdts__residentincompanyphone_Enabled = 0;
                AssignProp(sPrefix, false, edtavResidentincompanysdts__residentincompanyphone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavResidentincompanysdts__residentincompanyphone_Enabled), 5, 0), !bGXsfl_43_Refreshing);
+               edtavDeleterecord_Enabled = 0;
+               AssignProp(sPrefix, false, edtavDeleterecord_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavDeleterecord_Enabled), 5, 0), !bGXsfl_43_Refreshing);
                WS2W2( ) ;
                if ( ! isAjaxCallMode( ) )
                {
@@ -580,7 +580,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtavResidentincompanykvknumber_Internalname+"\"", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtavResidentincompanykvknumber_Internalname, context.GetMessage( "Kvk Number", ""), " AttributeLabel", 1, true, "");
+            GxWebStd.gx_label_element( context, edtavResidentincompanykvknumber_Internalname, context.GetMessage( "KVK Number", ""), " AttributeLabel", 1, true, "");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
             /* Single line edit */
@@ -975,7 +975,7 @@ namespace GeneXus.Programs {
                                  if ( ! wbErr )
                                  {
                                     dynload_actions( ) ;
-                                    GX_FocusControl = edtavDeleterecord_Internalname;
+                                    GX_FocusControl = edtavResidentincompanysdts__residentincompanykvknumber_Internalname;
                                     AssignAttri(sPrefix, false, "GX_FocusControl", GX_FocusControl);
                                  }
                               }
@@ -1014,7 +1014,7 @@ namespace GeneXus.Programs {
                                        if ( ! wbErr )
                                        {
                                           dynload_actions( ) ;
-                                          GX_FocusControl = edtavDeleterecord_Internalname;
+                                          GX_FocusControl = edtavResidentincompanysdts__residentincompanykvknumber_Internalname;
                                           AssignAttri(sPrefix, false, "GX_FocusControl", GX_FocusControl);
                                           /* Execute user event: Start */
                                           E162W2 ();
@@ -1029,7 +1029,7 @@ namespace GeneXus.Programs {
                                        if ( ! wbErr )
                                        {
                                           dynload_actions( ) ;
-                                          GX_FocusControl = edtavDeleterecord_Internalname;
+                                          GX_FocusControl = edtavResidentincompanysdts__residentincompanykvknumber_Internalname;
                                           AssignAttri(sPrefix, false, "GX_FocusControl", GX_FocusControl);
                                           /* Execute user event: Refresh */
                                           E172W2 ();
@@ -1044,7 +1044,7 @@ namespace GeneXus.Programs {
                                        if ( ! wbErr )
                                        {
                                           dynload_actions( ) ;
-                                          GX_FocusControl = edtavDeleterecord_Internalname;
+                                          GX_FocusControl = edtavResidentincompanysdts__residentincompanykvknumber_Internalname;
                                           AssignAttri(sPrefix, false, "GX_FocusControl", GX_FocusControl);
                                           E182W2 ();
                                        }
@@ -1078,7 +1078,7 @@ namespace GeneXus.Programs {
                                        if ( ! wbErr )
                                        {
                                           dynload_actions( ) ;
-                                          GX_FocusControl = edtavDeleterecord_Internalname;
+                                          GX_FocusControl = edtavResidentincompanysdts__residentincompanykvknumber_Internalname;
                                           AssignAttri(sPrefix, false, "GX_FocusControl", GX_FocusControl);
                                           E202W2 ();
                                        }
@@ -1097,7 +1097,7 @@ namespace GeneXus.Programs {
                                        if ( ! wbErr )
                                        {
                                           dynload_actions( ) ;
-                                          GX_FocusControl = edtavDeleterecord_Internalname;
+                                          GX_FocusControl = edtavResidentincompanysdts__residentincompanykvknumber_Internalname;
                                           AssignAttri(sPrefix, false, "GX_FocusControl", GX_FocusControl);
                                        }
                                     }
@@ -1237,8 +1237,6 @@ namespace GeneXus.Programs {
       protected void initialize_formulas( )
       {
          /* GeneXus formulas. */
-         edtavDeleterecord_Enabled = 0;
-         AssignProp(sPrefix, false, edtavDeleterecord_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavDeleterecord_Enabled), 5, 0), !bGXsfl_43_Refreshing);
          edtavResidentincompanysdts__residentincompanykvknumber_Enabled = 0;
          AssignProp(sPrefix, false, edtavResidentincompanysdts__residentincompanykvknumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavResidentincompanysdts__residentincompanykvknumber_Enabled), 5, 0), !bGXsfl_43_Refreshing);
          edtavResidentincompanysdts__residentincompanyname_Enabled = 0;
@@ -1247,6 +1245,8 @@ namespace GeneXus.Programs {
          AssignProp(sPrefix, false, edtavResidentincompanysdts__residentincompanyemail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavResidentincompanysdts__residentincompanyemail_Enabled), 5, 0), !bGXsfl_43_Refreshing);
          edtavResidentincompanysdts__residentincompanyphone_Enabled = 0;
          AssignProp(sPrefix, false, edtavResidentincompanysdts__residentincompanyphone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavResidentincompanysdts__residentincompanyphone_Enabled), 5, 0), !bGXsfl_43_Refreshing);
+         edtavDeleterecord_Enabled = 0;
+         AssignProp(sPrefix, false, edtavDeleterecord_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavDeleterecord_Enabled), 5, 0), !bGXsfl_43_Refreshing);
       }
 
       protected void RF2W2( )
@@ -1430,8 +1430,6 @@ namespace GeneXus.Programs {
 
       protected void before_start_formulas( )
       {
-         edtavDeleterecord_Enabled = 0;
-         AssignProp(sPrefix, false, edtavDeleterecord_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavDeleterecord_Enabled), 5, 0), !bGXsfl_43_Refreshing);
          edtavResidentincompanysdts__residentincompanykvknumber_Enabled = 0;
          AssignProp(sPrefix, false, edtavResidentincompanysdts__residentincompanykvknumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavResidentincompanysdts__residentincompanykvknumber_Enabled), 5, 0), !bGXsfl_43_Refreshing);
          edtavResidentincompanysdts__residentincompanyname_Enabled = 0;
@@ -1440,6 +1438,8 @@ namespace GeneXus.Programs {
          AssignProp(sPrefix, false, edtavResidentincompanysdts__residentincompanyemail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavResidentincompanysdts__residentincompanyemail_Enabled), 5, 0), !bGXsfl_43_Refreshing);
          edtavResidentincompanysdts__residentincompanyphone_Enabled = 0;
          AssignProp(sPrefix, false, edtavResidentincompanysdts__residentincompanyphone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavResidentincompanysdts__residentincompanyphone_Enabled), 5, 0), !bGXsfl_43_Refreshing);
+         edtavDeleterecord_Enabled = 0;
+         AssignProp(sPrefix, false, edtavDeleterecord_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavDeleterecord_Enabled), 5, 0), !bGXsfl_43_Refreshing);
          fix_multi_value_controls( ) ;
       }
 
@@ -1813,7 +1813,7 @@ namespace GeneXus.Programs {
          }
          if ( String.IsNullOrEmpty(StringUtil.RTrim( AV16ResidentINCompanyKvkNumber)) )
          {
-            GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "",  StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "Kvk Number", ""), "", "", "", "", "", "", "", ""),  "error",  edtavResidentincompanykvknumber_Internalname,  "true",  ""));
+            GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "",  StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "KVK Number", ""), "", "", "", "", "", "", "", ""),  "error",  edtavResidentincompanykvknumber_Internalname,  "true",  ""));
             AV28CheckRequiredFieldsResult = false;
             AssignAttri(sPrefix, false, "AV28CheckRequiredFieldsResult", AV28CheckRequiredFieldsResult);
          }
@@ -2113,7 +2113,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248191555952", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119573545", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2129,7 +2129,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("createresidentstep3.js", "?20248191555953", false, true);
+         context.AddJavascriptSource("createresidentstep3.js", "?202482119573546", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/DVPaginationBar/DVPaginationBarRender.js", "", false, true);
@@ -2140,20 +2140,20 @@ namespace GeneXus.Programs {
 
       protected void SubsflControlProps_432( )
       {
-         edtavDeleterecord_Internalname = sPrefix+"vDELETERECORD_"+sGXsfl_43_idx;
          edtavResidentincompanysdts__residentincompanykvknumber_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_43_idx;
          edtavResidentincompanysdts__residentincompanyname_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYNAME_"+sGXsfl_43_idx;
          edtavResidentincompanysdts__residentincompanyemail_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYEMAIL_"+sGXsfl_43_idx;
          edtavResidentincompanysdts__residentincompanyphone_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYPHONE_"+sGXsfl_43_idx;
+         edtavDeleterecord_Internalname = sPrefix+"vDELETERECORD_"+sGXsfl_43_idx;
       }
 
       protected void SubsflControlProps_fel_432( )
       {
-         edtavDeleterecord_Internalname = sPrefix+"vDELETERECORD_"+sGXsfl_43_fel_idx;
          edtavResidentincompanysdts__residentincompanykvknumber_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_43_fel_idx;
          edtavResidentincompanysdts__residentincompanyname_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYNAME_"+sGXsfl_43_fel_idx;
          edtavResidentincompanysdts__residentincompanyemail_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYEMAIL_"+sGXsfl_43_fel_idx;
          edtavResidentincompanysdts__residentincompanyphone_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYPHONE_"+sGXsfl_43_fel_idx;
+         edtavDeleterecord_Internalname = sPrefix+"vDELETERECORD_"+sGXsfl_43_fel_idx;
       }
 
       protected void sendrow_432( )
@@ -2225,15 +2225,6 @@ namespace GeneXus.Programs {
                context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+""+"\">") ;
             }
             /* Single line edit */
-            TempTags = " " + ((edtavDeleterecord_Enabled!=0)&&(edtavDeleterecord_Visible!=0) ? " onfocus=\"gx.evt.onfocus(this, 44,'"+sPrefix+"',false,'"+sGXsfl_43_idx+"',43)\"" : " ");
-            ROClassString = "Attribute";
-            GridsRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavDeleterecord_Internalname,StringUtil.RTrim( AV24DeleteRecord),(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+((edtavDeleterecord_Enabled!=0)&&(edtavDeleterecord_Visible!=0) ? " onblur=\""+""+";gx.evt.onblur(this,44);\"" : " "),"'"+sPrefix+"'"+",false,"+"'"+sPrefix+"EVDELETERECORD.CLICK."+sGXsfl_43_idx+"'",(string)"",(string)"",context.GetMessage( "Delete", ""),(string)"",(string)edtavDeleterecord_Jsonclick,(short)5,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWIconActionColumn",(string)"",(short)-1,(int)edtavDeleterecord_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)1,(short)43,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
-            /* Subfile cell */
-            if ( GridsContainer.GetWrapped() == 1 )
-            {
-               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+""+"\">") ;
-            }
-            /* Single line edit */
             ROClassString = "Attribute";
             GridsRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavResidentincompanysdts__residentincompanykvknumber_Internalname,((SdtResidentINCompanySDT)AV19ResidentINCompanySDTs.Item(AV29GXV1)).gxTpr_Residentincompanykvknumber,(string)"",(string)"",(string)"'"+sPrefix+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtavResidentincompanysdts__residentincompanykvknumber_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(short)-1,(int)edtavResidentincompanysdts__residentincompanykvknumber_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)8,(short)0,(short)0,(short)43,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
             /* Subfile cell */
@@ -2260,6 +2251,15 @@ namespace GeneXus.Programs {
             /* Single line edit */
             ROClassString = "Attribute";
             GridsRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavResidentincompanysdts__residentincompanyphone_Internalname,StringUtil.RTrim( ((SdtResidentINCompanySDT)AV19ResidentINCompanySDTs.Item(AV29GXV1)).gxTpr_Residentincompanyphone),(string)"",(string)"",(string)"'"+sPrefix+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtavResidentincompanysdts__residentincompanyphone_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(short)-1,(int)edtavResidentincompanysdts__residentincompanyphone_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)0,(short)43,(short)0,(short)-1,(short)0,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
+            /* Subfile cell */
+            if ( GridsContainer.GetWrapped() == 1 )
+            {
+               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+""+"\">") ;
+            }
+            /* Single line edit */
+            TempTags = " " + ((edtavDeleterecord_Enabled!=0)&&(edtavDeleterecord_Visible!=0) ? " onfocus=\"gx.evt.onfocus(this, 48,'"+sPrefix+"',false,'"+sGXsfl_43_idx+"',43)\"" : " ");
+            ROClassString = "Attribute";
+            GridsRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavDeleterecord_Internalname,StringUtil.RTrim( AV24DeleteRecord),(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+((edtavDeleterecord_Enabled!=0)&&(edtavDeleterecord_Visible!=0) ? " onblur=\""+""+";gx.evt.onblur(this,48);\"" : " "),"'"+sPrefix+"'"+",false,"+"'"+sPrefix+"EVDELETERECORD.CLICK."+sGXsfl_43_idx+"'",(string)"",(string)"",context.GetMessage( "Delete", ""),(string)"",(string)edtavDeleterecord_Jsonclick,(short)5,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWIconActionColumn",(string)"",(short)-1,(int)edtavDeleterecord_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)1,(short)43,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
             send_integrity_lvl_hashes2W2( ) ;
             GridsContainer.AddRow(GridsRow);
             nGXsfl_43_idx = ((subGrids_Islastpage==1)&&(nGXsfl_43_idx+1>subGrids_fnc_Recordsperpage( )) ? 1 : nGXsfl_43_idx+1);
@@ -2312,10 +2312,7 @@ namespace GeneXus.Programs {
                }
             }
             context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
-            context.SendWebValue( "") ;
-            context.WriteHtmlTextNl( "</th>") ;
-            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
-            context.SendWebValue( context.GetMessage( "Kvk Number", "")) ;
+            context.SendWebValue( context.GetMessage( "KVK Number", "")) ;
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
             context.SendWebValue( context.GetMessage( "Name", "")) ;
@@ -2325,6 +2322,9 @@ namespace GeneXus.Programs {
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
             context.SendWebValue( context.GetMessage( "Phone", "")) ;
+            context.WriteHtmlTextNl( "</th>") ;
+            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
+            context.SendWebValue( "") ;
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlTextNl( "</tr>") ;
             GridsContainer.AddObjectProperty("GridName", "Grids");
@@ -2340,10 +2340,6 @@ namespace GeneXus.Programs {
             GridsContainer.AddObjectProperty("CmpContext", sPrefix);
             GridsContainer.AddObjectProperty("InMasterPage", "false");
             GridsColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
-            GridsColumn.AddObjectProperty("Value", GXUtil.ValueEncode( StringUtil.RTrim( AV24DeleteRecord)));
-            GridsColumn.AddObjectProperty("Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavDeleterecord_Enabled), 5, 0, ".", "")));
-            GridsContainer.AddColumnProperties(GridsColumn);
-            GridsColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridsColumn.AddObjectProperty("Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavResidentincompanysdts__residentincompanykvknumber_Enabled), 5, 0, ".", "")));
             GridsContainer.AddColumnProperties(GridsColumn);
             GridsColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
@@ -2354,6 +2350,10 @@ namespace GeneXus.Programs {
             GridsContainer.AddColumnProperties(GridsColumn);
             GridsColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridsColumn.AddObjectProperty("Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavResidentincompanysdts__residentincompanyphone_Enabled), 5, 0, ".", "")));
+            GridsContainer.AddColumnProperties(GridsColumn);
+            GridsColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
+            GridsColumn.AddObjectProperty("Value", GXUtil.ValueEncode( StringUtil.RTrim( AV24DeleteRecord)));
+            GridsColumn.AddObjectProperty("Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavDeleterecord_Enabled), 5, 0, ".", "")));
             GridsContainer.AddColumnProperties(GridsColumn);
             GridsContainer.AddObjectProperty("Selectedindex", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrids_Selectedindex), 4, 0, ".", "")));
             GridsContainer.AddObjectProperty("Allowselection", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrids_Allowselection), 1, 0, ".", "")));
@@ -2373,11 +2373,11 @@ namespace GeneXus.Programs {
          edtavResidentincompanyphone_Internalname = sPrefix+"vRESIDENTINCOMPANYPHONE";
          bttBtnsavecompany_Internalname = sPrefix+"BTNSAVECOMPANY";
          divActionbtntable_Internalname = sPrefix+"ACTIONBTNTABLE";
-         edtavDeleterecord_Internalname = sPrefix+"vDELETERECORD";
          edtavResidentincompanysdts__residentincompanykvknumber_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYKVKNUMBER";
          edtavResidentincompanysdts__residentincompanyname_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYNAME";
          edtavResidentincompanysdts__residentincompanyemail_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYEMAIL";
          edtavResidentincompanysdts__residentincompanyphone_Internalname = sPrefix+"RESIDENTINCOMPANYSDTS__RESIDENTINCOMPANYPHONE";
+         edtavDeleterecord_Internalname = sPrefix+"vDELETERECORD";
          Gridspaginationbar_Internalname = sPrefix+"GRIDSPAGINATIONBAR";
          divGridstablewithpaginationbar_Internalname = sPrefix+"GRIDSTABLEWITHPAGINATIONBAR";
          divTableattributes_Internalname = sPrefix+"TABLEATTRIBUTES";
@@ -2411,6 +2411,9 @@ namespace GeneXus.Programs {
          subGrids_Allowcollapsing = 0;
          subGrids_Allowselection = 0;
          subGrids_Header = "";
+         edtavDeleterecord_Jsonclick = "";
+         edtavDeleterecord_Visible = -1;
+         edtavDeleterecord_Enabled = 1;
          edtavResidentincompanysdts__residentincompanyphone_Jsonclick = "";
          edtavResidentincompanysdts__residentincompanyphone_Enabled = 0;
          edtavResidentincompanysdts__residentincompanyemail_Jsonclick = "";
@@ -2419,9 +2422,6 @@ namespace GeneXus.Programs {
          edtavResidentincompanysdts__residentincompanyname_Enabled = 0;
          edtavResidentincompanysdts__residentincompanykvknumber_Jsonclick = "";
          edtavResidentincompanysdts__residentincompanykvknumber_Enabled = 0;
-         edtavDeleterecord_Jsonclick = "";
-         edtavDeleterecord_Visible = -1;
-         edtavDeleterecord_Enabled = 1;
          subGrids_Class = "GridWithPaginationBar WorkWith";
          subGrids_Backcolorstyle = 0;
          edtavResidentincompanyid_Jsonclick = "";
@@ -2495,7 +2495,7 @@ namespace GeneXus.Programs {
          setEventMetadata("VALIDV_RESIDENTINCOMPANYEMAIL",",oparms:[]}");
          setEventMetadata("VALIDV_GXV4","{handler:'Validv_Gxv4',iparms:[]");
          setEventMetadata("VALIDV_GXV4",",oparms:[]}");
-         setEventMetadata("NULL","{handler:'Validv_Gxv5',iparms:[]");
+         setEventMetadata("NULL","{handler:'Validv_Deleterecord',iparms:[]");
          setEventMetadata("NULL",",oparms:[]}");
          return  ;
       }
@@ -2565,11 +2565,11 @@ namespace GeneXus.Programs {
          ROClassString = "";
          GridsColumn = new GXWebColumn();
          /* GeneXus formulas. */
-         edtavDeleterecord_Enabled = 0;
          edtavResidentincompanysdts__residentincompanykvknumber_Enabled = 0;
          edtavResidentincompanysdts__residentincompanyname_Enabled = 0;
          edtavResidentincompanysdts__residentincompanyemail_Enabled = 0;
          edtavResidentincompanysdts__residentincompanyphone_Enabled = 0;
+         edtavDeleterecord_Enabled = 0;
       }
 
       private short GRIDS_nEOF ;
@@ -2597,11 +2597,11 @@ namespace GeneXus.Programs {
       private int nRC_GXsfl_43 ;
       private int subGrids_Rows ;
       private int nGXsfl_43_idx=1 ;
-      private int edtavDeleterecord_Enabled ;
       private int edtavResidentincompanysdts__residentincompanykvknumber_Enabled ;
       private int edtavResidentincompanysdts__residentincompanyname_Enabled ;
       private int edtavResidentincompanysdts__residentincompanyemail_Enabled ;
       private int edtavResidentincompanysdts__residentincompanyphone_Enabled ;
+      private int edtavDeleterecord_Enabled ;
       private int Gridspaginationbar_Pagestoshow ;
       private int edtavResidentincompanyname_Enabled ;
       private int edtavResidentincompanykvknumber_Enabled ;
@@ -2636,11 +2636,11 @@ namespace GeneXus.Programs {
       private string sCompPrefix ;
       private string sSFPrefix ;
       private string sGXsfl_43_idx="0001" ;
-      private string edtavDeleterecord_Internalname ;
       private string edtavResidentincompanysdts__residentincompanykvknumber_Internalname ;
       private string edtavResidentincompanysdts__residentincompanyname_Internalname ;
       private string edtavResidentincompanysdts__residentincompanyemail_Internalname ;
       private string edtavResidentincompanysdts__residentincompanyphone_Internalname ;
+      private string edtavDeleterecord_Internalname ;
       private string sDynURL ;
       private string FormProcess ;
       private string bodyStyle ;
@@ -2702,11 +2702,11 @@ namespace GeneXus.Programs {
       private string subGrids_Class ;
       private string subGrids_Linesclass ;
       private string ROClassString ;
-      private string edtavDeleterecord_Jsonclick ;
       private string edtavResidentincompanysdts__residentincompanykvknumber_Jsonclick ;
       private string edtavResidentincompanysdts__residentincompanyname_Jsonclick ;
       private string edtavResidentincompanysdts__residentincompanyemail_Jsonclick ;
       private string edtavResidentincompanysdts__residentincompanyphone_Jsonclick ;
+      private string edtavDeleterecord_Jsonclick ;
       private string subGrids_Header ;
       private bool AV6GoingBack ;
       private bool wcpOAV6GoingBack ;

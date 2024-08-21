@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: "Comforta11"
-  version: "20240819125921"
+  version: "20240821170205"
 servers:
   - url: http://localhost:8082/Comforta11NETPostgreSQL1/rest
 paths:
@@ -1064,9 +1064,6 @@ components:
         IsDynamicCall:
           type: "boolean"
         ResidentId:
-          type: "integer"
-          format: "int32"
-        Cond_CustomerId:
           type: "integer"
           format: "int32"
         SearchTxtParms:

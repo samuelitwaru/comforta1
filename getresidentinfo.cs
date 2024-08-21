@@ -230,10 +230,15 @@ namespace GeneXus.Programs {
          }
          pr_default.close(4);
          /* Using cursor P002R7 */
-         pr_default.execute(5, new Object[] {AV14CustomerId, A18CustomerLocationId, AV15LocationId});
+         pr_default.execute(5, new Object[] {AV14CustomerId, AV15LocationId});
          while ( (pr_default.getStatus(5) != 101) )
          {
+            A18CustomerLocationId = P002R7_A18CustomerLocationId[0];
             A1CustomerId = P002R7_A1CustomerId[0];
+            A21CustomerLocationEmail = P002R7_A21CustomerLocationEmail[0];
+            A22CustomerLocationPhone = P002R7_A22CustomerLocationPhone[0];
+            A20CustomerLocationPostalAddress = P002R7_A20CustomerLocationPostalAddress[0];
+            A19CustomerLocationVisitingAddres = P002R7_A19CustomerLocationVisitingAddres[0];
             AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Customerlocationid = A18CustomerLocationId;
             AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Customerlocationemail = A21CustomerLocationEmail;
             AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Customerlocationphone = A22CustomerLocationPhone;
@@ -356,7 +361,12 @@ namespace GeneXus.Programs {
          A4CustomerPostalAddress = "";
          A6CustomerVisitingAddress = "";
          A14CustomerVatNumber = "";
+         P002R7_A18CustomerLocationId = new short[1] ;
          P002R7_A1CustomerId = new short[1] ;
+         P002R7_A21CustomerLocationEmail = new string[] {""} ;
+         P002R7_A22CustomerLocationPhone = new string[] {""} ;
+         P002R7_A20CustomerLocationPostalAddress = new string[] {""} ;
+         P002R7_A19CustomerLocationVisitingAddres = new string[] {""} ;
          A21CustomerLocationEmail = "";
          A22CustomerLocationPhone = "";
          A20CustomerLocationPostalAddress = "";
@@ -382,7 +392,7 @@ namespace GeneXus.Programs {
                P002R6_n6CustomerVisitingAddress, P002R6_A14CustomerVatNumber
                }
                , new Object[] {
-               P002R7_A1CustomerId
+               P002R7_A18CustomerLocationId, P002R7_A1CustomerId, P002R7_A21CustomerLocationEmail, P002R7_A22CustomerLocationPhone, P002R7_A20CustomerLocationPostalAddress, P002R7_A19CustomerLocationVisitingAddres
                }
             }
          );
@@ -510,7 +520,12 @@ namespace GeneXus.Programs {
       private string[] P002R6_A6CustomerVisitingAddress ;
       private bool[] P002R6_n6CustomerVisitingAddress ;
       private string[] P002R6_A14CustomerVatNumber ;
+      private short[] P002R7_A18CustomerLocationId ;
       private short[] P002R7_A1CustomerId ;
+      private string[] P002R7_A21CustomerLocationEmail ;
+      private string[] P002R7_A22CustomerLocationPhone ;
+      private string[] P002R7_A20CustomerLocationPostalAddress ;
+      private string[] P002R7_A19CustomerLocationVisitingAddres ;
       private SdtResidentDetails aP1_ResidentDetails ;
       private SdtResidentDetails AV10ResidentDetails ;
       private SdtResidentDetails_ResidentNetworkIndividualsItem AV11ResidentNetworkIndividual ;
@@ -561,7 +576,6 @@ namespace GeneXus.Programs {
           Object[] prmP002R7;
           prmP002R7 = new Object[] {
           new ParDef("AV14CustomerId",GXType.Int16,4,0) ,
-          new ParDef("CustomerLocationId",GXType.Int16,4,0) ,
           new ParDef("AV15LocationId",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
@@ -570,7 +584,7 @@ namespace GeneXus.Programs {
              ,new CursorDef("P002R4", "SELECT ResidentId, ResidentINCompanyKvkNumber, ResidentINCompanyName, ResidentINCompanyEmail, ResidentINCompanyPhone, ResidentINCompanyId FROM ResidentINCompany WHERE ResidentId = :ResidentId ORDER BY ResidentId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R4,100, GxCacheFrequency.OFF ,false,false )
              ,new CursorDef("P002R5", "SELECT T1.ProductServiceId, T1.ResidentId, T2.ProductServicePicture_GXI, T2.ProductServiceName, T2.ProductServiceDescription, T2.ProductServiceQuantity, T2.ProductServiceTypeId, T3.ProductServiceTypeName, T2.ProductServicePicture FROM ((ResidentProductService T1 INNER JOIN ProductService T2 ON T2.ProductServiceId = T1.ProductServiceId) INNER JOIN ProductServiceType T3 ON T3.ProductServiceTypeId = T2.ProductServiceTypeId) WHERE T1.ResidentId = :ResidentId ORDER BY T1.ResidentId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R5,100, GxCacheFrequency.OFF ,false,false )
              ,new CursorDef("P002R6", "SELECT CustomerId, CustomerKvkNumber, CustomerName, CustomerEmail, CustomerPhone, CustomerPostalAddress, CustomerVisitingAddress, CustomerVatNumber FROM Customer WHERE CustomerId = :AV14CustomerId ORDER BY CustomerId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R6,1, GxCacheFrequency.OFF ,false,true )
-             ,new CursorDef("P002R7", "SELECT CustomerId FROM Customer WHERE (CustomerId = :AV14CustomerId) AND (:CustomerLocationId = :AV15LocationId) ORDER BY CustomerId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R7,1, GxCacheFrequency.OFF ,false,true )
+             ,new CursorDef("P002R7", "SELECT CustomerLocationId, CustomerId, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationPostalAddress, CustomerLocationVisitingAddres FROM CustomerLocation WHERE CustomerId = :AV14CustomerId and CustomerLocationId = :AV15LocationId ORDER BY CustomerId, CustomerLocationId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R7,1, GxCacheFrequency.OFF ,false,true )
           };
        }
     }
@@ -650,6 +664,11 @@ namespace GeneXus.Programs {
                 return;
              case 5 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
+                ((short[]) buf[1])[0] = rslt.getShort(2);
+                ((string[]) buf[2])[0] = rslt.getVarchar(3);
+                ((string[]) buf[3])[0] = rslt.getString(4, 20);
+                ((string[]) buf[4])[0] = rslt.getVarchar(5);
+                ((string[]) buf[5])[0] = rslt.getVarchar(6);
                 return;
        }
     }

@@ -212,15 +212,13 @@ namespace GeneXus.Programs {
          {
             enableOutput();
          }
-         context.AddJavascriptSource("UserControls/WWP_IconButtonRender.js", "", false, true);
-         context.AddJavascriptSource("UserControls/WWP_IconButtonRender.js", "", false, true);
          context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
          {
             disableOutput();
          }
-         FormProcess = ((nGXWrapped==0) ? " data-HasEnter=\"false\" data-Skiponenter=\"false\"" : "");
+         FormProcess = " data-HasEnter=\"false\" data-Skiponenter=\"false\"";
          context.WriteHtmlText( "<body ") ;
          if ( StringUtil.StrCmp(context.GetLanguageProperty( "rtl"), "true") == 0 )
          {
@@ -238,15 +236,12 @@ namespace GeneXus.Programs {
          context.WriteHtmlText( " "+"class=\"form-horizontal Form\""+" "+ "style='"+bodyStyle+"'") ;
          context.WriteHtmlText( FormProcess+">") ;
          context.skipLines(1);
-         if ( nGXWrapped != 1 )
-         {
-            context.WriteHtmlTextNl( "<form id=\"MAINFORM\" autocomplete=\"off\" name=\"MAINFORM\" method=\"post\" tabindex=-1  class=\"form-horizontal Form\" data-gx-class=\"form-horizontal Form\" novalidate action=\""+formatLink("notauthorized.aspx") +"\">") ;
-            GxWebStd.gx_hidden_field( context, "_EventName", "");
-            GxWebStd.gx_hidden_field( context, "_EventGridId", "");
-            GxWebStd.gx_hidden_field( context, "_EventRowId", "");
-            context.WriteHtmlText( "<div style=\"height:0;overflow:hidden\"><input type=\"submit\" title=\"submit\"  disabled></div>") ;
-            AssignProp("", false, "FORM", "Class", "form-horizontal Form", true);
-         }
+         context.WriteHtmlTextNl( "<form id=\"MAINFORM\" autocomplete=\"off\" name=\"MAINFORM\" method=\"post\" tabindex=-1  class=\"form-horizontal Form\" data-gx-class=\"form-horizontal Form\" novalidate action=\""+formatLink("notauthorized.aspx") +"\">") ;
+         GxWebStd.gx_hidden_field( context, "_EventName", "");
+         GxWebStd.gx_hidden_field( context, "_EventGridId", "");
+         GxWebStd.gx_hidden_field( context, "_EventRowId", "");
+         context.WriteHtmlText( "<div style=\"height:0;overflow:hidden\"><input type=\"submit\" title=\"submit\"  disabled></div>") ;
+         AssignProp("", false, "FORM", "Class", "form-horizontal Form", true);
          toggleJsOutput = isJsOutputEnabled( );
          if ( context.isSpaRequest( ) )
          {
@@ -279,10 +274,7 @@ namespace GeneXus.Programs {
          {
             disableOutput();
          }
-         if ( nGXWrapped != 1 )
-         {
-            context.WriteHtmlTextNl( "</form>") ;
-         }
+         context.WriteHtmlTextNl( "</form>") ;
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -491,22 +483,23 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, divTableactions_Internalname, 1, 0, "px", 0, "px", "Flex", "start", "top", " "+"data-gx-flex"+" ", "flex-wrap:wrap;justify-content:space-between;", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "", "start", "top", "", "flex-grow:1;", "div");
-            /* User Defined Control */
-            ucBtnlogin.SetProperty("TooltipText", Btnlogin_Tooltiptext);
-            ucBtnlogin.SetProperty("Caption", Btnlogin_Caption);
-            ucBtnlogin.SetProperty("Class", Btnlogin_Class);
-            ucBtnlogin.Render(context, "wwp_iconbutton", Btnlogin_Internalname, "BTNLOGINContainer");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-action-group ActionGroup", "start", "top", " "+"data-gx-actiongroup-type=\"toolbar\""+" ", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 52,'',false,'',0)\"";
+            ClassString = "Button";
+            StyleString = "";
+            GxWebStd.gx_button_ctrl( context, bttBtnlogin_Internalname, "", context.GetMessage( "Login Again", ""), bttBtnlogin_Jsonclick, 5, context.GetMessage( "Login Again", ""), "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'DOLOGIN\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_NotAuthorized.htm");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "", "start", "top", "", "flex-grow:1;", "div");
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 54,'',false,'',0)\"";
+            ClassString = "BtnDefault";
+            StyleString = "";
+            GxWebStd.gx_button_ctrl( context, bttBtnreturn_Internalname, "", context.GetMessage( "Return", ""), bttBtnreturn_Jsonclick, 5, context.GetMessage( "Return", ""), "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'DORETURN\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_NotAuthorized.htm");
             GxWebStd.gx_div_end( context, "start", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "", "start", "top", "", "align-self:flex-end;", "div");
-            /* User Defined Control */
-            ucBtnreturn.SetProperty("TooltipText", Btnreturn_Tooltiptext);
-            ucBtnreturn.SetProperty("Caption", Btnreturn_Caption);
-            ucBtnreturn.SetProperty("Class", Btnreturn_Class);
-            ucBtnreturn.Render(context, "wwp_iconbutton", Btnreturn_Internalname, "BTNRETURNContainer");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "Center", "top", "div");
@@ -780,6 +773,7 @@ namespace GeneXus.Programs {
       {
          /* Start Routine */
          returnInSub = false;
+         new getcustomercustomizationvalues(context ).execute( out  AV9CustomerCustomizationSDTValues) ;
          tblTable3_Height = 15;
          AssignProp("", false, tblTable3_Internalname, "Height", StringUtil.LTrimStr( (decimal)(tblTable3_Height), 9, 0), true);
          tblTable2_Height = 10;
@@ -788,6 +782,17 @@ namespace GeneXus.Programs {
          AssignProp("", false, tblTable1_Internalname, "Height", StringUtil.LTrimStr( (decimal)(tblTable1_Height), 9, 0), true);
          tblTable0_Height = 30;
          AssignProp("", false, tblTable0_Internalname, "Height", StringUtil.LTrimStr( (decimal)(tblTable0_Height), 9, 0), true);
+         GXt_SdtWWP_DesignSystemSettings1 = AV10WWP_DesignSystemSettings;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getdesignsystemsettings(context ).execute( out  GXt_SdtWWP_DesignSystemSettings1) ;
+         AV10WWP_DesignSystemSettings = GXt_SdtWWP_DesignSystemSettings1;
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV9CustomerCustomizationSDTValues.gxTpr_Customercustomizationbasecolor)) )
+         {
+            this.executeExternalObjectMethod("", false, "gx.core.ds", "setOption", new Object[] {(string)"base-color",context.GetMessage( "Teal", "")}, false);
+         }
+         else
+         {
+            this.executeExternalObjectMethod("", false, "gx.core.ds", "setOption", new Object[] {(string)"base-color",AV9CustomerCustomizationSDTValues.gxTpr_Customercustomizationbasecolor}, false);
+         }
       }
 
       protected void E12372( )
@@ -956,7 +961,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915582432", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119593533", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -971,13 +976,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         if ( nGXWrapped != 1 )
-         {
-            context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("notauthorized.js", "?202481915582435", false, true);
-            context.AddJavascriptSource("UserControls/WWP_IconButtonRender.js", "", false, true);
-            context.AddJavascriptSource("UserControls/WWP_IconButtonRender.js", "", false, true);
-         }
+         context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("notauthorized.js", "?202482119593537", false, true);
          /* End function include_jscripts */
       }
 
@@ -999,8 +999,8 @@ namespace GeneXus.Programs {
          lblTextblock2_Internalname = "TEXTBLOCK2";
          lblTextblock5_Internalname = "TEXTBLOCK5";
          tblTable3_Internalname = "TABLE3";
-         Btnlogin_Internalname = "BTNLOGIN";
-         Btnreturn_Internalname = "BTNRETURN";
+         bttBtnlogin_Internalname = "BTNLOGIN";
+         bttBtnreturn_Internalname = "BTNRETURN";
          divTableactions_Internalname = "TABLEACTIONS";
          divTablecontent_Internalname = "TABLECONTENT";
          divTablemain_Internalname = "TABLEMAIN";
@@ -1020,12 +1020,6 @@ namespace GeneXus.Programs {
          tblTable1_Height = 0;
          tblTable2_Height = 0;
          tblTable3_Height = 0;
-         Btnreturn_Class = "BtnDefault";
-         Btnreturn_Caption = context.GetMessage( "Return", "");
-         Btnreturn_Tooltiptext = "";
-         Btnlogin_Class = "Button";
-         Btnlogin_Caption = context.GetMessage( "Login Again", "");
-         Btnlogin_Tooltiptext = "";
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
@@ -1084,12 +1078,16 @@ namespace GeneXus.Programs {
          lblHourglass_Jsonclick = "";
          lblTextblock1_Jsonclick = "";
          lblTextblock2_Jsonclick = "";
-         ucBtnlogin = new GXUserControl();
-         ucBtnreturn = new GXUserControl();
+         TempTags = "";
+         bttBtnlogin_Jsonclick = "";
+         bttBtnreturn_Jsonclick = "";
          sEvt = "";
          EvtGridId = "";
          EvtRowId = "";
          sEvtType = "";
+         AV9CustomerCustomizationSDTValues = new SdtCustomerCustomizationSDT(context);
+         AV10WWP_DesignSystemSettings = new GeneXus.Programs.wwpbaseobjects.SdtWWP_DesignSystemSettings(context);
+         GXt_SdtWWP_DesignSystemSettings1 = new GeneXus.Programs.wwpbaseobjects.SdtWWP_DesignSystemSettings(context);
          AV5Errors = new GXExternalCollection<GeneXus.Programs.genexussecurity.SdtGAMError>( context, "GeneXus.Programs.genexussecurity.SdtGAMError", "GeneXus.Programs");
          sStyleString = "";
          lblTextblock5_Jsonclick = "";
@@ -1105,11 +1103,11 @@ namespace GeneXus.Programs {
       private short GxWebError ;
       private short initialized ;
       private short gxajaxcallmode ;
-      private short nGXWrapped ;
       private short wbEnd ;
       private short wbStart ;
       private short nDonePA ;
       private short gxcookieaux ;
+      private short nGXWrapped ;
       private int tblTable3_Height ;
       private int tblTable2_Height ;
       private int tblTable1_Height ;
@@ -1135,14 +1133,11 @@ namespace GeneXus.Programs {
       private string lblTextblock2_Internalname ;
       private string lblTextblock2_Jsonclick ;
       private string divTableactions_Internalname ;
-      private string Btnlogin_Tooltiptext ;
-      private string Btnlogin_Caption ;
-      private string Btnlogin_Class ;
-      private string Btnlogin_Internalname ;
-      private string Btnreturn_Tooltiptext ;
-      private string Btnreturn_Caption ;
-      private string Btnreturn_Class ;
-      private string Btnreturn_Internalname ;
+      private string TempTags ;
+      private string bttBtnlogin_Internalname ;
+      private string bttBtnlogin_Jsonclick ;
+      private string bttBtnreturn_Internalname ;
+      private string bttBtnreturn_Jsonclick ;
       private string sEvt ;
       private string EvtGridId ;
       private string EvtRowId ;
@@ -1168,14 +1163,15 @@ namespace GeneXus.Programs {
       private bool gxdyncontrolsrefreshing ;
       private bool returnInSub ;
       private bool AV7isOK ;
-      private GXUserControl ucBtnlogin ;
-      private GXUserControl ucBtnreturn ;
       private IGxDataStore dsGAM ;
       private IGxDataStore dsDefault ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private GXExternalCollection<GeneXus.Programs.genexussecurity.SdtGAMError> AV5Errors ;
       private GXWebForm Form ;
+      private SdtCustomerCustomizationSDT AV9CustomerCustomizationSDTValues ;
+      private GeneXus.Programs.wwpbaseobjects.SdtWWP_DesignSystemSettings AV10WWP_DesignSystemSettings ;
+      private GeneXus.Programs.wwpbaseobjects.SdtWWP_DesignSystemSettings GXt_SdtWWP_DesignSystemSettings1 ;
    }
 
 }

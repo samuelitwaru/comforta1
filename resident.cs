@@ -253,9 +253,9 @@ namespace GeneXus.Programs {
 
       protected void gxnrGridlevel_inindividual_newrow_invoke( )
       {
-         nRC_GXsfl_108 = (int)(Math.Round(NumberUtil.Val( GetPar( "nRC_GXsfl_108"), "."), 18, MidpointRounding.ToEven));
-         nGXsfl_108_idx = (int)(Math.Round(NumberUtil.Val( GetPar( "nGXsfl_108_idx"), "."), 18, MidpointRounding.ToEven));
-         sGXsfl_108_idx = GetPar( "sGXsfl_108_idx");
+         nRC_GXsfl_73 = (int)(Math.Round(NumberUtil.Val( GetPar( "nRC_GXsfl_73"), "."), 18, MidpointRounding.ToEven));
+         nGXsfl_73_idx = (int)(Math.Round(NumberUtil.Val( GetPar( "nGXsfl_73_idx"), "."), 18, MidpointRounding.ToEven));
+         sGXsfl_73_idx = GetPar( "sGXsfl_73_idx");
          A96ResidentLastLineIndividual = (short)(Math.Round(NumberUtil.Val( GetPar( "ResidentLastLineIndividual"), "."), 18, MidpointRounding.ToEven));
          Gx_BScreen = (short)(Math.Round(NumberUtil.Val( GetPar( "Gx_BScreen"), "."), 18, MidpointRounding.ToEven));
          Gx_mode = GetPar( "Mode");
@@ -271,9 +271,9 @@ namespace GeneXus.Programs {
 
       protected void gxnrGridlevel_incompany_newrow_invoke( )
       {
-         nRC_GXsfl_127 = (int)(Math.Round(NumberUtil.Val( GetPar( "nRC_GXsfl_127"), "."), 18, MidpointRounding.ToEven));
-         nGXsfl_127_idx = (int)(Math.Round(NumberUtil.Val( GetPar( "nGXsfl_127_idx"), "."), 18, MidpointRounding.ToEven));
-         sGXsfl_127_idx = GetPar( "sGXsfl_127_idx");
+         nRC_GXsfl_92 = (int)(Math.Round(NumberUtil.Val( GetPar( "nRC_GXsfl_92"), "."), 18, MidpointRounding.ToEven));
+         nGXsfl_92_idx = (int)(Math.Round(NumberUtil.Val( GetPar( "nGXsfl_92_idx"), "."), 18, MidpointRounding.ToEven));
+         sGXsfl_92_idx = GetPar( "sGXsfl_92_idx");
          A97ResidentLastLineCompany = (short)(Math.Round(NumberUtil.Val( GetPar( "ResidentLastLineCompany"), "."), 18, MidpointRounding.ToEven));
          Gx_BScreen = (short)(Math.Round(NumberUtil.Val( GetPar( "Gx_BScreen"), "."), 18, MidpointRounding.ToEven));
          Gx_mode = GetPar( "Mode");
@@ -289,11 +289,11 @@ namespace GeneXus.Programs {
 
       protected void gxnrGridlevel_productservice_newrow_invoke( )
       {
-         nRC_GXsfl_143 = (int)(Math.Round(NumberUtil.Val( GetPar( "nRC_GXsfl_143"), "."), 18, MidpointRounding.ToEven));
-         nGXsfl_143_idx = (int)(Math.Round(NumberUtil.Val( GetPar( "nGXsfl_143_idx"), "."), 18, MidpointRounding.ToEven));
-         sGXsfl_143_idx = GetPar( "sGXsfl_143_idx");
+         nRC_GXsfl_108 = (int)(Math.Round(NumberUtil.Val( GetPar( "nRC_GXsfl_108"), "."), 18, MidpointRounding.ToEven));
+         nGXsfl_108_idx = (int)(Math.Round(NumberUtil.Val( GetPar( "nGXsfl_108_idx"), "."), 18, MidpointRounding.ToEven));
+         sGXsfl_108_idx = GetPar( "sGXsfl_108_idx");
          edtProductServiceId_Horizontalalignment = GetNextPar( );
-         AssignProp("", false, edtProductServiceId_Internalname, "Horizontalalignment", edtProductServiceId_Horizontalalignment, !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServiceId_Internalname, "Horizontalalignment", edtProductServiceId_Horizontalalignment, !bGXsfl_108_Refreshing);
          Gx_mode = GetPar( "Mode");
          setAjaxCallMode();
          if ( ! IsValidAjaxCall( true) )
@@ -467,7 +467,7 @@ namespace GeneXus.Programs {
          ucGxuitabspanel_steps.Render(context, "tab", Gxuitabspanel_steps_Internalname, "GXUITABSPANEL_STEPSContainer");
          context.WriteHtmlText( "<div class=\"gx_usercontrol_child\" id=\""+"GXUITABSPANEL_STEPSContainer"+"title1"+"\" style=\"display:none;\">") ;
          /* Text block */
-         GxWebStd.gx_label_ctrl( context, lblTabgeneral_title_Internalname, context.GetMessage( "WWP_TemplateDataPanelTitle", ""), "", "", lblTabgeneral_title_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, 0, "HLP_Resident.htm");
+         GxWebStd.gx_label_ctrl( context, lblTabgeneral_title_Internalname, context.GetMessage( "Resident Information", ""), "", "", lblTabgeneral_title_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, 0, "HLP_Resident.htm");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "Section", "start", "top", "", "display:none;", "div");
          context.WriteHtmlText( "tabGeneral") ;
@@ -481,33 +481,17 @@ namespace GeneXus.Programs {
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
          /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtResidentId_Internalname+"\"", "", "div");
-         /* Attribute/Variable Label */
-         GxWebStd.gx_label_element( context, edtResidentId_Internalname, context.GetMessage( "Id", ""), " AttributeLabel", 1, true, "");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
-         /* Single line edit */
-         GxWebStd.gx_single_line_edit( context, edtResidentId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A31ResidentId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( ((edtResidentId_Enabled!=0) ? context.localUtil.Format( (decimal)(A31ResidentId), "ZZZ9") : context.localUtil.Format( (decimal)(A31ResidentId), "ZZZ9"))), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentId_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentId_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Resident.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
-         /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtResidentBsnNumber_Internalname+"\"", "", "div");
          /* Attribute/Variable Label */
-         GxWebStd.gx_label_element( context, edtResidentBsnNumber_Internalname, context.GetMessage( "Bsn Number", ""), " AttributeLabel", 1, true, "");
+         GxWebStd.gx_label_element( context, edtResidentBsnNumber_Internalname, context.GetMessage( "BSN Number", ""), " AttributeLabel", 1, true, "");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 29,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtResidentBsnNumber_Internalname, A40ResidentBsnNumber, StringUtil.RTrim( context.localUtil.Format( A40ResidentBsnNumber, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,29);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentBsnNumber_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentBsnNumber_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "BsnNumber", "start", true, "", "HLP_Resident.htm");
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 25,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtResidentBsnNumber_Internalname, A40ResidentBsnNumber, StringUtil.RTrim( context.localUtil.Format( A40ResidentBsnNumber, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,25);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentBsnNumber_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentBsnNumber_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "BsnNumber", "start", true, "", "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
          /* Div Control */
@@ -517,11 +501,14 @@ namespace GeneXus.Programs {
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 34,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtResidentGivenName_Internalname, A33ResidentGivenName, StringUtil.RTrim( context.localUtil.Format( A33ResidentGivenName, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,34);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentGivenName_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentGivenName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "Name", "start", true, "", "HLP_Resident.htm");
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 29,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtResidentGivenName_Internalname, A33ResidentGivenName, StringUtil.RTrim( context.localUtil.Format( A33ResidentGivenName, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,29);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentGivenName_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentGivenName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "Name", "start", true, "", "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
+         GxWebStd.gx_div_end( context, "start", "top", "div");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
          /* Div Control */
@@ -531,14 +518,11 @@ namespace GeneXus.Programs {
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 38,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtResidentLastName_Internalname, A34ResidentLastName, StringUtil.RTrim( context.localUtil.Format( A34ResidentLastName, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,38);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentLastName_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentLastName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "Name", "start", true, "", "HLP_Resident.htm");
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 34,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtResidentLastName_Internalname, A34ResidentLastName, StringUtil.RTrim( context.localUtil.Format( A34ResidentLastName, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,34);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentLastName_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentLastName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "Name", "start", true, "", "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
          /* Div Control */
@@ -548,22 +532,8 @@ namespace GeneXus.Programs {
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 43,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtResidentInitials_Internalname, StringUtil.RTrim( A35ResidentInitials), StringUtil.RTrim( context.localUtil.Format( A35ResidentInitials, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,43);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentInitials_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentInitials_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 0, -1, -1, true, "", "start", true, "", "HLP_Resident.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtResidentEmail_Internalname+"\"", "", "div");
-         /* Attribute/Variable Label */
-         GxWebStd.gx_label_element( context, edtResidentEmail_Internalname, context.GetMessage( "Email", ""), " AttributeLabel", 1, true, "");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
-         /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 47,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtResidentEmail_Internalname, A36ResidentEmail, StringUtil.RTrim( context.localUtil.Format( A36ResidentEmail, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,47);\"", "'"+""+"'"+",false,"+"'"+""+"'", "mailto:"+A36ResidentEmail, "", "", "", edtResidentEmail_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentEmail_Enabled, 0, "email", "", 80, "chr", 1, "row", 100, 0, 0, 0, 0, -1, 0, true, "GeneXus\\Email", "start", true, "", "HLP_Resident.htm");
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 38,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtResidentInitials_Internalname, StringUtil.RTrim( A35ResidentInitials), StringUtil.RTrim( context.localUtil.Format( A35ResidentInitials, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,38);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentInitials_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentInitials_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 0, -1, -1, true, "", "start", true, "", "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -573,21 +543,38 @@ namespace GeneXus.Programs {
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
          /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtResidentEmail_Internalname+"\"", "", "div");
+         /* Attribute/Variable Label */
+         GxWebStd.gx_label_element( context, edtResidentEmail_Internalname, context.GetMessage( "Email", ""), " AttributeLabel", 1, true, "");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
+         /* Single line edit */
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 43,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtResidentEmail_Internalname, A36ResidentEmail, StringUtil.RTrim( context.localUtil.Format( A36ResidentEmail, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,43);\"", "'"+""+"'"+",false,"+"'"+""+"'", "mailto:"+A36ResidentEmail, "", "", "", edtResidentEmail_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentEmail_Enabled, 0, "email", "", 80, "chr", 1, "row", 100, 0, 0, 0, 0, -1, 0, true, "GeneXus\\Email", "start", true, "", "HLP_Resident.htm");
+         GxWebStd.gx_div_end( context, "start", "top", "div");
+         GxWebStd.gx_div_end( context, "start", "top", "div");
+         GxWebStd.gx_div_end( context, "start", "top", "div");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
+         /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtResidentAddress_Internalname+"\"", "", "div");
          /* Attribute/Variable Label */
          GxWebStd.gx_label_element( context, edtResidentAddress_Internalname, context.GetMessage( "Address", ""), " AttributeLabel", 1, true, "");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
          /* Multiple line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 52,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 47,'',false,'',0)\"";
          ClassString = "Attribute";
          StyleString = "";
          ClassString = "Attribute";
          StyleString = "";
-         GxWebStd.gx_html_textarea( context, edtResidentAddress_Internalname, A37ResidentAddress, "http://maps.google.com/maps?q="+GXUtil.UrlEncode( A37ResidentAddress), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,52);\"", 0, 1, edtResidentAddress_Enabled, 0, 80, "chr", 10, "row", 0, StyleString, ClassString, "", "", "1024", -1, 0, "_blank", "", 0, true, "GeneXus\\Address", "'"+""+"'"+",false,"+"'"+""+"'", 0, "", "HLP_Resident.htm");
+         GxWebStd.gx_html_textarea( context, edtResidentAddress_Internalname, A37ResidentAddress, "http://maps.google.com/maps?q="+GXUtil.UrlEncode( A37ResidentAddress), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,47);\"", 0, 1, edtResidentAddress_Enabled, 0, 80, "chr", 10, "row", 0, StyleString, ClassString, "", "", "1024", -1, 0, "_blank", "", 0, true, "GeneXus\\Address", "'"+""+"'"+",false,"+"'"+""+"'", 0, "", "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
+         GxWebStd.gx_div_end( context, "start", "top", "div");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
          /* Div Control */
@@ -601,25 +588,8 @@ namespace GeneXus.Programs {
          {
             gxphoneLink = "tel:" + StringUtil.RTrim( A38ResidentPhone);
          }
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 56,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtResidentPhone_Internalname, StringUtil.RTrim( A38ResidentPhone), StringUtil.RTrim( context.localUtil.Format( A38ResidentPhone, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,56);\"", "'"+""+"'"+",false,"+"'"+""+"'", gxphoneLink, "", "", "", edtResidentPhone_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentPhone_Enabled, 0, "tel", "", 20, "chr", 1, "row", 20, 0, 0, 0, 0, -1, 0, true, "GeneXus\\Phone", "start", true, "", "HLP_Resident.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtResidentGAMGUID_Internalname+"\"", "", "div");
-         /* Attribute/Variable Label */
-         GxWebStd.gx_label_element( context, edtResidentGAMGUID_Internalname, context.GetMessage( "GAMGUID", ""), " AttributeLabel", 1, true, "");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
-         /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 61,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtResidentGAMGUID_Internalname, A39ResidentGAMGUID, StringUtil.RTrim( context.localUtil.Format( A39ResidentGAMGUID, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,61);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentGAMGUID_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentGAMGUID_Enabled, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 0, 0, 0, true, "GeneXusSecurityCommon\\GAMUserIdentification", "start", true, "", "HLP_Resident.htm");
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 52,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtResidentPhone_Internalname, StringUtil.RTrim( A38ResidentPhone), StringUtil.RTrim( context.localUtil.Format( A38ResidentPhone, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,52);\"", "'"+""+"'"+",false,"+"'"+""+"'", gxphoneLink, "", "", "", edtResidentPhone_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtResidentPhone_Enabled, 0, "tel", "", 20, "chr", 1, "row", 20, 0, 0, 0, 0, -1, 0, true, "GeneXus\\Phone", "start", true, "", "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -653,102 +623,10 @@ namespace GeneXus.Programs {
          /* Attribute/Variable Label */
          GxWebStd.gx_label_element( context, edtResidentTypeId_Internalname, context.GetMessage( "Resident Type Id", ""), "col-sm-3 AttributeLabel", 0, true, "");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 71,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtResidentTypeId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A82ResidentTypeId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(A82ResidentTypeId), "ZZZ9")), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,71);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentTypeId_Jsonclick, 0, "Attribute", "", "", "", "", edtResidentTypeId_Visible, edtResidentTypeId_Enabled, 1, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Resident.htm");
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 62,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtResidentTypeId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A82ResidentTypeId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(A82ResidentTypeId), "ZZZ9")), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,62);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentTypeId_Jsonclick, 0, "Attribute", "", "", "", "", edtResidentTypeId_Visible, edtResidentTypeId_Enabled, 1, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop ExtendedComboCell", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, divTablesplittedcustomerlocationid_Internalname, 1, 0, "px", 0, "px", "Table", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 MergeLabelCell", "start", "top", "", "", "div");
-         /* Text block */
-         GxWebStd.gx_label_ctrl( context, lblTextblockcustomerlocationid_Internalname, context.GetMessage( "Customer", ""), "", "", lblTextblockcustomerlocationid_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "Label", 0, "", 1, 1, 0, 0, "HLP_Resident.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "start", "top", "", "", "div");
-         /* User Defined Control */
-         ucCombo_customerlocationid.SetProperty("Caption", Combo_customerlocationid_Caption);
-         ucCombo_customerlocationid.SetProperty("Cls", Combo_customerlocationid_Cls);
-         ucCombo_customerlocationid.SetProperty("DataListProc", Combo_customerlocationid_Datalistproc);
-         ucCombo_customerlocationid.SetProperty("EmptyItem", Combo_customerlocationid_Emptyitem);
-         ucCombo_customerlocationid.SetProperty("DropDownOptionsTitleSettingsIcons", AV19DDO_TitleSettingsIcons);
-         ucCombo_customerlocationid.SetProperty("DropDownOptionsData", AV29CustomerLocationId_Data);
-         ucCombo_customerlocationid.Render(context, "dvelop.gxbootstrap.ddoextendedcombo", Combo_customerlocationid_Internalname, "COMBO_CUSTOMERLOCATIONIDContainer");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 Invisible", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
-         /* Attribute/Variable Label */
-         GxWebStd.gx_label_element( context, edtCustomerLocationId_Internalname, context.GetMessage( "Customer Location Id", ""), "col-sm-3 AttributeLabel", 0, true, "");
-         /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 82,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtCustomerLocationId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A18CustomerLocationId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(A18CustomerLocationId), "ZZZ9")), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,82);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtCustomerLocationId_Jsonclick, 0, "Attribute", "", "", "", "", edtCustomerLocationId_Visible, edtCustomerLocationId_Enabled, 1, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Resident.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop ExtendedComboCell", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, divTablesplittedcustomerid_Internalname, 1, 0, "px", 0, "px", "Table", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 MergeLabelCell", "start", "top", "", "", "div");
-         /* Text block */
-         GxWebStd.gx_label_ctrl( context, lblTextblockcustomerid_Internalname, context.GetMessage( "Customer", ""), "", "", lblTextblockcustomerid_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "Label", 0, "", 1, 1, 0, 0, "HLP_Resident.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "start", "top", "", "", "div");
-         /* User Defined Control */
-         ucCombo_customerid.SetProperty("Caption", Combo_customerid_Caption);
-         ucCombo_customerid.SetProperty("Cls", Combo_customerid_Cls);
-         ucCombo_customerid.SetProperty("DataListProc", Combo_customerid_Datalistproc);
-         ucCombo_customerid.SetProperty("DataListProcParametersPrefix", Combo_customerid_Datalistprocparametersprefix);
-         ucCombo_customerid.SetProperty("EmptyItem", Combo_customerid_Emptyitem);
-         ucCombo_customerid.SetProperty("DropDownOptionsTitleSettingsIcons", AV19DDO_TitleSettingsIcons);
-         ucCombo_customerid.SetProperty("DropDownOptionsData", AV32CustomerId_Data);
-         ucCombo_customerid.Render(context, "dvelop.gxbootstrap.ddoextendedcombo", Combo_customerid_Internalname, "COMBO_CUSTOMERIDContainer");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 Invisible", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
-         /* Attribute/Variable Label */
-         GxWebStd.gx_label_element( context, edtCustomerId_Internalname, context.GetMessage( "Customer Id", ""), "col-sm-3 AttributeLabel", 0, true, "");
-         /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 92,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtCustomerId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A1CustomerId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(A1CustomerId), "ZZZ9")), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,92);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtCustomerId_Jsonclick, 0, "Attribute", "", "", "", "", edtCustomerId_Visible, edtCustomerId_Enabled, 1, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Resident.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtCustomerName_Internalname+"\"", "", "div");
-         /* Attribute/Variable Label */
-         GxWebStd.gx_label_element( context, edtCustomerName_Internalname, context.GetMessage( "Customer Name", ""), " AttributeLabel", 1, true, "");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
-         /* Single line edit */
-         GxWebStd.gx_single_line_edit( context, edtCustomerName_Internalname, A3CustomerName, StringUtil.RTrim( context.localUtil.Format( A3CustomerName, "")), "", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtCustomerName_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtCustomerName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "Name", "start", true, "", "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -852,35 +730,35 @@ namespace GeneXus.Programs {
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-action-group WizardTrnActionGroup", "start", "top", " "+"data-gx-actiongroup-type=\"toolbar\""+" ", "", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 154,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 119,'',false,'',0)\"";
          ClassString = "BtnDefault ButtonWizard";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtnwizardprevious_Internalname, "", context.GetMessage( "GXM_previous", ""), bttBtnwizardprevious_Jsonclick, 7, context.GetMessage( "GXM_previous", ""), "", StyleString, ClassString, bttBtnwizardprevious_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"e11025_client"+"'", TempTags, "", 2, "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 156,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 121,'',false,'',0)\"";
          ClassString = "BtnDefault";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtntrn_cancel_Internalname, "", context.GetMessage( "GX_BtnCancel", ""), bttBtntrn_cancel_Jsonclick, 1, context.GetMessage( "GX_BtnCancel", ""), "", StyleString, ClassString, bttBtntrn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 158,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 123,'',false,'',0)\"";
          ClassString = "Button ButtonWizard";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtnwizardnext_Internalname, "", context.GetMessage( "GXM_next", ""), bttBtnwizardnext_Jsonclick, 7, context.GetMessage( "GXM_next", ""), "", StyleString, ClassString, bttBtnwizardnext_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"e12025_client"+"'", TempTags, "", 2, "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 160,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 125,'',false,'',0)\"";
          ClassString = "Button";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtntrn_enter_Internalname, "", context.GetMessage( "GX_BtnEnter", ""), bttBtntrn_enter_Jsonclick, 5, context.GetMessage( "GX_BtnEnter", ""), "", StyleString, ClassString, bttBtntrn_enter_Visible, bttBtntrn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 162,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 127,'',false,'',0)\"";
          ClassString = "BtnDefault";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtntrn_delete_Internalname, "", context.GetMessage( "GX_BtnDelete", ""), bttBtntrn_delete_Jsonclick, 5, context.GetMessage( "GX_BtnDelete", ""), "", StyleString, ClassString, bttBtntrn_delete_Visible, bttBtntrn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_Resident.htm");
@@ -905,16 +783,6 @@ namespace GeneXus.Programs {
          /* Single line edit */
          GxWebStd.gx_single_line_edit( context, edtavComboresidenttypeid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV26ComboResidentTypeId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( ((edtavComboresidenttypeid_Enabled!=0) ? context.localUtil.Format( (decimal)(AV26ComboResidentTypeId), "ZZZ9") : context.localUtil.Format( (decimal)(AV26ComboResidentTypeId), "ZZZ9"))), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavComboresidenttypeid_Jsonclick, 0, "Attribute", "", "", "", "", edtavComboresidenttypeid_Visible, edtavComboresidenttypeid_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "", "end", false, "", "HLP_Resident.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, divSectionattribute_customerlocationid_Internalname, 1, 0, "px", 0, "px", "Section", "start", "top", "", "", "div");
-         /* Single line edit */
-         GxWebStd.gx_single_line_edit( context, edtavCombocustomerlocationid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV30ComboCustomerLocationId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( ((edtavCombocustomerlocationid_Enabled!=0) ? context.localUtil.Format( (decimal)(AV30ComboCustomerLocationId), "ZZZ9") : context.localUtil.Format( (decimal)(AV30ComboCustomerLocationId), "ZZZ9"))), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCombocustomerlocationid_Jsonclick, 0, "Attribute", "", "", "", "", edtavCombocustomerlocationid_Visible, edtavCombocustomerlocationid_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "", "end", false, "", "HLP_Resident.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, divSectionattribute_customerid_Internalname, 1, 0, "px", 0, "px", "Section", "start", "top", "", "", "div");
-         /* Single line edit */
-         GxWebStd.gx_single_line_edit( context, edtavCombocustomerid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV33ComboCustomerId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( ((edtavCombocustomerid_Enabled!=0) ? context.localUtil.Format( (decimal)(AV33ComboCustomerId), "ZZZ9") : context.localUtil.Format( (decimal)(AV33ComboCustomerId), "ZZZ9"))), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCombocustomerid_Jsonclick, 0, "Attribute", "", "", "", "", edtavCombocustomerid_Visible, edtavCombocustomerid_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "", "end", false, "", "HLP_Resident.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
          /* User Defined Control */
          ucCombo_productserviceid.SetProperty("Caption", Combo_productserviceid_Caption);
          ucCombo_productserviceid.SetProperty("Cls", Combo_productserviceid_Cls);
@@ -926,6 +794,19 @@ namespace GeneXus.Programs {
          ucCombo_productserviceid.SetProperty("DropDownOptionsTitleSettingsIcons", AV19DDO_TitleSettingsIcons);
          ucCombo_productserviceid.SetProperty("DropDownOptionsData", AV18ProductServiceId_Data);
          ucCombo_productserviceid.Render(context, "dvelop.gxbootstrap.ddoextendedcombo", Combo_productserviceid_Internalname, "COMBO_PRODUCTSERVICEIDContainer");
+         /* Single line edit */
+         GxWebStd.gx_single_line_edit( context, edtResidentId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A31ResidentId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( ((edtResidentId_Enabled!=0) ? context.localUtil.Format( (decimal)(A31ResidentId), "ZZZ9") : context.localUtil.Format( (decimal)(A31ResidentId), "ZZZ9"))), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentId_Jsonclick, 0, "Attribute", "", "", "", "", edtResidentId_Visible, edtResidentId_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Resident.htm");
+         /* Single line edit */
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 135,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtResidentGAMGUID_Internalname, A39ResidentGAMGUID, StringUtil.RTrim( context.localUtil.Format( A39ResidentGAMGUID, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,135);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtResidentGAMGUID_Jsonclick, 0, "Attribute", "", "", "", "", edtResidentGAMGUID_Visible, edtResidentGAMGUID_Enabled, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 0, 0, 0, true, "GeneXusSecurityCommon\\GAMUserIdentification", "start", true, "", "HLP_Resident.htm");
+         /* Single line edit */
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 136,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtCustomerLocationId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A18CustomerLocationId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(A18CustomerLocationId), "ZZZ9")), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,136);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtCustomerLocationId_Jsonclick, 0, "Attribute", "", "", "", "", edtCustomerLocationId_Visible, edtCustomerLocationId_Enabled, 1, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Resident.htm");
+         /* Single line edit */
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 137,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtCustomerId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A1CustomerId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(A1CustomerId), "ZZZ9")), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,137);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtCustomerId_Jsonclick, 0, "Attribute", "", "", "", "", edtCustomerId_Visible, edtCustomerId_Enabled, 1, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Resident.htm");
+         /* Single line edit */
+         GxWebStd.gx_single_line_edit( context, edtCustomerName_Internalname, A3CustomerName, StringUtil.RTrim( context.localUtil.Format( A3CustomerName, "")), "", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtCustomerName_Jsonclick, 0, "Attribute", "", "", "", "", edtCustomerName_Visible, edtCustomerName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "Name", "start", true, "", "HLP_Resident.htm");
          /* User Defined Control */
          ucWizard_steps.Render(context, "dvelop.dvtabstransform", Wizard_steps_Internalname, "WIZARD_STEPSContainer");
          GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -938,8 +819,8 @@ namespace GeneXus.Programs {
       protected void gxdraw_Gridlevel_inindividual( )
       {
          /*  Grid Control  */
-         StartGridControl108( ) ;
-         nGXsfl_108_idx = 0;
+         StartGridControl73( ) ;
+         nGXsfl_73_idx = 0;
          if ( ( nKeyPressed == 1 ) && ( AnyError == 0 ) )
          {
             /* Enter key processing. */
@@ -970,26 +851,26 @@ namespace GeneXus.Programs {
             standaloneNotModal026( ) ;
             standaloneModal026( ) ;
             sMode6 = Gx_mode;
-            while ( nGXsfl_108_idx < nRC_GXsfl_108 )
+            while ( nGXsfl_73_idx < nRC_GXsfl_73 )
             {
-               bGXsfl_108_Refreshing = true;
+               bGXsfl_73_Refreshing = true;
                ReadRow026( ) ;
-               edtResidentINIndividualId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALID_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINIndividualId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
-               edtResidentINIndividualBsnNumber_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINIndividualBsnNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualBsnNumber_Enabled), 5, 0), !bGXsfl_108_Refreshing);
-               edtResidentINIndividualGivenName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINIndividualGivenName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualGivenName_Enabled), 5, 0), !bGXsfl_108_Refreshing);
-               edtResidentINIndividualLastName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINIndividualLastName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualLastName_Enabled), 5, 0), !bGXsfl_108_Refreshing);
-               edtResidentINIndividualEmail_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINIndividualEmail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualEmail_Enabled), 5, 0), !bGXsfl_108_Refreshing);
-               edtResidentINIndividualPhone_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALPHONE_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINIndividualPhone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualPhone_Enabled), 5, 0), !bGXsfl_108_Refreshing);
-               edtResidentINIndividualAddress_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINIndividualAddress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualAddress_Enabled), 5, 0), !bGXsfl_108_Refreshing);
-               cmbResidentINIndividualGender.Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALGENDER_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, cmbResidentINIndividualGender_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(cmbResidentINIndividualGender.Enabled), 5, 0), !bGXsfl_108_Refreshing);
+               edtResidentINIndividualId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALID_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINIndividualId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualId_Enabled), 5, 0), !bGXsfl_73_Refreshing);
+               edtResidentINIndividualBsnNumber_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINIndividualBsnNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualBsnNumber_Enabled), 5, 0), !bGXsfl_73_Refreshing);
+               edtResidentINIndividualGivenName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINIndividualGivenName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualGivenName_Enabled), 5, 0), !bGXsfl_73_Refreshing);
+               edtResidentINIndividualLastName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINIndividualLastName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualLastName_Enabled), 5, 0), !bGXsfl_73_Refreshing);
+               edtResidentINIndividualEmail_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINIndividualEmail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualEmail_Enabled), 5, 0), !bGXsfl_73_Refreshing);
+               edtResidentINIndividualPhone_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALPHONE_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINIndividualPhone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualPhone_Enabled), 5, 0), !bGXsfl_73_Refreshing);
+               edtResidentINIndividualAddress_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINIndividualAddress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualAddress_Enabled), 5, 0), !bGXsfl_73_Refreshing);
+               cmbResidentINIndividualGender.Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALGENDER_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, cmbResidentINIndividualGender_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(cmbResidentINIndividualGender.Enabled), 5, 0), !bGXsfl_73_Refreshing);
                if ( ( nRcdExists_6 == 0 ) && ! IsIns( ) )
                {
                   Gx_mode = "INS";
@@ -997,7 +878,7 @@ namespace GeneXus.Programs {
                   standaloneModal026( ) ;
                }
                SendRow026( ) ;
-               bGXsfl_108_Refreshing = false;
+               bGXsfl_73_Refreshing = false;
             }
             Gx_mode = sMode6;
             AssignAttri("", false, "Gx_mode", Gx_mode);
@@ -1016,8 +897,8 @@ namespace GeneXus.Programs {
                ScanStart026( ) ;
                while ( RcdFound6 != 0 )
                {
-                  sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx+1), 4, 0), 4, "0");
-                  SubsflControlProps_1086( ) ;
+                  sGXsfl_73_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_73_idx+1), 4, 0), 4, "0");
+                  SubsflControlProps_736( ) ;
                   init_level_properties6( ) ;
                   standaloneNotModal026( ) ;
                   getByPrimaryKey026( ) ;
@@ -1034,8 +915,8 @@ namespace GeneXus.Programs {
             sMode6 = Gx_mode;
             Gx_mode = "INS";
             AssignAttri("", false, "Gx_mode", Gx_mode);
-            sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx+1), 4, 0), 4, "0");
-            SubsflControlProps_1086( ) ;
+            sGXsfl_73_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_73_idx+1), 4, 0), 4, "0");
+            SubsflControlProps_736( ) ;
             InitAll026( ) ;
             init_level_properties6( ) ;
             B97ResidentLastLineCompany = A97ResidentLastLineCompany;
@@ -1087,8 +968,8 @@ namespace GeneXus.Programs {
       protected void gxdraw_Gridlevel_incompany( )
       {
          /*  Grid Control  */
-         StartGridControl127( ) ;
-         nGXsfl_127_idx = 0;
+         StartGridControl92( ) ;
+         nGXsfl_92_idx = 0;
          if ( ( nKeyPressed == 1 ) && ( AnyError == 0 ) )
          {
             /* Enter key processing. */
@@ -1119,20 +1000,20 @@ namespace GeneXus.Programs {
             standaloneNotModal027( ) ;
             standaloneModal027( ) ;
             sMode7 = Gx_mode;
-            while ( nGXsfl_127_idx < nRC_GXsfl_127 )
+            while ( nGXsfl_92_idx < nRC_GXsfl_92 )
             {
-               bGXsfl_127_Refreshing = true;
+               bGXsfl_92_Refreshing = true;
                ReadRow027( ) ;
-               edtResidentINCompanyId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYID_"+sGXsfl_127_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINCompanyId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyId_Enabled), 5, 0), !bGXsfl_127_Refreshing);
-               edtResidentINCompanyKvkNumber_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_127_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINCompanyKvkNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyKvkNumber_Enabled), 5, 0), !bGXsfl_127_Refreshing);
-               edtResidentINCompanyName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYNAME_"+sGXsfl_127_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINCompanyName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyName_Enabled), 5, 0), !bGXsfl_127_Refreshing);
-               edtResidentINCompanyEmail_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYEMAIL_"+sGXsfl_127_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINCompanyEmail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyEmail_Enabled), 5, 0), !bGXsfl_127_Refreshing);
-               edtResidentINCompanyPhone_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYPHONE_"+sGXsfl_127_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtResidentINCompanyPhone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyPhone_Enabled), 5, 0), !bGXsfl_127_Refreshing);
+               edtResidentINCompanyId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYID_"+sGXsfl_92_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINCompanyId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyId_Enabled), 5, 0), !bGXsfl_92_Refreshing);
+               edtResidentINCompanyKvkNumber_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_92_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINCompanyKvkNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyKvkNumber_Enabled), 5, 0), !bGXsfl_92_Refreshing);
+               edtResidentINCompanyName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYNAME_"+sGXsfl_92_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINCompanyName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyName_Enabled), 5, 0), !bGXsfl_92_Refreshing);
+               edtResidentINCompanyEmail_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYEMAIL_"+sGXsfl_92_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINCompanyEmail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyEmail_Enabled), 5, 0), !bGXsfl_92_Refreshing);
+               edtResidentINCompanyPhone_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYPHONE_"+sGXsfl_92_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtResidentINCompanyPhone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyPhone_Enabled), 5, 0), !bGXsfl_92_Refreshing);
                if ( ( nRcdExists_7 == 0 ) && ! IsIns( ) )
                {
                   Gx_mode = "INS";
@@ -1140,7 +1021,7 @@ namespace GeneXus.Programs {
                   standaloneModal027( ) ;
                }
                SendRow027( ) ;
-               bGXsfl_127_Refreshing = false;
+               bGXsfl_92_Refreshing = false;
             }
             Gx_mode = sMode7;
             AssignAttri("", false, "Gx_mode", Gx_mode);
@@ -1159,8 +1040,8 @@ namespace GeneXus.Programs {
                ScanStart027( ) ;
                while ( RcdFound7 != 0 )
                {
-                  sGXsfl_127_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_127_idx+1), 4, 0), 4, "0");
-                  SubsflControlProps_1277( ) ;
+                  sGXsfl_92_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_92_idx+1), 4, 0), 4, "0");
+                  SubsflControlProps_927( ) ;
                   init_level_properties7( ) ;
                   standaloneNotModal027( ) ;
                   getByPrimaryKey027( ) ;
@@ -1177,8 +1058,8 @@ namespace GeneXus.Programs {
             sMode7 = Gx_mode;
             Gx_mode = "INS";
             AssignAttri("", false, "Gx_mode", Gx_mode);
-            sGXsfl_127_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_127_idx+1), 4, 0), 4, "0");
-            SubsflControlProps_1277( ) ;
+            sGXsfl_92_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_92_idx+1), 4, 0), 4, "0");
+            SubsflControlProps_927( ) ;
             InitAll027( ) ;
             init_level_properties7( ) ;
             B97ResidentLastLineCompany = A97ResidentLastLineCompany;
@@ -1230,8 +1111,8 @@ namespace GeneXus.Programs {
       protected void gxdraw_Gridlevel_productservice( )
       {
          /*  Grid Control  */
-         StartGridControl143( ) ;
-         nGXsfl_143_idx = 0;
+         StartGridControl108( ) ;
+         nGXsfl_108_idx = 0;
          if ( ( nKeyPressed == 1 ) && ( AnyError == 0 ) )
          {
             /* Enter key processing. */
@@ -1262,24 +1143,24 @@ namespace GeneXus.Programs {
             standaloneNotModal0218( ) ;
             standaloneModal0218( ) ;
             sMode18 = Gx_mode;
-            while ( nGXsfl_143_idx < nRC_GXsfl_143 )
+            while ( nGXsfl_108_idx < nRC_GXsfl_108 )
             {
-               bGXsfl_143_Refreshing = true;
+               bGXsfl_108_Refreshing = true;
                ReadRow0218( ) ;
-               edtProductServiceId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEID_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_143_Refreshing);
-               edtProductServiceId_Horizontalalignment = cgiGet( "PRODUCTSERVICEID_"+sGXsfl_143_idx+"Horizontalalignment");
-               AssignProp("", false, edtProductServiceId_Internalname, "Horizontalalignment", edtProductServiceId_Horizontalalignment, !bGXsfl_143_Refreshing);
-               edtProductServiceDescription_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtProductServiceDescription_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceDescription_Enabled), 5, 0), !bGXsfl_143_Refreshing);
-               edtProductServiceQuantity_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEQUANTITY_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtProductServiceQuantity_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceQuantity_Enabled), 5, 0), !bGXsfl_143_Refreshing);
-               edtProductServicePicture_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEPICTURE_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtProductServicePicture_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServicePicture_Enabled), 5, 0), !bGXsfl_143_Refreshing);
-               edtProductServiceTypeId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICETYPEID_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtProductServiceTypeId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceTypeId_Enabled), 5, 0), !bGXsfl_143_Refreshing);
-               edtProductServiceTypeName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICETYPENAME_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignProp("", false, edtProductServiceTypeName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceTypeName_Enabled), 5, 0), !bGXsfl_143_Refreshing);
+               edtProductServiceId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEID_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+               edtProductServiceId_Horizontalalignment = cgiGet( "PRODUCTSERVICEID_"+sGXsfl_108_idx+"Horizontalalignment");
+               AssignProp("", false, edtProductServiceId_Internalname, "Horizontalalignment", edtProductServiceId_Horizontalalignment, !bGXsfl_108_Refreshing);
+               edtProductServiceDescription_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtProductServiceDescription_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceDescription_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+               edtProductServiceQuantity_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEQUANTITY_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtProductServiceQuantity_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceQuantity_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+               edtProductServicePicture_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEPICTURE_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtProductServicePicture_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServicePicture_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+               edtProductServiceTypeId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICETYPEID_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtProductServiceTypeId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceTypeId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+               edtProductServiceTypeName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICETYPENAME_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignProp("", false, edtProductServiceTypeName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceTypeName_Enabled), 5, 0), !bGXsfl_108_Refreshing);
                if ( ( nRcdExists_18 == 0 ) && ! IsIns( ) )
                {
                   Gx_mode = "INS";
@@ -1287,7 +1168,7 @@ namespace GeneXus.Programs {
                   standaloneModal0218( ) ;
                }
                SendRow0218( ) ;
-               bGXsfl_143_Refreshing = false;
+               bGXsfl_108_Refreshing = false;
             }
             Gx_mode = sMode18;
             AssignAttri("", false, "Gx_mode", Gx_mode);
@@ -1306,8 +1187,8 @@ namespace GeneXus.Programs {
                ScanStart0218( ) ;
                while ( RcdFound18 != 0 )
                {
-                  sGXsfl_143_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_143_idx+1), 4, 0), 4, "0");
-                  SubsflControlProps_14318( ) ;
+                  sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx+1), 4, 0), 4, "0");
+                  SubsflControlProps_10818( ) ;
                   init_level_properties18( ) ;
                   standaloneNotModal0218( ) ;
                   getByPrimaryKey0218( ) ;
@@ -1324,8 +1205,8 @@ namespace GeneXus.Programs {
             sMode18 = Gx_mode;
             Gx_mode = "INS";
             AssignAttri("", false, "Gx_mode", Gx_mode);
-            sGXsfl_143_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_143_idx+1), 4, 0), 4, "0");
-            SubsflControlProps_14318( ) ;
+            sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx+1), 4, 0), 4, "0");
+            SubsflControlProps_10818( ) ;
             InitAll0218( ) ;
             init_level_properties18( ) ;
             B97ResidentLastLineCompany = A97ResidentLastLineCompany;
@@ -1411,8 +1292,6 @@ namespace GeneXus.Programs {
                /* Read saved SDTs. */
                ajax_req_read_hidden_sdt(cgiGet( "vDDO_TITLESETTINGSICONS"), AV19DDO_TitleSettingsIcons);
                ajax_req_read_hidden_sdt(cgiGet( "vRESIDENTTYPEID_DATA"), AV25ResidentTypeId_Data);
-               ajax_req_read_hidden_sdt(cgiGet( "vCUSTOMERLOCATIONID_DATA"), AV29CustomerLocationId_Data);
-               ajax_req_read_hidden_sdt(cgiGet( "vCUSTOMERID_DATA"), AV32CustomerId_Data);
                ajax_req_read_hidden_sdt(cgiGet( "vPRODUCTSERVICEID_DATA"), AV18ProductServiceId_Data);
                /* Read saved values. */
                Z31ResidentId = (short)(Math.Round(context.localUtil.CToN( cgiGet( "Z31ResidentId"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
@@ -1441,13 +1320,12 @@ namespace GeneXus.Programs {
                IsConfirmed = (short)(Math.Round(context.localUtil.CToN( cgiGet( "IsConfirmed"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                IsModified = (short)(Math.Round(context.localUtil.CToN( cgiGet( "IsModified"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                Gx_mode = cgiGet( "Mode");
+               nRC_GXsfl_73 = (int)(Math.Round(context.localUtil.CToN( cgiGet( "nRC_GXsfl_73"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               nRC_GXsfl_92 = (int)(Math.Round(context.localUtil.CToN( cgiGet( "nRC_GXsfl_92"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                nRC_GXsfl_108 = (int)(Math.Round(context.localUtil.CToN( cgiGet( "nRC_GXsfl_108"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               nRC_GXsfl_127 = (int)(Math.Round(context.localUtil.CToN( cgiGet( "nRC_GXsfl_127"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               nRC_GXsfl_143 = (int)(Math.Round(context.localUtil.CToN( cgiGet( "nRC_GXsfl_143"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                N82ResidentTypeId = (short)(Math.Round(context.localUtil.CToN( cgiGet( "N82ResidentTypeId"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                N1CustomerId = (short)(Math.Round(context.localUtil.CToN( cgiGet( "N1CustomerId"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                N18CustomerLocationId = (short)(Math.Round(context.localUtil.CToN( cgiGet( "N18CustomerLocationId"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AV31Cond_CustomerId = (short)(Math.Round(context.localUtil.CToN( cgiGet( "vCOND_CUSTOMERID"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                AV17TabsActivePage = (short)(Math.Round(context.localUtil.CToN( cgiGet( "vTABSACTIVEPAGE"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                Gx_mode = cgiGet( "vMODE");
                AV15CheckRequiredFieldsResult = StringUtil.StrToBool( cgiGet( "vCHECKREQUIREDFIELDSRESULT"));
@@ -1504,88 +1382,6 @@ namespace GeneXus.Programs {
                Combo_residenttypeid_Multiplevaluesseparator = cgiGet( "COMBO_RESIDENTTYPEID_Multiplevaluesseparator");
                Combo_residenttypeid_Addnewoptiontext = cgiGet( "COMBO_RESIDENTTYPEID_Addnewoptiontext");
                Combo_residenttypeid_Gxcontroltype = (int)(Math.Round(context.localUtil.CToN( cgiGet( "COMBO_RESIDENTTYPEID_Gxcontroltype"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               Combo_customerlocationid_Objectcall = cgiGet( "COMBO_CUSTOMERLOCATIONID_Objectcall");
-               Combo_customerlocationid_Class = cgiGet( "COMBO_CUSTOMERLOCATIONID_Class");
-               Combo_customerlocationid_Icontype = cgiGet( "COMBO_CUSTOMERLOCATIONID_Icontype");
-               Combo_customerlocationid_Icon = cgiGet( "COMBO_CUSTOMERLOCATIONID_Icon");
-               Combo_customerlocationid_Caption = cgiGet( "COMBO_CUSTOMERLOCATIONID_Caption");
-               Combo_customerlocationid_Tooltip = cgiGet( "COMBO_CUSTOMERLOCATIONID_Tooltip");
-               Combo_customerlocationid_Cls = cgiGet( "COMBO_CUSTOMERLOCATIONID_Cls");
-               Combo_customerlocationid_Selectedvalue_set = cgiGet( "COMBO_CUSTOMERLOCATIONID_Selectedvalue_set");
-               Combo_customerlocationid_Selectedvalue_get = cgiGet( "COMBO_CUSTOMERLOCATIONID_Selectedvalue_get");
-               Combo_customerlocationid_Selectedtext_set = cgiGet( "COMBO_CUSTOMERLOCATIONID_Selectedtext_set");
-               Combo_customerlocationid_Selectedtext_get = cgiGet( "COMBO_CUSTOMERLOCATIONID_Selectedtext_get");
-               Combo_customerlocationid_Gamoauthtoken = cgiGet( "COMBO_CUSTOMERLOCATIONID_Gamoauthtoken");
-               Combo_customerlocationid_Ddointernalname = cgiGet( "COMBO_CUSTOMERLOCATIONID_Ddointernalname");
-               Combo_customerlocationid_Titlecontrolalign = cgiGet( "COMBO_CUSTOMERLOCATIONID_Titlecontrolalign");
-               Combo_customerlocationid_Dropdownoptionstype = cgiGet( "COMBO_CUSTOMERLOCATIONID_Dropdownoptionstype");
-               Combo_customerlocationid_Enabled = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERLOCATIONID_Enabled"));
-               Combo_customerlocationid_Visible = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERLOCATIONID_Visible"));
-               Combo_customerlocationid_Titlecontrolidtoreplace = cgiGet( "COMBO_CUSTOMERLOCATIONID_Titlecontrolidtoreplace");
-               Combo_customerlocationid_Datalisttype = cgiGet( "COMBO_CUSTOMERLOCATIONID_Datalisttype");
-               Combo_customerlocationid_Allowmultipleselection = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERLOCATIONID_Allowmultipleselection"));
-               Combo_customerlocationid_Datalistfixedvalues = cgiGet( "COMBO_CUSTOMERLOCATIONID_Datalistfixedvalues");
-               Combo_customerlocationid_Isgriditem = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERLOCATIONID_Isgriditem"));
-               Combo_customerlocationid_Hasdescription = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERLOCATIONID_Hasdescription"));
-               Combo_customerlocationid_Datalistproc = cgiGet( "COMBO_CUSTOMERLOCATIONID_Datalistproc");
-               Combo_customerlocationid_Datalistprocparametersprefix = cgiGet( "COMBO_CUSTOMERLOCATIONID_Datalistprocparametersprefix");
-               Combo_customerlocationid_Remoteservicesparameters = cgiGet( "COMBO_CUSTOMERLOCATIONID_Remoteservicesparameters");
-               Combo_customerlocationid_Datalistupdateminimumcharacters = (int)(Math.Round(context.localUtil.CToN( cgiGet( "COMBO_CUSTOMERLOCATIONID_Datalistupdateminimumcharacters"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               Combo_customerlocationid_Includeonlyselectedoption = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERLOCATIONID_Includeonlyselectedoption"));
-               Combo_customerlocationid_Includeselectalloption = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERLOCATIONID_Includeselectalloption"));
-               Combo_customerlocationid_Emptyitem = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERLOCATIONID_Emptyitem"));
-               Combo_customerlocationid_Includeaddnewoption = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERLOCATIONID_Includeaddnewoption"));
-               Combo_customerlocationid_Htmltemplate = cgiGet( "COMBO_CUSTOMERLOCATIONID_Htmltemplate");
-               Combo_customerlocationid_Multiplevaluestype = cgiGet( "COMBO_CUSTOMERLOCATIONID_Multiplevaluestype");
-               Combo_customerlocationid_Loadingdata = cgiGet( "COMBO_CUSTOMERLOCATIONID_Loadingdata");
-               Combo_customerlocationid_Noresultsfound = cgiGet( "COMBO_CUSTOMERLOCATIONID_Noresultsfound");
-               Combo_customerlocationid_Emptyitemtext = cgiGet( "COMBO_CUSTOMERLOCATIONID_Emptyitemtext");
-               Combo_customerlocationid_Onlyselectedvalues = cgiGet( "COMBO_CUSTOMERLOCATIONID_Onlyselectedvalues");
-               Combo_customerlocationid_Selectalltext = cgiGet( "COMBO_CUSTOMERLOCATIONID_Selectalltext");
-               Combo_customerlocationid_Multiplevaluesseparator = cgiGet( "COMBO_CUSTOMERLOCATIONID_Multiplevaluesseparator");
-               Combo_customerlocationid_Addnewoptiontext = cgiGet( "COMBO_CUSTOMERLOCATIONID_Addnewoptiontext");
-               Combo_customerlocationid_Gxcontroltype = (int)(Math.Round(context.localUtil.CToN( cgiGet( "COMBO_CUSTOMERLOCATIONID_Gxcontroltype"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               Combo_customerid_Objectcall = cgiGet( "COMBO_CUSTOMERID_Objectcall");
-               Combo_customerid_Class = cgiGet( "COMBO_CUSTOMERID_Class");
-               Combo_customerid_Icontype = cgiGet( "COMBO_CUSTOMERID_Icontype");
-               Combo_customerid_Icon = cgiGet( "COMBO_CUSTOMERID_Icon");
-               Combo_customerid_Caption = cgiGet( "COMBO_CUSTOMERID_Caption");
-               Combo_customerid_Tooltip = cgiGet( "COMBO_CUSTOMERID_Tooltip");
-               Combo_customerid_Cls = cgiGet( "COMBO_CUSTOMERID_Cls");
-               Combo_customerid_Selectedvalue_set = cgiGet( "COMBO_CUSTOMERID_Selectedvalue_set");
-               Combo_customerid_Selectedvalue_get = cgiGet( "COMBO_CUSTOMERID_Selectedvalue_get");
-               Combo_customerid_Selectedtext_set = cgiGet( "COMBO_CUSTOMERID_Selectedtext_set");
-               Combo_customerid_Selectedtext_get = cgiGet( "COMBO_CUSTOMERID_Selectedtext_get");
-               Combo_customerid_Gamoauthtoken = cgiGet( "COMBO_CUSTOMERID_Gamoauthtoken");
-               Combo_customerid_Ddointernalname = cgiGet( "COMBO_CUSTOMERID_Ddointernalname");
-               Combo_customerid_Titlecontrolalign = cgiGet( "COMBO_CUSTOMERID_Titlecontrolalign");
-               Combo_customerid_Dropdownoptionstype = cgiGet( "COMBO_CUSTOMERID_Dropdownoptionstype");
-               Combo_customerid_Enabled = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERID_Enabled"));
-               Combo_customerid_Visible = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERID_Visible"));
-               Combo_customerid_Titlecontrolidtoreplace = cgiGet( "COMBO_CUSTOMERID_Titlecontrolidtoreplace");
-               Combo_customerid_Datalisttype = cgiGet( "COMBO_CUSTOMERID_Datalisttype");
-               Combo_customerid_Allowmultipleselection = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERID_Allowmultipleselection"));
-               Combo_customerid_Datalistfixedvalues = cgiGet( "COMBO_CUSTOMERID_Datalistfixedvalues");
-               Combo_customerid_Isgriditem = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERID_Isgriditem"));
-               Combo_customerid_Hasdescription = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERID_Hasdescription"));
-               Combo_customerid_Datalistproc = cgiGet( "COMBO_CUSTOMERID_Datalistproc");
-               Combo_customerid_Datalistprocparametersprefix = cgiGet( "COMBO_CUSTOMERID_Datalistprocparametersprefix");
-               Combo_customerid_Remoteservicesparameters = cgiGet( "COMBO_CUSTOMERID_Remoteservicesparameters");
-               Combo_customerid_Datalistupdateminimumcharacters = (int)(Math.Round(context.localUtil.CToN( cgiGet( "COMBO_CUSTOMERID_Datalistupdateminimumcharacters"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               Combo_customerid_Includeonlyselectedoption = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERID_Includeonlyselectedoption"));
-               Combo_customerid_Includeselectalloption = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERID_Includeselectalloption"));
-               Combo_customerid_Emptyitem = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERID_Emptyitem"));
-               Combo_customerid_Includeaddnewoption = StringUtil.StrToBool( cgiGet( "COMBO_CUSTOMERID_Includeaddnewoption"));
-               Combo_customerid_Htmltemplate = cgiGet( "COMBO_CUSTOMERID_Htmltemplate");
-               Combo_customerid_Multiplevaluestype = cgiGet( "COMBO_CUSTOMERID_Multiplevaluestype");
-               Combo_customerid_Loadingdata = cgiGet( "COMBO_CUSTOMERID_Loadingdata");
-               Combo_customerid_Noresultsfound = cgiGet( "COMBO_CUSTOMERID_Noresultsfound");
-               Combo_customerid_Emptyitemtext = cgiGet( "COMBO_CUSTOMERID_Emptyitemtext");
-               Combo_customerid_Onlyselectedvalues = cgiGet( "COMBO_CUSTOMERID_Onlyselectedvalues");
-               Combo_customerid_Selectalltext = cgiGet( "COMBO_CUSTOMERID_Selectalltext");
-               Combo_customerid_Multiplevaluesseparator = cgiGet( "COMBO_CUSTOMERID_Multiplevaluesseparator");
-               Combo_customerid_Addnewoptiontext = cgiGet( "COMBO_CUSTOMERID_Addnewoptiontext");
-               Combo_customerid_Gxcontroltype = (int)(Math.Round(context.localUtil.CToN( cgiGet( "COMBO_CUSTOMERID_Gxcontroltype"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                Gxuitabspanel_steps_Objectcall = cgiGet( "GXUITABSPANEL_STEPS_Objectcall");
                Gxuitabspanel_steps_Enabled = StringUtil.StrToBool( cgiGet( "GXUITABSPANEL_STEPS_Enabled"));
                Gxuitabspanel_steps_Activepage = (int)(Math.Round(context.localUtil.CToN( cgiGet( "GXUITABSPANEL_STEPS_Activepage"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
@@ -1645,8 +1441,6 @@ namespace GeneXus.Programs {
                Wizard_steps_Wizardarrowunselectedselectedimage = cgiGet( "WIZARD_STEPS_Wizardarrowunselectedselectedimage");
                Wizard_steps_Visible = StringUtil.StrToBool( cgiGet( "WIZARD_STEPS_Visible"));
                /* Read variables values. */
-               A31ResidentId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtResidentId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignAttri("", false, "A31ResidentId", StringUtil.LTrimStr( (decimal)(A31ResidentId), 4, 0));
                A40ResidentBsnNumber = cgiGet( edtResidentBsnNumber_Internalname);
                AssignAttri("", false, "A40ResidentBsnNumber", A40ResidentBsnNumber);
                A33ResidentGivenName = cgiGet( edtResidentGivenName_Internalname);
@@ -1667,8 +1461,6 @@ namespace GeneXus.Programs {
                n38ResidentPhone = false;
                AssignAttri("", false, "A38ResidentPhone", A38ResidentPhone);
                n38ResidentPhone = (String.IsNullOrEmpty(StringUtil.RTrim( A38ResidentPhone)) ? true : false);
-               A39ResidentGAMGUID = cgiGet( edtResidentGAMGUID_Internalname);
-               AssignAttri("", false, "A39ResidentGAMGUID", A39ResidentGAMGUID);
                if ( ( ( context.localUtil.CToN( cgiGet( edtResidentTypeId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtResidentTypeId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) > Convert.ToDecimal( 9999 )) ) )
                {
                   GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "RESIDENTTYPEID");
@@ -1684,6 +1476,12 @@ namespace GeneXus.Programs {
                   A82ResidentTypeId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtResidentTypeId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                   AssignAttri("", false, "A82ResidentTypeId", StringUtil.LTrimStr( (decimal)(A82ResidentTypeId), 4, 0));
                }
+               AV26ComboResidentTypeId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtavComboresidenttypeid_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignAttri("", false, "AV26ComboResidentTypeId", StringUtil.LTrimStr( (decimal)(AV26ComboResidentTypeId), 4, 0));
+               A31ResidentId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtResidentId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignAttri("", false, "A31ResidentId", StringUtil.LTrimStr( (decimal)(A31ResidentId), 4, 0));
+               A39ResidentGAMGUID = cgiGet( edtResidentGAMGUID_Internalname);
+               AssignAttri("", false, "A39ResidentGAMGUID", A39ResidentGAMGUID);
                if ( ( ( context.localUtil.CToN( cgiGet( edtCustomerLocationId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtCustomerLocationId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) > Convert.ToDecimal( 9999 )) ) )
                {
                   GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "CUSTOMERLOCATIONID");
@@ -1716,12 +1514,6 @@ namespace GeneXus.Programs {
                }
                A3CustomerName = cgiGet( edtCustomerName_Internalname);
                AssignAttri("", false, "A3CustomerName", A3CustomerName);
-               AV26ComboResidentTypeId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtavComboresidenttypeid_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignAttri("", false, "AV26ComboResidentTypeId", StringUtil.LTrimStr( (decimal)(AV26ComboResidentTypeId), 4, 0));
-               AV30ComboCustomerLocationId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtavCombocustomerlocationid_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignAttri("", false, "AV30ComboCustomerLocationId", StringUtil.LTrimStr( (decimal)(AV30ComboCustomerLocationId), 4, 0));
-               AV33ComboCustomerId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtavCombocustomerid_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignAttri("", false, "AV33ComboCustomerId", StringUtil.LTrimStr( (decimal)(AV33ComboCustomerId), 4, 0));
                /* Read subfile selected row values. */
                /* Read hidden variables. */
                GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -1911,8 +1703,6 @@ namespace GeneXus.Programs {
             DisableAttributes025( ) ;
          }
          AssignProp("", false, edtavComboresidenttypeid_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavComboresidenttypeid_Enabled), 5, 0), true);
-         AssignProp("", false, edtavCombocustomerlocationid_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCombocustomerlocationid_Enabled), 5, 0), true);
-         AssignProp("", false, edtavCombocustomerid_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCombocustomerid_Enabled), 5, 0), true);
       }
 
       protected void set_caption( )
@@ -1974,8 +1764,8 @@ namespace GeneXus.Programs {
 
       protected void CONFIRM_0218( )
       {
-         nGXsfl_143_idx = 0;
-         while ( nGXsfl_143_idx < nRC_GXsfl_143 )
+         nGXsfl_108_idx = 0;
+         while ( nGXsfl_108_idx < nRC_GXsfl_108 )
          {
             ReadRow0218( ) ;
             if ( ( nRcdExists_18 != 0 ) || ( nIsMod_18 != 0 ) )
@@ -2001,7 +1791,7 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_143_idx;
+                     GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_108_idx;
                      GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, GXCCtl);
                      AnyError = 1;
                      GX_FocusControl = edtProductServiceId_Internalname;
@@ -2048,7 +1838,7 @@ namespace GeneXus.Programs {
                   {
                      if ( nRcdDeleted_18 == 0 )
                      {
-                        GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_143_idx;
+                        GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_108_idx;
                         GX_msglist.addItem(context.GetMessage( "GXM_recdeleted", ""), 1, GXCCtl);
                         AnyError = 1;
                         GX_FocusControl = edtProductServiceId_Internalname;
@@ -2063,19 +1853,19 @@ namespace GeneXus.Programs {
             ChangePostValue( edtProductServicePicture_Internalname, A77ProductServicePicture) ;
             ChangePostValue( edtProductServiceTypeId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A71ProductServiceTypeId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             ChangePostValue( edtProductServiceTypeName_Internalname, A72ProductServiceTypeName) ;
-            ChangePostValue( "ZT_"+"Z73ProductServiceId_"+sGXsfl_143_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z73ProductServiceId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nRcdDeleted_18_"+sGXsfl_143_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nRcdExists_18_"+sGXsfl_143_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nIsMod_18_"+sGXsfl_143_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z73ProductServiceId_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z73ProductServiceId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nRcdDeleted_18_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nRcdExists_18_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nIsMod_18_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             if ( nIsMod_18 != 0 )
             {
-               ChangePostValue( "PRODUCTSERVICEID_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceId_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "PRODUCTSERVICEID_"+sGXsfl_143_idx+"Horizontalalignment", StringUtil.RTrim( edtProductServiceId_Horizontalalignment)) ;
-               ChangePostValue( "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceDescription_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "PRODUCTSERVICEQUANTITY_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceQuantity_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "PRODUCTSERVICEPICTURE_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServicePicture_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "PRODUCTSERVICETYPEID_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeId_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "PRODUCTSERVICETYPENAME_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeName_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICEID_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceId_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICEID_"+sGXsfl_108_idx+"Horizontalalignment", StringUtil.RTrim( edtProductServiceId_Horizontalalignment)) ;
+               ChangePostValue( "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceDescription_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICEQUANTITY_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceQuantity_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICEPICTURE_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServicePicture_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICETYPEID_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeId_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICETYPENAME_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeName_Enabled), 5, 0, ".", ""))) ;
             }
          }
          /* Start of After( level) rules */
@@ -2086,8 +1876,8 @@ namespace GeneXus.Programs {
       {
          s97ResidentLastLineCompany = O97ResidentLastLineCompany;
          AssignAttri("", false, "A97ResidentLastLineCompany", StringUtil.LTrimStr( (decimal)(A97ResidentLastLineCompany), 4, 0));
-         nGXsfl_127_idx = 0;
-         while ( nGXsfl_127_idx < nRC_GXsfl_127 )
+         nGXsfl_92_idx = 0;
+         while ( nGXsfl_92_idx < nRC_GXsfl_92 )
          {
             ReadRow027( ) ;
             if ( ( nRcdExists_7 != 0 ) || ( nIsMod_7 != 0 ) )
@@ -2115,7 +1905,7 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     GXCCtl = "RESIDENTINCOMPANYID_" + sGXsfl_127_idx;
+                     GXCCtl = "RESIDENTINCOMPANYID_" + sGXsfl_92_idx;
                      GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, GXCCtl);
                      AnyError = 1;
                      GX_FocusControl = edtResidentINCompanyId_Internalname;
@@ -2166,7 +1956,7 @@ namespace GeneXus.Programs {
                   {
                      if ( nRcdDeleted_7 == 0 )
                      {
-                        GXCCtl = "RESIDENTINCOMPANYID_" + sGXsfl_127_idx;
+                        GXCCtl = "RESIDENTINCOMPANYID_" + sGXsfl_92_idx;
                         GX_msglist.addItem(context.GetMessage( "GXM_recdeleted", ""), 1, GXCCtl);
                         AnyError = 1;
                         GX_FocusControl = edtResidentINCompanyId_Internalname;
@@ -2180,21 +1970,21 @@ namespace GeneXus.Programs {
             ChangePostValue( edtResidentINCompanyName_Internalname, A52ResidentINCompanyName) ;
             ChangePostValue( edtResidentINCompanyEmail_Internalname, A53ResidentINCompanyEmail) ;
             ChangePostValue( edtResidentINCompanyPhone_Internalname, StringUtil.RTrim( A54ResidentINCompanyPhone)) ;
-            ChangePostValue( "ZT_"+"Z50ResidentINCompanyId_"+sGXsfl_127_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z50ResidentINCompanyId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "ZT_"+"Z51ResidentINCompanyKvkNumber_"+sGXsfl_127_idx, Z51ResidentINCompanyKvkNumber) ;
-            ChangePostValue( "ZT_"+"Z52ResidentINCompanyName_"+sGXsfl_127_idx, Z52ResidentINCompanyName) ;
-            ChangePostValue( "ZT_"+"Z53ResidentINCompanyEmail_"+sGXsfl_127_idx, Z53ResidentINCompanyEmail) ;
-            ChangePostValue( "ZT_"+"Z54ResidentINCompanyPhone_"+sGXsfl_127_idx, StringUtil.RTrim( Z54ResidentINCompanyPhone)) ;
-            ChangePostValue( "nRcdDeleted_7_"+sGXsfl_127_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nRcdExists_7_"+sGXsfl_127_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nIsMod_7_"+sGXsfl_127_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z50ResidentINCompanyId_"+sGXsfl_92_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z50ResidentINCompanyId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z51ResidentINCompanyKvkNumber_"+sGXsfl_92_idx, Z51ResidentINCompanyKvkNumber) ;
+            ChangePostValue( "ZT_"+"Z52ResidentINCompanyName_"+sGXsfl_92_idx, Z52ResidentINCompanyName) ;
+            ChangePostValue( "ZT_"+"Z53ResidentINCompanyEmail_"+sGXsfl_92_idx, Z53ResidentINCompanyEmail) ;
+            ChangePostValue( "ZT_"+"Z54ResidentINCompanyPhone_"+sGXsfl_92_idx, StringUtil.RTrim( Z54ResidentINCompanyPhone)) ;
+            ChangePostValue( "nRcdDeleted_7_"+sGXsfl_92_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nRcdExists_7_"+sGXsfl_92_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nIsMod_7_"+sGXsfl_92_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             if ( nIsMod_7 != 0 )
             {
-               ChangePostValue( "RESIDENTINCOMPANYID_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyId_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyKvkNumber_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTINCOMPANYNAME_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyName_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTINCOMPANYEMAIL_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyEmail_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTINCOMPANYPHONE_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyPhone_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTINCOMPANYID_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyId_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyKvkNumber_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTINCOMPANYNAME_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyName_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTINCOMPANYEMAIL_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyEmail_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTINCOMPANYPHONE_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyPhone_Enabled), 5, 0, ".", ""))) ;
             }
          }
          O97ResidentLastLineCompany = s97ResidentLastLineCompany;
@@ -2207,8 +1997,8 @@ namespace GeneXus.Programs {
       {
          s96ResidentLastLineIndividual = O96ResidentLastLineIndividual;
          AssignAttri("", false, "A96ResidentLastLineIndividual", StringUtil.LTrimStr( (decimal)(A96ResidentLastLineIndividual), 4, 0));
-         nGXsfl_108_idx = 0;
-         while ( nGXsfl_108_idx < nRC_GXsfl_108 )
+         nGXsfl_73_idx = 0;
+         while ( nGXsfl_73_idx < nRC_GXsfl_73 )
          {
             ReadRow026( ) ;
             if ( ( nRcdExists_6 != 0 ) || ( nIsMod_6 != 0 ) )
@@ -2236,7 +2026,7 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     GXCCtl = "RESIDENTININDIVIDUALID_" + sGXsfl_108_idx;
+                     GXCCtl = "RESIDENTININDIVIDUALID_" + sGXsfl_73_idx;
                      GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, GXCCtl);
                      AnyError = 1;
                      GX_FocusControl = edtResidentINIndividualId_Internalname;
@@ -2287,7 +2077,7 @@ namespace GeneXus.Programs {
                   {
                      if ( nRcdDeleted_6 == 0 )
                      {
-                        GXCCtl = "RESIDENTININDIVIDUALID_" + sGXsfl_108_idx;
+                        GXCCtl = "RESIDENTININDIVIDUALID_" + sGXsfl_73_idx;
                         GX_msglist.addItem(context.GetMessage( "GXM_recdeleted", ""), 1, GXCCtl);
                         AnyError = 1;
                         GX_FocusControl = edtResidentINIndividualId_Internalname;
@@ -2304,27 +2094,27 @@ namespace GeneXus.Programs {
             ChangePostValue( edtResidentINIndividualPhone_Internalname, StringUtil.RTrim( A47ResidentINIndividualPhone)) ;
             ChangePostValue( edtResidentINIndividualAddress_Internalname, A48ResidentINIndividualAddress) ;
             ChangePostValue( cmbResidentINIndividualGender_Internalname, StringUtil.RTrim( A49ResidentINIndividualGender)) ;
-            ChangePostValue( "ZT_"+"Z42ResidentINIndividualId_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z42ResidentINIndividualId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "ZT_"+"Z43ResidentINIndividualBsnNumber_"+sGXsfl_108_idx, Z43ResidentINIndividualBsnNumber) ;
-            ChangePostValue( "ZT_"+"Z44ResidentINIndividualGivenName_"+sGXsfl_108_idx, Z44ResidentINIndividualGivenName) ;
-            ChangePostValue( "ZT_"+"Z45ResidentINIndividualLastName_"+sGXsfl_108_idx, Z45ResidentINIndividualLastName) ;
-            ChangePostValue( "ZT_"+"Z46ResidentINIndividualEmail_"+sGXsfl_108_idx, Z46ResidentINIndividualEmail) ;
-            ChangePostValue( "ZT_"+"Z47ResidentINIndividualPhone_"+sGXsfl_108_idx, StringUtil.RTrim( Z47ResidentINIndividualPhone)) ;
-            ChangePostValue( "ZT_"+"Z48ResidentINIndividualAddress_"+sGXsfl_108_idx, Z48ResidentINIndividualAddress) ;
-            ChangePostValue( "ZT_"+"Z49ResidentINIndividualGender_"+sGXsfl_108_idx, StringUtil.RTrim( Z49ResidentINIndividualGender)) ;
-            ChangePostValue( "nRcdDeleted_6_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nRcdExists_6_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nIsMod_6_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z42ResidentINIndividualId_"+sGXsfl_73_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z42ResidentINIndividualId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z43ResidentINIndividualBsnNumber_"+sGXsfl_73_idx, Z43ResidentINIndividualBsnNumber) ;
+            ChangePostValue( "ZT_"+"Z44ResidentINIndividualGivenName_"+sGXsfl_73_idx, Z44ResidentINIndividualGivenName) ;
+            ChangePostValue( "ZT_"+"Z45ResidentINIndividualLastName_"+sGXsfl_73_idx, Z45ResidentINIndividualLastName) ;
+            ChangePostValue( "ZT_"+"Z46ResidentINIndividualEmail_"+sGXsfl_73_idx, Z46ResidentINIndividualEmail) ;
+            ChangePostValue( "ZT_"+"Z47ResidentINIndividualPhone_"+sGXsfl_73_idx, StringUtil.RTrim( Z47ResidentINIndividualPhone)) ;
+            ChangePostValue( "ZT_"+"Z48ResidentINIndividualAddress_"+sGXsfl_73_idx, Z48ResidentINIndividualAddress) ;
+            ChangePostValue( "ZT_"+"Z49ResidentINIndividualGender_"+sGXsfl_73_idx, StringUtil.RTrim( Z49ResidentINIndividualGender)) ;
+            ChangePostValue( "nRcdDeleted_6_"+sGXsfl_73_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nRcdExists_6_"+sGXsfl_73_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nIsMod_6_"+sGXsfl_73_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             if ( nIsMod_6 != 0 )
             {
-               ChangePostValue( "RESIDENTININDIVIDUALID_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualId_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualBsnNumber_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualGivenName_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualLastName_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualEmail_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALPHONE_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualPhone_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualAddress_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALGENDER_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(cmbResidentINIndividualGender.Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALID_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualId_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualBsnNumber_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualGivenName_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualLastName_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualEmail_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALPHONE_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualPhone_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualAddress_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALGENDER_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(cmbResidentINIndividualGender.Enabled), 5, 0, ".", ""))) ;
             }
          }
          O96ResidentLastLineIndividual = s96ResidentLastLineIndividual;
@@ -2372,23 +2162,7 @@ namespace GeneXus.Programs {
          Combo_productserviceid_Titlecontrolidtoreplace = edtProductServiceId_Internalname;
          ucCombo_productserviceid.SendProperty(context, "", false, Combo_productserviceid_Internalname, "TitleControlIdToReplace", Combo_productserviceid_Titlecontrolidtoreplace);
          edtProductServiceId_Horizontalalignment = "Left";
-         AssignProp("", false, edtProductServiceId_Internalname, "Horizontalalignment", edtProductServiceId_Horizontalalignment, !bGXsfl_143_Refreshing);
-         Combo_customerid_Gamoauthtoken = AV23GAMSession.gxTpr_Token;
-         ucCombo_customerid.SendProperty(context, "", false, Combo_customerid_Internalname, "GAMOAuthToken", Combo_customerid_Gamoauthtoken);
-         edtCustomerId_Visible = 0;
-         AssignProp("", false, edtCustomerId_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerId_Visible), 5, 0), true);
-         AV33ComboCustomerId = 0;
-         AssignAttri("", false, "AV33ComboCustomerId", StringUtil.LTrimStr( (decimal)(AV33ComboCustomerId), 4, 0));
-         edtavCombocustomerid_Visible = 0;
-         AssignProp("", false, edtavCombocustomerid_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtavCombocustomerid_Visible), 5, 0), true);
-         Combo_customerlocationid_Gamoauthtoken = AV23GAMSession.gxTpr_Token;
-         ucCombo_customerlocationid.SendProperty(context, "", false, Combo_customerlocationid_Internalname, "GAMOAuthToken", Combo_customerlocationid_Gamoauthtoken);
-         edtCustomerLocationId_Visible = 0;
-         AssignProp("", false, edtCustomerLocationId_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerLocationId_Visible), 5, 0), true);
-         AV30ComboCustomerLocationId = 0;
-         AssignAttri("", false, "AV30ComboCustomerLocationId", StringUtil.LTrimStr( (decimal)(AV30ComboCustomerLocationId), 4, 0));
-         edtavCombocustomerlocationid_Visible = 0;
-         AssignProp("", false, edtavCombocustomerlocationid_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtavCombocustomerlocationid_Visible), 5, 0), true);
+         AssignProp("", false, edtProductServiceId_Internalname, "Horizontalalignment", edtProductServiceId_Horizontalalignment, !bGXsfl_108_Refreshing);
          Combo_residenttypeid_Gamoauthtoken = AV23GAMSession.gxTpr_Token;
          ucCombo_residenttypeid.SendProperty(context, "", false, Combo_residenttypeid_Internalname, "GAMOAuthToken", Combo_residenttypeid_Gamoauthtoken);
          edtResidentTypeId_Visible = 0;
@@ -2399,20 +2173,6 @@ namespace GeneXus.Programs {
          AssignProp("", false, edtavComboresidenttypeid_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtavComboresidenttypeid_Visible), 5, 0), true);
          /* Execute user subroutine: 'LOADCOMBORESIDENTTYPEID' */
          S112 ();
-         if ( returnInSub )
-         {
-            returnInSub = true;
-            if (true) return;
-         }
-         /* Execute user subroutine: 'LOADCOMBOCUSTOMERLOCATIONID' */
-         S122 ();
-         if ( returnInSub )
-         {
-            returnInSub = true;
-            if (true) return;
-         }
-         /* Execute user subroutine: 'LOADCOMBOCUSTOMERID' */
-         S132 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -2437,7 +2197,7 @@ namespace GeneXus.Programs {
                      Combo_residenttypeid_Selectedvalue_set = StringUtil.Trim( StringUtil.Str( (decimal)(AV26ComboResidentTypeId), 4, 0));
                      ucCombo_residenttypeid.SendProperty(context, "", false, Combo_residenttypeid_Internalname, "SelectedValue_set", Combo_residenttypeid_Selectedvalue_set);
                      GXt_char2 = AV22Combo_DataJson;
-                     new residentloaddvcombo(context ).execute(  "ResidentTypeId",  "GET",  false,  AV7ResidentId,  A1CustomerId,  AV14TrnContextAtt.gxTpr_Attributevalue, out  AV20ComboSelectedValue, out  AV21ComboSelectedText, out  GXt_char2) ;
+                     new residentloaddvcombo(context ).execute(  "ResidentTypeId",  "GET",  false,  AV7ResidentId,  AV14TrnContextAtt.gxTpr_Attributevalue, out  AV20ComboSelectedValue, out  AV21ComboSelectedText, out  GXt_char2) ;
                      AssignAttri("", false, "AV20ComboSelectedValue", AV20ComboSelectedValue);
                      AssignAttri("", false, "AV21ComboSelectedText", AV21ComboSelectedText);
                      AV22Combo_DataJson = GXt_char2;
@@ -2452,50 +2212,26 @@ namespace GeneXus.Programs {
                {
                   AV27Insert_CustomerId = (short)(Math.Round(NumberUtil.Val( AV14TrnContextAtt.gxTpr_Attributevalue, "."), 18, MidpointRounding.ToEven));
                   AssignAttri("", false, "AV27Insert_CustomerId", StringUtil.LTrimStr( (decimal)(AV27Insert_CustomerId), 4, 0));
-                  if ( ! (0==AV27Insert_CustomerId) )
-                  {
-                     AV33ComboCustomerId = AV27Insert_CustomerId;
-                     AssignAttri("", false, "AV33ComboCustomerId", StringUtil.LTrimStr( (decimal)(AV33ComboCustomerId), 4, 0));
-                     Combo_customerid_Selectedvalue_set = StringUtil.Trim( StringUtil.Str( (decimal)(AV33ComboCustomerId), 4, 0));
-                     ucCombo_customerid.SendProperty(context, "", false, Combo_customerid_Internalname, "SelectedValue_set", Combo_customerid_Selectedvalue_set);
-                     GXt_char2 = AV22Combo_DataJson;
-                     new residentloaddvcombo(context ).execute(  "CustomerId",  "GET",  false,  AV7ResidentId,  A1CustomerId,  AV14TrnContextAtt.gxTpr_Attributevalue, out  AV20ComboSelectedValue, out  AV21ComboSelectedText, out  GXt_char2) ;
-                     AssignAttri("", false, "AV20ComboSelectedValue", AV20ComboSelectedValue);
-                     AssignAttri("", false, "AV21ComboSelectedText", AV21ComboSelectedText);
-                     AV22Combo_DataJson = GXt_char2;
-                     AssignAttri("", false, "AV22Combo_DataJson", AV22Combo_DataJson);
-                     Combo_customerid_Selectedtext_set = AV21ComboSelectedText;
-                     ucCombo_customerid.SendProperty(context, "", false, Combo_customerid_Internalname, "SelectedText_set", Combo_customerid_Selectedtext_set);
-                     Combo_customerid_Enabled = false;
-                     ucCombo_customerid.SendProperty(context, "", false, Combo_customerid_Internalname, "Enabled", StringUtil.BoolToStr( Combo_customerid_Enabled));
-                  }
                }
                else if ( StringUtil.StrCmp(AV14TrnContextAtt.gxTpr_Attributename, "CustomerLocationId") == 0 )
                {
                   AV28Insert_CustomerLocationId = (short)(Math.Round(NumberUtil.Val( AV14TrnContextAtt.gxTpr_Attributevalue, "."), 18, MidpointRounding.ToEven));
                   AssignAttri("", false, "AV28Insert_CustomerLocationId", StringUtil.LTrimStr( (decimal)(AV28Insert_CustomerLocationId), 4, 0));
-                  if ( ! (0==AV28Insert_CustomerLocationId) )
-                  {
-                     AV30ComboCustomerLocationId = AV28Insert_CustomerLocationId;
-                     AssignAttri("", false, "AV30ComboCustomerLocationId", StringUtil.LTrimStr( (decimal)(AV30ComboCustomerLocationId), 4, 0));
-                     Combo_customerlocationid_Selectedvalue_set = StringUtil.Trim( StringUtil.Str( (decimal)(AV30ComboCustomerLocationId), 4, 0));
-                     ucCombo_customerlocationid.SendProperty(context, "", false, Combo_customerlocationid_Internalname, "SelectedValue_set", Combo_customerlocationid_Selectedvalue_set);
-                     GXt_char2 = AV22Combo_DataJson;
-                     new residentloaddvcombo(context ).execute(  "CustomerLocationId",  "GET",  false,  AV7ResidentId,  AV27Insert_CustomerId,  AV14TrnContextAtt.gxTpr_Attributevalue, out  AV20ComboSelectedValue, out  AV21ComboSelectedText, out  GXt_char2) ;
-                     AssignAttri("", false, "AV20ComboSelectedValue", AV20ComboSelectedValue);
-                     AssignAttri("", false, "AV21ComboSelectedText", AV21ComboSelectedText);
-                     AV22Combo_DataJson = GXt_char2;
-                     AssignAttri("", false, "AV22Combo_DataJson", AV22Combo_DataJson);
-                     Combo_customerlocationid_Selectedtext_set = AV21ComboSelectedText;
-                     ucCombo_customerlocationid.SendProperty(context, "", false, Combo_customerlocationid_Internalname, "SelectedText_set", Combo_customerlocationid_Selectedtext_set);
-                     Combo_customerlocationid_Enabled = false;
-                     ucCombo_customerlocationid.SendProperty(context, "", false, Combo_customerlocationid_Internalname, "Enabled", StringUtil.BoolToStr( Combo_customerlocationid_Enabled));
-                  }
                }
                AV36GXV1 = (int)(AV36GXV1+1);
                AssignAttri("", false, "AV36GXV1", StringUtil.LTrimStr( (decimal)(AV36GXV1), 8, 0));
             }
          }
+         edtResidentId_Visible = 0;
+         AssignProp("", false, edtResidentId_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtResidentId_Visible), 5, 0), true);
+         edtResidentGAMGUID_Visible = 0;
+         AssignProp("", false, edtResidentGAMGUID_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtResidentGAMGUID_Visible), 5, 0), true);
+         edtCustomerLocationId_Visible = 0;
+         AssignProp("", false, edtCustomerLocationId_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerLocationId_Visible), 5, 0), true);
+         edtCustomerId_Visible = 0;
+         AssignProp("", false, edtCustomerId_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerId_Visible), 5, 0), true);
+         edtCustomerName_Visible = 0;
+         AssignProp("", false, edtCustomerName_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerName_Visible), 5, 0), true);
       }
 
       protected void E14022( )
@@ -2519,7 +2255,7 @@ namespace GeneXus.Programs {
          if (true) return;
       }
 
-      protected void S172( )
+      protected void S152( )
       {
          /* 'UPDATE WIZARD STEPS BUTTONS VISIBILITY' Routine */
          returnInSub = false;
@@ -2536,7 +2272,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void S142( )
+      protected void S122( )
       {
          /* 'CHECKREQUIREDFIELDS_TABGENERAL' Routine */
          returnInSub = false;
@@ -2544,7 +2280,7 @@ namespace GeneXus.Programs {
          AssignAttri("", false, "AV15CheckRequiredFieldsResult", AV15CheckRequiredFieldsResult);
       }
 
-      protected void S152( )
+      protected void S132( )
       {
          /* 'CHECKREQUIREDFIELDS_TABLEVEL_ININDIVIDUAL' Routine */
          returnInSub = false;
@@ -2552,7 +2288,7 @@ namespace GeneXus.Programs {
          AssignAttri("", false, "AV15CheckRequiredFieldsResult", AV15CheckRequiredFieldsResult);
       }
 
-      protected void S162( )
+      protected void S142( )
       {
          /* 'CHECKREQUIREDFIELDS_TABLEVEL_INCOMPANY' Routine */
          returnInSub = false;
@@ -2560,60 +2296,12 @@ namespace GeneXus.Programs {
          AssignAttri("", false, "AV15CheckRequiredFieldsResult", AV15CheckRequiredFieldsResult);
       }
 
-      protected void S132( )
-      {
-         /* 'LOADCOMBOCUSTOMERID' Routine */
-         returnInSub = false;
-         GXt_char2 = AV22Combo_DataJson;
-         new residentloaddvcombo(context ).execute(  "CustomerId",  Gx_mode,  false,  AV7ResidentId,  A1CustomerId,  "", out  AV20ComboSelectedValue, out  AV21ComboSelectedText, out  GXt_char2) ;
-         AssignAttri("", false, "AV20ComboSelectedValue", AV20ComboSelectedValue);
-         AssignAttri("", false, "AV21ComboSelectedText", AV21ComboSelectedText);
-         AV22Combo_DataJson = GXt_char2;
-         AssignAttri("", false, "AV22Combo_DataJson", AV22Combo_DataJson);
-         Combo_customerid_Selectedvalue_set = AV20ComboSelectedValue;
-         ucCombo_customerid.SendProperty(context, "", false, Combo_customerid_Internalname, "SelectedValue_set", Combo_customerid_Selectedvalue_set);
-         Combo_customerid_Selectedtext_set = AV21ComboSelectedText;
-         ucCombo_customerid.SendProperty(context, "", false, Combo_customerid_Internalname, "SelectedText_set", Combo_customerid_Selectedtext_set);
-         AV33ComboCustomerId = (short)(Math.Round(NumberUtil.Val( AV20ComboSelectedValue, "."), 18, MidpointRounding.ToEven));
-         AssignAttri("", false, "AV33ComboCustomerId", StringUtil.LTrimStr( (decimal)(AV33ComboCustomerId), 4, 0));
-         if ( ( StringUtil.StrCmp(Gx_mode, "DSP") == 0 ) || ( StringUtil.StrCmp(Gx_mode, "DLT") == 0 ) )
-         {
-            Combo_customerid_Enabled = false;
-            ucCombo_customerid.SendProperty(context, "", false, Combo_customerid_Internalname, "Enabled", StringUtil.BoolToStr( Combo_customerid_Enabled));
-         }
-      }
-
-      protected void S122( )
-      {
-         /* 'LOADCOMBOCUSTOMERLOCATIONID' Routine */
-         returnInSub = false;
-         Combo_customerlocationid_Datalistprocparametersprefix = StringUtil.Format( " \"ComboName\": \"CustomerLocationId\", \"TrnMode\": \"INS\", \"IsDynamicCall\": true, \"ResidentId\": 0, \"Cond_CustomerId\": \"#%1#\"", edtCustomerId_Internalname, "", "", "", "", "", "", "", "");
-         ucCombo_customerlocationid.SendProperty(context, "", false, Combo_customerlocationid_Internalname, "DataListProcParametersPrefix", Combo_customerlocationid_Datalistprocparametersprefix);
-         GXt_char2 = AV22Combo_DataJson;
-         new residentloaddvcombo(context ).execute(  "CustomerLocationId",  Gx_mode,  false,  AV7ResidentId,  A1CustomerId,  "", out  AV20ComboSelectedValue, out  AV21ComboSelectedText, out  GXt_char2) ;
-         AssignAttri("", false, "AV20ComboSelectedValue", AV20ComboSelectedValue);
-         AssignAttri("", false, "AV21ComboSelectedText", AV21ComboSelectedText);
-         AV22Combo_DataJson = GXt_char2;
-         AssignAttri("", false, "AV22Combo_DataJson", AV22Combo_DataJson);
-         Combo_customerlocationid_Selectedvalue_set = AV20ComboSelectedValue;
-         ucCombo_customerlocationid.SendProperty(context, "", false, Combo_customerlocationid_Internalname, "SelectedValue_set", Combo_customerlocationid_Selectedvalue_set);
-         Combo_customerlocationid_Selectedtext_set = AV21ComboSelectedText;
-         ucCombo_customerlocationid.SendProperty(context, "", false, Combo_customerlocationid_Internalname, "SelectedText_set", Combo_customerlocationid_Selectedtext_set);
-         AV30ComboCustomerLocationId = (short)(Math.Round(NumberUtil.Val( AV20ComboSelectedValue, "."), 18, MidpointRounding.ToEven));
-         AssignAttri("", false, "AV30ComboCustomerLocationId", StringUtil.LTrimStr( (decimal)(AV30ComboCustomerLocationId), 4, 0));
-         if ( ( StringUtil.StrCmp(Gx_mode, "DSP") == 0 ) || ( StringUtil.StrCmp(Gx_mode, "DLT") == 0 ) )
-         {
-            Combo_customerlocationid_Enabled = false;
-            ucCombo_customerlocationid.SendProperty(context, "", false, Combo_customerlocationid_Internalname, "Enabled", StringUtil.BoolToStr( Combo_customerlocationid_Enabled));
-         }
-      }
-
       protected void S112( )
       {
          /* 'LOADCOMBORESIDENTTYPEID' Routine */
          returnInSub = false;
          GXt_char2 = AV22Combo_DataJson;
-         new residentloaddvcombo(context ).execute(  "ResidentTypeId",  Gx_mode,  false,  AV7ResidentId,  A1CustomerId,  "", out  AV20ComboSelectedValue, out  AV21ComboSelectedText, out  GXt_char2) ;
+         new residentloaddvcombo(context ).execute(  "ResidentTypeId",  Gx_mode,  false,  AV7ResidentId,  "", out  AV20ComboSelectedValue, out  AV21ComboSelectedText, out  GXt_char2) ;
          AssignAttri("", false, "AV20ComboSelectedValue", AV20ComboSelectedValue);
          AssignAttri("", false, "AV21ComboSelectedText", AV21ComboSelectedText);
          AV22Combo_DataJson = GXt_char2;
@@ -2743,6 +2431,16 @@ namespace GeneXus.Programs {
 
       protected void standaloneModal( )
       {
+         if ( ( StringUtil.StrCmp(Gx_mode, "INS") == 0 ) && ! (0==AV28Insert_CustomerLocationId) )
+         {
+            A18CustomerLocationId = AV28Insert_CustomerLocationId;
+            AssignAttri("", false, "A18CustomerLocationId", StringUtil.LTrimStr( (decimal)(A18CustomerLocationId), 4, 0));
+         }
+         if ( ( StringUtil.StrCmp(Gx_mode, "INS") == 0 ) && ! (0==AV27Insert_CustomerId) )
+         {
+            A1CustomerId = AV27Insert_CustomerId;
+            AssignAttri("", false, "A1CustomerId", StringUtil.LTrimStr( (decimal)(A1CustomerId), 4, 0));
+         }
          if ( ( StringUtil.StrCmp(Gx_mode, "INS") == 0 ) && ! (0==AV13Insert_ResidentTypeId) )
          {
             A82ResidentTypeId = AV13Insert_ResidentTypeId;
@@ -2752,26 +2450,6 @@ namespace GeneXus.Programs {
          {
             A82ResidentTypeId = AV26ComboResidentTypeId;
             AssignAttri("", false, "A82ResidentTypeId", StringUtil.LTrimStr( (decimal)(A82ResidentTypeId), 4, 0));
-         }
-         if ( ( StringUtil.StrCmp(Gx_mode, "INS") == 0 ) && ! (0==AV28Insert_CustomerLocationId) )
-         {
-            A18CustomerLocationId = AV28Insert_CustomerLocationId;
-            AssignAttri("", false, "A18CustomerLocationId", StringUtil.LTrimStr( (decimal)(A18CustomerLocationId), 4, 0));
-         }
-         else
-         {
-            A18CustomerLocationId = AV30ComboCustomerLocationId;
-            AssignAttri("", false, "A18CustomerLocationId", StringUtil.LTrimStr( (decimal)(A18CustomerLocationId), 4, 0));
-         }
-         if ( ( StringUtil.StrCmp(Gx_mode, "INS") == 0 ) && ! (0==AV27Insert_CustomerId) )
-         {
-            A1CustomerId = AV27Insert_CustomerId;
-            AssignAttri("", false, "A1CustomerId", StringUtil.LTrimStr( (decimal)(A1CustomerId), 4, 0));
-         }
-         else
-         {
-            A1CustomerId = AV33ComboCustomerId;
-            AssignAttri("", false, "A1CustomerId", StringUtil.LTrimStr( (decimal)(A1CustomerId), 4, 0));
          }
          if ( StringUtil.StrCmp(Gx_mode, "DSP") == 0 )
          {
@@ -2785,15 +2463,15 @@ namespace GeneXus.Programs {
          }
          if ( ( StringUtil.StrCmp(Gx_mode, "INS") == 0 ) && ( Gx_BScreen == 0 ) )
          {
-            /* Using cursor T000212 */
-            pr_default.execute(10, new Object[] {A82ResidentTypeId});
-            A83ResidentTypeName = T000212_A83ResidentTypeName[0];
-            pr_default.close(10);
             /* Using cursor T000213 */
             pr_default.execute(11, new Object[] {A1CustomerId});
             A3CustomerName = T000213_A3CustomerName[0];
             AssignAttri("", false, "A3CustomerName", A3CustomerName);
             pr_default.close(11);
+            /* Using cursor T000212 */
+            pr_default.execute(10, new Object[] {A82ResidentTypeId});
+            A83ResidentTypeName = T000212_A83ResidentTypeName[0];
+            pr_default.close(10);
          }
       }
 
@@ -3635,8 +3313,8 @@ namespace GeneXus.Programs {
       {
          s96ResidentLastLineIndividual = O96ResidentLastLineIndividual;
          AssignAttri("", false, "A96ResidentLastLineIndividual", StringUtil.LTrimStr( (decimal)(A96ResidentLastLineIndividual), 4, 0));
-         nGXsfl_108_idx = 0;
-         while ( nGXsfl_108_idx < nRC_GXsfl_108 )
+         nGXsfl_73_idx = 0;
+         while ( nGXsfl_73_idx < nRC_GXsfl_73 )
          {
             ReadRow026( ) ;
             if ( ( nRcdExists_6 != 0 ) || ( nIsMod_6 != 0 ) )
@@ -3673,7 +3351,7 @@ namespace GeneXus.Programs {
                   {
                      if ( nRcdDeleted_6 == 0 )
                      {
-                        GXCCtl = "RESIDENTININDIVIDUALID_" + sGXsfl_108_idx;
+                        GXCCtl = "RESIDENTININDIVIDUALID_" + sGXsfl_73_idx;
                         GX_msglist.addItem(context.GetMessage( "GXM_recdeleted", ""), 1, GXCCtl);
                         AnyError = 1;
                         GX_FocusControl = edtResidentINIndividualId_Internalname;
@@ -3692,27 +3370,27 @@ namespace GeneXus.Programs {
             ChangePostValue( edtResidentINIndividualPhone_Internalname, StringUtil.RTrim( A47ResidentINIndividualPhone)) ;
             ChangePostValue( edtResidentINIndividualAddress_Internalname, A48ResidentINIndividualAddress) ;
             ChangePostValue( cmbResidentINIndividualGender_Internalname, StringUtil.RTrim( A49ResidentINIndividualGender)) ;
-            ChangePostValue( "ZT_"+"Z42ResidentINIndividualId_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z42ResidentINIndividualId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "ZT_"+"Z43ResidentINIndividualBsnNumber_"+sGXsfl_108_idx, Z43ResidentINIndividualBsnNumber) ;
-            ChangePostValue( "ZT_"+"Z44ResidentINIndividualGivenName_"+sGXsfl_108_idx, Z44ResidentINIndividualGivenName) ;
-            ChangePostValue( "ZT_"+"Z45ResidentINIndividualLastName_"+sGXsfl_108_idx, Z45ResidentINIndividualLastName) ;
-            ChangePostValue( "ZT_"+"Z46ResidentINIndividualEmail_"+sGXsfl_108_idx, Z46ResidentINIndividualEmail) ;
-            ChangePostValue( "ZT_"+"Z47ResidentINIndividualPhone_"+sGXsfl_108_idx, StringUtil.RTrim( Z47ResidentINIndividualPhone)) ;
-            ChangePostValue( "ZT_"+"Z48ResidentINIndividualAddress_"+sGXsfl_108_idx, Z48ResidentINIndividualAddress) ;
-            ChangePostValue( "ZT_"+"Z49ResidentINIndividualGender_"+sGXsfl_108_idx, StringUtil.RTrim( Z49ResidentINIndividualGender)) ;
-            ChangePostValue( "nRcdDeleted_6_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nRcdExists_6_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nIsMod_6_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z42ResidentINIndividualId_"+sGXsfl_73_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z42ResidentINIndividualId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z43ResidentINIndividualBsnNumber_"+sGXsfl_73_idx, Z43ResidentINIndividualBsnNumber) ;
+            ChangePostValue( "ZT_"+"Z44ResidentINIndividualGivenName_"+sGXsfl_73_idx, Z44ResidentINIndividualGivenName) ;
+            ChangePostValue( "ZT_"+"Z45ResidentINIndividualLastName_"+sGXsfl_73_idx, Z45ResidentINIndividualLastName) ;
+            ChangePostValue( "ZT_"+"Z46ResidentINIndividualEmail_"+sGXsfl_73_idx, Z46ResidentINIndividualEmail) ;
+            ChangePostValue( "ZT_"+"Z47ResidentINIndividualPhone_"+sGXsfl_73_idx, StringUtil.RTrim( Z47ResidentINIndividualPhone)) ;
+            ChangePostValue( "ZT_"+"Z48ResidentINIndividualAddress_"+sGXsfl_73_idx, Z48ResidentINIndividualAddress) ;
+            ChangePostValue( "ZT_"+"Z49ResidentINIndividualGender_"+sGXsfl_73_idx, StringUtil.RTrim( Z49ResidentINIndividualGender)) ;
+            ChangePostValue( "nRcdDeleted_6_"+sGXsfl_73_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nRcdExists_6_"+sGXsfl_73_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nIsMod_6_"+sGXsfl_73_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_6), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             if ( nIsMod_6 != 0 )
             {
-               ChangePostValue( "RESIDENTININDIVIDUALID_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualId_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualBsnNumber_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualGivenName_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualLastName_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualEmail_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALPHONE_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualPhone_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualAddress_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTININDIVIDUALGENDER_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(cmbResidentINIndividualGender.Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALID_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualId_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualBsnNumber_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualGivenName_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualLastName_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualEmail_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALPHONE_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualPhone_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualAddress_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTININDIVIDUALGENDER_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(cmbResidentINIndividualGender.Enabled), 5, 0, ".", ""))) ;
             }
          }
          /* Start of After( level) rules */
@@ -3732,8 +3410,8 @@ namespace GeneXus.Programs {
       {
          s97ResidentLastLineCompany = O97ResidentLastLineCompany;
          AssignAttri("", false, "A97ResidentLastLineCompany", StringUtil.LTrimStr( (decimal)(A97ResidentLastLineCompany), 4, 0));
-         nGXsfl_127_idx = 0;
-         while ( nGXsfl_127_idx < nRC_GXsfl_127 )
+         nGXsfl_92_idx = 0;
+         while ( nGXsfl_92_idx < nRC_GXsfl_92 )
          {
             ReadRow027( ) ;
             if ( ( nRcdExists_7 != 0 ) || ( nIsMod_7 != 0 ) )
@@ -3770,7 +3448,7 @@ namespace GeneXus.Programs {
                   {
                      if ( nRcdDeleted_7 == 0 )
                      {
-                        GXCCtl = "RESIDENTINCOMPANYID_" + sGXsfl_127_idx;
+                        GXCCtl = "RESIDENTINCOMPANYID_" + sGXsfl_92_idx;
                         GX_msglist.addItem(context.GetMessage( "GXM_recdeleted", ""), 1, GXCCtl);
                         AnyError = 1;
                         GX_FocusControl = edtResidentINCompanyId_Internalname;
@@ -3786,21 +3464,21 @@ namespace GeneXus.Programs {
             ChangePostValue( edtResidentINCompanyName_Internalname, A52ResidentINCompanyName) ;
             ChangePostValue( edtResidentINCompanyEmail_Internalname, A53ResidentINCompanyEmail) ;
             ChangePostValue( edtResidentINCompanyPhone_Internalname, StringUtil.RTrim( A54ResidentINCompanyPhone)) ;
-            ChangePostValue( "ZT_"+"Z50ResidentINCompanyId_"+sGXsfl_127_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z50ResidentINCompanyId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "ZT_"+"Z51ResidentINCompanyKvkNumber_"+sGXsfl_127_idx, Z51ResidentINCompanyKvkNumber) ;
-            ChangePostValue( "ZT_"+"Z52ResidentINCompanyName_"+sGXsfl_127_idx, Z52ResidentINCompanyName) ;
-            ChangePostValue( "ZT_"+"Z53ResidentINCompanyEmail_"+sGXsfl_127_idx, Z53ResidentINCompanyEmail) ;
-            ChangePostValue( "ZT_"+"Z54ResidentINCompanyPhone_"+sGXsfl_127_idx, StringUtil.RTrim( Z54ResidentINCompanyPhone)) ;
-            ChangePostValue( "nRcdDeleted_7_"+sGXsfl_127_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nRcdExists_7_"+sGXsfl_127_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nIsMod_7_"+sGXsfl_127_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z50ResidentINCompanyId_"+sGXsfl_92_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z50ResidentINCompanyId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z51ResidentINCompanyKvkNumber_"+sGXsfl_92_idx, Z51ResidentINCompanyKvkNumber) ;
+            ChangePostValue( "ZT_"+"Z52ResidentINCompanyName_"+sGXsfl_92_idx, Z52ResidentINCompanyName) ;
+            ChangePostValue( "ZT_"+"Z53ResidentINCompanyEmail_"+sGXsfl_92_idx, Z53ResidentINCompanyEmail) ;
+            ChangePostValue( "ZT_"+"Z54ResidentINCompanyPhone_"+sGXsfl_92_idx, StringUtil.RTrim( Z54ResidentINCompanyPhone)) ;
+            ChangePostValue( "nRcdDeleted_7_"+sGXsfl_92_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nRcdExists_7_"+sGXsfl_92_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nIsMod_7_"+sGXsfl_92_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_7), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             if ( nIsMod_7 != 0 )
             {
-               ChangePostValue( "RESIDENTINCOMPANYID_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyId_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyKvkNumber_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTINCOMPANYNAME_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyName_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTINCOMPANYEMAIL_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyEmail_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "RESIDENTINCOMPANYPHONE_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyPhone_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTINCOMPANYID_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyId_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyKvkNumber_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTINCOMPANYNAME_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyName_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTINCOMPANYEMAIL_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyEmail_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "RESIDENTINCOMPANYPHONE_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyPhone_Enabled), 5, 0, ".", ""))) ;
             }
          }
          /* Start of After( level) rules */
@@ -3818,8 +3496,8 @@ namespace GeneXus.Programs {
 
       protected void ProcessNestedLevel0218( )
       {
-         nGXsfl_143_idx = 0;
-         while ( nGXsfl_143_idx < nRC_GXsfl_143 )
+         nGXsfl_108_idx = 0;
+         while ( nGXsfl_108_idx < nRC_GXsfl_108 )
          {
             ReadRow0218( ) ;
             if ( ( nRcdExists_18 != 0 ) || ( nIsMod_18 != 0 ) )
@@ -3856,7 +3534,7 @@ namespace GeneXus.Programs {
                   {
                      if ( nRcdDeleted_18 == 0 )
                      {
-                        GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_143_idx;
+                        GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_108_idx;
                         GX_msglist.addItem(context.GetMessage( "GXM_recdeleted", ""), 1, GXCCtl);
                         AnyError = 1;
                         GX_FocusControl = edtProductServiceId_Internalname;
@@ -3871,19 +3549,19 @@ namespace GeneXus.Programs {
             ChangePostValue( edtProductServicePicture_Internalname, A77ProductServicePicture) ;
             ChangePostValue( edtProductServiceTypeId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A71ProductServiceTypeId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             ChangePostValue( edtProductServiceTypeName_Internalname, A72ProductServiceTypeName) ;
-            ChangePostValue( "ZT_"+"Z73ProductServiceId_"+sGXsfl_143_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z73ProductServiceId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nRcdDeleted_18_"+sGXsfl_143_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nRcdExists_18_"+sGXsfl_143_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
-            ChangePostValue( "nIsMod_18_"+sGXsfl_143_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z73ProductServiceId_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z73ProductServiceId), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nRcdDeleted_18_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nRcdExists_18_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "nIsMod_18_"+sGXsfl_108_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_18), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             if ( nIsMod_18 != 0 )
             {
-               ChangePostValue( "PRODUCTSERVICEID_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceId_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "PRODUCTSERVICEID_"+sGXsfl_143_idx+"Horizontalalignment", StringUtil.RTrim( edtProductServiceId_Horizontalalignment)) ;
-               ChangePostValue( "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceDescription_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "PRODUCTSERVICEQUANTITY_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceQuantity_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "PRODUCTSERVICEPICTURE_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServicePicture_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "PRODUCTSERVICETYPEID_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeId_Enabled), 5, 0, ".", ""))) ;
-               ChangePostValue( "PRODUCTSERVICETYPENAME_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeName_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICEID_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceId_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICEID_"+sGXsfl_108_idx+"Horizontalalignment", StringUtil.RTrim( edtProductServiceId_Horizontalalignment)) ;
+               ChangePostValue( "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceDescription_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICEQUANTITY_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceQuantity_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICEPICTURE_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServicePicture_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICETYPEID_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeId_Enabled), 5, 0, ".", ""))) ;
+               ChangePostValue( "PRODUCTSERVICETYPENAME_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeName_Enabled), 5, 0, ".", ""))) ;
             }
          }
          /* Start of After( level) rules */
@@ -4018,8 +3696,6 @@ namespace GeneXus.Programs {
 
       protected void DisableAttributes025( )
       {
-         edtResidentId_Enabled = 0;
-         AssignProp("", false, edtResidentId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentId_Enabled), 5, 0), true);
          edtResidentBsnNumber_Enabled = 0;
          AssignProp("", false, edtResidentBsnNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentBsnNumber_Enabled), 5, 0), true);
          edtResidentGivenName_Enabled = 0;
@@ -4034,22 +3710,20 @@ namespace GeneXus.Programs {
          AssignProp("", false, edtResidentAddress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentAddress_Enabled), 5, 0), true);
          edtResidentPhone_Enabled = 0;
          AssignProp("", false, edtResidentPhone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentPhone_Enabled), 5, 0), true);
-         edtResidentGAMGUID_Enabled = 0;
-         AssignProp("", false, edtResidentGAMGUID_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentGAMGUID_Enabled), 5, 0), true);
          edtResidentTypeId_Enabled = 0;
          AssignProp("", false, edtResidentTypeId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentTypeId_Enabled), 5, 0), true);
+         edtavComboresidenttypeid_Enabled = 0;
+         AssignProp("", false, edtavComboresidenttypeid_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavComboresidenttypeid_Enabled), 5, 0), true);
+         edtResidentId_Enabled = 0;
+         AssignProp("", false, edtResidentId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentId_Enabled), 5, 0), true);
+         edtResidentGAMGUID_Enabled = 0;
+         AssignProp("", false, edtResidentGAMGUID_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentGAMGUID_Enabled), 5, 0), true);
          edtCustomerLocationId_Enabled = 0;
          AssignProp("", false, edtCustomerLocationId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerLocationId_Enabled), 5, 0), true);
          edtCustomerId_Enabled = 0;
          AssignProp("", false, edtCustomerId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerId_Enabled), 5, 0), true);
          edtCustomerName_Enabled = 0;
          AssignProp("", false, edtCustomerName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerName_Enabled), 5, 0), true);
-         edtavComboresidenttypeid_Enabled = 0;
-         AssignProp("", false, edtavComboresidenttypeid_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavComboresidenttypeid_Enabled), 5, 0), true);
-         edtavCombocustomerlocationid_Enabled = 0;
-         AssignProp("", false, edtavCombocustomerlocationid_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCombocustomerlocationid_Enabled), 5, 0), true);
-         edtavCombocustomerid_Enabled = 0;
-         AssignProp("", false, edtavCombocustomerid_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCombocustomerid_Enabled), 5, 0), true);
       }
 
       protected void ZM026( short GX_JID )
@@ -4109,12 +3783,12 @@ namespace GeneXus.Programs {
          if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
          {
             edtResidentINIndividualId_Enabled = 0;
-            AssignProp("", false, edtResidentINIndividualId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+            AssignProp("", false, edtResidentINIndividualId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualId_Enabled), 5, 0), !bGXsfl_73_Refreshing);
          }
          else
          {
             edtResidentINIndividualId_Enabled = 1;
-            AssignProp("", false, edtResidentINIndividualId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+            AssignProp("", false, edtResidentINIndividualId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualId_Enabled), 5, 0), !bGXsfl_73_Refreshing);
          }
       }
 
@@ -4153,7 +3827,7 @@ namespace GeneXus.Programs {
          standaloneModal026( ) ;
          if ( ! ( GxRegex.IsMatch(A46ResidentINIndividualEmail,"^((\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*)|(\\s*))$") || String.IsNullOrEmpty(StringUtil.RTrim( A46ResidentINIndividualEmail)) ) )
          {
-            GXCCtl = "RESIDENTININDIVIDUALEMAIL_" + sGXsfl_108_idx;
+            GXCCtl = "RESIDENTININDIVIDUALEMAIL_" + sGXsfl_73_idx;
             GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXM_DoesNotMatchRegExp", ""), context.GetMessage( "Resident INIndividual Email", ""), "", "", "", "", "", "", "", ""), "OutOfRange", 1, GXCCtl);
             AnyError = 1;
             GX_FocusControl = edtResidentINIndividualEmail_Internalname;
@@ -4161,7 +3835,7 @@ namespace GeneXus.Programs {
          }
          if ( ! ( ( StringUtil.StrCmp(A49ResidentINIndividualGender, "Man") == 0 ) || ( StringUtil.StrCmp(A49ResidentINIndividualGender, "Woman") == 0 ) || ( StringUtil.StrCmp(A49ResidentINIndividualGender, "Other") == 0 ) ) )
          {
-            GXCCtl = "RESIDENTININDIVIDUALGENDER_" + sGXsfl_108_idx;
+            GXCCtl = "RESIDENTININDIVIDUALGENDER_" + sGXsfl_73_idx;
             GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_OutOfRange", ""), context.GetMessage( "Resident INIndividual Gender", ""), "", "", "", "", "", "", "", ""), "OutOfRange", 1, GXCCtl);
             AnyError = 1;
             GX_FocusControl = cmbResidentINIndividualGender_Internalname;
@@ -4563,21 +4237,21 @@ namespace GeneXus.Programs {
       protected void DisableAttributes026( )
       {
          edtResidentINIndividualId_Enabled = 0;
-         AssignProp("", false, edtResidentINIndividualId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+         AssignProp("", false, edtResidentINIndividualId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualId_Enabled), 5, 0), !bGXsfl_73_Refreshing);
          edtResidentINIndividualBsnNumber_Enabled = 0;
-         AssignProp("", false, edtResidentINIndividualBsnNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualBsnNumber_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+         AssignProp("", false, edtResidentINIndividualBsnNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualBsnNumber_Enabled), 5, 0), !bGXsfl_73_Refreshing);
          edtResidentINIndividualGivenName_Enabled = 0;
-         AssignProp("", false, edtResidentINIndividualGivenName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualGivenName_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+         AssignProp("", false, edtResidentINIndividualGivenName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualGivenName_Enabled), 5, 0), !bGXsfl_73_Refreshing);
          edtResidentINIndividualLastName_Enabled = 0;
-         AssignProp("", false, edtResidentINIndividualLastName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualLastName_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+         AssignProp("", false, edtResidentINIndividualLastName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualLastName_Enabled), 5, 0), !bGXsfl_73_Refreshing);
          edtResidentINIndividualEmail_Enabled = 0;
-         AssignProp("", false, edtResidentINIndividualEmail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualEmail_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+         AssignProp("", false, edtResidentINIndividualEmail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualEmail_Enabled), 5, 0), !bGXsfl_73_Refreshing);
          edtResidentINIndividualPhone_Enabled = 0;
-         AssignProp("", false, edtResidentINIndividualPhone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualPhone_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+         AssignProp("", false, edtResidentINIndividualPhone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualPhone_Enabled), 5, 0), !bGXsfl_73_Refreshing);
          edtResidentINIndividualAddress_Enabled = 0;
-         AssignProp("", false, edtResidentINIndividualAddress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualAddress_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+         AssignProp("", false, edtResidentINIndividualAddress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualAddress_Enabled), 5, 0), !bGXsfl_73_Refreshing);
          cmbResidentINIndividualGender.Enabled = 0;
-         AssignProp("", false, cmbResidentINIndividualGender_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(cmbResidentINIndividualGender.Enabled), 5, 0), !bGXsfl_108_Refreshing);
+         AssignProp("", false, cmbResidentINIndividualGender_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(cmbResidentINIndividualGender.Enabled), 5, 0), !bGXsfl_73_Refreshing);
       }
 
       protected void send_integrity_lvl_hashes026( )
@@ -4632,12 +4306,12 @@ namespace GeneXus.Programs {
          if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
          {
             edtResidentINCompanyId_Enabled = 0;
-            AssignProp("", false, edtResidentINCompanyId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyId_Enabled), 5, 0), !bGXsfl_127_Refreshing);
+            AssignProp("", false, edtResidentINCompanyId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyId_Enabled), 5, 0), !bGXsfl_92_Refreshing);
          }
          else
          {
             edtResidentINCompanyId_Enabled = 1;
-            AssignProp("", false, edtResidentINCompanyId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyId_Enabled), 5, 0), !bGXsfl_127_Refreshing);
+            AssignProp("", false, edtResidentINCompanyId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyId_Enabled), 5, 0), !bGXsfl_92_Refreshing);
          }
       }
 
@@ -4672,7 +4346,7 @@ namespace GeneXus.Programs {
          standaloneModal027( ) ;
          if ( ! ( GxRegex.IsMatch(A53ResidentINCompanyEmail,"^((\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*)|(\\s*))$") || String.IsNullOrEmpty(StringUtil.RTrim( A53ResidentINCompanyEmail)) ) )
          {
-            GXCCtl = "RESIDENTINCOMPANYEMAIL_" + sGXsfl_127_idx;
+            GXCCtl = "RESIDENTINCOMPANYEMAIL_" + sGXsfl_92_idx;
             GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXM_DoesNotMatchRegExp", ""), context.GetMessage( "Resident INCompany Email", ""), "", "", "", "", "", "", "", ""), "OutOfRange", 1, GXCCtl);
             AnyError = 1;
             GX_FocusControl = edtResidentINCompanyEmail_Internalname;
@@ -5047,15 +4721,15 @@ namespace GeneXus.Programs {
       protected void DisableAttributes027( )
       {
          edtResidentINCompanyId_Enabled = 0;
-         AssignProp("", false, edtResidentINCompanyId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyId_Enabled), 5, 0), !bGXsfl_127_Refreshing);
+         AssignProp("", false, edtResidentINCompanyId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyId_Enabled), 5, 0), !bGXsfl_92_Refreshing);
          edtResidentINCompanyKvkNumber_Enabled = 0;
-         AssignProp("", false, edtResidentINCompanyKvkNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyKvkNumber_Enabled), 5, 0), !bGXsfl_127_Refreshing);
+         AssignProp("", false, edtResidentINCompanyKvkNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyKvkNumber_Enabled), 5, 0), !bGXsfl_92_Refreshing);
          edtResidentINCompanyName_Enabled = 0;
-         AssignProp("", false, edtResidentINCompanyName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyName_Enabled), 5, 0), !bGXsfl_127_Refreshing);
+         AssignProp("", false, edtResidentINCompanyName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyName_Enabled), 5, 0), !bGXsfl_92_Refreshing);
          edtResidentINCompanyEmail_Enabled = 0;
-         AssignProp("", false, edtResidentINCompanyEmail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyEmail_Enabled), 5, 0), !bGXsfl_127_Refreshing);
+         AssignProp("", false, edtResidentINCompanyEmail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyEmail_Enabled), 5, 0), !bGXsfl_92_Refreshing);
          edtResidentINCompanyPhone_Enabled = 0;
-         AssignProp("", false, edtResidentINCompanyPhone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyPhone_Enabled), 5, 0), !bGXsfl_127_Refreshing);
+         AssignProp("", false, edtResidentINCompanyPhone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyPhone_Enabled), 5, 0), !bGXsfl_92_Refreshing);
       }
 
       protected void send_integrity_lvl_hashes027( )
@@ -5096,12 +4770,12 @@ namespace GeneXus.Programs {
          if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
          {
             edtProductServiceId_Enabled = 0;
-            AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_143_Refreshing);
+            AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
          }
          else
          {
             edtProductServiceId_Enabled = 1;
-            AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_143_Refreshing);
+            AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
          }
       }
 
@@ -5116,12 +4790,12 @@ namespace GeneXus.Programs {
             A75ProductServiceDescription = T000243_A75ProductServiceDescription[0];
             A76ProductServiceQuantity = T000243_A76ProductServiceQuantity[0];
             A40000ProductServicePicture_GXI = T000243_A40000ProductServicePicture_GXI[0];
-            AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_143_Refreshing);
+            AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_108_Refreshing);
             AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
             A72ProductServiceTypeName = T000243_A72ProductServiceTypeName[0];
             A71ProductServiceTypeId = T000243_A71ProductServiceTypeId[0];
             A77ProductServicePicture = T000243_A77ProductServicePicture[0];
-            AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_143_Refreshing);
+            AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_108_Refreshing);
             AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
             ZM0218( -31) ;
          }
@@ -5143,7 +4817,7 @@ namespace GeneXus.Programs {
          pr_default.execute(2, new Object[] {A73ProductServiceId});
          if ( (pr_default.getStatus(2) == 101) )
          {
-            GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_143_idx;
+            GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_108_idx;
             GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_ForeignKeyNotFound", ""), context.GetMessage( "Product Service", ""), "", "", "", "", "", "", "", ""), "ForeignKeyNotFound", 1, GXCCtl);
             AnyError = 1;
             GX_FocusControl = edtProductServiceId_Internalname;
@@ -5153,18 +4827,18 @@ namespace GeneXus.Programs {
          A75ProductServiceDescription = T00024_A75ProductServiceDescription[0];
          A76ProductServiceQuantity = T00024_A76ProductServiceQuantity[0];
          A40000ProductServicePicture_GXI = T00024_A40000ProductServicePicture_GXI[0];
-         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_108_Refreshing);
          AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
          A71ProductServiceTypeId = T00024_A71ProductServiceTypeId[0];
          A77ProductServicePicture = T00024_A77ProductServicePicture[0];
-         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_108_Refreshing);
          AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
          pr_default.close(2);
          /* Using cursor T00025 */
          pr_default.execute(3, new Object[] {A71ProductServiceTypeId});
          if ( (pr_default.getStatus(3) == 101) )
          {
-            GXCCtl = "PRODUCTSERVICETYPEID_" + sGXsfl_143_idx;
+            GXCCtl = "PRODUCTSERVICETYPEID_" + sGXsfl_108_idx;
             GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_ForeignKeyNotFound", ""), context.GetMessage( "Product Service Type", ""), "", "", "", "", "", "", "", ""), "ForeignKeyNotFound", 1, GXCCtl);
             AnyError = 1;
          }
@@ -5188,7 +4862,7 @@ namespace GeneXus.Programs {
          pr_default.execute(42, new Object[] {A73ProductServiceId});
          if ( (pr_default.getStatus(42) == 101) )
          {
-            GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_143_idx;
+            GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_108_idx;
             GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_ForeignKeyNotFound", ""), context.GetMessage( "Product Service", ""), "", "", "", "", "", "", "", ""), "ForeignKeyNotFound", 1, GXCCtl);
             AnyError = 1;
             GX_FocusControl = edtProductServiceId_Internalname;
@@ -5198,11 +4872,11 @@ namespace GeneXus.Programs {
          A75ProductServiceDescription = T000244_A75ProductServiceDescription[0];
          A76ProductServiceQuantity = T000244_A76ProductServiceQuantity[0];
          A40000ProductServicePicture_GXI = T000244_A40000ProductServicePicture_GXI[0];
-         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_108_Refreshing);
          AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
          A71ProductServiceTypeId = T000244_A71ProductServiceTypeId[0];
          A77ProductServicePicture = T000244_A77ProductServicePicture[0];
-         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_108_Refreshing);
          AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
          GxWebStd.set_html_headers( context, 0, "", "");
          AddString( "[[") ;
@@ -5223,7 +4897,7 @@ namespace GeneXus.Programs {
          pr_default.execute(43, new Object[] {A71ProductServiceTypeId});
          if ( (pr_default.getStatus(43) == 101) )
          {
-            GXCCtl = "PRODUCTSERVICETYPEID_" + sGXsfl_143_idx;
+            GXCCtl = "PRODUCTSERVICETYPEID_" + sGXsfl_108_idx;
             GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_ForeignKeyNotFound", ""), context.GetMessage( "Product Service Type", ""), "", "", "", "", "", "", "", ""), "ForeignKeyNotFound", 1, GXCCtl);
             AnyError = 1;
          }
@@ -5491,11 +5165,11 @@ namespace GeneXus.Programs {
             A75ProductServiceDescription = T000249_A75ProductServiceDescription[0];
             A76ProductServiceQuantity = T000249_A76ProductServiceQuantity[0];
             A40000ProductServicePicture_GXI = T000249_A40000ProductServicePicture_GXI[0];
-            AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_143_Refreshing);
+            AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_108_Refreshing);
             AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
             A71ProductServiceTypeId = T000249_A71ProductServiceTypeId[0];
             A77ProductServicePicture = T000249_A77ProductServicePicture[0];
-            AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_143_Refreshing);
+            AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_108_Refreshing);
             AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
             pr_default.close(47);
             /* Using cursor T000250 */
@@ -5582,17 +5256,17 @@ namespace GeneXus.Programs {
       protected void DisableAttributes0218( )
       {
          edtProductServiceId_Enabled = 0;
-         AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
          edtProductServiceDescription_Enabled = 0;
-         AssignProp("", false, edtProductServiceDescription_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceDescription_Enabled), 5, 0), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServiceDescription_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceDescription_Enabled), 5, 0), !bGXsfl_108_Refreshing);
          edtProductServiceQuantity_Enabled = 0;
-         AssignProp("", false, edtProductServiceQuantity_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceQuantity_Enabled), 5, 0), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServiceQuantity_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceQuantity_Enabled), 5, 0), !bGXsfl_108_Refreshing);
          edtProductServicePicture_Enabled = 0;
-         AssignProp("", false, edtProductServicePicture_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServicePicture_Enabled), 5, 0), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServicePicture_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServicePicture_Enabled), 5, 0), !bGXsfl_108_Refreshing);
          edtProductServiceTypeId_Enabled = 0;
-         AssignProp("", false, edtProductServiceTypeId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceTypeId_Enabled), 5, 0), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServiceTypeId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceTypeId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
          edtProductServiceTypeName_Enabled = 0;
-         AssignProp("", false, edtProductServiceTypeName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceTypeName_Enabled), 5, 0), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServiceTypeName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceTypeName_Enabled), 5, 0), !bGXsfl_108_Refreshing);
       }
 
       protected void send_integrity_lvl_hashes0218( )
@@ -5603,35 +5277,35 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void SubsflControlProps_1086( )
+      protected void SubsflControlProps_736( )
       {
-         edtResidentINIndividualId_Internalname = "RESIDENTININDIVIDUALID_"+sGXsfl_108_idx;
-         edtResidentINIndividualBsnNumber_Internalname = "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_108_idx;
-         edtResidentINIndividualGivenName_Internalname = "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_108_idx;
-         edtResidentINIndividualLastName_Internalname = "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_108_idx;
-         edtResidentINIndividualEmail_Internalname = "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_108_idx;
-         edtResidentINIndividualPhone_Internalname = "RESIDENTININDIVIDUALPHONE_"+sGXsfl_108_idx;
-         edtResidentINIndividualAddress_Internalname = "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_108_idx;
-         cmbResidentINIndividualGender_Internalname = "RESIDENTININDIVIDUALGENDER_"+sGXsfl_108_idx;
+         edtResidentINIndividualId_Internalname = "RESIDENTININDIVIDUALID_"+sGXsfl_73_idx;
+         edtResidentINIndividualBsnNumber_Internalname = "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_73_idx;
+         edtResidentINIndividualGivenName_Internalname = "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_73_idx;
+         edtResidentINIndividualLastName_Internalname = "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_73_idx;
+         edtResidentINIndividualEmail_Internalname = "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_73_idx;
+         edtResidentINIndividualPhone_Internalname = "RESIDENTININDIVIDUALPHONE_"+sGXsfl_73_idx;
+         edtResidentINIndividualAddress_Internalname = "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_73_idx;
+         cmbResidentINIndividualGender_Internalname = "RESIDENTININDIVIDUALGENDER_"+sGXsfl_73_idx;
       }
 
-      protected void SubsflControlProps_fel_1086( )
+      protected void SubsflControlProps_fel_736( )
       {
-         edtResidentINIndividualId_Internalname = "RESIDENTININDIVIDUALID_"+sGXsfl_108_fel_idx;
-         edtResidentINIndividualBsnNumber_Internalname = "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_108_fel_idx;
-         edtResidentINIndividualGivenName_Internalname = "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_108_fel_idx;
-         edtResidentINIndividualLastName_Internalname = "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_108_fel_idx;
-         edtResidentINIndividualEmail_Internalname = "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_108_fel_idx;
-         edtResidentINIndividualPhone_Internalname = "RESIDENTININDIVIDUALPHONE_"+sGXsfl_108_fel_idx;
-         edtResidentINIndividualAddress_Internalname = "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_108_fel_idx;
-         cmbResidentINIndividualGender_Internalname = "RESIDENTININDIVIDUALGENDER_"+sGXsfl_108_fel_idx;
+         edtResidentINIndividualId_Internalname = "RESIDENTININDIVIDUALID_"+sGXsfl_73_fel_idx;
+         edtResidentINIndividualBsnNumber_Internalname = "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_73_fel_idx;
+         edtResidentINIndividualGivenName_Internalname = "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_73_fel_idx;
+         edtResidentINIndividualLastName_Internalname = "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_73_fel_idx;
+         edtResidentINIndividualEmail_Internalname = "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_73_fel_idx;
+         edtResidentINIndividualPhone_Internalname = "RESIDENTININDIVIDUALPHONE_"+sGXsfl_73_fel_idx;
+         edtResidentINIndividualAddress_Internalname = "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_73_fel_idx;
+         cmbResidentINIndividualGender_Internalname = "RESIDENTININDIVIDUALGENDER_"+sGXsfl_73_fel_idx;
       }
 
       protected void AddRow026( )
       {
-         nGXsfl_108_idx = (int)(nGXsfl_108_idx+1);
-         sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx), 4, 0), 4, "0");
-         SubsflControlProps_1086( ) ;
+         nGXsfl_73_idx = (int)(nGXsfl_73_idx+1);
+         sGXsfl_73_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_73_idx), 4, 0), 4, "0");
+         SubsflControlProps_736( ) ;
          SendRow026( ) ;
       }
 
@@ -5671,7 +5345,7 @@ namespace GeneXus.Programs {
          {
             /* Report style subfile background logic. */
             subGridlevel_inindividual_Backstyle = 1;
-            if ( ((int)((nGXsfl_108_idx) % (2))) == 0 )
+            if ( ((int)((nGXsfl_73_idx) % (2))) == 0 )
             {
                subGridlevel_inindividual_Backcolor = (int)(0x0);
                if ( StringUtil.StrCmp(subGridlevel_inindividual_Class, "") != 0 )
@@ -5690,48 +5364,48 @@ namespace GeneXus.Programs {
          }
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_108_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 109,'',false,'" + sGXsfl_108_idx + "',108)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_73_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 74,'',false,'" + sGXsfl_73_idx + "',73)\"";
          ROClassString = "Attribute";
-         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A42ResidentINIndividualId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A42ResidentINIndividualId), "ZZZ9"))," dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,109);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINIndividualId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualId_Enabled,(short)1,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)0,(bool)true,(string)"Id",(string)"end",(bool)false,(string)""});
+         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A42ResidentINIndividualId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A42ResidentINIndividualId), "ZZZ9"))," dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,74);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINIndividualId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualId_Enabled,(short)1,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)73,(short)0,(short)-1,(short)0,(bool)true,(string)"Id",(string)"end",(bool)false,(string)""});
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_108_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 110,'',false,'" + sGXsfl_108_idx + "',108)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_73_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 75,'',false,'" + sGXsfl_73_idx + "',73)\"";
          ROClassString = "Attribute";
-         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualBsnNumber_Internalname,(string)A43ResidentINIndividualBsnNumber,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,110);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINIndividualBsnNumber_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualBsnNumber_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)-1,(bool)true,(string)"BsnNumber",(string)"start",(bool)true,(string)""});
+         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualBsnNumber_Internalname,(string)A43ResidentINIndividualBsnNumber,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,75);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINIndividualBsnNumber_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualBsnNumber_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)73,(short)0,(short)-1,(short)-1,(bool)true,(string)"BsnNumber",(string)"start",(bool)true,(string)""});
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_108_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 111,'',false,'" + sGXsfl_108_idx + "',108)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_73_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 76,'',false,'" + sGXsfl_73_idx + "',73)\"";
          ROClassString = "Attribute";
-         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualGivenName_Internalname,(string)A44ResidentINIndividualGivenName,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,111);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINIndividualGivenName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualGivenName_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"start",(bool)true,(string)""});
+         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualGivenName_Internalname,(string)A44ResidentINIndividualGivenName,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,76);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINIndividualGivenName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualGivenName_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)73,(short)0,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"start",(bool)true,(string)""});
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_108_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 112,'',false,'" + sGXsfl_108_idx + "',108)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_73_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 77,'',false,'" + sGXsfl_73_idx + "',73)\"";
          ROClassString = "Attribute";
-         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualLastName_Internalname,(string)A45ResidentINIndividualLastName,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,112);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINIndividualLastName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualLastName_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"start",(bool)true,(string)""});
+         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualLastName_Internalname,(string)A45ResidentINIndividualLastName,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,77);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINIndividualLastName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualLastName_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)73,(short)0,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"start",(bool)true,(string)""});
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_108_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 113,'',false,'" + sGXsfl_108_idx + "',108)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_73_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 78,'',false,'" + sGXsfl_73_idx + "',73)\"";
          ROClassString = "Attribute";
-         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualEmail_Internalname,(string)A46ResidentINIndividualEmail,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,113);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"mailto:"+A46ResidentINIndividualEmail,(string)"",(string)"",(string)"",(string)edtResidentINIndividualEmail_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualEmail_Enabled,(short)0,(string)"email",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)100,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Email",(string)"start",(bool)true,(string)""});
+         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualEmail_Internalname,(string)A46ResidentINIndividualEmail,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,78);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"mailto:"+A46ResidentINIndividualEmail,(string)"",(string)"",(string)"",(string)edtResidentINIndividualEmail_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualEmail_Enabled,(short)0,(string)"email",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)100,(short)0,(short)0,(short)73,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Email",(string)"start",(bool)true,(string)""});
          /* Subfile cell */
          /* Single line edit */
          if ( context.isSmartDevice( ) )
          {
             gxphoneLink = "tel:" + StringUtil.RTrim( A47ResidentINIndividualPhone);
          }
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_108_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 114,'',false,'" + sGXsfl_108_idx + "',108)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_73_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 79,'',false,'" + sGXsfl_73_idx + "',73)\"";
          ROClassString = "Attribute";
-         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualPhone_Internalname,StringUtil.RTrim( A47ResidentINIndividualPhone),(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,114);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)gxphoneLink,(string)"",(string)"",(string)"",(string)edtResidentINIndividualPhone_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualPhone_Enabled,(short)0,(string)"tel",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Phone",(string)"start",(bool)true,(string)""});
+         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualPhone_Internalname,StringUtil.RTrim( A47ResidentINIndividualPhone),(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,79);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)gxphoneLink,(string)"",(string)"",(string)"",(string)edtResidentINIndividualPhone_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualPhone_Enabled,(short)0,(string)"tel",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)0,(short)73,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Phone",(string)"start",(bool)true,(string)""});
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_108_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 115,'',false,'" + sGXsfl_108_idx + "',108)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_73_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 80,'',false,'" + sGXsfl_73_idx + "',73)\"";
          ROClassString = "Attribute";
-         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualAddress_Internalname,(string)A48ResidentINIndividualAddress,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,115);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'","http://maps.google.com/maps?q="+GXUtil.UrlEncode( A48ResidentINIndividualAddress),(string)"_blank",(string)"",(string)"",(string)edtResidentINIndividualAddress_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualAddress_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)1024,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Address",(string)"start",(bool)true,(string)""});
+         Gridlevel_inindividualRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINIndividualAddress_Internalname,(string)A48ResidentINIndividualAddress,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,80);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'","http://maps.google.com/maps?q="+GXUtil.UrlEncode( A48ResidentINIndividualAddress),(string)"_blank",(string)"",(string)"",(string)edtResidentINIndividualAddress_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINIndividualAddress_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)1024,(short)0,(short)0,(short)73,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Address",(string)"start",(bool)true,(string)""});
          /* Subfile cell */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_108_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 116,'',false,'" + sGXsfl_108_idx + "',108)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_6_" + sGXsfl_73_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 81,'',false,'" + sGXsfl_73_idx + "',73)\"";
          if ( ( cmbResidentINIndividualGender.ItemCount == 0 ) && isAjaxCallMode( ) )
          {
-            GXCCtl = "RESIDENTININDIVIDUALGENDER_" + sGXsfl_108_idx;
+            GXCCtl = "RESIDENTININDIVIDUALGENDER_" + sGXsfl_73_idx;
             cmbResidentINIndividualGender.Name = GXCCtl;
             cmbResidentINIndividualGender.WebTags = "";
             cmbResidentINIndividualGender.addItem("Man", context.GetMessage( "Man", ""), 0);
@@ -5743,36 +5417,36 @@ namespace GeneXus.Programs {
             }
          }
          /* ComboBox */
-         Gridlevel_inindividualRow.AddColumnProperties("combobox", 2, isAjaxCallMode( ), new Object[] {(GXCombobox)cmbResidentINIndividualGender,(string)cmbResidentINIndividualGender_Internalname,StringUtil.RTrim( A49ResidentINIndividualGender),(short)1,(string)cmbResidentINIndividualGender_Jsonclick,(short)0,(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"char",(string)"",(short)-1,cmbResidentINIndividualGender.Enabled,(short)0,(short)0,(short)0,(string)"px",(short)0,(string)"px",(string)"",(string)"Attribute",(string)"TrnColumn",(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,116);\"",(string)"",(bool)true,(short)0});
+         Gridlevel_inindividualRow.AddColumnProperties("combobox", 2, isAjaxCallMode( ), new Object[] {(GXCombobox)cmbResidentINIndividualGender,(string)cmbResidentINIndividualGender_Internalname,StringUtil.RTrim( A49ResidentINIndividualGender),(short)1,(string)cmbResidentINIndividualGender_Jsonclick,(short)0,(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"char",(string)"",(short)-1,cmbResidentINIndividualGender.Enabled,(short)0,(short)0,(short)0,(string)"px",(short)0,(string)"px",(string)"",(string)"Attribute",(string)"TrnColumn",(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,81);\"",(string)"",(bool)true,(short)0});
          cmbResidentINIndividualGender.CurrentValue = StringUtil.RTrim( A49ResidentINIndividualGender);
-         AssignProp("", false, cmbResidentINIndividualGender_Internalname, "Values", (string)(cmbResidentINIndividualGender.ToJavascriptSource()), !bGXsfl_108_Refreshing);
+         AssignProp("", false, cmbResidentINIndividualGender_Internalname, "Values", (string)(cmbResidentINIndividualGender.ToJavascriptSource()), !bGXsfl_73_Refreshing);
          ajax_sending_grid_row(Gridlevel_inindividualRow);
          send_integrity_lvl_hashes026( ) ;
-         GXCCtl = "Z42ResidentINIndividualId_" + sGXsfl_108_idx;
+         GXCCtl = "Z42ResidentINIndividualId_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z42ResidentINIndividualId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "Z43ResidentINIndividualBsnNumber_" + sGXsfl_108_idx;
+         GXCCtl = "Z43ResidentINIndividualBsnNumber_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, Z43ResidentINIndividualBsnNumber);
-         GXCCtl = "Z44ResidentINIndividualGivenName_" + sGXsfl_108_idx;
+         GXCCtl = "Z44ResidentINIndividualGivenName_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, Z44ResidentINIndividualGivenName);
-         GXCCtl = "Z45ResidentINIndividualLastName_" + sGXsfl_108_idx;
+         GXCCtl = "Z45ResidentINIndividualLastName_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, Z45ResidentINIndividualLastName);
-         GXCCtl = "Z46ResidentINIndividualEmail_" + sGXsfl_108_idx;
+         GXCCtl = "Z46ResidentINIndividualEmail_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, Z46ResidentINIndividualEmail);
-         GXCCtl = "Z47ResidentINIndividualPhone_" + sGXsfl_108_idx;
+         GXCCtl = "Z47ResidentINIndividualPhone_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.RTrim( Z47ResidentINIndividualPhone));
-         GXCCtl = "Z48ResidentINIndividualAddress_" + sGXsfl_108_idx;
+         GXCCtl = "Z48ResidentINIndividualAddress_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, Z48ResidentINIndividualAddress);
-         GXCCtl = "Z49ResidentINIndividualGender_" + sGXsfl_108_idx;
+         GXCCtl = "Z49ResidentINIndividualGender_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.RTrim( Z49ResidentINIndividualGender));
-         GXCCtl = "nRcdDeleted_6_" + sGXsfl_108_idx;
+         GXCCtl = "nRcdDeleted_6_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_6), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "nRcdExists_6_" + sGXsfl_108_idx;
+         GXCCtl = "nRcdExists_6_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_6), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "nIsMod_6_" + sGXsfl_108_idx;
+         GXCCtl = "nIsMod_6_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_6), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "vMODE_" + sGXsfl_108_idx;
+         GXCCtl = "vMODE_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.RTrim( Gx_mode));
-         GXCCtl = "vTRNCONTEXT_" + sGXsfl_108_idx;
+         GXCCtl = "vTRNCONTEXT_" + sGXsfl_73_idx;
          if ( context.isAjaxRequest( ) )
          {
             context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, GXCCtl, AV11TrnContext);
@@ -5781,38 +5455,38 @@ namespace GeneXus.Programs {
          {
             context.httpAjaxContext.ajax_rsp_assign_hidden_sdt(GXCCtl, AV11TrnContext);
          }
-         GXCCtl = "vCHECKREQUIREDFIELDSRESULT_" + sGXsfl_108_idx;
+         GXCCtl = "vCHECKREQUIREDFIELDSRESULT_" + sGXsfl_73_idx;
          GxWebStd.gx_boolean_hidden_field( context, GXCCtl, AV15CheckRequiredFieldsResult);
-         GXCCtl = "vRESIDENTID_" + sGXsfl_108_idx;
+         GXCCtl = "vRESIDENTID_" + sGXsfl_73_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV7ResidentId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALID_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualId_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualBsnNumber_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualGivenName_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualLastName_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualEmail_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALPHONE_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualPhone_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualAddress_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALGENDER_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(cmbResidentINIndividualGender.Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALID_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualId_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualBsnNumber_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualGivenName_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualLastName_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualEmail_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALPHONE_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualPhone_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINIndividualAddress_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTININDIVIDUALGENDER_"+sGXsfl_73_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(cmbResidentINIndividualGender.Enabled), 5, 0, ".", "")));
          ajax_sending_grid_row(null);
          Gridlevel_inindividualContainer.AddRow(Gridlevel_inindividualRow);
       }
 
       protected void ReadRow026( )
       {
-         nGXsfl_108_idx = (int)(nGXsfl_108_idx+1);
-         sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx), 4, 0), 4, "0");
-         SubsflControlProps_1086( ) ;
-         edtResidentINIndividualId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALID_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtResidentINIndividualBsnNumber_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtResidentINIndividualGivenName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtResidentINIndividualLastName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtResidentINIndividualEmail_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtResidentINIndividualPhone_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALPHONE_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtResidentINIndividualAddress_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         cmbResidentINIndividualGender.Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALGENDER_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         nGXsfl_73_idx = (int)(nGXsfl_73_idx+1);
+         sGXsfl_73_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_73_idx), 4, 0), 4, "0");
+         SubsflControlProps_736( ) ;
+         edtResidentINIndividualId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALID_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtResidentINIndividualBsnNumber_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALBSNNUMBER_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtResidentINIndividualGivenName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALGIVENNAME_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtResidentINIndividualLastName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALLASTNAME_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtResidentINIndividualEmail_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALEMAIL_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtResidentINIndividualPhone_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALPHONE_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtResidentINIndividualAddress_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALADDRESS_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         cmbResidentINIndividualGender.Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTININDIVIDUALGENDER_"+sGXsfl_73_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
          if ( ( ( context.localUtil.CToN( cgiGet( edtResidentINIndividualId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtResidentINIndividualId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) > Convert.ToDecimal( 9999 )) ) )
          {
-            GXCCtl = "RESIDENTININDIVIDUALID_" + sGXsfl_108_idx;
+            GXCCtl = "RESIDENTININDIVIDUALID_" + sGXsfl_73_idx;
             GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, GXCCtl);
             AnyError = 1;
             GX_FocusControl = edtResidentINIndividualId_Internalname;
@@ -5838,56 +5512,56 @@ namespace GeneXus.Programs {
          cmbResidentINIndividualGender.Name = cmbResidentINIndividualGender_Internalname;
          cmbResidentINIndividualGender.CurrentValue = cgiGet( cmbResidentINIndividualGender_Internalname);
          A49ResidentINIndividualGender = cgiGet( cmbResidentINIndividualGender_Internalname);
-         GXCCtl = "Z42ResidentINIndividualId_" + sGXsfl_108_idx;
+         GXCCtl = "Z42ResidentINIndividualId_" + sGXsfl_73_idx;
          Z42ResidentINIndividualId = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         GXCCtl = "Z43ResidentINIndividualBsnNumber_" + sGXsfl_108_idx;
+         GXCCtl = "Z43ResidentINIndividualBsnNumber_" + sGXsfl_73_idx;
          Z43ResidentINIndividualBsnNumber = cgiGet( GXCCtl);
-         GXCCtl = "Z44ResidentINIndividualGivenName_" + sGXsfl_108_idx;
+         GXCCtl = "Z44ResidentINIndividualGivenName_" + sGXsfl_73_idx;
          Z44ResidentINIndividualGivenName = cgiGet( GXCCtl);
-         GXCCtl = "Z45ResidentINIndividualLastName_" + sGXsfl_108_idx;
+         GXCCtl = "Z45ResidentINIndividualLastName_" + sGXsfl_73_idx;
          Z45ResidentINIndividualLastName = cgiGet( GXCCtl);
-         GXCCtl = "Z46ResidentINIndividualEmail_" + sGXsfl_108_idx;
+         GXCCtl = "Z46ResidentINIndividualEmail_" + sGXsfl_73_idx;
          Z46ResidentINIndividualEmail = cgiGet( GXCCtl);
          n46ResidentINIndividualEmail = (String.IsNullOrEmpty(StringUtil.RTrim( A46ResidentINIndividualEmail)) ? true : false);
-         GXCCtl = "Z47ResidentINIndividualPhone_" + sGXsfl_108_idx;
+         GXCCtl = "Z47ResidentINIndividualPhone_" + sGXsfl_73_idx;
          Z47ResidentINIndividualPhone = cgiGet( GXCCtl);
          n47ResidentINIndividualPhone = (String.IsNullOrEmpty(StringUtil.RTrim( A47ResidentINIndividualPhone)) ? true : false);
-         GXCCtl = "Z48ResidentINIndividualAddress_" + sGXsfl_108_idx;
+         GXCCtl = "Z48ResidentINIndividualAddress_" + sGXsfl_73_idx;
          Z48ResidentINIndividualAddress = cgiGet( GXCCtl);
          n48ResidentINIndividualAddress = (String.IsNullOrEmpty(StringUtil.RTrim( A48ResidentINIndividualAddress)) ? true : false);
-         GXCCtl = "Z49ResidentINIndividualGender_" + sGXsfl_108_idx;
+         GXCCtl = "Z49ResidentINIndividualGender_" + sGXsfl_73_idx;
          Z49ResidentINIndividualGender = cgiGet( GXCCtl);
-         GXCCtl = "nRcdDeleted_6_" + sGXsfl_108_idx;
+         GXCCtl = "nRcdDeleted_6_" + sGXsfl_73_idx;
          nRcdDeleted_6 = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         GXCCtl = "nRcdExists_6_" + sGXsfl_108_idx;
+         GXCCtl = "nRcdExists_6_" + sGXsfl_73_idx;
          nRcdExists_6 = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         GXCCtl = "nIsMod_6_" + sGXsfl_108_idx;
+         GXCCtl = "nIsMod_6_" + sGXsfl_73_idx;
          nIsMod_6 = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
       }
 
-      protected void SubsflControlProps_1277( )
+      protected void SubsflControlProps_927( )
       {
-         edtResidentINCompanyId_Internalname = "RESIDENTINCOMPANYID_"+sGXsfl_127_idx;
-         edtResidentINCompanyKvkNumber_Internalname = "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_127_idx;
-         edtResidentINCompanyName_Internalname = "RESIDENTINCOMPANYNAME_"+sGXsfl_127_idx;
-         edtResidentINCompanyEmail_Internalname = "RESIDENTINCOMPANYEMAIL_"+sGXsfl_127_idx;
-         edtResidentINCompanyPhone_Internalname = "RESIDENTINCOMPANYPHONE_"+sGXsfl_127_idx;
+         edtResidentINCompanyId_Internalname = "RESIDENTINCOMPANYID_"+sGXsfl_92_idx;
+         edtResidentINCompanyKvkNumber_Internalname = "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_92_idx;
+         edtResidentINCompanyName_Internalname = "RESIDENTINCOMPANYNAME_"+sGXsfl_92_idx;
+         edtResidentINCompanyEmail_Internalname = "RESIDENTINCOMPANYEMAIL_"+sGXsfl_92_idx;
+         edtResidentINCompanyPhone_Internalname = "RESIDENTINCOMPANYPHONE_"+sGXsfl_92_idx;
       }
 
-      protected void SubsflControlProps_fel_1277( )
+      protected void SubsflControlProps_fel_927( )
       {
-         edtResidentINCompanyId_Internalname = "RESIDENTINCOMPANYID_"+sGXsfl_127_fel_idx;
-         edtResidentINCompanyKvkNumber_Internalname = "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_127_fel_idx;
-         edtResidentINCompanyName_Internalname = "RESIDENTINCOMPANYNAME_"+sGXsfl_127_fel_idx;
-         edtResidentINCompanyEmail_Internalname = "RESIDENTINCOMPANYEMAIL_"+sGXsfl_127_fel_idx;
-         edtResidentINCompanyPhone_Internalname = "RESIDENTINCOMPANYPHONE_"+sGXsfl_127_fel_idx;
+         edtResidentINCompanyId_Internalname = "RESIDENTINCOMPANYID_"+sGXsfl_92_fel_idx;
+         edtResidentINCompanyKvkNumber_Internalname = "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_92_fel_idx;
+         edtResidentINCompanyName_Internalname = "RESIDENTINCOMPANYNAME_"+sGXsfl_92_fel_idx;
+         edtResidentINCompanyEmail_Internalname = "RESIDENTINCOMPANYEMAIL_"+sGXsfl_92_fel_idx;
+         edtResidentINCompanyPhone_Internalname = "RESIDENTINCOMPANYPHONE_"+sGXsfl_92_fel_idx;
       }
 
       protected void AddRow027( )
       {
-         nGXsfl_127_idx = (int)(nGXsfl_127_idx+1);
-         sGXsfl_127_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_127_idx), 4, 0), 4, "0");
-         SubsflControlProps_1277( ) ;
+         nGXsfl_92_idx = (int)(nGXsfl_92_idx+1);
+         sGXsfl_92_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_92_idx), 4, 0), 4, "0");
+         SubsflControlProps_927( ) ;
          SendRow027( ) ;
       }
 
@@ -5927,7 +5601,7 @@ namespace GeneXus.Programs {
          {
             /* Report style subfile background logic. */
             subGridlevel_incompany_Backstyle = 1;
-            if ( ((int)((nGXsfl_127_idx) % (2))) == 0 )
+            if ( ((int)((nGXsfl_92_idx) % (2))) == 0 )
             {
                subGridlevel_incompany_Backcolor = (int)(0x0);
                if ( StringUtil.StrCmp(subGridlevel_incompany_Class, "") != 0 )
@@ -5946,54 +5620,54 @@ namespace GeneXus.Programs {
          }
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_7_" + sGXsfl_127_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 128,'',false,'" + sGXsfl_127_idx + "',127)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_7_" + sGXsfl_92_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 93,'',false,'" + sGXsfl_92_idx + "',92)\"";
          ROClassString = "Attribute";
-         Gridlevel_incompanyRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINCompanyId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A50ResidentINCompanyId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A50ResidentINCompanyId), "ZZZ9"))," dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,128);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINCompanyId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINCompanyId_Enabled,(short)1,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)127,(short)0,(short)-1,(short)0,(bool)true,(string)"Id",(string)"end",(bool)false,(string)""});
+         Gridlevel_incompanyRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINCompanyId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A50ResidentINCompanyId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A50ResidentINCompanyId), "ZZZ9"))," dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,93);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINCompanyId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINCompanyId_Enabled,(short)1,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)92,(short)0,(short)-1,(short)0,(bool)true,(string)"Id",(string)"end",(bool)false,(string)""});
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_7_" + sGXsfl_127_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 129,'',false,'" + sGXsfl_127_idx + "',127)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_7_" + sGXsfl_92_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 94,'',false,'" + sGXsfl_92_idx + "',92)\"";
          ROClassString = "Attribute";
-         Gridlevel_incompanyRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINCompanyKvkNumber_Internalname,(string)A51ResidentINCompanyKvkNumber,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,129);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINCompanyKvkNumber_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINCompanyKvkNumber_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)8,(short)0,(short)0,(short)127,(short)0,(short)-1,(short)-1,(bool)true,(string)"KvkNumber",(string)"start",(bool)true,(string)""});
+         Gridlevel_incompanyRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINCompanyKvkNumber_Internalname,(string)A51ResidentINCompanyKvkNumber,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,94);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINCompanyKvkNumber_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINCompanyKvkNumber_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)8,(short)0,(short)0,(short)92,(short)0,(short)-1,(short)-1,(bool)true,(string)"KvkNumber",(string)"start",(bool)true,(string)""});
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_7_" + sGXsfl_127_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 130,'',false,'" + sGXsfl_127_idx + "',127)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_7_" + sGXsfl_92_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 95,'',false,'" + sGXsfl_92_idx + "',92)\"";
          ROClassString = "Attribute";
-         Gridlevel_incompanyRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINCompanyName_Internalname,(string)A52ResidentINCompanyName,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,130);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINCompanyName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINCompanyName_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)127,(short)0,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"start",(bool)true,(string)""});
+         Gridlevel_incompanyRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINCompanyName_Internalname,(string)A52ResidentINCompanyName,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,95);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtResidentINCompanyName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINCompanyName_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)92,(short)0,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"start",(bool)true,(string)""});
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_7_" + sGXsfl_127_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 131,'',false,'" + sGXsfl_127_idx + "',127)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_7_" + sGXsfl_92_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 96,'',false,'" + sGXsfl_92_idx + "',92)\"";
          ROClassString = "Attribute";
-         Gridlevel_incompanyRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINCompanyEmail_Internalname,(string)A53ResidentINCompanyEmail,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,131);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"mailto:"+A53ResidentINCompanyEmail,(string)"",(string)"",(string)"",(string)edtResidentINCompanyEmail_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINCompanyEmail_Enabled,(short)0,(string)"email",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)100,(short)0,(short)0,(short)127,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Email",(string)"start",(bool)true,(string)""});
+         Gridlevel_incompanyRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINCompanyEmail_Internalname,(string)A53ResidentINCompanyEmail,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,96);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"mailto:"+A53ResidentINCompanyEmail,(string)"",(string)"",(string)"",(string)edtResidentINCompanyEmail_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINCompanyEmail_Enabled,(short)0,(string)"email",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)100,(short)0,(short)0,(short)92,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Email",(string)"start",(bool)true,(string)""});
          /* Subfile cell */
          /* Single line edit */
          if ( context.isSmartDevice( ) )
          {
             gxphoneLink = "tel:" + StringUtil.RTrim( A54ResidentINCompanyPhone);
          }
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_7_" + sGXsfl_127_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 132,'',false,'" + sGXsfl_127_idx + "',127)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_7_" + sGXsfl_92_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 97,'',false,'" + sGXsfl_92_idx + "',92)\"";
          ROClassString = "Attribute";
-         Gridlevel_incompanyRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINCompanyPhone_Internalname,StringUtil.RTrim( A54ResidentINCompanyPhone),(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,132);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)gxphoneLink,(string)"",(string)"",(string)"",(string)edtResidentINCompanyPhone_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINCompanyPhone_Enabled,(short)0,(string)"tel",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)0,(short)127,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Phone",(string)"start",(bool)true,(string)""});
+         Gridlevel_incompanyRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtResidentINCompanyPhone_Internalname,StringUtil.RTrim( A54ResidentINCompanyPhone),(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,97);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)gxphoneLink,(string)"",(string)"",(string)"",(string)edtResidentINCompanyPhone_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtResidentINCompanyPhone_Enabled,(short)0,(string)"tel",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)0,(short)92,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Phone",(string)"start",(bool)true,(string)""});
          ajax_sending_grid_row(Gridlevel_incompanyRow);
          send_integrity_lvl_hashes027( ) ;
-         GXCCtl = "Z50ResidentINCompanyId_" + sGXsfl_127_idx;
+         GXCCtl = "Z50ResidentINCompanyId_" + sGXsfl_92_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z50ResidentINCompanyId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "Z51ResidentINCompanyKvkNumber_" + sGXsfl_127_idx;
+         GXCCtl = "Z51ResidentINCompanyKvkNumber_" + sGXsfl_92_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, Z51ResidentINCompanyKvkNumber);
-         GXCCtl = "Z52ResidentINCompanyName_" + sGXsfl_127_idx;
+         GXCCtl = "Z52ResidentINCompanyName_" + sGXsfl_92_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, Z52ResidentINCompanyName);
-         GXCCtl = "Z53ResidentINCompanyEmail_" + sGXsfl_127_idx;
+         GXCCtl = "Z53ResidentINCompanyEmail_" + sGXsfl_92_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, Z53ResidentINCompanyEmail);
-         GXCCtl = "Z54ResidentINCompanyPhone_" + sGXsfl_127_idx;
+         GXCCtl = "Z54ResidentINCompanyPhone_" + sGXsfl_92_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.RTrim( Z54ResidentINCompanyPhone));
-         GXCCtl = "nRcdDeleted_7_" + sGXsfl_127_idx;
+         GXCCtl = "nRcdDeleted_7_" + sGXsfl_92_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_7), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "nRcdExists_7_" + sGXsfl_127_idx;
+         GXCCtl = "nRcdExists_7_" + sGXsfl_92_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_7), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "nIsMod_7_" + sGXsfl_127_idx;
+         GXCCtl = "nIsMod_7_" + sGXsfl_92_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_7), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "vMODE_" + sGXsfl_127_idx;
+         GXCCtl = "vMODE_" + sGXsfl_92_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.RTrim( Gx_mode));
-         GXCCtl = "vTRNCONTEXT_" + sGXsfl_127_idx;
+         GXCCtl = "vTRNCONTEXT_" + sGXsfl_92_idx;
          if ( context.isAjaxRequest( ) )
          {
             context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, GXCCtl, AV11TrnContext);
@@ -6002,32 +5676,32 @@ namespace GeneXus.Programs {
          {
             context.httpAjaxContext.ajax_rsp_assign_hidden_sdt(GXCCtl, AV11TrnContext);
          }
-         GXCCtl = "vCHECKREQUIREDFIELDSRESULT_" + sGXsfl_127_idx;
+         GXCCtl = "vCHECKREQUIREDFIELDSRESULT_" + sGXsfl_92_idx;
          GxWebStd.gx_boolean_hidden_field( context, GXCCtl, AV15CheckRequiredFieldsResult);
-         GXCCtl = "vRESIDENTID_" + sGXsfl_127_idx;
+         GXCCtl = "vRESIDENTID_" + sGXsfl_92_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV7ResidentId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTINCOMPANYID_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyId_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyKvkNumber_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTINCOMPANYNAME_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyName_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTINCOMPANYEMAIL_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyEmail_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "RESIDENTINCOMPANYPHONE_"+sGXsfl_127_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyPhone_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTINCOMPANYID_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyId_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyKvkNumber_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTINCOMPANYNAME_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyName_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTINCOMPANYEMAIL_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyEmail_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "RESIDENTINCOMPANYPHONE_"+sGXsfl_92_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtResidentINCompanyPhone_Enabled), 5, 0, ".", "")));
          ajax_sending_grid_row(null);
          Gridlevel_incompanyContainer.AddRow(Gridlevel_incompanyRow);
       }
 
       protected void ReadRow027( )
       {
-         nGXsfl_127_idx = (int)(nGXsfl_127_idx+1);
-         sGXsfl_127_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_127_idx), 4, 0), 4, "0");
-         SubsflControlProps_1277( ) ;
-         edtResidentINCompanyId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYID_"+sGXsfl_127_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtResidentINCompanyKvkNumber_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_127_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtResidentINCompanyName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYNAME_"+sGXsfl_127_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtResidentINCompanyEmail_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYEMAIL_"+sGXsfl_127_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtResidentINCompanyPhone_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYPHONE_"+sGXsfl_127_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         nGXsfl_92_idx = (int)(nGXsfl_92_idx+1);
+         sGXsfl_92_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_92_idx), 4, 0), 4, "0");
+         SubsflControlProps_927( ) ;
+         edtResidentINCompanyId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYID_"+sGXsfl_92_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtResidentINCompanyKvkNumber_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYKVKNUMBER_"+sGXsfl_92_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtResidentINCompanyName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYNAME_"+sGXsfl_92_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtResidentINCompanyEmail_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYEMAIL_"+sGXsfl_92_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtResidentINCompanyPhone_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "RESIDENTINCOMPANYPHONE_"+sGXsfl_92_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
          if ( ( ( context.localUtil.CToN( cgiGet( edtResidentINCompanyId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtResidentINCompanyId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) > Convert.ToDecimal( 9999 )) ) )
          {
-            GXCCtl = "RESIDENTINCOMPANYID_" + sGXsfl_127_idx;
+            GXCCtl = "RESIDENTINCOMPANYID_" + sGXsfl_92_idx;
             GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, GXCCtl);
             AnyError = 1;
             GX_FocusControl = edtResidentINCompanyId_Internalname;
@@ -6046,51 +5720,51 @@ namespace GeneXus.Programs {
          A54ResidentINCompanyPhone = cgiGet( edtResidentINCompanyPhone_Internalname);
          n54ResidentINCompanyPhone = false;
          n54ResidentINCompanyPhone = (String.IsNullOrEmpty(StringUtil.RTrim( A54ResidentINCompanyPhone)) ? true : false);
-         GXCCtl = "Z50ResidentINCompanyId_" + sGXsfl_127_idx;
+         GXCCtl = "Z50ResidentINCompanyId_" + sGXsfl_92_idx;
          Z50ResidentINCompanyId = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         GXCCtl = "Z51ResidentINCompanyKvkNumber_" + sGXsfl_127_idx;
+         GXCCtl = "Z51ResidentINCompanyKvkNumber_" + sGXsfl_92_idx;
          Z51ResidentINCompanyKvkNumber = cgiGet( GXCCtl);
-         GXCCtl = "Z52ResidentINCompanyName_" + sGXsfl_127_idx;
+         GXCCtl = "Z52ResidentINCompanyName_" + sGXsfl_92_idx;
          Z52ResidentINCompanyName = cgiGet( GXCCtl);
-         GXCCtl = "Z53ResidentINCompanyEmail_" + sGXsfl_127_idx;
+         GXCCtl = "Z53ResidentINCompanyEmail_" + sGXsfl_92_idx;
          Z53ResidentINCompanyEmail = cgiGet( GXCCtl);
          n53ResidentINCompanyEmail = (String.IsNullOrEmpty(StringUtil.RTrim( A53ResidentINCompanyEmail)) ? true : false);
-         GXCCtl = "Z54ResidentINCompanyPhone_" + sGXsfl_127_idx;
+         GXCCtl = "Z54ResidentINCompanyPhone_" + sGXsfl_92_idx;
          Z54ResidentINCompanyPhone = cgiGet( GXCCtl);
          n54ResidentINCompanyPhone = (String.IsNullOrEmpty(StringUtil.RTrim( A54ResidentINCompanyPhone)) ? true : false);
-         GXCCtl = "nRcdDeleted_7_" + sGXsfl_127_idx;
+         GXCCtl = "nRcdDeleted_7_" + sGXsfl_92_idx;
          nRcdDeleted_7 = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         GXCCtl = "nRcdExists_7_" + sGXsfl_127_idx;
+         GXCCtl = "nRcdExists_7_" + sGXsfl_92_idx;
          nRcdExists_7 = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         GXCCtl = "nIsMod_7_" + sGXsfl_127_idx;
+         GXCCtl = "nIsMod_7_" + sGXsfl_92_idx;
          nIsMod_7 = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
       }
 
-      protected void SubsflControlProps_14318( )
+      protected void SubsflControlProps_10818( )
       {
-         edtProductServiceId_Internalname = "PRODUCTSERVICEID_"+sGXsfl_143_idx;
-         edtProductServiceDescription_Internalname = "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_143_idx;
-         edtProductServiceQuantity_Internalname = "PRODUCTSERVICEQUANTITY_"+sGXsfl_143_idx;
-         edtProductServicePicture_Internalname = "PRODUCTSERVICEPICTURE_"+sGXsfl_143_idx;
-         edtProductServiceTypeId_Internalname = "PRODUCTSERVICETYPEID_"+sGXsfl_143_idx;
-         edtProductServiceTypeName_Internalname = "PRODUCTSERVICETYPENAME_"+sGXsfl_143_idx;
+         edtProductServiceId_Internalname = "PRODUCTSERVICEID_"+sGXsfl_108_idx;
+         edtProductServiceDescription_Internalname = "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_108_idx;
+         edtProductServiceQuantity_Internalname = "PRODUCTSERVICEQUANTITY_"+sGXsfl_108_idx;
+         edtProductServicePicture_Internalname = "PRODUCTSERVICEPICTURE_"+sGXsfl_108_idx;
+         edtProductServiceTypeId_Internalname = "PRODUCTSERVICETYPEID_"+sGXsfl_108_idx;
+         edtProductServiceTypeName_Internalname = "PRODUCTSERVICETYPENAME_"+sGXsfl_108_idx;
       }
 
-      protected void SubsflControlProps_fel_14318( )
+      protected void SubsflControlProps_fel_10818( )
       {
-         edtProductServiceId_Internalname = "PRODUCTSERVICEID_"+sGXsfl_143_fel_idx;
-         edtProductServiceDescription_Internalname = "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_143_fel_idx;
-         edtProductServiceQuantity_Internalname = "PRODUCTSERVICEQUANTITY_"+sGXsfl_143_fel_idx;
-         edtProductServicePicture_Internalname = "PRODUCTSERVICEPICTURE_"+sGXsfl_143_fel_idx;
-         edtProductServiceTypeId_Internalname = "PRODUCTSERVICETYPEID_"+sGXsfl_143_fel_idx;
-         edtProductServiceTypeName_Internalname = "PRODUCTSERVICETYPENAME_"+sGXsfl_143_fel_idx;
+         edtProductServiceId_Internalname = "PRODUCTSERVICEID_"+sGXsfl_108_fel_idx;
+         edtProductServiceDescription_Internalname = "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_108_fel_idx;
+         edtProductServiceQuantity_Internalname = "PRODUCTSERVICEQUANTITY_"+sGXsfl_108_fel_idx;
+         edtProductServicePicture_Internalname = "PRODUCTSERVICEPICTURE_"+sGXsfl_108_fel_idx;
+         edtProductServiceTypeId_Internalname = "PRODUCTSERVICETYPEID_"+sGXsfl_108_fel_idx;
+         edtProductServiceTypeName_Internalname = "PRODUCTSERVICETYPENAME_"+sGXsfl_108_fel_idx;
       }
 
       protected void AddRow0218( )
       {
-         nGXsfl_143_idx = (int)(nGXsfl_143_idx+1);
-         sGXsfl_143_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_143_idx), 4, 0), 4, "0");
-         SubsflControlProps_14318( ) ;
+         nGXsfl_108_idx = (int)(nGXsfl_108_idx+1);
+         sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx), 4, 0), 4, "0");
+         SubsflControlProps_10818( ) ;
          SendRow0218( ) ;
       }
 
@@ -6130,7 +5804,7 @@ namespace GeneXus.Programs {
          {
             /* Report style subfile background logic. */
             subGridlevel_productservice_Backstyle = 1;
-            if ( ((int)((nGXsfl_143_idx) % (2))) == 0 )
+            if ( ((int)((nGXsfl_108_idx) % (2))) == 0 )
             {
                subGridlevel_productservice_Backcolor = (int)(0x0);
                if ( StringUtil.StrCmp(subGridlevel_productservice_Class, "") != 0 )
@@ -6149,17 +5823,17 @@ namespace GeneXus.Programs {
          }
          /* Subfile cell */
          /* Single line edit */
-         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_18_" + sGXsfl_143_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 144,'',false,'" + sGXsfl_143_idx + "',143)\"";
+         TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_18_" + sGXsfl_108_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 109,'',false,'" + sGXsfl_108_idx + "',108)\"";
          ROClassString = "Attribute";
-         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A73ProductServiceId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A73ProductServiceId), "ZZZ9"))," dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,144);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceId_Enabled,(short)1,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)143,(short)0,(short)-1,(short)0,(bool)true,(string)"Id",(string)edtProductServiceId_Horizontalalignment,(bool)false,(string)""});
+         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A73ProductServiceId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A73ProductServiceId), "ZZZ9"))," dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,109);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceId_Enabled,(short)1,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)0,(bool)true,(string)"Id",(string)edtProductServiceId_Horizontalalignment,(bool)false,(string)""});
          /* Subfile cell */
          /* Single line edit */
          ROClassString = "Attribute";
-         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceDescription_Internalname,(string)A75ProductServiceDescription,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceDescription_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceDescription_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)200,(short)0,(short)0,(short)143,(short)0,(short)-1,(short)-1,(bool)true,(string)"GeneXusUnanimo\\Description",(string)"start",(bool)true,(string)""});
+         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceDescription_Internalname,(string)A75ProductServiceDescription,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceDescription_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceDescription_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)200,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)-1,(bool)true,(string)"GeneXusUnanimo\\Description",(string)"start",(bool)true,(string)""});
          /* Subfile cell */
          /* Single line edit */
          ROClassString = "Attribute";
-         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceQuantity_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A76ProductServiceQuantity), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( ((edtProductServiceQuantity_Enabled!=0) ? context.localUtil.Format( (decimal)(A76ProductServiceQuantity), "ZZZ9") : context.localUtil.Format( (decimal)(A76ProductServiceQuantity), "ZZZ9"))),(string)" dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceQuantity_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceQuantity_Enabled,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)143,(short)0,(short)-1,(short)0,(bool)true,(string)"",(string)"end",(bool)false,(string)""});
+         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceQuantity_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A76ProductServiceQuantity), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( ((edtProductServiceQuantity_Enabled!=0) ? context.localUtil.Format( (decimal)(A76ProductServiceQuantity), "ZZZ9") : context.localUtil.Format( (decimal)(A76ProductServiceQuantity), "ZZZ9"))),(string)" dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceQuantity_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceQuantity_Enabled,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)0,(bool)true,(string)"",(string)"end",(bool)false,(string)""});
          /* Subfile cell */
          /* Static Bitmap Variable */
          ClassString = "Attribute";
@@ -6167,29 +5841,29 @@ namespace GeneXus.Programs {
          A77ProductServicePicture_IsBlob = (bool)((String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture))&&String.IsNullOrEmpty(StringUtil.RTrim( A40000ProductServicePicture_GXI)))||!String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)));
          sImgUrl = (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.PathToRelativeUrl( A77ProductServicePicture));
          Gridlevel_productserviceRow.AddColumnProperties("bitmap", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServicePicture_Internalname,(string)sImgUrl,(string)"",(string)"",(string)"",context.GetTheme( ),(short)-1,(int)edtProductServicePicture_Enabled,(string)"",(string)"",(short)0,(short)-1,(short)0,(string)"px",(short)0,(string)"px",(short)0,(short)0,(short)0,(string)"",(string)"",(string)StyleString,(string)ClassString,(string)"TrnColumn",(string)"",(string)"",(string)"",(string)"",(string)"",(string)"",(short)0,(bool)A77ProductServicePicture_IsBlob,(bool)true,context.GetImageSrcSet( sImgUrl)});
-         AssignProp("", false, edtProductServicePicture_Internalname, "URL", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.PathToRelativeUrl( A77ProductServicePicture)), !bGXsfl_143_Refreshing);
-         AssignProp("", false, edtProductServicePicture_Internalname, "IsBlob", StringUtil.BoolToStr( A77ProductServicePicture_IsBlob), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServicePicture_Internalname, "URL", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.PathToRelativeUrl( A77ProductServicePicture)), !bGXsfl_108_Refreshing);
+         AssignProp("", false, edtProductServicePicture_Internalname, "IsBlob", StringUtil.BoolToStr( A77ProductServicePicture_IsBlob), !bGXsfl_108_Refreshing);
          /* Subfile cell */
          /* Single line edit */
          ROClassString = "Attribute";
-         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceTypeId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A71ProductServiceTypeId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( ((edtProductServiceTypeId_Enabled!=0) ? context.localUtil.Format( (decimal)(A71ProductServiceTypeId), "ZZZ9") : context.localUtil.Format( (decimal)(A71ProductServiceTypeId), "ZZZ9"))),(string)" dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceTypeId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceTypeId_Enabled,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)143,(short)0,(short)-1,(short)0,(bool)true,(string)"Id",(string)"end",(bool)false,(string)""});
+         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceTypeId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A71ProductServiceTypeId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( ((edtProductServiceTypeId_Enabled!=0) ? context.localUtil.Format( (decimal)(A71ProductServiceTypeId), "ZZZ9") : context.localUtil.Format( (decimal)(A71ProductServiceTypeId), "ZZZ9"))),(string)" dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceTypeId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceTypeId_Enabled,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)0,(bool)true,(string)"Id",(string)"end",(bool)false,(string)""});
          /* Subfile cell */
          /* Single line edit */
          ROClassString = "Attribute";
-         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceTypeName_Internalname,(string)A72ProductServiceTypeName,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceTypeName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceTypeName_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)143,(short)0,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"start",(bool)true,(string)""});
+         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceTypeName_Internalname,(string)A72ProductServiceTypeName,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceTypeName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceTypeName_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)40,(short)0,(short)0,(short)108,(short)0,(short)-1,(short)-1,(bool)true,(string)"Name",(string)"start",(bool)true,(string)""});
          ajax_sending_grid_row(Gridlevel_productserviceRow);
          send_integrity_lvl_hashes0218( ) ;
-         GXCCtl = "Z73ProductServiceId_" + sGXsfl_143_idx;
+         GXCCtl = "Z73ProductServiceId_" + sGXsfl_108_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z73ProductServiceId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "nRcdDeleted_18_" + sGXsfl_143_idx;
+         GXCCtl = "nRcdDeleted_18_" + sGXsfl_108_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdDeleted_18), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "nRcdExists_18_" + sGXsfl_143_idx;
+         GXCCtl = "nRcdExists_18_" + sGXsfl_108_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRcdExists_18), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "nIsMod_18_" + sGXsfl_143_idx;
+         GXCCtl = "nIsMod_18_" + sGXsfl_108_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(nIsMod_18), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "vMODE_" + sGXsfl_143_idx;
+         GXCCtl = "vMODE_" + sGXsfl_108_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.RTrim( Gx_mode));
-         GXCCtl = "vTRNCONTEXT_" + sGXsfl_143_idx;
+         GXCCtl = "vTRNCONTEXT_" + sGXsfl_108_idx;
          if ( context.isAjaxRequest( ) )
          {
             context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, GXCCtl, AV11TrnContext);
@@ -6198,39 +5872,39 @@ namespace GeneXus.Programs {
          {
             context.httpAjaxContext.ajax_rsp_assign_hidden_sdt(GXCCtl, AV11TrnContext);
          }
-         GXCCtl = "vCHECKREQUIREDFIELDSRESULT_" + sGXsfl_143_idx;
+         GXCCtl = "vCHECKREQUIREDFIELDSRESULT_" + sGXsfl_108_idx;
          GxWebStd.gx_boolean_hidden_field( context, GXCCtl, AV15CheckRequiredFieldsResult);
-         GXCCtl = "vRESIDENTID_" + sGXsfl_143_idx;
+         GXCCtl = "vRESIDENTID_" + sGXsfl_108_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV7ResidentId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GXCCtl = "PRODUCTSERVICEPICTURE_" + sGXsfl_143_idx;
+         GXCCtl = "PRODUCTSERVICEPICTURE_" + sGXsfl_108_idx;
          GXCCtlgxBlob = GXCCtl + "_gxBlob";
          GxWebStd.gx_hidden_field( context, GXCCtlgxBlob, A77ProductServicePicture);
-         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICEID_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceId_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICEID_"+sGXsfl_143_idx+"Horizontalalignment", StringUtil.RTrim( edtProductServiceId_Horizontalalignment));
-         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceDescription_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICEQUANTITY_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceQuantity_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICEPICTURE_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServicePicture_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICETYPEID_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeId_Enabled), 5, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICETYPENAME_"+sGXsfl_143_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeName_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICEID_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceId_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICEID_"+sGXsfl_108_idx+"Horizontalalignment", StringUtil.RTrim( edtProductServiceId_Horizontalalignment));
+         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceDescription_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICEQUANTITY_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceQuantity_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICEPICTURE_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServicePicture_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICETYPEID_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeId_Enabled), 5, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "PRODUCTSERVICETYPENAME_"+sGXsfl_108_idx+"Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtProductServiceTypeName_Enabled), 5, 0, ".", "")));
          ajax_sending_grid_row(null);
          Gridlevel_productserviceContainer.AddRow(Gridlevel_productserviceRow);
       }
 
       protected void ReadRow0218( )
       {
-         nGXsfl_143_idx = (int)(nGXsfl_143_idx+1);
-         sGXsfl_143_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_143_idx), 4, 0), 4, "0");
-         SubsflControlProps_14318( ) ;
-         edtProductServiceId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEID_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtProductServiceId_Horizontalalignment = cgiGet( "PRODUCTSERVICEID_"+sGXsfl_143_idx+"Horizontalalignment");
-         edtProductServiceDescription_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtProductServiceQuantity_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEQUANTITY_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtProductServicePicture_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEPICTURE_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtProductServiceTypeId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICETYPEID_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         edtProductServiceTypeName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICETYPENAME_"+sGXsfl_143_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         nGXsfl_108_idx = (int)(nGXsfl_108_idx+1);
+         sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx), 4, 0), 4, "0");
+         SubsflControlProps_10818( ) ;
+         edtProductServiceId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEID_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtProductServiceId_Horizontalalignment = cgiGet( "PRODUCTSERVICEID_"+sGXsfl_108_idx+"Horizontalalignment");
+         edtProductServiceDescription_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEDESCRIPTION_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtProductServiceQuantity_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEQUANTITY_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtProductServicePicture_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICEPICTURE_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtProductServiceTypeId_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICETYPEID_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         edtProductServiceTypeName_Enabled = (int)(Math.Round(context.localUtil.CToN( cgiGet( "PRODUCTSERVICETYPENAME_"+sGXsfl_108_idx+"Enabled"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
          if ( ( ( context.localUtil.CToN( cgiGet( edtProductServiceId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtProductServiceId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) > Convert.ToDecimal( 9999 )) ) )
          {
-            GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_143_idx;
+            GXCCtl = "PRODUCTSERVICEID_" + sGXsfl_108_idx;
             GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, GXCCtl);
             AnyError = 1;
             GX_FocusControl = edtProductServiceId_Internalname;
@@ -6246,13 +5920,13 @@ namespace GeneXus.Programs {
          A77ProductServicePicture = cgiGet( edtProductServicePicture_Internalname);
          A71ProductServiceTypeId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtProductServiceTypeId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
          A72ProductServiceTypeName = cgiGet( edtProductServiceTypeName_Internalname);
-         GXCCtl = "Z73ProductServiceId_" + sGXsfl_143_idx;
+         GXCCtl = "Z73ProductServiceId_" + sGXsfl_108_idx;
          Z73ProductServiceId = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         GXCCtl = "nRcdDeleted_18_" + sGXsfl_143_idx;
+         GXCCtl = "nRcdDeleted_18_" + sGXsfl_108_idx;
          nRcdDeleted_18 = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         GXCCtl = "nRcdExists_18_" + sGXsfl_143_idx;
+         GXCCtl = "nRcdExists_18_" + sGXsfl_108_idx;
          nRcdExists_18 = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-         GXCCtl = "nIsMod_18_" + sGXsfl_143_idx;
+         GXCCtl = "nIsMod_18_" + sGXsfl_108_idx;
          nIsMod_18 = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
          getMultimediaValue(edtProductServicePicture_Internalname, ref  A77ProductServicePicture, ref  A40000ProductServicePicture_GXI);
       }
@@ -6266,60 +5940,60 @@ namespace GeneXus.Programs {
 
       protected void ConfirmValues020( )
       {
+         nGXsfl_73_idx = 0;
+         sGXsfl_73_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_73_idx), 4, 0), 4, "0");
+         SubsflControlProps_736( ) ;
+         while ( nGXsfl_73_idx < nRC_GXsfl_73 )
+         {
+            nGXsfl_73_idx = (int)(nGXsfl_73_idx+1);
+            sGXsfl_73_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_73_idx), 4, 0), 4, "0");
+            SubsflControlProps_736( ) ;
+            ChangePostValue( "Z42ResidentINIndividualId_"+sGXsfl_73_idx, cgiGet( "ZT_"+"Z42ResidentINIndividualId_"+sGXsfl_73_idx)) ;
+            DeletePostValue( "ZT_"+"Z42ResidentINIndividualId_"+sGXsfl_73_idx) ;
+            ChangePostValue( "Z43ResidentINIndividualBsnNumber_"+sGXsfl_73_idx, cgiGet( "ZT_"+"Z43ResidentINIndividualBsnNumber_"+sGXsfl_73_idx)) ;
+            DeletePostValue( "ZT_"+"Z43ResidentINIndividualBsnNumber_"+sGXsfl_73_idx) ;
+            ChangePostValue( "Z44ResidentINIndividualGivenName_"+sGXsfl_73_idx, cgiGet( "ZT_"+"Z44ResidentINIndividualGivenName_"+sGXsfl_73_idx)) ;
+            DeletePostValue( "ZT_"+"Z44ResidentINIndividualGivenName_"+sGXsfl_73_idx) ;
+            ChangePostValue( "Z45ResidentINIndividualLastName_"+sGXsfl_73_idx, cgiGet( "ZT_"+"Z45ResidentINIndividualLastName_"+sGXsfl_73_idx)) ;
+            DeletePostValue( "ZT_"+"Z45ResidentINIndividualLastName_"+sGXsfl_73_idx) ;
+            ChangePostValue( "Z46ResidentINIndividualEmail_"+sGXsfl_73_idx, cgiGet( "ZT_"+"Z46ResidentINIndividualEmail_"+sGXsfl_73_idx)) ;
+            DeletePostValue( "ZT_"+"Z46ResidentINIndividualEmail_"+sGXsfl_73_idx) ;
+            ChangePostValue( "Z47ResidentINIndividualPhone_"+sGXsfl_73_idx, cgiGet( "ZT_"+"Z47ResidentINIndividualPhone_"+sGXsfl_73_idx)) ;
+            DeletePostValue( "ZT_"+"Z47ResidentINIndividualPhone_"+sGXsfl_73_idx) ;
+            ChangePostValue( "Z48ResidentINIndividualAddress_"+sGXsfl_73_idx, cgiGet( "ZT_"+"Z48ResidentINIndividualAddress_"+sGXsfl_73_idx)) ;
+            DeletePostValue( "ZT_"+"Z48ResidentINIndividualAddress_"+sGXsfl_73_idx) ;
+            ChangePostValue( "Z49ResidentINIndividualGender_"+sGXsfl_73_idx, cgiGet( "ZT_"+"Z49ResidentINIndividualGender_"+sGXsfl_73_idx)) ;
+            DeletePostValue( "ZT_"+"Z49ResidentINIndividualGender_"+sGXsfl_73_idx) ;
+         }
+         nGXsfl_92_idx = 0;
+         sGXsfl_92_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_92_idx), 4, 0), 4, "0");
+         SubsflControlProps_927( ) ;
+         while ( nGXsfl_92_idx < nRC_GXsfl_92 )
+         {
+            nGXsfl_92_idx = (int)(nGXsfl_92_idx+1);
+            sGXsfl_92_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_92_idx), 4, 0), 4, "0");
+            SubsflControlProps_927( ) ;
+            ChangePostValue( "Z50ResidentINCompanyId_"+sGXsfl_92_idx, cgiGet( "ZT_"+"Z50ResidentINCompanyId_"+sGXsfl_92_idx)) ;
+            DeletePostValue( "ZT_"+"Z50ResidentINCompanyId_"+sGXsfl_92_idx) ;
+            ChangePostValue( "Z51ResidentINCompanyKvkNumber_"+sGXsfl_92_idx, cgiGet( "ZT_"+"Z51ResidentINCompanyKvkNumber_"+sGXsfl_92_idx)) ;
+            DeletePostValue( "ZT_"+"Z51ResidentINCompanyKvkNumber_"+sGXsfl_92_idx) ;
+            ChangePostValue( "Z52ResidentINCompanyName_"+sGXsfl_92_idx, cgiGet( "ZT_"+"Z52ResidentINCompanyName_"+sGXsfl_92_idx)) ;
+            DeletePostValue( "ZT_"+"Z52ResidentINCompanyName_"+sGXsfl_92_idx) ;
+            ChangePostValue( "Z53ResidentINCompanyEmail_"+sGXsfl_92_idx, cgiGet( "ZT_"+"Z53ResidentINCompanyEmail_"+sGXsfl_92_idx)) ;
+            DeletePostValue( "ZT_"+"Z53ResidentINCompanyEmail_"+sGXsfl_92_idx) ;
+            ChangePostValue( "Z54ResidentINCompanyPhone_"+sGXsfl_92_idx, cgiGet( "ZT_"+"Z54ResidentINCompanyPhone_"+sGXsfl_92_idx)) ;
+            DeletePostValue( "ZT_"+"Z54ResidentINCompanyPhone_"+sGXsfl_92_idx) ;
+         }
          nGXsfl_108_idx = 0;
          sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx), 4, 0), 4, "0");
-         SubsflControlProps_1086( ) ;
+         SubsflControlProps_10818( ) ;
          while ( nGXsfl_108_idx < nRC_GXsfl_108 )
          {
             nGXsfl_108_idx = (int)(nGXsfl_108_idx+1);
             sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx), 4, 0), 4, "0");
-            SubsflControlProps_1086( ) ;
-            ChangePostValue( "Z42ResidentINIndividualId_"+sGXsfl_108_idx, cgiGet( "ZT_"+"Z42ResidentINIndividualId_"+sGXsfl_108_idx)) ;
-            DeletePostValue( "ZT_"+"Z42ResidentINIndividualId_"+sGXsfl_108_idx) ;
-            ChangePostValue( "Z43ResidentINIndividualBsnNumber_"+sGXsfl_108_idx, cgiGet( "ZT_"+"Z43ResidentINIndividualBsnNumber_"+sGXsfl_108_idx)) ;
-            DeletePostValue( "ZT_"+"Z43ResidentINIndividualBsnNumber_"+sGXsfl_108_idx) ;
-            ChangePostValue( "Z44ResidentINIndividualGivenName_"+sGXsfl_108_idx, cgiGet( "ZT_"+"Z44ResidentINIndividualGivenName_"+sGXsfl_108_idx)) ;
-            DeletePostValue( "ZT_"+"Z44ResidentINIndividualGivenName_"+sGXsfl_108_idx) ;
-            ChangePostValue( "Z45ResidentINIndividualLastName_"+sGXsfl_108_idx, cgiGet( "ZT_"+"Z45ResidentINIndividualLastName_"+sGXsfl_108_idx)) ;
-            DeletePostValue( "ZT_"+"Z45ResidentINIndividualLastName_"+sGXsfl_108_idx) ;
-            ChangePostValue( "Z46ResidentINIndividualEmail_"+sGXsfl_108_idx, cgiGet( "ZT_"+"Z46ResidentINIndividualEmail_"+sGXsfl_108_idx)) ;
-            DeletePostValue( "ZT_"+"Z46ResidentINIndividualEmail_"+sGXsfl_108_idx) ;
-            ChangePostValue( "Z47ResidentINIndividualPhone_"+sGXsfl_108_idx, cgiGet( "ZT_"+"Z47ResidentINIndividualPhone_"+sGXsfl_108_idx)) ;
-            DeletePostValue( "ZT_"+"Z47ResidentINIndividualPhone_"+sGXsfl_108_idx) ;
-            ChangePostValue( "Z48ResidentINIndividualAddress_"+sGXsfl_108_idx, cgiGet( "ZT_"+"Z48ResidentINIndividualAddress_"+sGXsfl_108_idx)) ;
-            DeletePostValue( "ZT_"+"Z48ResidentINIndividualAddress_"+sGXsfl_108_idx) ;
-            ChangePostValue( "Z49ResidentINIndividualGender_"+sGXsfl_108_idx, cgiGet( "ZT_"+"Z49ResidentINIndividualGender_"+sGXsfl_108_idx)) ;
-            DeletePostValue( "ZT_"+"Z49ResidentINIndividualGender_"+sGXsfl_108_idx) ;
-         }
-         nGXsfl_127_idx = 0;
-         sGXsfl_127_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_127_idx), 4, 0), 4, "0");
-         SubsflControlProps_1277( ) ;
-         while ( nGXsfl_127_idx < nRC_GXsfl_127 )
-         {
-            nGXsfl_127_idx = (int)(nGXsfl_127_idx+1);
-            sGXsfl_127_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_127_idx), 4, 0), 4, "0");
-            SubsflControlProps_1277( ) ;
-            ChangePostValue( "Z50ResidentINCompanyId_"+sGXsfl_127_idx, cgiGet( "ZT_"+"Z50ResidentINCompanyId_"+sGXsfl_127_idx)) ;
-            DeletePostValue( "ZT_"+"Z50ResidentINCompanyId_"+sGXsfl_127_idx) ;
-            ChangePostValue( "Z51ResidentINCompanyKvkNumber_"+sGXsfl_127_idx, cgiGet( "ZT_"+"Z51ResidentINCompanyKvkNumber_"+sGXsfl_127_idx)) ;
-            DeletePostValue( "ZT_"+"Z51ResidentINCompanyKvkNumber_"+sGXsfl_127_idx) ;
-            ChangePostValue( "Z52ResidentINCompanyName_"+sGXsfl_127_idx, cgiGet( "ZT_"+"Z52ResidentINCompanyName_"+sGXsfl_127_idx)) ;
-            DeletePostValue( "ZT_"+"Z52ResidentINCompanyName_"+sGXsfl_127_idx) ;
-            ChangePostValue( "Z53ResidentINCompanyEmail_"+sGXsfl_127_idx, cgiGet( "ZT_"+"Z53ResidentINCompanyEmail_"+sGXsfl_127_idx)) ;
-            DeletePostValue( "ZT_"+"Z53ResidentINCompanyEmail_"+sGXsfl_127_idx) ;
-            ChangePostValue( "Z54ResidentINCompanyPhone_"+sGXsfl_127_idx, cgiGet( "ZT_"+"Z54ResidentINCompanyPhone_"+sGXsfl_127_idx)) ;
-            DeletePostValue( "ZT_"+"Z54ResidentINCompanyPhone_"+sGXsfl_127_idx) ;
-         }
-         nGXsfl_143_idx = 0;
-         sGXsfl_143_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_143_idx), 4, 0), 4, "0");
-         SubsflControlProps_14318( ) ;
-         while ( nGXsfl_143_idx < nRC_GXsfl_143 )
-         {
-            nGXsfl_143_idx = (int)(nGXsfl_143_idx+1);
-            sGXsfl_143_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_143_idx), 4, 0), 4, "0");
-            SubsflControlProps_14318( ) ;
-            ChangePostValue( "Z73ProductServiceId_"+sGXsfl_143_idx, cgiGet( "ZT_"+"Z73ProductServiceId_"+sGXsfl_143_idx)) ;
-            DeletePostValue( "ZT_"+"Z73ProductServiceId_"+sGXsfl_143_idx) ;
+            SubsflControlProps_10818( ) ;
+            ChangePostValue( "Z73ProductServiceId_"+sGXsfl_108_idx, cgiGet( "ZT_"+"Z73ProductServiceId_"+sGXsfl_108_idx)) ;
+            DeletePostValue( "ZT_"+"Z73ProductServiceId_"+sGXsfl_108_idx) ;
          }
       }
 
@@ -6364,12 +6038,6 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("shared/HistoryManager/rsh/rsh.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/HistoryManagerCreate.js", "", false, true);
          context.AddJavascriptSource("Tab/TabRender.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -6450,9 +6118,9 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "IsModified", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsModified), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
          GxWebStd.gx_hidden_field( context, "Mode", StringUtil.RTrim( Gx_mode));
          GxWebStd.gx_hidden_field( context, "gxhash_Mode", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!")), context));
+         GxWebStd.gx_hidden_field( context, "nRC_GXsfl_73", StringUtil.LTrim( StringUtil.NToC( (decimal)(nGXsfl_73_idx), 8, 0, context.GetLanguageProperty( "decimal_point"), "")));
+         GxWebStd.gx_hidden_field( context, "nRC_GXsfl_92", StringUtil.LTrim( StringUtil.NToC( (decimal)(nGXsfl_92_idx), 8, 0, context.GetLanguageProperty( "decimal_point"), "")));
          GxWebStd.gx_hidden_field( context, "nRC_GXsfl_108", StringUtil.LTrim( StringUtil.NToC( (decimal)(nGXsfl_108_idx), 8, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GxWebStd.gx_hidden_field( context, "nRC_GXsfl_127", StringUtil.LTrim( StringUtil.NToC( (decimal)(nGXsfl_127_idx), 8, 0, context.GetLanguageProperty( "decimal_point"), "")));
-         GxWebStd.gx_hidden_field( context, "nRC_GXsfl_143", StringUtil.LTrim( StringUtil.NToC( (decimal)(nGXsfl_143_idx), 8, 0, context.GetLanguageProperty( "decimal_point"), "")));
          GxWebStd.gx_hidden_field( context, "N82ResidentTypeId", StringUtil.LTrim( StringUtil.NToC( (decimal)(A82ResidentTypeId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
          GxWebStd.gx_hidden_field( context, "N1CustomerId", StringUtil.LTrim( StringUtil.NToC( (decimal)(A1CustomerId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
          GxWebStd.gx_hidden_field( context, "N18CustomerLocationId", StringUtil.LTrim( StringUtil.NToC( (decimal)(A18CustomerLocationId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
@@ -6474,22 +6142,6 @@ namespace GeneXus.Programs {
          }
          if ( context.isAjaxRequest( ) )
          {
-            context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vCUSTOMERLOCATIONID_DATA", AV29CustomerLocationId_Data);
-         }
-         else
-         {
-            context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vCUSTOMERLOCATIONID_DATA", AV29CustomerLocationId_Data);
-         }
-         if ( context.isAjaxRequest( ) )
-         {
-            context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vCUSTOMERID_DATA", AV32CustomerId_Data);
-         }
-         else
-         {
-            context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vCUSTOMERID_DATA", AV32CustomerId_Data);
-         }
-         if ( context.isAjaxRequest( ) )
-         {
             context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vPRODUCTSERVICEID_DATA", AV18ProductServiceId_Data);
          }
          else
@@ -6508,7 +6160,6 @@ namespace GeneXus.Programs {
          }
          GxWebStd.gx_hidden_field( context, "gxhash_vTRNCONTEXT", GetSecureSignedToken( "", AV11TrnContext, context));
          GxWebStd.gx_boolean_hidden_field( context, "vCHECKREQUIREDFIELDSRESULT", AV15CheckRequiredFieldsResult);
-         GxWebStd.gx_hidden_field( context, "vCOND_CUSTOMERID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV31Cond_CustomerId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
          GxWebStd.gx_hidden_field( context, "vTABSACTIVEPAGE", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV17TabsActivePage), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
          GxWebStd.gx_hidden_field( context, "vRESIDENTID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV7ResidentId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
          GxWebStd.gx_hidden_field( context, "gxhash_vRESIDENTID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV7ResidentId), "ZZZ9"), context));
@@ -6532,24 +6183,6 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "COMBO_RESIDENTTYPEID_Datalistproc", StringUtil.RTrim( Combo_residenttypeid_Datalistproc));
          GxWebStd.gx_hidden_field( context, "COMBO_RESIDENTTYPEID_Datalistprocparametersprefix", StringUtil.RTrim( Combo_residenttypeid_Datalistprocparametersprefix));
          GxWebStd.gx_hidden_field( context, "COMBO_RESIDENTTYPEID_Emptyitem", StringUtil.BoolToStr( Combo_residenttypeid_Emptyitem));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERLOCATIONID_Objectcall", StringUtil.RTrim( Combo_customerlocationid_Objectcall));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERLOCATIONID_Cls", StringUtil.RTrim( Combo_customerlocationid_Cls));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERLOCATIONID_Selectedvalue_set", StringUtil.RTrim( Combo_customerlocationid_Selectedvalue_set));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERLOCATIONID_Selectedtext_set", StringUtil.RTrim( Combo_customerlocationid_Selectedtext_set));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERLOCATIONID_Gamoauthtoken", StringUtil.RTrim( Combo_customerlocationid_Gamoauthtoken));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERLOCATIONID_Enabled", StringUtil.BoolToStr( Combo_customerlocationid_Enabled));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERLOCATIONID_Datalistproc", StringUtil.RTrim( Combo_customerlocationid_Datalistproc));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERLOCATIONID_Datalistprocparametersprefix", StringUtil.RTrim( Combo_customerlocationid_Datalistprocparametersprefix));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERLOCATIONID_Emptyitem", StringUtil.BoolToStr( Combo_customerlocationid_Emptyitem));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERID_Objectcall", StringUtil.RTrim( Combo_customerid_Objectcall));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERID_Cls", StringUtil.RTrim( Combo_customerid_Cls));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERID_Selectedvalue_set", StringUtil.RTrim( Combo_customerid_Selectedvalue_set));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERID_Selectedtext_set", StringUtil.RTrim( Combo_customerid_Selectedtext_set));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERID_Gamoauthtoken", StringUtil.RTrim( Combo_customerid_Gamoauthtoken));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERID_Enabled", StringUtil.BoolToStr( Combo_customerid_Enabled));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERID_Datalistproc", StringUtil.RTrim( Combo_customerid_Datalistproc));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERID_Datalistprocparametersprefix", StringUtil.RTrim( Combo_customerid_Datalistprocparametersprefix));
-         GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERID_Emptyitem", StringUtil.BoolToStr( Combo_customerid_Emptyitem));
          GxWebStd.gx_hidden_field( context, "GXUITABSPANEL_STEPS_Objectcall", StringUtil.RTrim( Gxuitabspanel_steps_Objectcall));
          GxWebStd.gx_hidden_field( context, "GXUITABSPANEL_STEPS_Enabled", StringUtil.BoolToStr( Gxuitabspanel_steps_Enabled));
          GxWebStd.gx_hidden_field( context, "GXUITABSPANEL_STEPS_Pagecount", StringUtil.LTrim( StringUtil.NToC( (decimal)(Gxuitabspanel_steps_Pagecount), 9, 0, ".", "")));
@@ -6786,10 +6419,10 @@ namespace GeneXus.Programs {
          A75ProductServiceDescription = "";
          A76ProductServiceQuantity = 0;
          A77ProductServicePicture = "";
-         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_108_Refreshing);
          AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
          A40000ProductServicePicture_GXI = "";
-         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_108_Refreshing);
          AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
          A71ProductServiceTypeId = 0;
          A72ProductServiceTypeName = "";
@@ -6816,7 +6449,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915563131", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119584659", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -6832,18 +6465,12 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("resident.js", "?202481915563133", false, true);
+         context.AddJavascriptSource("resident.js", "?202482119584660", false, true);
          context.AddJavascriptSource("shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/rsh/rsh.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/HistoryManagerCreate.js", "", false, true);
          context.AddJavascriptSource("Tab/TabRender.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -6858,22 +6485,22 @@ namespace GeneXus.Programs {
       protected void init_level_properties6( )
       {
          edtResidentINIndividualId_Enabled = defedtResidentINIndividualId_Enabled;
-         AssignProp("", false, edtResidentINIndividualId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
+         AssignProp("", false, edtResidentINIndividualId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINIndividualId_Enabled), 5, 0), !bGXsfl_73_Refreshing);
       }
 
       protected void init_level_properties7( )
       {
          edtResidentINCompanyId_Enabled = defedtResidentINCompanyId_Enabled;
-         AssignProp("", false, edtResidentINCompanyId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyId_Enabled), 5, 0), !bGXsfl_127_Refreshing);
+         AssignProp("", false, edtResidentINCompanyId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtResidentINCompanyId_Enabled), 5, 0), !bGXsfl_92_Refreshing);
       }
 
       protected void init_level_properties18( )
       {
          edtProductServiceId_Enabled = defedtProductServiceId_Enabled;
-         AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_143_Refreshing);
+         AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_108_Refreshing);
       }
 
-      protected void StartGridControl108( )
+      protected void StartGridControl73( )
       {
          Gridlevel_inindividualContainer.AddObjectProperty("GridName", "Gridlevel_inindividual");
          Gridlevel_inindividualContainer.AddObjectProperty("Header", subGridlevel_inindividual_Header);
@@ -6924,7 +6551,7 @@ namespace GeneXus.Programs {
          Gridlevel_inindividualContainer.AddObjectProperty("Collapsed", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGridlevel_inindividual_Collapsed), 1, 0, ".", "")));
       }
 
-      protected void StartGridControl127( )
+      protected void StartGridControl92( )
       {
          Gridlevel_incompanyContainer.AddObjectProperty("GridName", "Gridlevel_incompany");
          Gridlevel_incompanyContainer.AddObjectProperty("Header", subGridlevel_incompany_Header);
@@ -6963,7 +6590,7 @@ namespace GeneXus.Programs {
          Gridlevel_incompanyContainer.AddObjectProperty("Collapsed", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGridlevel_incompany_Collapsed), 1, 0, ".", "")));
       }
 
-      protected void StartGridControl143( )
+      protected void StartGridControl108( )
       {
          Gridlevel_productserviceContainer.AddObjectProperty("GridName", "Gridlevel_productservice");
          Gridlevel_productserviceContainer.AddObjectProperty("Header", subGridlevel_productservice_Header);
@@ -7010,7 +6637,6 @@ namespace GeneXus.Programs {
       protected void init_default_properties( )
       {
          lblTabgeneral_title_Internalname = "TABGENERAL_TITLE";
-         edtResidentId_Internalname = "RESIDENTID";
          edtResidentBsnNumber_Internalname = "RESIDENTBSNNUMBER";
          edtResidentGivenName_Internalname = "RESIDENTGIVENNAME";
          edtResidentLastName_Internalname = "RESIDENTLASTNAME";
@@ -7018,20 +6644,10 @@ namespace GeneXus.Programs {
          edtResidentEmail_Internalname = "RESIDENTEMAIL";
          edtResidentAddress_Internalname = "RESIDENTADDRESS";
          edtResidentPhone_Internalname = "RESIDENTPHONE";
-         edtResidentGAMGUID_Internalname = "RESIDENTGAMGUID";
          lblTextblockresidenttypeid_Internalname = "TEXTBLOCKRESIDENTTYPEID";
          Combo_residenttypeid_Internalname = "COMBO_RESIDENTTYPEID";
          edtResidentTypeId_Internalname = "RESIDENTTYPEID";
          divTablesplittedresidenttypeid_Internalname = "TABLESPLITTEDRESIDENTTYPEID";
-         lblTextblockcustomerlocationid_Internalname = "TEXTBLOCKCUSTOMERLOCATIONID";
-         Combo_customerlocationid_Internalname = "COMBO_CUSTOMERLOCATIONID";
-         edtCustomerLocationId_Internalname = "CUSTOMERLOCATIONID";
-         divTablesplittedcustomerlocationid_Internalname = "TABLESPLITTEDCUSTOMERLOCATIONID";
-         lblTextblockcustomerid_Internalname = "TEXTBLOCKCUSTOMERID";
-         Combo_customerid_Internalname = "COMBO_CUSTOMERID";
-         edtCustomerId_Internalname = "CUSTOMERID";
-         divTablesplittedcustomerid_Internalname = "TABLESPLITTEDCUSTOMERID";
-         edtCustomerName_Internalname = "CUSTOMERNAME";
          divTableattributes_Internalname = "TABLEATTRIBUTES";
          lblTablevel_inindividual_title_Internalname = "TABLEVEL_ININDIVIDUAL_TITLE";
          edtResidentINIndividualId_Internalname = "RESIDENTININDIVIDUALID";
@@ -7071,11 +6687,12 @@ namespace GeneXus.Programs {
          divTablemain_Internalname = "TABLEMAIN";
          edtavComboresidenttypeid_Internalname = "vCOMBORESIDENTTYPEID";
          divSectionattribute_residenttypeid_Internalname = "SECTIONATTRIBUTE_RESIDENTTYPEID";
-         edtavCombocustomerlocationid_Internalname = "vCOMBOCUSTOMERLOCATIONID";
-         divSectionattribute_customerlocationid_Internalname = "SECTIONATTRIBUTE_CUSTOMERLOCATIONID";
-         edtavCombocustomerid_Internalname = "vCOMBOCUSTOMERID";
-         divSectionattribute_customerid_Internalname = "SECTIONATTRIBUTE_CUSTOMERID";
          Combo_productserviceid_Internalname = "COMBO_PRODUCTSERVICEID";
+         edtResidentId_Internalname = "RESIDENTID";
+         edtResidentGAMGUID_Internalname = "RESIDENTGAMGUID";
+         edtCustomerLocationId_Internalname = "CUSTOMERLOCATIONID";
+         edtCustomerId_Internalname = "CUSTOMERID";
+         edtCustomerName_Internalname = "CUSTOMERNAME";
          Wizard_steps_Internalname = "WIZARD_STEPS";
          divHtml_bottomauxiliarcontrols_Internalname = "HTML_BOTTOMAUXILIARCONTROLS";
          divLayoutmaintable_Internalname = "LAYOUTMAINTABLE";
@@ -7132,7 +6749,6 @@ namespace GeneXus.Programs {
          edtResidentINIndividualId_Jsonclick = "";
          subGridlevel_inindividual_Class = "WorkWith";
          subGridlevel_inindividual_Backcolorstyle = 0;
-         Combo_customerlocationid_Datalistprocparametersprefix = "";
          Combo_productserviceid_Titlecontrolidtoreplace = "";
          Wizard_steps_Tabsinternalname = "";
          edtProductServiceTypeName_Enabled = 0;
@@ -7154,6 +6770,21 @@ namespace GeneXus.Programs {
          edtResidentINIndividualGivenName_Enabled = 1;
          edtResidentINIndividualBsnNumber_Enabled = 1;
          edtResidentINIndividualId_Enabled = 1;
+         edtCustomerName_Jsonclick = "";
+         edtCustomerName_Enabled = 0;
+         edtCustomerName_Visible = 1;
+         edtCustomerId_Jsonclick = "";
+         edtCustomerId_Enabled = 1;
+         edtCustomerId_Visible = 1;
+         edtCustomerLocationId_Jsonclick = "";
+         edtCustomerLocationId_Enabled = 1;
+         edtCustomerLocationId_Visible = 1;
+         edtResidentGAMGUID_Jsonclick = "";
+         edtResidentGAMGUID_Enabled = 1;
+         edtResidentGAMGUID_Visible = 1;
+         edtResidentId_Jsonclick = "";
+         edtResidentId_Enabled = 0;
+         edtResidentId_Visible = 1;
          Combo_productserviceid_Emptyitem = Convert.ToBoolean( 0);
          Combo_productserviceid_Datalistprocparametersprefix = " \"ComboName\": \"ProductServiceId\", \"TrnMode\": \"INS\", \"IsDynamicCall\": true, \"ResidentId\": 0";
          Combo_productserviceid_Datalistproc = "ResidentLoadDVCombo";
@@ -7161,12 +6792,6 @@ namespace GeneXus.Programs {
          Combo_productserviceid_Isgriditem = Convert.ToBoolean( -1);
          Combo_productserviceid_Cls = "ExtendedCombo";
          Combo_productserviceid_Caption = "";
-         edtavCombocustomerid_Jsonclick = "";
-         edtavCombocustomerid_Enabled = 0;
-         edtavCombocustomerid_Visible = 1;
-         edtavCombocustomerlocationid_Jsonclick = "";
-         edtavCombocustomerlocationid_Enabled = 0;
-         edtavCombocustomerlocationid_Visible = 1;
          edtavComboresidenttypeid_Jsonclick = "";
          edtavComboresidenttypeid_Enabled = 0;
          edtavComboresidenttypeid_Visible = 1;
@@ -7177,25 +6802,6 @@ namespace GeneXus.Programs {
          bttBtnwizardnext_Visible = 1;
          bttBtntrn_cancel_Visible = 1;
          bttBtnwizardprevious_Visible = 1;
-         edtCustomerName_Jsonclick = "";
-         edtCustomerName_Enabled = 0;
-         edtCustomerId_Jsonclick = "";
-         edtCustomerId_Enabled = 1;
-         edtCustomerId_Visible = 1;
-         Combo_customerid_Emptyitem = Convert.ToBoolean( 0);
-         Combo_customerid_Datalistprocparametersprefix = " \"ComboName\": \"CustomerId\", \"TrnMode\": \"INS\", \"IsDynamicCall\": true, \"ResidentId\": 0";
-         Combo_customerid_Datalistproc = "ResidentLoadDVCombo";
-         Combo_customerid_Cls = "ExtendedCombo Attribute";
-         Combo_customerid_Caption = "";
-         Combo_customerid_Enabled = Convert.ToBoolean( -1);
-         edtCustomerLocationId_Jsonclick = "";
-         edtCustomerLocationId_Enabled = 1;
-         edtCustomerLocationId_Visible = 1;
-         Combo_customerlocationid_Emptyitem = Convert.ToBoolean( 0);
-         Combo_customerlocationid_Datalistproc = "ResidentLoadDVCombo";
-         Combo_customerlocationid_Cls = "ExtendedCombo Attribute";
-         Combo_customerlocationid_Caption = "";
-         Combo_customerlocationid_Enabled = Convert.ToBoolean( -1);
          edtResidentTypeId_Jsonclick = "";
          edtResidentTypeId_Enabled = 1;
          edtResidentTypeId_Visible = 1;
@@ -7205,8 +6811,6 @@ namespace GeneXus.Programs {
          Combo_residenttypeid_Cls = "ExtendedCombo Attribute";
          Combo_residenttypeid_Caption = "";
          Combo_residenttypeid_Enabled = Convert.ToBoolean( -1);
-         edtResidentGAMGUID_Jsonclick = "";
-         edtResidentGAMGUID_Enabled = 1;
          edtResidentPhone_Jsonclick = "";
          edtResidentPhone_Enabled = 1;
          edtResidentAddress_Enabled = 1;
@@ -7220,8 +6824,6 @@ namespace GeneXus.Programs {
          edtResidentGivenName_Enabled = 1;
          edtResidentBsnNumber_Jsonclick = "";
          edtResidentBsnNumber_Enabled = 1;
-         edtResidentId_Jsonclick = "";
-         edtResidentId_Enabled = 0;
          Gxuitabspanel_steps_Historymanagement = Convert.ToBoolean( 0);
          Gxuitabspanel_steps_Class = "Tab";
          Gxuitabspanel_steps_Pagecount = 4;
@@ -7277,8 +6879,8 @@ namespace GeneXus.Programs {
          GxWebStd.set_html_headers( context, 0, "", "");
          Gx_mode = "INS";
          AssignAttri("", false, "Gx_mode", Gx_mode);
-         SubsflControlProps_1086( ) ;
-         while ( nGXsfl_108_idx <= nRC_GXsfl_108 )
+         SubsflControlProps_736( ) ;
+         while ( nGXsfl_73_idx <= nRC_GXsfl_73 )
          {
             standaloneNotModal( ) ;
             standaloneModal( ) ;
@@ -7287,9 +6889,9 @@ namespace GeneXus.Programs {
             init_web_controls( ) ;
             dynload_actions( ) ;
             SendRow026( ) ;
-            nGXsfl_108_idx = (int)(nGXsfl_108_idx+1);
-            sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx), 4, 0), 4, "0");
-            SubsflControlProps_1086( ) ;
+            nGXsfl_73_idx = (int)(nGXsfl_73_idx+1);
+            sGXsfl_73_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_73_idx), 4, 0), 4, "0");
+            SubsflControlProps_736( ) ;
          }
          AddString( context.httpAjaxContext.getJSONContainerResponse( Gridlevel_inindividualContainer)) ;
          /* End function gxnrGridlevel_inindividual_newrow */
@@ -7300,8 +6902,8 @@ namespace GeneXus.Programs {
          GxWebStd.set_html_headers( context, 0, "", "");
          Gx_mode = "INS";
          AssignAttri("", false, "Gx_mode", Gx_mode);
-         SubsflControlProps_1277( ) ;
-         while ( nGXsfl_127_idx <= nRC_GXsfl_127 )
+         SubsflControlProps_927( ) ;
+         while ( nGXsfl_92_idx <= nRC_GXsfl_92 )
          {
             standaloneNotModal( ) ;
             standaloneModal( ) ;
@@ -7310,9 +6912,9 @@ namespace GeneXus.Programs {
             init_web_controls( ) ;
             dynload_actions( ) ;
             SendRow027( ) ;
-            nGXsfl_127_idx = (int)(nGXsfl_127_idx+1);
-            sGXsfl_127_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_127_idx), 4, 0), 4, "0");
-            SubsflControlProps_1277( ) ;
+            nGXsfl_92_idx = (int)(nGXsfl_92_idx+1);
+            sGXsfl_92_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_92_idx), 4, 0), 4, "0");
+            SubsflControlProps_927( ) ;
          }
          AddString( context.httpAjaxContext.getJSONContainerResponse( Gridlevel_incompanyContainer)) ;
          /* End function gxnrGridlevel_incompany_newrow */
@@ -7323,8 +6925,8 @@ namespace GeneXus.Programs {
          GxWebStd.set_html_headers( context, 0, "", "");
          Gx_mode = "INS";
          AssignAttri("", false, "Gx_mode", Gx_mode);
-         SubsflControlProps_14318( ) ;
-         while ( nGXsfl_143_idx <= nRC_GXsfl_143 )
+         SubsflControlProps_10818( ) ;
+         while ( nGXsfl_108_idx <= nRC_GXsfl_108 )
          {
             standaloneNotModal( ) ;
             standaloneModal( ) ;
@@ -7333,9 +6935,9 @@ namespace GeneXus.Programs {
             init_web_controls( ) ;
             dynload_actions( ) ;
             SendRow0218( ) ;
-            nGXsfl_143_idx = (int)(nGXsfl_143_idx+1);
-            sGXsfl_143_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_143_idx), 4, 0), 4, "0");
-            SubsflControlProps_14318( ) ;
+            nGXsfl_108_idx = (int)(nGXsfl_108_idx+1);
+            sGXsfl_108_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_108_idx), 4, 0), 4, "0");
+            SubsflControlProps_10818( ) ;
          }
          AddString( context.httpAjaxContext.getJSONContainerResponse( Gridlevel_productserviceContainer)) ;
          /* End function gxnrGridlevel_productservice_newrow */
@@ -7343,7 +6945,7 @@ namespace GeneXus.Programs {
 
       protected void init_web_controls( )
       {
-         GXCCtl = "RESIDENTININDIVIDUALGENDER_" + sGXsfl_108_idx;
+         GXCCtl = "RESIDENTININDIVIDUALGENDER_" + sGXsfl_73_idx;
          cmbResidentINIndividualGender.Name = GXCCtl;
          cmbResidentINIndividualGender.WebTags = "";
          cmbResidentINIndividualGender.addItem("Man", context.GetMessage( "Man", ""), 0);
@@ -7476,7 +7078,7 @@ namespace GeneXus.Programs {
          AssignAttri("", false, "A75ProductServiceDescription", A75ProductServiceDescription);
          AssignAttri("", false, "A76ProductServiceQuantity", StringUtil.LTrim( StringUtil.NToC( (decimal)(A76ProductServiceQuantity), 4, 0, ".", "")));
          AssignAttri("", false, "A77ProductServicePicture", context.PathToRelativeUrl( A77ProductServicePicture));
-         GXCCtl = "PRODUCTSERVICEPICTURE_" + sGXsfl_143_idx;
+         GXCCtl = "PRODUCTSERVICEPICTURE_" + sGXsfl_108_idx;
          AssignAttri("", false, "GXCCtl", GXCCtl);
          GXCCtlgxBlob = GXCCtl + "_gxBlob";
          AssignAttri("", false, "GXCCtlgxBlob", GXCCtlgxBlob);
@@ -7503,8 +7105,6 @@ namespace GeneXus.Programs {
          setEventMetadata("'WIZARDNEXT'",",oparms:[{av:'AV15CheckRequiredFieldsResult',fld:'vCHECKREQUIREDFIELDSRESULT',pic:''}]}");
          setEventMetadata("'WIZARDPREVIOUS'","{handler:'E11025',iparms:[{av:'Gxuitabspanel_steps_Activepage',ctrl:'GXUITABSPANEL_STEPS',prop:'ActivePage'}]");
          setEventMetadata("'WIZARDPREVIOUS'",",oparms:[]}");
-         setEventMetadata("VALID_RESIDENTID","{handler:'Valid_Residentid',iparms:[]");
-         setEventMetadata("VALID_RESIDENTID",",oparms:[]}");
          setEventMetadata("VALID_RESIDENTBSNNUMBER","{handler:'Valid_Residentbsnnumber',iparms:[{av:'A40ResidentBsnNumber',fld:'RESIDENTBSNNUMBER',pic:''},{av:'A31ResidentId',fld:'RESIDENTID',pic:'ZZZ9'}]");
          setEventMetadata("VALID_RESIDENTBSNNUMBER",",oparms:[]}");
          setEventMetadata("VALID_RESIDENTGIVENNAME","{handler:'Valid_Residentgivenname',iparms:[]");
@@ -7515,16 +7115,14 @@ namespace GeneXus.Programs {
          setEventMetadata("VALID_RESIDENTEMAIL",",oparms:[]}");
          setEventMetadata("VALID_RESIDENTTYPEID","{handler:'Valid_Residenttypeid',iparms:[{av:'A82ResidentTypeId',fld:'RESIDENTTYPEID',pic:'ZZZ9'},{av:'A83ResidentTypeName',fld:'RESIDENTTYPENAME',pic:''}]");
          setEventMetadata("VALID_RESIDENTTYPEID",",oparms:[{av:'A83ResidentTypeName',fld:'RESIDENTTYPENAME',pic:''}]}");
+         setEventMetadata("VALIDV_COMBORESIDENTTYPEID","{handler:'Validv_Comboresidenttypeid',iparms:[]");
+         setEventMetadata("VALIDV_COMBORESIDENTTYPEID",",oparms:[]}");
+         setEventMetadata("VALID_RESIDENTID","{handler:'Valid_Residentid',iparms:[]");
+         setEventMetadata("VALID_RESIDENTID",",oparms:[]}");
          setEventMetadata("VALID_CUSTOMERLOCATIONID","{handler:'Valid_Customerlocationid',iparms:[]");
          setEventMetadata("VALID_CUSTOMERLOCATIONID",",oparms:[]}");
          setEventMetadata("VALID_CUSTOMERID","{handler:'Valid_Customerid',iparms:[{av:'A1CustomerId',fld:'CUSTOMERID',pic:'ZZZ9'},{av:'A18CustomerLocationId',fld:'CUSTOMERLOCATIONID',pic:'ZZZ9'},{av:'A3CustomerName',fld:'CUSTOMERNAME',pic:''}]");
          setEventMetadata("VALID_CUSTOMERID",",oparms:[{av:'A3CustomerName',fld:'CUSTOMERNAME',pic:''}]}");
-         setEventMetadata("VALIDV_COMBORESIDENTTYPEID","{handler:'Validv_Comboresidenttypeid',iparms:[]");
-         setEventMetadata("VALIDV_COMBORESIDENTTYPEID",",oparms:[]}");
-         setEventMetadata("VALIDV_COMBOCUSTOMERLOCATIONID","{handler:'Validv_Combocustomerlocationid',iparms:[]");
-         setEventMetadata("VALIDV_COMBOCUSTOMERLOCATIONID",",oparms:[]}");
-         setEventMetadata("VALIDV_COMBOCUSTOMERID","{handler:'Validv_Combocustomerid',iparms:[]");
-         setEventMetadata("VALIDV_COMBOCUSTOMERID",",oparms:[]}");
          setEventMetadata("VALID_RESIDENTININDIVIDUALID","{handler:'Valid_Residentinindividualid',iparms:[]");
          setEventMetadata("VALID_RESIDENTININDIVIDUALID",",oparms:[]}");
          setEventMetadata("VALID_RESIDENTININDIVIDUALEMAIL","{handler:'Valid_Residentinindividualemail',iparms:[]");
@@ -7582,8 +7180,6 @@ namespace GeneXus.Programs {
          Z111ResidentGender = "";
          Z37ResidentAddress = "";
          Z38ResidentPhone = "";
-         Combo_customerid_Selectedvalue_get = "";
-         Combo_customerlocationid_Selectedvalue_get = "";
          Combo_residenttypeid_Selectedvalue_get = "";
          Z43ResidentINIndividualBsnNumber = "";
          Z44ResidentINIndividualGivenName = "";
@@ -7617,18 +7213,10 @@ namespace GeneXus.Programs {
          A37ResidentAddress = "";
          gxphoneLink = "";
          A38ResidentPhone = "";
-         A39ResidentGAMGUID = "";
          lblTextblockresidenttypeid_Jsonclick = "";
          ucCombo_residenttypeid = new GXUserControl();
          AV19DDO_TitleSettingsIcons = new GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons(context);
          AV25ResidentTypeId_Data = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTComboData_Item>( context, "Item", "");
-         lblTextblockcustomerlocationid_Jsonclick = "";
-         ucCombo_customerlocationid = new GXUserControl();
-         AV29CustomerLocationId_Data = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTComboData_Item>( context, "Item", "");
-         lblTextblockcustomerid_Jsonclick = "";
-         ucCombo_customerid = new GXUserControl();
-         AV32CustomerId_Data = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTComboData_Item>( context, "Item", "");
-         A3CustomerName = "";
          lblTablevel_inindividual_title_Jsonclick = "";
          lblTablevel_incompany_title_Jsonclick = "";
          lblTablevel_productservice_title_Jsonclick = "";
@@ -7639,6 +7227,8 @@ namespace GeneXus.Programs {
          bttBtntrn_delete_Jsonclick = "";
          ucCombo_productserviceid = new GXUserControl();
          AV18ProductServiceId_Data = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTComboData_Item>( context, "Item", "");
+         A39ResidentGAMGUID = "";
+         A3CustomerName = "";
          ucWizard_steps = new GXUserControl();
          Gridlevel_inindividualContainer = new GXWebGrid( context);
          sMode6 = "";
@@ -7677,56 +7267,6 @@ namespace GeneXus.Programs {
          Combo_residenttypeid_Selectalltext = "";
          Combo_residenttypeid_Multiplevaluesseparator = "";
          Combo_residenttypeid_Addnewoptiontext = "";
-         Combo_customerlocationid_Objectcall = "";
-         Combo_customerlocationid_Class = "";
-         Combo_customerlocationid_Icontype = "";
-         Combo_customerlocationid_Icon = "";
-         Combo_customerlocationid_Tooltip = "";
-         Combo_customerlocationid_Selectedvalue_set = "";
-         Combo_customerlocationid_Selectedtext_set = "";
-         Combo_customerlocationid_Selectedtext_get = "";
-         Combo_customerlocationid_Gamoauthtoken = "";
-         Combo_customerlocationid_Ddointernalname = "";
-         Combo_customerlocationid_Titlecontrolalign = "";
-         Combo_customerlocationid_Dropdownoptionstype = "";
-         Combo_customerlocationid_Titlecontrolidtoreplace = "";
-         Combo_customerlocationid_Datalisttype = "";
-         Combo_customerlocationid_Datalistfixedvalues = "";
-         Combo_customerlocationid_Remoteservicesparameters = "";
-         Combo_customerlocationid_Htmltemplate = "";
-         Combo_customerlocationid_Multiplevaluestype = "";
-         Combo_customerlocationid_Loadingdata = "";
-         Combo_customerlocationid_Noresultsfound = "";
-         Combo_customerlocationid_Emptyitemtext = "";
-         Combo_customerlocationid_Onlyselectedvalues = "";
-         Combo_customerlocationid_Selectalltext = "";
-         Combo_customerlocationid_Multiplevaluesseparator = "";
-         Combo_customerlocationid_Addnewoptiontext = "";
-         Combo_customerid_Objectcall = "";
-         Combo_customerid_Class = "";
-         Combo_customerid_Icontype = "";
-         Combo_customerid_Icon = "";
-         Combo_customerid_Tooltip = "";
-         Combo_customerid_Selectedvalue_set = "";
-         Combo_customerid_Selectedtext_set = "";
-         Combo_customerid_Selectedtext_get = "";
-         Combo_customerid_Gamoauthtoken = "";
-         Combo_customerid_Ddointernalname = "";
-         Combo_customerid_Titlecontrolalign = "";
-         Combo_customerid_Dropdownoptionstype = "";
-         Combo_customerid_Titlecontrolidtoreplace = "";
-         Combo_customerid_Datalisttype = "";
-         Combo_customerid_Datalistfixedvalues = "";
-         Combo_customerid_Remoteservicesparameters = "";
-         Combo_customerid_Htmltemplate = "";
-         Combo_customerid_Multiplevaluestype = "";
-         Combo_customerid_Loadingdata = "";
-         Combo_customerid_Noresultsfound = "";
-         Combo_customerid_Emptyitemtext = "";
-         Combo_customerid_Onlyselectedvalues = "";
-         Combo_customerid_Selectalltext = "";
-         Combo_customerid_Multiplevaluesseparator = "";
-         Combo_customerid_Addnewoptiontext = "";
          Gxuitabspanel_steps_Objectcall = "";
          Gxuitabspanel_steps_Activepagecontrolname = "";
          Combo_productserviceid_Objectcall = "";
@@ -7798,8 +7338,8 @@ namespace GeneXus.Programs {
          GXt_char2 = "";
          Z83ResidentTypeName = "";
          Z3CustomerName = "";
-         T000212_A83ResidentTypeName = new string[] {""} ;
          T000213_A3CustomerName = new string[] {""} ;
+         T000212_A83ResidentTypeName = new string[] {""} ;
          T000215_A31ResidentId = new short[1] ;
          T000215_A39ResidentGAMGUID = new string[] {""} ;
          T000215_A35ResidentInitials = new string[] {""} ;
@@ -8197,10 +7737,8 @@ namespace GeneXus.Programs {
       private short Gx_BScreen ;
       private short A97ResidentLastLineCompany ;
       private short initialized ;
-      private short A31ResidentId ;
       private short AV26ComboResidentTypeId ;
-      private short AV30ComboCustomerLocationId ;
-      private short AV33ComboCustomerId ;
+      private short A31ResidentId ;
       private short nBlankRcdCount6 ;
       private short RcdFound6 ;
       private short B97ResidentLastLineCompany ;
@@ -8212,7 +7750,6 @@ namespace GeneXus.Programs {
       private short nBlankRcdCount18 ;
       private short RcdFound18 ;
       private short nBlankRcdUsr18 ;
-      private short AV31Cond_CustomerId ;
       private short AV17TabsActivePage ;
       private short AV13Insert_ResidentTypeId ;
       private short AV27Insert_CustomerId ;
@@ -8251,16 +7788,15 @@ namespace GeneXus.Programs {
       private short subGridlevel_productservice_Allowhovering ;
       private short subGridlevel_productservice_Allowcollapsing ;
       private short subGridlevel_productservice_Collapsed ;
+      private int nRC_GXsfl_73 ;
+      private int nGXsfl_73_idx=1 ;
+      private int nRC_GXsfl_92 ;
+      private int nGXsfl_92_idx=1 ;
       private int nRC_GXsfl_108 ;
       private int nGXsfl_108_idx=1 ;
-      private int nRC_GXsfl_127 ;
-      private int nGXsfl_127_idx=1 ;
-      private int nRC_GXsfl_143 ;
-      private int nGXsfl_143_idx=1 ;
       private int Gxuitabspanel_steps_Activepage ;
       private int trnEnded ;
       private int Gxuitabspanel_steps_Pagecount ;
-      private int edtResidentId_Enabled ;
       private int edtResidentBsnNumber_Enabled ;
       private int edtResidentGivenName_Enabled ;
       private int edtResidentLastName_Enabled ;
@@ -8268,14 +7804,8 @@ namespace GeneXus.Programs {
       private int edtResidentEmail_Enabled ;
       private int edtResidentAddress_Enabled ;
       private int edtResidentPhone_Enabled ;
-      private int edtResidentGAMGUID_Enabled ;
       private int edtResidentTypeId_Visible ;
       private int edtResidentTypeId_Enabled ;
-      private int edtCustomerLocationId_Visible ;
-      private int edtCustomerLocationId_Enabled ;
-      private int edtCustomerId_Visible ;
-      private int edtCustomerId_Enabled ;
-      private int edtCustomerName_Enabled ;
       private int bttBtnwizardprevious_Visible ;
       private int bttBtntrn_cancel_Visible ;
       private int bttBtnwizardnext_Visible ;
@@ -8285,10 +7815,16 @@ namespace GeneXus.Programs {
       private int bttBtntrn_delete_Enabled ;
       private int edtavComboresidenttypeid_Enabled ;
       private int edtavComboresidenttypeid_Visible ;
-      private int edtavCombocustomerlocationid_Enabled ;
-      private int edtavCombocustomerlocationid_Visible ;
-      private int edtavCombocustomerid_Enabled ;
-      private int edtavCombocustomerid_Visible ;
+      private int edtResidentId_Enabled ;
+      private int edtResidentId_Visible ;
+      private int edtResidentGAMGUID_Visible ;
+      private int edtResidentGAMGUID_Enabled ;
+      private int edtCustomerLocationId_Visible ;
+      private int edtCustomerLocationId_Enabled ;
+      private int edtCustomerId_Visible ;
+      private int edtCustomerId_Enabled ;
+      private int edtCustomerName_Visible ;
+      private int edtCustomerName_Enabled ;
       private int edtResidentINIndividualId_Enabled ;
       private int edtResidentINIndividualBsnNumber_Enabled ;
       private int edtResidentINIndividualGivenName_Enabled ;
@@ -8310,10 +7846,6 @@ namespace GeneXus.Programs {
       private int edtProductServiceTypeName_Enabled ;
       private int Combo_residenttypeid_Datalistupdateminimumcharacters ;
       private int Combo_residenttypeid_Gxcontroltype ;
-      private int Combo_customerlocationid_Datalistupdateminimumcharacters ;
-      private int Combo_customerlocationid_Gxcontroltype ;
-      private int Combo_customerid_Datalistupdateminimumcharacters ;
-      private int Combo_customerid_Gxcontroltype ;
       private int Combo_productserviceid_Datalistupdateminimumcharacters ;
       private int Combo_productserviceid_Gxcontroltype ;
       private int AV36GXV1 ;
@@ -8344,8 +7876,6 @@ namespace GeneXus.Programs {
       private string Z35ResidentInitials ;
       private string Z111ResidentGender ;
       private string Z38ResidentPhone ;
-      private string Combo_customerid_Selectedvalue_get ;
-      private string Combo_customerlocationid_Selectedvalue_get ;
       private string Combo_residenttypeid_Selectedvalue_get ;
       private string Z47ResidentINIndividualPhone ;
       private string Z49ResidentINIndividualGender ;
@@ -8359,9 +7889,9 @@ namespace GeneXus.Programs {
       private string PreviousCaption ;
       private string GX_FocusControl ;
       private string edtResidentBsnNumber_Internalname ;
+      private string sGXsfl_73_idx="0001" ;
+      private string sGXsfl_92_idx="0001" ;
       private string sGXsfl_108_idx="0001" ;
-      private string sGXsfl_127_idx="0001" ;
-      private string sGXsfl_143_idx="0001" ;
       private string edtProductServiceId_Horizontalalignment ;
       private string edtProductServiceId_Internalname ;
       private string divLayoutmaintable_Internalname ;
@@ -8375,8 +7905,6 @@ namespace GeneXus.Programs {
       private string lblTabgeneral_title_Internalname ;
       private string lblTabgeneral_title_Jsonclick ;
       private string divTableattributes_Internalname ;
-      private string edtResidentId_Internalname ;
-      private string edtResidentId_Jsonclick ;
       private string TempTags ;
       private string edtResidentBsnNumber_Jsonclick ;
       private string edtResidentGivenName_Internalname ;
@@ -8393,8 +7921,6 @@ namespace GeneXus.Programs {
       private string gxphoneLink ;
       private string A38ResidentPhone ;
       private string edtResidentPhone_Jsonclick ;
-      private string edtResidentGAMGUID_Internalname ;
-      private string edtResidentGAMGUID_Jsonclick ;
       private string divTablesplittedresidenttypeid_Internalname ;
       private string lblTextblockresidenttypeid_Internalname ;
       private string lblTextblockresidenttypeid_Jsonclick ;
@@ -8405,27 +7931,6 @@ namespace GeneXus.Programs {
       private string Combo_residenttypeid_Internalname ;
       private string edtResidentTypeId_Internalname ;
       private string edtResidentTypeId_Jsonclick ;
-      private string divTablesplittedcustomerlocationid_Internalname ;
-      private string lblTextblockcustomerlocationid_Internalname ;
-      private string lblTextblockcustomerlocationid_Jsonclick ;
-      private string Combo_customerlocationid_Caption ;
-      private string Combo_customerlocationid_Cls ;
-      private string Combo_customerlocationid_Datalistproc ;
-      private string Combo_customerlocationid_Internalname ;
-      private string edtCustomerLocationId_Internalname ;
-      private string edtCustomerLocationId_Jsonclick ;
-      private string divTablesplittedcustomerid_Internalname ;
-      private string lblTextblockcustomerid_Internalname ;
-      private string lblTextblockcustomerid_Jsonclick ;
-      private string Combo_customerid_Caption ;
-      private string Combo_customerid_Cls ;
-      private string Combo_customerid_Datalistproc ;
-      private string Combo_customerid_Datalistprocparametersprefix ;
-      private string Combo_customerid_Internalname ;
-      private string edtCustomerId_Internalname ;
-      private string edtCustomerId_Jsonclick ;
-      private string edtCustomerName_Internalname ;
-      private string edtCustomerName_Jsonclick ;
       private string lblTablevel_inindividual_title_Internalname ;
       private string lblTablevel_inindividual_title_Jsonclick ;
       private string divTabtablelevel_inindividual_Internalname ;
@@ -8452,17 +7957,21 @@ namespace GeneXus.Programs {
       private string divSectionattribute_residenttypeid_Internalname ;
       private string edtavComboresidenttypeid_Internalname ;
       private string edtavComboresidenttypeid_Jsonclick ;
-      private string divSectionattribute_customerlocationid_Internalname ;
-      private string edtavCombocustomerlocationid_Internalname ;
-      private string edtavCombocustomerlocationid_Jsonclick ;
-      private string divSectionattribute_customerid_Internalname ;
-      private string edtavCombocustomerid_Internalname ;
-      private string edtavCombocustomerid_Jsonclick ;
       private string Combo_productserviceid_Caption ;
       private string Combo_productserviceid_Cls ;
       private string Combo_productserviceid_Datalistproc ;
       private string Combo_productserviceid_Datalistprocparametersprefix ;
       private string Combo_productserviceid_Internalname ;
+      private string edtResidentId_Internalname ;
+      private string edtResidentId_Jsonclick ;
+      private string edtResidentGAMGUID_Internalname ;
+      private string edtResidentGAMGUID_Jsonclick ;
+      private string edtCustomerLocationId_Internalname ;
+      private string edtCustomerLocationId_Jsonclick ;
+      private string edtCustomerId_Internalname ;
+      private string edtCustomerId_Jsonclick ;
+      private string edtCustomerName_Internalname ;
+      private string edtCustomerName_Jsonclick ;
       private string Wizard_steps_Internalname ;
       private string sMode6 ;
       private string edtResidentINIndividualId_Internalname ;
@@ -8516,57 +8025,6 @@ namespace GeneXus.Programs {
       private string Combo_residenttypeid_Selectalltext ;
       private string Combo_residenttypeid_Multiplevaluesseparator ;
       private string Combo_residenttypeid_Addnewoptiontext ;
-      private string Combo_customerlocationid_Objectcall ;
-      private string Combo_customerlocationid_Class ;
-      private string Combo_customerlocationid_Icontype ;
-      private string Combo_customerlocationid_Icon ;
-      private string Combo_customerlocationid_Tooltip ;
-      private string Combo_customerlocationid_Selectedvalue_set ;
-      private string Combo_customerlocationid_Selectedtext_set ;
-      private string Combo_customerlocationid_Selectedtext_get ;
-      private string Combo_customerlocationid_Gamoauthtoken ;
-      private string Combo_customerlocationid_Ddointernalname ;
-      private string Combo_customerlocationid_Titlecontrolalign ;
-      private string Combo_customerlocationid_Dropdownoptionstype ;
-      private string Combo_customerlocationid_Titlecontrolidtoreplace ;
-      private string Combo_customerlocationid_Datalisttype ;
-      private string Combo_customerlocationid_Datalistfixedvalues ;
-      private string Combo_customerlocationid_Datalistprocparametersprefix ;
-      private string Combo_customerlocationid_Remoteservicesparameters ;
-      private string Combo_customerlocationid_Htmltemplate ;
-      private string Combo_customerlocationid_Multiplevaluestype ;
-      private string Combo_customerlocationid_Loadingdata ;
-      private string Combo_customerlocationid_Noresultsfound ;
-      private string Combo_customerlocationid_Emptyitemtext ;
-      private string Combo_customerlocationid_Onlyselectedvalues ;
-      private string Combo_customerlocationid_Selectalltext ;
-      private string Combo_customerlocationid_Multiplevaluesseparator ;
-      private string Combo_customerlocationid_Addnewoptiontext ;
-      private string Combo_customerid_Objectcall ;
-      private string Combo_customerid_Class ;
-      private string Combo_customerid_Icontype ;
-      private string Combo_customerid_Icon ;
-      private string Combo_customerid_Tooltip ;
-      private string Combo_customerid_Selectedvalue_set ;
-      private string Combo_customerid_Selectedtext_set ;
-      private string Combo_customerid_Selectedtext_get ;
-      private string Combo_customerid_Gamoauthtoken ;
-      private string Combo_customerid_Ddointernalname ;
-      private string Combo_customerid_Titlecontrolalign ;
-      private string Combo_customerid_Dropdownoptionstype ;
-      private string Combo_customerid_Titlecontrolidtoreplace ;
-      private string Combo_customerid_Datalisttype ;
-      private string Combo_customerid_Datalistfixedvalues ;
-      private string Combo_customerid_Remoteservicesparameters ;
-      private string Combo_customerid_Htmltemplate ;
-      private string Combo_customerid_Multiplevaluestype ;
-      private string Combo_customerid_Loadingdata ;
-      private string Combo_customerid_Noresultsfound ;
-      private string Combo_customerid_Emptyitemtext ;
-      private string Combo_customerid_Onlyselectedvalues ;
-      private string Combo_customerid_Selectalltext ;
-      private string Combo_customerid_Multiplevaluesseparator ;
-      private string Combo_customerid_Addnewoptiontext ;
       private string Gxuitabspanel_steps_Objectcall ;
       private string Gxuitabspanel_steps_Activepagecontrolname ;
       private string Combo_productserviceid_Objectcall ;
@@ -8615,7 +8073,7 @@ namespace GeneXus.Programs {
       private string A47ResidentINIndividualPhone ;
       private string A49ResidentINIndividualGender ;
       private string GXt_char2 ;
-      private string sGXsfl_108_fel_idx="0001" ;
+      private string sGXsfl_73_fel_idx="0001" ;
       private string subGridlevel_inindividual_Class ;
       private string subGridlevel_inindividual_Linesclass ;
       private string ROClassString ;
@@ -8627,7 +8085,7 @@ namespace GeneXus.Programs {
       private string edtResidentINIndividualPhone_Jsonclick ;
       private string edtResidentINIndividualAddress_Jsonclick ;
       private string cmbResidentINIndividualGender_Jsonclick ;
-      private string sGXsfl_127_fel_idx="0001" ;
+      private string sGXsfl_92_fel_idx="0001" ;
       private string subGridlevel_incompany_Class ;
       private string subGridlevel_incompany_Linesclass ;
       private string edtResidentINCompanyId_Jsonclick ;
@@ -8635,7 +8093,7 @@ namespace GeneXus.Programs {
       private string edtResidentINCompanyName_Jsonclick ;
       private string edtResidentINCompanyEmail_Jsonclick ;
       private string edtResidentINCompanyPhone_Jsonclick ;
-      private string sGXsfl_143_fel_idx="0001" ;
+      private string sGXsfl_108_fel_idx="0001" ;
       private string subGridlevel_productservice_Class ;
       private string subGridlevel_productservice_Linesclass ;
       private string edtProductServiceId_Jsonclick ;
@@ -8654,16 +8112,14 @@ namespace GeneXus.Programs {
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool wbErr ;
-      private bool bGXsfl_143_Refreshing=false ;
+      private bool bGXsfl_108_Refreshing=false ;
       private bool Gxuitabspanel_steps_Historymanagement ;
       private bool Combo_residenttypeid_Emptyitem ;
-      private bool Combo_customerlocationid_Emptyitem ;
-      private bool Combo_customerid_Emptyitem ;
       private bool Combo_productserviceid_Isgriditem ;
       private bool Combo_productserviceid_Hasdescription ;
       private bool Combo_productserviceid_Emptyitem ;
-      private bool bGXsfl_108_Refreshing=false ;
-      private bool bGXsfl_127_Refreshing=false ;
+      private bool bGXsfl_73_Refreshing=false ;
+      private bool bGXsfl_92_Refreshing=false ;
       private bool n35ResidentInitials ;
       private bool n37ResidentAddress ;
       private bool n38ResidentPhone ;
@@ -8676,22 +8132,6 @@ namespace GeneXus.Programs {
       private bool Combo_residenttypeid_Includeonlyselectedoption ;
       private bool Combo_residenttypeid_Includeselectalloption ;
       private bool Combo_residenttypeid_Includeaddnewoption ;
-      private bool Combo_customerlocationid_Enabled ;
-      private bool Combo_customerlocationid_Visible ;
-      private bool Combo_customerlocationid_Allowmultipleselection ;
-      private bool Combo_customerlocationid_Isgriditem ;
-      private bool Combo_customerlocationid_Hasdescription ;
-      private bool Combo_customerlocationid_Includeonlyselectedoption ;
-      private bool Combo_customerlocationid_Includeselectalloption ;
-      private bool Combo_customerlocationid_Includeaddnewoption ;
-      private bool Combo_customerid_Enabled ;
-      private bool Combo_customerid_Visible ;
-      private bool Combo_customerid_Allowmultipleselection ;
-      private bool Combo_customerid_Isgriditem ;
-      private bool Combo_customerid_Hasdescription ;
-      private bool Combo_customerid_Includeonlyselectedoption ;
-      private bool Combo_customerid_Includeselectalloption ;
-      private bool Combo_customerid_Includeaddnewoption ;
       private bool Gxuitabspanel_steps_Enabled ;
       private bool Gxuitabspanel_steps_Visible ;
       private bool Combo_productserviceid_Enabled ;
@@ -8768,16 +8208,14 @@ namespace GeneXus.Programs {
       private GXWebColumn Gridlevel_productserviceColumn ;
       private GXUserControl ucGxuitabspanel_steps ;
       private GXUserControl ucCombo_residenttypeid ;
-      private GXUserControl ucCombo_customerlocationid ;
-      private GXUserControl ucCombo_customerid ;
       private GXUserControl ucCombo_productserviceid ;
       private GXUserControl ucWizard_steps ;
       private IGxDataStore dsGAM ;
       private IGxDataStore dsDefault ;
       private GXCombobox cmbResidentINIndividualGender ;
       private IDataStoreProvider pr_default ;
-      private string[] T000212_A83ResidentTypeName ;
       private string[] T000213_A3CustomerName ;
+      private string[] T000212_A83ResidentTypeName ;
       private short[] T000215_A31ResidentId ;
       private string[] T000215_A39ResidentGAMGUID ;
       private string[] T000215_A35ResidentInitials ;
@@ -8957,8 +8395,6 @@ namespace GeneXus.Programs {
       private IDataStoreProvider pr_gam ;
       private GxHttpRequest AV16HTTPRequest ;
       private GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTComboData_Item> AV25ResidentTypeId_Data ;
-      private GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTComboData_Item> AV29CustomerLocationId_Data ;
-      private GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTComboData_Item> AV32CustomerId_Data ;
       private GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTComboData_Item> AV18ProductServiceId_Data ;
       private GXExternalCollection<GeneXus.Programs.genexussecurity.SdtGAMError> AV24GAMErrors ;
       private GXWebForm Form ;

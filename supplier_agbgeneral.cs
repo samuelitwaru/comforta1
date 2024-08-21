@@ -435,7 +435,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtSupplier_AgbNumber_Internalname+"\"", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtSupplier_AgbNumber_Internalname, context.GetMessage( "Number", ""), " AttributeLabel", 1, true, "");
+            GxWebStd.gx_label_element( context, edtSupplier_AgbNumber_Internalname, context.GetMessage( "AGB Number", ""), " AttributeLabel", 1, true, "");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
             /* Single line edit */
@@ -448,7 +448,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtSupplier_AgbKvkNumber_Internalname+"\"", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtSupplier_AgbKvkNumber_Internalname, context.GetMessage( "Kvk Number", ""), " AttributeLabel", 1, true, "");
+            GxWebStd.gx_label_element( context, edtSupplier_AgbKvkNumber_Internalname, context.GetMessage( "KVK Number", ""), " AttributeLabel", 1, true, "");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
             /* Single line edit */
@@ -1255,7 +1255,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915553361", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119574473", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1271,7 +1271,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("supplier_agbgeneral.js", "?202481915553361", false, true);
+         context.AddJavascriptSource("supplier_agbgeneral.js", "?202482119574474", false, true);
          /* End function include_jscripts */
       }
 

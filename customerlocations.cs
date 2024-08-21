@@ -1053,10 +1053,6 @@ namespace GeneXus.Programs {
       {
          /* GeneXus formulas. */
          AV40Pgmname = "CustomerLocations";
-         edtavUpdate_Enabled = 0;
-         AssignProp("", false, edtavUpdate_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavUpdate_Enabled), 5, 0), !bGXsfl_37_Refreshing);
-         edtavDelete_Enabled = 0;
-         AssignProp("", false, edtavDelete_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavDelete_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtavCustomerlocationsdts__customerid_Enabled = 0;
          AssignProp("", false, edtavCustomerlocationsdts__customerid_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCustomerlocationsdts__customerid_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtavCustomerlocationsdts__customerlocationid_Enabled = 0;
@@ -1069,6 +1065,10 @@ namespace GeneXus.Programs {
          AssignProp("", false, edtavCustomerlocationsdts__customerlocationphone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCustomerlocationsdts__customerlocationphone_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtavCustomerlocationsdts__customerlocationpostaladdress_Enabled = 0;
          AssignProp("", false, edtavCustomerlocationsdts__customerlocationpostaladdress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCustomerlocationsdts__customerlocationpostaladdress_Enabled), 5, 0), !bGXsfl_37_Refreshing);
+         edtavUpdate_Enabled = 0;
+         AssignProp("", false, edtavUpdate_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavUpdate_Enabled), 5, 0), !bGXsfl_37_Refreshing);
+         edtavDelete_Enabled = 0;
+         AssignProp("", false, edtavDelete_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavDelete_Enabled), 5, 0), !bGXsfl_37_Refreshing);
       }
 
       protected void RF2J2( )
@@ -1254,10 +1254,6 @@ namespace GeneXus.Programs {
       protected void before_start_formulas( )
       {
          AV40Pgmname = "CustomerLocations";
-         edtavUpdate_Enabled = 0;
-         AssignProp("", false, edtavUpdate_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavUpdate_Enabled), 5, 0), !bGXsfl_37_Refreshing);
-         edtavDelete_Enabled = 0;
-         AssignProp("", false, edtavDelete_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavDelete_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtavCustomerlocationsdts__customerid_Enabled = 0;
          AssignProp("", false, edtavCustomerlocationsdts__customerid_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCustomerlocationsdts__customerid_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtavCustomerlocationsdts__customerlocationid_Enabled = 0;
@@ -1270,6 +1266,10 @@ namespace GeneXus.Programs {
          AssignProp("", false, edtavCustomerlocationsdts__customerlocationphone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCustomerlocationsdts__customerlocationphone_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtavCustomerlocationsdts__customerlocationpostaladdress_Enabled = 0;
          AssignProp("", false, edtavCustomerlocationsdts__customerlocationpostaladdress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCustomerlocationsdts__customerlocationpostaladdress_Enabled), 5, 0), !bGXsfl_37_Refreshing);
+         edtavUpdate_Enabled = 0;
+         AssignProp("", false, edtavUpdate_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavUpdate_Enabled), 5, 0), !bGXsfl_37_Refreshing);
+         edtavDelete_Enabled = 0;
+         AssignProp("", false, edtavDelete_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavDelete_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          fix_multi_value_controls( ) ;
       }
 
@@ -1542,9 +1542,9 @@ namespace GeneXus.Programs {
          while ( AV31GXV1 <= AV8CustomerLocationSDTs.Count )
          {
             AV8CustomerLocationSDTs.CurrentItem = ((SdtCustomerLocationSDT)AV8CustomerLocationSDTs.Item(AV31GXV1));
-            AV27Update = "<i class=\"fa fa-pen\"></i>";
+            AV27Update = "<i class=\"disabledIconBtn fas fa-pen\"></i>";
             AssignAttri("", false, edtavUpdate_Internalname, AV27Update);
-            AV10Delete = "<i class=\"fa fa-times\"></i>";
+            AV10Delete = "<i class=\"disabledIconBtn fas fa-xmark\"></i>";
             AssignAttri("", false, edtavDelete_Internalname, AV10Delete);
             /* Load Method */
             if ( wbStart != -1 )
@@ -1771,7 +1771,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915581028", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119591766", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1787,7 +1787,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("customerlocations.js", "?202481915581028", false, true);
+         context.AddJavascriptSource("customerlocations.js", "?202482119591766", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -1807,26 +1807,26 @@ namespace GeneXus.Programs {
 
       protected void SubsflControlProps_372( )
       {
-         edtavUpdate_Internalname = "vUPDATE_"+sGXsfl_37_idx;
-         edtavDelete_Internalname = "vDELETE_"+sGXsfl_37_idx;
          edtavCustomerlocationsdts__customerid_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERID_"+sGXsfl_37_idx;
          edtavCustomerlocationsdts__customerlocationid_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONID_"+sGXsfl_37_idx;
          edtavCustomerlocationsdts__customerlocationvisitingaddress_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONVISITINGADDRESS_"+sGXsfl_37_idx;
          edtavCustomerlocationsdts__customerlocationemail_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONEMAIL_"+sGXsfl_37_idx;
          edtavCustomerlocationsdts__customerlocationphone_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONPHONE_"+sGXsfl_37_idx;
          edtavCustomerlocationsdts__customerlocationpostaladdress_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONPOSTALADDRESS_"+sGXsfl_37_idx;
+         edtavUpdate_Internalname = "vUPDATE_"+sGXsfl_37_idx;
+         edtavDelete_Internalname = "vDELETE_"+sGXsfl_37_idx;
       }
 
       protected void SubsflControlProps_fel_372( )
       {
-         edtavUpdate_Internalname = "vUPDATE_"+sGXsfl_37_fel_idx;
-         edtavDelete_Internalname = "vDELETE_"+sGXsfl_37_fel_idx;
          edtavCustomerlocationsdts__customerid_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERID_"+sGXsfl_37_fel_idx;
          edtavCustomerlocationsdts__customerlocationid_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONID_"+sGXsfl_37_fel_idx;
          edtavCustomerlocationsdts__customerlocationvisitingaddress_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONVISITINGADDRESS_"+sGXsfl_37_fel_idx;
          edtavCustomerlocationsdts__customerlocationemail_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONEMAIL_"+sGXsfl_37_fel_idx;
          edtavCustomerlocationsdts__customerlocationphone_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONPHONE_"+sGXsfl_37_fel_idx;
          edtavCustomerlocationsdts__customerlocationpostaladdress_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONPOSTALADDRESS_"+sGXsfl_37_fel_idx;
+         edtavUpdate_Internalname = "vUPDATE_"+sGXsfl_37_fel_idx;
+         edtavDelete_Internalname = "vDELETE_"+sGXsfl_37_fel_idx;
       }
 
       protected void sendrow_372( )
@@ -1895,22 +1895,6 @@ namespace GeneXus.Programs {
             /* Subfile cell */
             if ( GridContainer.GetWrapped() == 1 )
             {
-               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+""+"\">") ;
-            }
-            /* Single line edit */
-            ROClassString = "Attribute";
-            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavUpdate_Internalname,StringUtil.RTrim( AV27Update),(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",context.GetMessage( "GXM_update", ""),(string)"",(string)edtavUpdate_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWIconActionColumn",(string)"",(short)-1,(int)edtavUpdate_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)1,(short)37,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
-            /* Subfile cell */
-            if ( GridContainer.GetWrapped() == 1 )
-            {
-               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+""+"\">") ;
-            }
-            /* Single line edit */
-            ROClassString = "Attribute";
-            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavDelete_Internalname,StringUtil.RTrim( AV10Delete),(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",context.GetMessage( "GX_BtnDelete", ""),(string)"",(string)edtavDelete_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWIconActionColumn",(string)"",(short)-1,(int)edtavDelete_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)1,(short)37,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
-            /* Subfile cell */
-            if ( GridContainer.GetWrapped() == 1 )
-            {
                context.WriteHtmlText( "<td valign=\"middle\" align=\""+"end"+"\""+" style=\""+"display:none;"+"\">") ;
             }
             /* Single line edit */
@@ -1956,6 +1940,22 @@ namespace GeneXus.Programs {
             /* Single line edit */
             ROClassString = "Attribute";
             GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavCustomerlocationsdts__customerlocationpostaladdress_Internalname,((SdtCustomerLocationSDT)AV8CustomerLocationSDTs.Item(AV31GXV1)).gxTpr_Customerlocationpostaladdress,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtavCustomerlocationsdts__customerlocationpostaladdress_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(int)edtavCustomerlocationsdts__customerlocationpostaladdress_Visible,(int)edtavCustomerlocationsdts__customerlocationpostaladdress_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)1024,(short)0,(short)0,(short)37,(short)0,(short)-1,(short)0,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
+            /* Subfile cell */
+            if ( GridContainer.GetWrapped() == 1 )
+            {
+               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+""+"\">") ;
+            }
+            /* Single line edit */
+            ROClassString = "Attribute";
+            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavUpdate_Internalname,StringUtil.RTrim( AV27Update),(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",context.GetMessage( "GXM_update", ""),(string)"",(string)edtavUpdate_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWIconActionColumn",(string)"",(short)-1,(int)edtavUpdate_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)1,(short)37,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
+            /* Subfile cell */
+            if ( GridContainer.GetWrapped() == 1 )
+            {
+               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+""+"\">") ;
+            }
+            /* Single line edit */
+            ROClassString = "Attribute";
+            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavDelete_Internalname,StringUtil.RTrim( AV10Delete),(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",context.GetMessage( "GX_BtnDelete", ""),(string)"",(string)edtavDelete_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWIconActionColumn",(string)"",(short)-1,(int)edtavDelete_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)1,(short)37,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
             send_integrity_lvl_hashes2J2( ) ;
             GridContainer.AddRow(GridRow);
             nGXsfl_37_idx = ((subGrid_Islastpage==1)&&(nGXsfl_37_idx+1>subGrid_fnc_Recordsperpage( )) ? 1 : nGXsfl_37_idx+1);
@@ -2007,12 +2007,6 @@ namespace GeneXus.Programs {
                   }
                }
             }
-            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
-            context.SendWebValue( "") ;
-            context.WriteHtmlTextNl( "</th>") ;
-            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
-            context.SendWebValue( "") ;
-            context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"end"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+"display:none;"+""+"\" "+">") ;
             context.SendWebValue( "") ;
             context.WriteHtmlTextNl( "</th>") ;
@@ -2031,6 +2025,12 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+((edtavCustomerlocationsdts__customerlocationpostaladdress_Visible==0) ? "display:none;" : "")+""+"\" "+">") ;
             context.SendWebValue( context.GetMessage( "Postal Address", "")) ;
             context.WriteHtmlTextNl( "</th>") ;
+            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
+            context.SendWebValue( "") ;
+            context.WriteHtmlTextNl( "</th>") ;
+            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
+            context.SendWebValue( "") ;
+            context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlTextNl( "</tr>") ;
             GridContainer.AddObjectProperty("GridName", "Grid");
          }
@@ -2045,14 +2045,6 @@ namespace GeneXus.Programs {
             GridContainer.AddObjectProperty("Sortable", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid_Sortable), 1, 0, ".", "")));
             GridContainer.AddObjectProperty("CmpContext", "");
             GridContainer.AddObjectProperty("InMasterPage", "false");
-            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
-            GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( StringUtil.RTrim( AV27Update)));
-            GridColumn.AddObjectProperty("Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavUpdate_Enabled), 5, 0, ".", "")));
-            GridContainer.AddColumnProperties(GridColumn);
-            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
-            GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( StringUtil.RTrim( AV10Delete)));
-            GridColumn.AddObjectProperty("Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavDelete_Enabled), 5, 0, ".", "")));
-            GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavCustomerlocationsdts__customerid_Enabled), 5, 0, ".", "")));
             GridContainer.AddColumnProperties(GridColumn);
@@ -2075,6 +2067,14 @@ namespace GeneXus.Programs {
             GridColumn.AddObjectProperty("Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavCustomerlocationsdts__customerlocationpostaladdress_Enabled), 5, 0, ".", "")));
             GridColumn.AddObjectProperty("Visible", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavCustomerlocationsdts__customerlocationpostaladdress_Visible), 5, 0, ".", "")));
             GridContainer.AddColumnProperties(GridColumn);
+            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
+            GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( StringUtil.RTrim( AV27Update)));
+            GridColumn.AddObjectProperty("Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavUpdate_Enabled), 5, 0, ".", "")));
+            GridContainer.AddColumnProperties(GridColumn);
+            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
+            GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( StringUtil.RTrim( AV10Delete)));
+            GridColumn.AddObjectProperty("Enabled", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtavDelete_Enabled), 5, 0, ".", "")));
+            GridContainer.AddColumnProperties(GridColumn);
             GridContainer.AddObjectProperty("Selectedindex", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid_Selectedindex), 4, 0, ".", "")));
             GridContainer.AddObjectProperty("Allowselection", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid_Allowselection), 1, 0, ".", "")));
             GridContainer.AddObjectProperty("Selectioncolor", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid_Selectioncolor), 9, 0, ".", "")));
@@ -2096,14 +2096,14 @@ namespace GeneXus.Programs {
          divTablerightheader_Internalname = "TABLERIGHTHEADER";
          divTableheadercontent_Internalname = "TABLEHEADERCONTENT";
          divTableheader_Internalname = "TABLEHEADER";
-         edtavUpdate_Internalname = "vUPDATE";
-         edtavDelete_Internalname = "vDELETE";
          edtavCustomerlocationsdts__customerid_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERID";
          edtavCustomerlocationsdts__customerlocationid_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONID";
          edtavCustomerlocationsdts__customerlocationvisitingaddress_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONVISITINGADDRESS";
          edtavCustomerlocationsdts__customerlocationemail_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONEMAIL";
          edtavCustomerlocationsdts__customerlocationphone_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONPHONE";
          edtavCustomerlocationsdts__customerlocationpostaladdress_Internalname = "CUSTOMERLOCATIONSDTS__CUSTOMERLOCATIONPOSTALADDRESS";
+         edtavUpdate_Internalname = "vUPDATE";
+         edtavDelete_Internalname = "vDELETE";
          Gridpaginationbar_Internalname = "GRIDPAGINATIONBAR";
          divGridtablewithpaginationbar_Internalname = "GRIDTABLEWITHPAGINATIONBAR";
          divTablemain_Internalname = "TABLEMAIN";
@@ -2127,6 +2127,10 @@ namespace GeneXus.Programs {
          subGrid_Allowcollapsing = 0;
          subGrid_Allowselection = 0;
          subGrid_Header = "";
+         edtavDelete_Jsonclick = "";
+         edtavDelete_Enabled = 0;
+         edtavUpdate_Jsonclick = "";
+         edtavUpdate_Enabled = 0;
          edtavCustomerlocationsdts__customerlocationpostaladdress_Jsonclick = "";
          edtavCustomerlocationsdts__customerlocationpostaladdress_Enabled = 0;
          edtavCustomerlocationsdts__customerlocationpostaladdress_Visible = -1;
@@ -2143,10 +2147,6 @@ namespace GeneXus.Programs {
          edtavCustomerlocationsdts__customerlocationid_Enabled = 0;
          edtavCustomerlocationsdts__customerid_Jsonclick = "";
          edtavCustomerlocationsdts__customerid_Enabled = 0;
-         edtavDelete_Jsonclick = "";
-         edtavDelete_Enabled = 0;
-         edtavUpdate_Jsonclick = "";
-         edtavUpdate_Enabled = 0;
          subGrid_Class = "GridWithPaginationBar WorkWith";
          subGrid_Backcolorstyle = 0;
          edtavCustomerlocationsdts__customerlocationpostaladdress_Visible = -1;
@@ -2173,7 +2173,7 @@ namespace GeneXus.Programs {
          Ddo_gridcolumnsselector_Icontype = "FontIcon";
          Ddo_grid_Fixable = "T";
          Ddo_grid_Columnssortvalues = "|||";
-         Ddo_grid_Columnids = "4:CustomerLocationSDTs__CustomerLocationVisitingAddress|5:CustomerLocationSDTs__CustomerLocationEmail|6:CustomerLocationSDTs__CustomerLocationPhone|7:CustomerLocationSDTs__CustomerLocationPostalAddress";
+         Ddo_grid_Columnids = "2:CustomerLocationSDTs__CustomerLocationVisitingAddress|3:CustomerLocationSDTs__CustomerLocationEmail|4:CustomerLocationSDTs__CustomerLocationPhone|5:CustomerLocationSDTs__CustomerLocationPostalAddress";
          Ddo_grid_Gridinternalname = "";
          Gridpaginationbar_Rowsperpagecaption = "WWP_PagingRowsPerPage";
          Gridpaginationbar_Emptygridcaption = "No location records available";
@@ -2232,7 +2232,7 @@ namespace GeneXus.Programs {
          setEventMetadata("'DOINSERTLOCATION'",",oparms:[]}");
          setEventMetadata("VALIDV_GXV5","{handler:'Validv_Gxv5',iparms:[]");
          setEventMetadata("VALIDV_GXV5",",oparms:[]}");
-         setEventMetadata("NULL","{handler:'Validv_Gxv7',iparms:[]");
+         setEventMetadata("NULL","{handler:'Validv_Delete',iparms:[]");
          setEventMetadata("NULL",",oparms:[]}");
          return  ;
       }
@@ -2334,14 +2334,14 @@ namespace GeneXus.Programs {
          AV40Pgmname = "CustomerLocations";
          /* GeneXus formulas. */
          AV40Pgmname = "CustomerLocations";
-         edtavUpdate_Enabled = 0;
-         edtavDelete_Enabled = 0;
          edtavCustomerlocationsdts__customerid_Enabled = 0;
          edtavCustomerlocationsdts__customerlocationid_Enabled = 0;
          edtavCustomerlocationsdts__customerlocationvisitingaddress_Enabled = 0;
          edtavCustomerlocationsdts__customerlocationemail_Enabled = 0;
          edtavCustomerlocationsdts__customerlocationphone_Enabled = 0;
          edtavCustomerlocationsdts__customerlocationpostaladdress_Enabled = 0;
+         edtavUpdate_Enabled = 0;
+         edtavDelete_Enabled = 0;
       }
 
       private short GRID_nEOF ;
@@ -2376,14 +2376,14 @@ namespace GeneXus.Programs {
       private int edtavFilterfulltext_Enabled ;
       private int AV31GXV1 ;
       private int subGrid_Islastpage ;
-      private int edtavUpdate_Enabled ;
-      private int edtavDelete_Enabled ;
       private int edtavCustomerlocationsdts__customerid_Enabled ;
       private int edtavCustomerlocationsdts__customerlocationid_Enabled ;
       private int edtavCustomerlocationsdts__customerlocationvisitingaddress_Enabled ;
       private int edtavCustomerlocationsdts__customerlocationemail_Enabled ;
       private int edtavCustomerlocationsdts__customerlocationphone_Enabled ;
       private int edtavCustomerlocationsdts__customerlocationpostaladdress_Enabled ;
+      private int edtavUpdate_Enabled ;
+      private int edtavDelete_Enabled ;
       private int GRID_nGridOutOfScope ;
       private int nGXsfl_37_fel_idx=1 ;
       private int edtavCustomerlocationsdts__customerlocationvisitingaddress_Visible ;
@@ -2492,14 +2492,14 @@ namespace GeneXus.Programs {
       private string subGrid_Class ;
       private string subGrid_Linesclass ;
       private string ROClassString ;
-      private string edtavUpdate_Jsonclick ;
-      private string edtavDelete_Jsonclick ;
       private string edtavCustomerlocationsdts__customerid_Jsonclick ;
       private string edtavCustomerlocationsdts__customerlocationid_Jsonclick ;
       private string edtavCustomerlocationsdts__customerlocationvisitingaddress_Jsonclick ;
       private string edtavCustomerlocationsdts__customerlocationemail_Jsonclick ;
       private string edtavCustomerlocationsdts__customerlocationphone_Jsonclick ;
       private string edtavCustomerlocationsdts__customerlocationpostaladdress_Jsonclick ;
+      private string edtavUpdate_Jsonclick ;
+      private string edtavDelete_Jsonclick ;
       private string subGrid_Header ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;

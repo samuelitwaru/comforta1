@@ -349,6 +349,7 @@ namespace GeneXus.Programs {
          }
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Filtermode", StringUtil.BoolToStr( Calendaruc_Filtermode));
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Selectable", StringUtil.BoolToStr( Calendaruc_Selectable));
+         GxWebStd.gx_hidden_field( context, "CALENDARUC_Initialview", StringUtil.RTrim( Calendaruc_Initialview));
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Viewstyle", StringUtil.RTrim( Calendaruc_Viewstyle));
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Defaulteventstyle", StringUtil.RTrim( Calendaruc_Defaulteventstyle));
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Fixedweekcount", StringUtil.BoolToStr( Calendaruc_Fixedweekcount));
@@ -369,6 +370,9 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Yearbuttonposition", StringUtil.RTrim( Calendaruc_Yearbuttonposition));
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Listbuttonposition", StringUtil.RTrim( Calendaruc_Listbuttonposition));
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Todaybuttontext", StringUtil.RTrim( Calendaruc_Todaybuttontext));
+         GxWebStd.gx_hidden_field( context, "CALENDARUC_Monthbuttontext", StringUtil.RTrim( Calendaruc_Monthbuttontext));
+         GxWebStd.gx_hidden_field( context, "CALENDARUC_Weekbuttontext", StringUtil.RTrim( Calendaruc_Weekbuttontext));
+         GxWebStd.gx_hidden_field( context, "CALENDARUC_Daybuttontext", StringUtil.RTrim( Calendaruc_Daybuttontext));
          GxWebStd.gx_hidden_field( context, "DVELOP_CONFIRMPANEL_BTNDUMMYDELETE_Title", StringUtil.RTrim( Dvelop_confirmpanel_btndummydelete_Title));
          GxWebStd.gx_hidden_field( context, "DVELOP_CONFIRMPANEL_BTNDUMMYDELETE_Confirmationtext", StringUtil.RTrim( Dvelop_confirmpanel_btndummydelete_Confirmationtext));
          GxWebStd.gx_hidden_field( context, "DVELOP_CONFIRMPANEL_BTNDUMMYDELETE_Yesbuttoncaption", StringUtil.RTrim( Dvelop_confirmpanel_btndummydelete_Yesbuttoncaption));
@@ -629,6 +633,7 @@ namespace GeneXus.Programs {
             ucCalendaruc.SetProperty("FromDate", AV10CalendarLoadFromDate);
             ucCalendaruc.SetProperty("ToDate", AV11CalendarLoadToDate);
             ucCalendaruc.SetProperty("Selectable", Calendaruc_Selectable);
+            ucCalendaruc.SetProperty("InitialView", Calendaruc_Initialview);
             ucCalendaruc.SetProperty("ViewStyle", Calendaruc_Viewstyle);
             ucCalendaruc.SetProperty("DefaultEventStyle", Calendaruc_Defaulteventstyle);
             ucCalendaruc.SetProperty("FixedWeekCount", Calendaruc_Fixedweekcount);
@@ -649,6 +654,9 @@ namespace GeneXus.Programs {
             ucCalendaruc.SetProperty("YearButtonPosition", Calendaruc_Yearbuttonposition);
             ucCalendaruc.SetProperty("ListButtonPosition", Calendaruc_Listbuttonposition);
             ucCalendaruc.SetProperty("TodayButtonText", Calendaruc_Todaybuttontext);
+            ucCalendaruc.SetProperty("MonthButtonText", Calendaruc_Monthbuttontext);
+            ucCalendaruc.SetProperty("WeekButtonText", Calendaruc_Weekbuttontext);
+            ucCalendaruc.SetProperty("DayButtonText", Calendaruc_Daybuttontext);
             ucCalendaruc.Render(context, "dvelop.wwpcalendar", Calendaruc_Internalname, "CALENDARUCContainer");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -1105,6 +1113,7 @@ namespace GeneXus.Programs {
             AV22DisabledDaysJson = cgiGet( "vDISABLEDDAYSJSON");
             Calendaruc_Filtermode = StringUtil.StrToBool( cgiGet( "CALENDARUC_Filtermode"));
             Calendaruc_Selectable = StringUtil.StrToBool( cgiGet( "CALENDARUC_Selectable"));
+            Calendaruc_Initialview = cgiGet( "CALENDARUC_Initialview");
             Calendaruc_Viewstyle = cgiGet( "CALENDARUC_Viewstyle");
             Calendaruc_Defaulteventstyle = cgiGet( "CALENDARUC_Defaulteventstyle");
             Calendaruc_Fixedweekcount = StringUtil.StrToBool( cgiGet( "CALENDARUC_Fixedweekcount"));
@@ -1125,6 +1134,9 @@ namespace GeneXus.Programs {
             Calendaruc_Yearbuttonposition = cgiGet( "CALENDARUC_Yearbuttonposition");
             Calendaruc_Listbuttonposition = cgiGet( "CALENDARUC_Listbuttonposition");
             Calendaruc_Todaybuttontext = cgiGet( "CALENDARUC_Todaybuttontext");
+            Calendaruc_Monthbuttontext = cgiGet( "CALENDARUC_Monthbuttontext");
+            Calendaruc_Weekbuttontext = cgiGet( "CALENDARUC_Weekbuttontext");
+            Calendaruc_Daybuttontext = cgiGet( "CALENDARUC_Daybuttontext");
             Dvelop_confirmpanel_btndummydelete_Title = cgiGet( "DVELOP_CONFIRMPANEL_BTNDUMMYDELETE_Title");
             Dvelop_confirmpanel_btndummydelete_Confirmationtext = cgiGet( "DVELOP_CONFIRMPANEL_BTNDUMMYDELETE_Confirmationtext");
             Dvelop_confirmpanel_btndummydelete_Yesbuttoncaption = cgiGet( "DVELOP_CONFIRMPANEL_BTNDUMMYDELETE_Yesbuttoncaption");
@@ -1762,7 +1774,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915583885", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248211959283", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1778,7 +1790,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("agendacalendar.js", "?202481915583885", false, true);
+         context.AddJavascriptSource("agendacalendar.js", "?20248211959283", false, true);
          context.AddJavascriptSource("DVelop/Calendar/index.global.min.js", "", false, true);
          context.AddJavascriptSource("DVelop/Calendar/WWPCalendarRender.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/daterangepicker/locales.js", "", false, true);
@@ -1882,7 +1894,10 @@ namespace GeneXus.Programs {
          Dvelop_confirmpanel_btndummydelete_Yesbuttoncaption = "WWP_ConfirmTextYes";
          Dvelop_confirmpanel_btndummydelete_Confirmationtext = "WWP_Calendar_DeleteEventMessage";
          Dvelop_confirmpanel_btndummydelete_Title = context.GetMessage( "WWP_Calendar_DeleteEventTitle", "");
-         Calendaruc_Todaybuttontext = "today";
+         Calendaruc_Daybuttontext = "Day";
+         Calendaruc_Weekbuttontext = "Week";
+         Calendaruc_Monthbuttontext = "Month";
+         Calendaruc_Todaybuttontext = "Today";
          Calendaruc_Listbuttonposition = "None";
          Calendaruc_Yearbuttonposition = "None";
          Calendaruc_Daybuttonposition = "HeaderRight";
@@ -1902,6 +1917,7 @@ namespace GeneXus.Programs {
          Calendaruc_Fixedweekcount = Convert.ToBoolean( 0);
          Calendaruc_Defaulteventstyle = "BaseColor";
          Calendaruc_Viewstyle = "Standard";
+         Calendaruc_Initialview = "Month";
          Calendaruc_Selectable = Convert.ToBoolean( -1);
          Form.Headerrawhtml = "";
          Form.Background = "";
@@ -2081,6 +2097,7 @@ namespace GeneXus.Programs {
       private string bodyStyle ;
       private string GXKey ;
       private string Gx_mode ;
+      private string Calendaruc_Initialview ;
       private string Calendaruc_Viewstyle ;
       private string Calendaruc_Todaybuttonposition ;
       private string Calendaruc_Previousbuttonposition ;
@@ -2092,6 +2109,9 @@ namespace GeneXus.Programs {
       private string Calendaruc_Yearbuttonposition ;
       private string Calendaruc_Listbuttonposition ;
       private string Calendaruc_Todaybuttontext ;
+      private string Calendaruc_Monthbuttontext ;
+      private string Calendaruc_Weekbuttontext ;
+      private string Calendaruc_Daybuttontext ;
       private string Dvelop_confirmpanel_btndummydelete_Title ;
       private string Dvelop_confirmpanel_btndummydelete_Confirmationtext ;
       private string Dvelop_confirmpanel_btndummydelete_Yesbuttoncaption ;

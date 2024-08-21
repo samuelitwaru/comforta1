@@ -802,7 +802,7 @@ namespace GeneXus.Programs {
          AV13WizardSteps.Add(AV14WizardStep, 0);
          AV14WizardStep = new GeneXus.Programs.wwpbaseobjects.SdtWizardSteps_WizardStepsItem(context);
          AV14WizardStep.gxTpr_Code = "Step3";
-         AV14WizardStep.gxTpr_Title = context.GetMessage( "Receptionist", "");
+         AV14WizardStep.gxTpr_Title = context.GetMessage( "Receptionists", "");
          AV14WizardStep.gxTpr_Description = context.GetMessage( "Receptionist Information", "");
          AV13WizardSteps.Add(AV14WizardStep, 0);
          if ( String.IsNullOrEmpty(StringUtil.RTrim( AV11CurrentStep)) )
@@ -1103,7 +1103,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248191558768", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119591174", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1119,7 +1119,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("createlocation.js", "?20248191558769", false, true);
+         context.AddJavascriptSource("createlocation.js", "?202482119591174", false, true);
          /* End function include_jscripts */
       }
 
