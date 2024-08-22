@@ -1771,7 +1771,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119591766", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248221451123", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1787,7 +1787,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("customerlocations.js", "?202482119591766", false, true);
+         context.AddJavascriptSource("customerlocations.js", "?20248221451123", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -2176,7 +2176,7 @@ namespace GeneXus.Programs {
          Ddo_grid_Columnids = "2:CustomerLocationSDTs__CustomerLocationVisitingAddress|3:CustomerLocationSDTs__CustomerLocationEmail|4:CustomerLocationSDTs__CustomerLocationPhone|5:CustomerLocationSDTs__CustomerLocationPostalAddress";
          Ddo_grid_Gridinternalname = "";
          Gridpaginationbar_Rowsperpagecaption = "WWP_PagingRowsPerPage";
-         Gridpaginationbar_Emptygridcaption = "No location records available";
+         Gridpaginationbar_Emptygridcaption = "WWP_PagingEmptyGridCaption";
          Gridpaginationbar_Caption = context.GetMessage( "WWP_PagingCaption", "");
          Gridpaginationbar_Next = "WWP_PagingNextCaption";
          Gridpaginationbar_Previous = "WWP_PagingPreviousCaption";

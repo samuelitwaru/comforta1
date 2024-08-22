@@ -184,7 +184,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          Gxm1dvelop_menu.gxTpr_Link = "";
          Gxm1dvelop_menu.gxTpr_Linktarget = "";
          Gxm1dvelop_menu.gxTpr_Iconclass = "menu-icon fa fa-truck-field";
-         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "Suppliers", "");
+         Gxm1dvelop_menu.gxTpr_Caption = context.GetMessage( "My Suppliers", "");
          Gxm3dvelop_menu_subitems = new GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item(context);
          Gxm1dvelop_menu.gxTpr_Subitems.Add(Gxm3dvelop_menu_subitems, 0);
          AV5id = (short)(AV5id+1);

@@ -195,7 +195,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          context.AddJavascriptSource("DVelop/Shared/daterangepicker/daterangepicker.min.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/DatePicker/DatePickerRender.js", "", false, true);
-         context.AddJavascriptSource("wwpbaseobjects/workwithplusmasterpage.js", "?202481915572680", false, true);
+         context.AddJavascriptSource("wwpbaseobjects/workwithplusmasterpage.js", "?202482214505526", false, true);
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -283,8 +283,8 @@ namespace GeneXus.Programs.wwpbaseobjects {
             /* Static Bitmap Variable */
             ClassString = "Attribute" + " " + ((StringUtil.StrCmp(imgavHeaderimage_gximage, "")==0) ? "" : "GX_Image_"+imgavHeaderimage_gximage+"_Class");
             StyleString = "";
-            AV32HeaderImage_IsBlob = (bool)((String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage))&&String.IsNullOrEmpty(StringUtil.RTrim( AV36Headerimage_GXI)))||!String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)));
-            sImgUrl = (String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)) ? AV36Headerimage_GXI : context.PathToRelativeUrl( AV32HeaderImage));
+            AV32HeaderImage_IsBlob = (bool)((String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage))&&String.IsNullOrEmpty(StringUtil.RTrim( AV37Headerimage_GXI)))||!String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)));
+            sImgUrl = (String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)) ? AV37Headerimage_GXI : context.PathToRelativeUrl( AV32HeaderImage));
             GxWebStd.gx_bitmap( context, imgavHeaderimage_Internalname, sImgUrl, "", "", "", context.GetTheme( ), 1, 0, "", "", 0, -1, 0, "", 0, "", 0, 0, 0, "", "", StyleString, ClassString, "", "", "", "", "", "", "", 1, AV32HeaderImage_IsBlob, false, context.GetImageSrcSet( sImgUrl), "HLP_WWPBaseObjects/WorkWithPlusMasterPage.htm");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -838,24 +838,23 @@ namespace GeneXus.Programs.wwpbaseobjects {
             imgImagelogo_gximage = "LogoLogin";
             AssignProp("", true, imgImagelogo_Internalname, "gximage", imgImagelogo_gximage, true);
             AV33ImageLogo = context.GetImagePath( "e9edf59f-db45-4e16-b6a6-2c2b6611a4a3", "", context.GetTheme( ));
-            AV35Imagelogo_GXI = GXDbFile.PathToUrl( context.GetImagePath( "e9edf59f-db45-4e16-b6a6-2c2b6611a4a3", "", context.GetTheme( )));
+            AV36Imagelogo_GXI = GXDbFile.PathToUrl( context.GetImagePath( "e9edf59f-db45-4e16-b6a6-2c2b6611a4a3", "", context.GetTheme( )));
             AV32HeaderImage = AV33ImageLogo;
-            AssignProp("", true, imgavHeaderimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)) ? AV36Headerimage_GXI : context.convertURL( context.PathToRelativeUrl( AV32HeaderImage))), true);
+            AssignProp("", true, imgavHeaderimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)) ? AV37Headerimage_GXI : context.convertURL( context.PathToRelativeUrl( AV32HeaderImage))), true);
             AssignProp("", true, imgavHeaderimage_Internalname, "SrcSet", context.GetImageSrcSet( AV32HeaderImage), true);
-            AV36Headerimage_GXI = AV35Imagelogo_GXI;
-            AssignProp("", true, imgavHeaderimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)) ? AV36Headerimage_GXI : context.convertURL( context.PathToRelativeUrl( AV32HeaderImage))), true);
+            AV37Headerimage_GXI = AV36Imagelogo_GXI;
+            AssignProp("", true, imgavHeaderimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)) ? AV37Headerimage_GXI : context.convertURL( context.PathToRelativeUrl( AV32HeaderImage))), true);
             AssignProp("", true, imgavHeaderimage_Internalname, "SrcSet", context.GetImageSrcSet( AV32HeaderImage), true);
          }
          else
          {
             AV34Resized = AV30CustomerCustomizationSDTValues.gxTpr_Customercustomizationlogo;
-            AV37Resized_GXI = AV30CustomerCustomizationSDTValues.gxTpr_Customercustomizationlogo_gxi;
-            GxImageUtil.Resize(AV34Resized, 200, 30, true) ;
+            AV38Resized_GXI = AV30CustomerCustomizationSDTValues.gxTpr_Customercustomizationlogo_gxi;
             AV32HeaderImage = AV34Resized;
-            AssignProp("", true, imgavHeaderimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)) ? AV36Headerimage_GXI : context.convertURL( context.PathToRelativeUrl( AV32HeaderImage))), true);
+            AssignProp("", true, imgavHeaderimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)) ? AV37Headerimage_GXI : context.convertURL( context.PathToRelativeUrl( AV32HeaderImage))), true);
             AssignProp("", true, imgavHeaderimage_Internalname, "SrcSet", context.GetImageSrcSet( AV32HeaderImage), true);
-            AV36Headerimage_GXI = AV37Resized_GXI;
-            AssignProp("", true, imgavHeaderimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)) ? AV36Headerimage_GXI : context.convertURL( context.PathToRelativeUrl( AV32HeaderImage))), true);
+            AV37Headerimage_GXI = AV38Resized_GXI;
+            AssignProp("", true, imgavHeaderimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV32HeaderImage)) ? AV37Headerimage_GXI : context.convertURL( context.PathToRelativeUrl( AV32HeaderImage))), true);
             AssignProp("", true, imgavHeaderimage_Internalname, "SrcSet", context.GetImageSrcSet( AV32HeaderImage), true);
          }
          Ddc_adminag_Icon = context.convertURL( (string)(context.GetImagePath( "cd132e7c-3222-4be1-9123-4cad0b17f9cf", "", context.GetTheme( ))));
@@ -864,10 +863,10 @@ namespace GeneXus.Programs.wwpbaseobjects {
          AV9GAMUser = new GeneXus.Programs.genexussecurity.SdtGAMUser(context).get();
          AV19UserName = (String.IsNullOrEmpty(StringUtil.RTrim( AV9GAMUser.gxTpr_Firstname)) ? AV9GAMUser.gxTpr_Name : StringUtil.Trim( AV9GAMUser.gxTpr_Firstname)+" "+StringUtil.Trim( AV9GAMUser.gxTpr_Lastname));
          AV5GAMRoleCollection = new GeneXus.Programs.genexussecurity.SdtGAMSession(context).getroles(out  AV7GAMErrorCollection);
-         AV38GXV1 = 1;
-         while ( AV38GXV1 <= AV5GAMRoleCollection.Count )
+         AV39GXV1 = 1;
+         while ( AV39GXV1 <= AV5GAMRoleCollection.Count )
          {
-            AV6GAMRole = ((GeneXus.Programs.genexussecurity.SdtGAMRole)AV5GAMRoleCollection.Item(AV38GXV1));
+            AV6GAMRole = ((GeneXus.Programs.genexussecurity.SdtGAMRole)AV5GAMRoleCollection.Item(AV39GXV1));
             if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV20RolesDescriptions)) )
             {
                AV20RolesDescriptions += ", ";
@@ -875,7 +874,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
             }
             AV20RolesDescriptions += (String.IsNullOrEmpty(StringUtil.RTrim( AV6GAMRole.gxTpr_Description)) ? AV6GAMRole.gxTpr_Name : AV6GAMRole.gxTpr_Description);
             AssignAttri("", true, "AV20RolesDescriptions", AV20RolesDescriptions);
-            AV38GXV1 = (int)(AV38GXV1+1);
+            AV39GXV1 = (int)(AV39GXV1+1);
          }
          if ( StringUtil.StrCmp(AV24Httprequest.Method, "GET") == 0 )
          {
@@ -982,7 +981,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?202481915573146", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?202482214505883", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -997,7 +996,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("wwpbaseobjects/workwithplusmasterpage.js", "?202481915573147", false, true);
+         context.AddJavascriptSource("wwpbaseobjects/workwithplusmasterpage.js", "?202482214505884", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -1133,7 +1132,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          ClassString = "";
          StyleString = "";
          AV32HeaderImage = "";
-         AV36Headerimage_GXI = "";
+         AV37Headerimage_GXI = "";
          sImgUrl = "";
          lblShowmenu_Jsonclick = "";
          ucDdc_changelanguage = new GXUserControl();
@@ -1158,9 +1157,9 @@ namespace GeneXus.Programs.wwpbaseobjects {
          AV33ImageLogo = "";
          imgImagelogo_gximage = "";
          imgImagelogo_Internalname = "";
-         AV35Imagelogo_GXI = "";
+         AV36Imagelogo_GXI = "";
          AV34Resized = "";
-         AV37Resized_GXI = "";
+         AV38Resized_GXI = "";
          AV9GAMUser = new GeneXus.Programs.genexussecurity.SdtGAMUser(context);
          AV19UserName = "";
          AV5GAMRoleCollection = new GXExternalCollection<GeneXus.Programs.genexussecurity.SdtGAMRole>( context, "GeneXus.Programs.genexussecurity.SdtGAMRole", "GeneXus.Programs");
@@ -1190,7 +1189,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
       private int Ddc_changelanguage_Componentwidth ;
       private int Ddc_adminag_Componentwidth ;
       private int Ucmenu_Scrollwidth ;
-      private int AV38GXV1 ;
+      private int AV39GXV1 ;
       private int idxLst ;
       private string GXKey ;
       private string Ddc_changelanguage_Caption ;
@@ -1260,9 +1259,9 @@ namespace GeneXus.Programs.wwpbaseobjects {
       private bool toggleJsOutput ;
       private bool gxdyncontrolsrefreshing ;
       private bool returnInSub ;
-      private string AV36Headerimage_GXI ;
-      private string AV35Imagelogo_GXI ;
-      private string AV37Resized_GXI ;
+      private string AV37Headerimage_GXI ;
+      private string AV36Imagelogo_GXI ;
+      private string AV38Resized_GXI ;
       private string AV19UserName ;
       private string AV20RolesDescriptions ;
       private string AV32HeaderImage ;
