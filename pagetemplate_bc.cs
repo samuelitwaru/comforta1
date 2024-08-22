@@ -130,20 +130,14 @@ namespace GeneXus.Programs {
          returnInSub = false;
       }
 
-      protected void E130D2( )
-      {
-         /* 'Cancel' Routine */
-         returnInSub = false;
-      }
-
       protected void ZM0D22( short GX_JID )
       {
-         if ( ( GX_JID == 4 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             Z103PageTemplateName = A103PageTemplateName;
             Z106PageTemplateDescription = A106PageTemplateDescription;
          }
-         if ( GX_JID == -4 )
+         if ( GX_JID == -1 )
          {
             Z102PageTemplateId = A102PageTemplateId;
             Z103PageTemplateName = A103PageTemplateName;
@@ -176,7 +170,7 @@ namespace GeneXus.Programs {
             A113PageTemplateCSS = BC000D4_A113PageTemplateCSS[0];
             A40000PageTemplateImage_GXI = BC000D4_A40000PageTemplateImage_GXI[0];
             A105PageTemplateImage = BC000D4_A105PageTemplateImage[0];
-            ZM0D22( -4) ;
+            ZM0D22( -1) ;
          }
          pr_default.close(2);
          OnLoadActions0D22( ) ;
@@ -190,21 +184,6 @@ namespace GeneXus.Programs {
       {
          nIsDirty_22 = 0;
          standaloneModal( ) ;
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( A103PageTemplateName)) )
-         {
-            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "Page Template Name", ""), "", "", "", "", "", "", "", ""), 1, "");
-            AnyError = 1;
-         }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( A106PageTemplateDescription)) )
-         {
-            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "Page Template Description", ""), "", "", "", "", "", "", "", ""), 1, "");
-            AnyError = 1;
-         }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( A105PageTemplateImage)) && String.IsNullOrEmpty(StringUtil.RTrim( A40000PageTemplateImage_GXI)) )
-         {
-            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "Page Template Image", ""), "", "", "", "", "", "", "", ""), 1, "");
-            AnyError = 1;
-         }
       }
 
       protected void CloseExtendedTableCursors0D22( )
@@ -236,7 +215,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A102PageTemplateId});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0D22( 4) ;
+            ZM0D22( 1) ;
             RcdFound22 = 1;
             A102PageTemplateId = BC000D3_A102PageTemplateId[0];
             A103PageTemplateName = BC000D3_A103PageTemplateName[0];
@@ -720,7 +699,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z102PageTemplateId = A102PageTemplateId;
          }
-         ZM0D22( -4) ;
+         ZM0D22( -1) ;
          OnLoadActions0D22( ) ;
          AddRow0D22( ) ;
          ScanKeyEnd0D22( ) ;
@@ -749,7 +728,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z102PageTemplateId = A102PageTemplateId;
          }
-         ZM0D22( -4) ;
+         ZM0D22( -1) ;
          OnLoadActions0D22( ) ;
          AddRow0D22( ) ;
          ScanKeyEnd0D22( ) ;

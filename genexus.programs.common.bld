@@ -18,7 +18,6 @@ type_SdtResident.cs
 type_SdtResident_INCompany.cs
 type_SdtResident_INIndividual.cs
 type_SdtResident_ProductService.cs
-type_SdtPageTemplate.cs
 type_SdtSupplier_Gen.cs
 type_SdtSupplier_Gen_ProductService.cs
 type_SdtCustomer.cs
@@ -28,6 +27,7 @@ type_SdtCustomer_Locations_Receptionist.cs
 type_SdtCustomer_Locations_Supplier_Agb.cs
 type_SdtCustomer_Locations_Supplier_Gen.cs
 type_SdtCustomer_Manager.cs
+type_SdtPageTemplate.cs
 type_SdtQRCodeLibrary.cs
 wwpbaseobjects\gxdomainwwpcardsmenuoptiontype.cs
 gxdomainwwpcardsmenusize.cs
