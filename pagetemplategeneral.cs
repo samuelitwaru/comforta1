@@ -431,7 +431,26 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
             /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 DataContentCell DscTop", "start", "top", "", "", "div");
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "start", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, divTransactiondetail_tableform_Internalname, 1, 0, "px", 0, "px", "Table", "start", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtPageTemplateId_Internalname+"\"", "", "div");
+            /* Attribute/Variable Label */
+            GxWebStd.gx_label_element( context, edtPageTemplateId_Internalname, context.GetMessage( "Template Id", ""), " AttributeLabel", 1, true, "");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
+            /* Single line edit */
+            GxWebStd.gx_single_line_edit( context, edtPageTemplateId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A102PageTemplateId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( ((edtPageTemplateId_Enabled!=0) ? context.localUtil.Format( (decimal)(A102PageTemplateId), "ZZZ9") : context.localUtil.Format( (decimal)(A102PageTemplateId), "ZZZ9"))), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+sPrefix+"'"+",false,"+"'"+""+"'", "", "", "", "", edtPageTemplateId_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtPageTemplateId_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_PageTemplateGeneral.htm");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtPageTemplateName_Internalname+"\"", "", "div");
             /* Attribute/Variable Label */
@@ -443,28 +462,11 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 DataContentCell DscTop", "start", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+imgPageTemplateImage_Internalname+"\"", "", "div");
-            /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, "", context.GetMessage( "Template Image", ""), " AttributeLabel", 1, true, "");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
-            /* Static Bitmap Variable */
-            ClassString = "Attribute";
-            StyleString = "";
-            A105PageTemplateImage_IsBlob = (bool)((String.IsNullOrEmpty(StringUtil.RTrim( A105PageTemplateImage))&&String.IsNullOrEmpty(StringUtil.RTrim( A40000PageTemplateImage_GXI)))||!String.IsNullOrEmpty(StringUtil.RTrim( A105PageTemplateImage)));
-            sImgUrl = (String.IsNullOrEmpty(StringUtil.RTrim( A105PageTemplateImage)) ? A40000PageTemplateImage_GXI : context.PathToRelativeUrl( A105PageTemplateImage));
-            GxWebStd.gx_bitmap( context, imgPageTemplateImage_Internalname, sImgUrl, "", "", "", context.GetTheme( ), 1, 0, "", "", 0, -1, 0, "", 0, "", 0, 0, 0, "", "", StyleString, ClassString, "", "", "", "", "", "", "", 1, A105PageTemplateImage_IsBlob, true, context.GetImageSrcSet( sImgUrl), "HLP_PageTemplateGeneral.htm");
-            GxWebStd.gx_div_end( context, "start", "top", "div");
-            GxWebStd.gx_div_end( context, "start", "top", "div");
-            GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
             /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 DataContentCell DscTop", "start", "top", "", "", "div");
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtPageTemplateDescription_Internalname+"\"", "", "div");
             /* Attribute/Variable Label */
@@ -481,7 +483,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 DataContentCell DscTop", "start", "top", "", "", "div");
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtPageTemplateHtml_Internalname+"\"", "", "div");
             /* Attribute/Variable Label */
@@ -501,7 +503,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
             /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 DataContentCell DscTop", "start", "top", "", "", "div");
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtPageTemplateCSS_Internalname+"\"", "", "div");
             /* Attribute/Variable Label */
@@ -517,6 +519,35 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+imgPageTemplateImage_Internalname+"\"", "", "div");
+            /* Attribute/Variable Label */
+            GxWebStd.gx_label_element( context, "", context.GetMessage( "Template Image", ""), " AttributeLabel", 1, true, "");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
+            /* Static Bitmap Variable */
+            ClassString = "Attribute";
+            StyleString = "";
+            A105PageTemplateImage_IsBlob = (bool)((String.IsNullOrEmpty(StringUtil.RTrim( A105PageTemplateImage))&&String.IsNullOrEmpty(StringUtil.RTrim( A40000PageTemplateImage_GXI)))||!String.IsNullOrEmpty(StringUtil.RTrim( A105PageTemplateImage)));
+            sImgUrl = (String.IsNullOrEmpty(StringUtil.RTrim( A105PageTemplateImage)) ? A40000PageTemplateImage_GXI : context.PathToRelativeUrl( A105PageTemplateImage));
+            GxWebStd.gx_bitmap( context, imgPageTemplateImage_Internalname, sImgUrl, "", "", "", context.GetTheme( ), 1, 0, "", "", 0, -1, 0, "", 0, "", 0, 0, 0, "", "", StyleString, ClassString, "", "", "", "", "", "", "", 1, A105PageTemplateImage_IsBlob, true, context.GetImageSrcSet( sImgUrl), "HLP_PageTemplateGeneral.htm");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "start", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, divTransactiondetail_actionstable_Internalname, 1, 0, "px", 0, "px", "Flex", "start", "top", " "+"data-gx-flex"+" ", "", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -529,14 +560,14 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-action-group CellMarginTop10", "start", "top", " "+"data-gx-actiongroup-type=\"toolbar\""+" ", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 37,'" + sPrefix + "',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 47,'" + sPrefix + "',false,'',0)\"";
             ClassString = "Button";
             StyleString = "";
             GxWebStd.gx_button_ctrl( context, bttBtnupdate_Internalname, "", context.GetMessage( "GXM_update", ""), bttBtnupdate_Jsonclick, 7, context.GetMessage( "GXM_update", ""), "", StyleString, ClassString, bttBtnupdate_Visible, 1, "standard", "'"+sPrefix+"'"+",false,"+"'"+"e11351_client"+"'", TempTags, "", 2, "HLP_PageTemplateGeneral.htm");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 39,'" + sPrefix + "',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 49,'" + sPrefix + "',false,'',0)\"";
             ClassString = "BtnDefault";
             StyleString = "";
             GxWebStd.gx_button_ctrl( context, bttBtndelete_Internalname, "", context.GetMessage( "GX_BtnDelete", ""), bttBtndelete_Jsonclick, 7, context.GetMessage( "GX_BtnDelete", ""), "", StyleString, ClassString, bttBtndelete_Visible, 1, "standard", "'"+sPrefix+"'"+",false,"+"'"+"e12351_client"+"'", TempTags, "", 2, "HLP_PageTemplateGeneral.htm");
@@ -544,17 +575,6 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
-            GxWebStd.gx_div_end( context, "start", "top", "div");
-            GxWebStd.gx_div_end( context, "start", "top", "div");
-            GxWebStd.gx_div_end( context, "start", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "start", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, divHtml_bottomauxiliarcontrols_Internalname, 1, 0, "px", 0, "px", "Section", "start", "top", "", "", "div");
-            /* Single line edit */
-            GxWebStd.gx_single_line_edit( context, edtPageTemplateId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A102PageTemplateId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(A102PageTemplateId), "ZZZ9")), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+sPrefix+"'"+",false,"+"'"+""+"'", "", "", "", "", edtPageTemplateId_Jsonclick, 0, "Attribute", "", "", "", "", edtPageTemplateId_Visible, 0, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_PageTemplateGeneral.htm");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -838,15 +858,15 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A102PageTemplateId});
             while ( (pr_default.getStatus(0) != 101) )
             {
+               A40000PageTemplateImage_GXI = H00352_A40000PageTemplateImage_GXI[0];
+               AssignProp(sPrefix, false, imgPageTemplateImage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A105PageTemplateImage)) ? A40000PageTemplateImage_GXI : context.convertURL( context.PathToRelativeUrl( A105PageTemplateImage))), true);
+               AssignProp(sPrefix, false, imgPageTemplateImage_Internalname, "SrcSet", context.GetImageSrcSet( A105PageTemplateImage), true);
                A113PageTemplateCSS = H00352_A113PageTemplateCSS[0];
                AssignAttri(sPrefix, false, "A113PageTemplateCSS", A113PageTemplateCSS);
                A114PageTemplateHtml = H00352_A114PageTemplateHtml[0];
                AssignAttri(sPrefix, false, "A114PageTemplateHtml", A114PageTemplateHtml);
                A106PageTemplateDescription = H00352_A106PageTemplateDescription[0];
                AssignAttri(sPrefix, false, "A106PageTemplateDescription", A106PageTemplateDescription);
-               A40000PageTemplateImage_GXI = H00352_A40000PageTemplateImage_GXI[0];
-               AssignProp(sPrefix, false, imgPageTemplateImage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A105PageTemplateImage)) ? A40000PageTemplateImage_GXI : context.convertURL( context.PathToRelativeUrl( A105PageTemplateImage))), true);
-               AssignProp(sPrefix, false, imgPageTemplateImage_Internalname, "SrcSet", context.GetImageSrcSet( A105PageTemplateImage), true);
                A103PageTemplateName = H00352_A103PageTemplateName[0];
                AssignAttri(sPrefix, false, "A103PageTemplateName", A103PageTemplateName);
                A105PageTemplateImage = H00352_A105PageTemplateImage[0];
@@ -874,18 +894,18 @@ namespace GeneXus.Programs {
       protected void before_start_formulas( )
       {
          AV16Pgmname = "PageTemplateGeneral";
+         edtPageTemplateId_Enabled = 0;
+         AssignProp(sPrefix, false, edtPageTemplateId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageTemplateId_Enabled), 5, 0), true);
          edtPageTemplateName_Enabled = 0;
          AssignProp(sPrefix, false, edtPageTemplateName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageTemplateName_Enabled), 5, 0), true);
-         imgPageTemplateImage_Enabled = 0;
-         AssignProp(sPrefix, false, imgPageTemplateImage_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(imgPageTemplateImage_Enabled), 5, 0), true);
          edtPageTemplateDescription_Enabled = 0;
          AssignProp(sPrefix, false, edtPageTemplateDescription_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageTemplateDescription_Enabled), 5, 0), true);
          edtPageTemplateHtml_Enabled = 0;
          AssignProp(sPrefix, false, edtPageTemplateHtml_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageTemplateHtml_Enabled), 5, 0), true);
          edtPageTemplateCSS_Enabled = 0;
          AssignProp(sPrefix, false, edtPageTemplateCSS_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageTemplateCSS_Enabled), 5, 0), true);
-         edtPageTemplateId_Enabled = 0;
-         AssignProp(sPrefix, false, edtPageTemplateId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageTemplateId_Enabled), 5, 0), true);
+         imgPageTemplateImage_Enabled = 0;
+         AssignProp(sPrefix, false, imgPageTemplateImage_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(imgPageTemplateImage_Enabled), 5, 0), true);
          fix_multi_value_controls( ) ;
       }
 
@@ -911,14 +931,14 @@ namespace GeneXus.Programs {
             /* Read variables values. */
             A103PageTemplateName = cgiGet( edtPageTemplateName_Internalname);
             AssignAttri(sPrefix, false, "A103PageTemplateName", A103PageTemplateName);
-            A105PageTemplateImage = cgiGet( imgPageTemplateImage_Internalname);
-            AssignAttri(sPrefix, false, "A105PageTemplateImage", A105PageTemplateImage);
             A106PageTemplateDescription = cgiGet( edtPageTemplateDescription_Internalname);
             AssignAttri(sPrefix, false, "A106PageTemplateDescription", A106PageTemplateDescription);
             A114PageTemplateHtml = cgiGet( edtPageTemplateHtml_Internalname);
             AssignAttri(sPrefix, false, "A114PageTemplateHtml", A114PageTemplateHtml);
             A113PageTemplateCSS = cgiGet( edtPageTemplateCSS_Internalname);
             AssignAttri(sPrefix, false, "A113PageTemplateCSS", A113PageTemplateCSS);
+            A105PageTemplateImage = cgiGet( imgPageTemplateImage_Internalname);
+            AssignAttri(sPrefix, false, "A105PageTemplateImage", A105PageTemplateImage);
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -962,8 +982,6 @@ namespace GeneXus.Programs {
       {
          /* Load Routine */
          returnInSub = false;
-         edtPageTemplateId_Visible = 0;
-         AssignProp(sPrefix, false, edtPageTemplateId_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtPageTemplateId_Visible), 5, 0), true);
          GXt_boolean1 = AV12IsAuthorized_Update;
          new GeneXus.Programs.wwpbaseobjects.secgamisauthbyfunctionalitykey(context ).execute(  "pagetemplate_Update", out  GXt_boolean1) ;
          AV12IsAuthorized_Update = GXt_boolean1;
@@ -1194,7 +1212,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915564439", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248221020811", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1210,7 +1228,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("pagetemplategeneral.js", "?202481915564439", false, true);
+         context.AddJavascriptSource("pagetemplategeneral.js", "?20248221020811", false, true);
          /* End function include_jscripts */
       }
 
@@ -1221,17 +1239,18 @@ namespace GeneXus.Programs {
 
       protected void init_default_properties( )
       {
+         edtPageTemplateId_Internalname = sPrefix+"PAGETEMPLATEID";
          edtPageTemplateName_Internalname = sPrefix+"PAGETEMPLATENAME";
-         imgPageTemplateImage_Internalname = sPrefix+"PAGETEMPLATEIMAGE";
          edtPageTemplateDescription_Internalname = sPrefix+"PAGETEMPLATEDESCRIPTION";
          edtPageTemplateHtml_Internalname = sPrefix+"PAGETEMPLATEHTML";
          edtPageTemplateCSS_Internalname = sPrefix+"PAGETEMPLATECSS";
+         imgPageTemplateImage_Internalname = sPrefix+"PAGETEMPLATEIMAGE";
+         divTransactiondetail_tableform_Internalname = sPrefix+"TRANSACTIONDETAIL_TABLEFORM";
+         divTransactiondetail_actionstable_Internalname = sPrefix+"TRANSACTIONDETAIL_ACTIONSTABLE";
          divTransactiondetail_tableattributes_Internalname = sPrefix+"TRANSACTIONDETAIL_TABLEATTRIBUTES";
          bttBtnupdate_Internalname = sPrefix+"BTNUPDATE";
          bttBtndelete_Internalname = sPrefix+"BTNDELETE";
          divTable_Internalname = sPrefix+"TABLE";
-         edtPageTemplateId_Internalname = sPrefix+"PAGETEMPLATEID";
-         divHtml_bottomauxiliarcontrols_Internalname = sPrefix+"HTML_BOTTOMAUXILIARCONTROLS";
          divLayoutmaintable_Internalname = sPrefix+"LAYOUTMAINTABLE";
          Form.Internalname = sPrefix+"FORM";
       }
@@ -1250,10 +1269,7 @@ namespace GeneXus.Programs {
             }
          }
          init_default_properties( ) ;
-         edtPageTemplateId_Enabled = 0;
          imgPageTemplateImage_Enabled = 0;
-         edtPageTemplateId_Jsonclick = "";
-         edtPageTemplateId_Visible = 1;
          bttBtndelete_Visible = 1;
          bttBtnupdate_Visible = 1;
          edtPageTemplateCSS_Enabled = 0;
@@ -1261,6 +1277,8 @@ namespace GeneXus.Programs {
          edtPageTemplateDescription_Enabled = 0;
          edtPageTemplateName_Jsonclick = "";
          edtPageTemplateName_Enabled = 0;
+         edtPageTemplateId_Jsonclick = "";
+         edtPageTemplateId_Enabled = 0;
          if ( StringUtil.Len( sPrefix) == 0 )
          {
             if ( context.isSpaRequest( ) )
@@ -1316,12 +1334,12 @@ namespace GeneXus.Programs {
          A103PageTemplateName = "";
          ClassString = "";
          StyleString = "";
-         A105PageTemplateImage = "";
-         A40000PageTemplateImage_GXI = "";
-         sImgUrl = "";
          A106PageTemplateDescription = "";
          A114PageTemplateHtml = "";
          A113PageTemplateCSS = "";
+         A105PageTemplateImage = "";
+         A40000PageTemplateImage_GXI = "";
+         sImgUrl = "";
          TempTags = "";
          bttBtnupdate_Jsonclick = "";
          bttBtndelete_Jsonclick = "";
@@ -1333,10 +1351,10 @@ namespace GeneXus.Programs {
          sEvtType = "";
          scmdbuf = "";
          H00352_A102PageTemplateId = new short[1] ;
+         H00352_A40000PageTemplateImage_GXI = new string[] {""} ;
          H00352_A113PageTemplateCSS = new string[] {""} ;
          H00352_A114PageTemplateHtml = new string[] {""} ;
          H00352_A106PageTemplateDescription = new string[] {""} ;
-         H00352_A40000PageTemplateImage_GXI = new string[] {""} ;
          H00352_A103PageTemplateName = new string[] {""} ;
          H00352_A105PageTemplateImage = new string[] {""} ;
          AV6WWPContext = new GeneXus.Programs.wwpbaseobjects.SdtWWPContext(context);
@@ -1349,7 +1367,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.pagetemplategeneral__default(),
             new Object[][] {
                 new Object[] {
-               H00352_A102PageTemplateId, H00352_A113PageTemplateCSS, H00352_A114PageTemplateHtml, H00352_A106PageTemplateDescription, H00352_A40000PageTemplateImage_GXI, H00352_A103PageTemplateName, H00352_A105PageTemplateImage
+               H00352_A102PageTemplateId, H00352_A40000PageTemplateImage_GXI, H00352_A113PageTemplateCSS, H00352_A114PageTemplateHtml, H00352_A106PageTemplateDescription, H00352_A103PageTemplateName, H00352_A105PageTemplateImage
                }
             }
          );
@@ -1371,15 +1389,14 @@ namespace GeneXus.Programs {
       private short nDonePA ;
       private short gxcookieaux ;
       private short nGXWrapped ;
+      private int edtPageTemplateId_Enabled ;
       private int edtPageTemplateName_Enabled ;
       private int edtPageTemplateDescription_Enabled ;
       private int edtPageTemplateHtml_Enabled ;
       private int edtPageTemplateCSS_Enabled ;
       private int bttBtnupdate_Visible ;
       private int bttBtndelete_Visible ;
-      private int edtPageTemplateId_Visible ;
       private int imgPageTemplateImage_Enabled ;
-      private int edtPageTemplateId_Enabled ;
       private int idxLst ;
       private string gxfirstwebparm ;
       private string gxfirstwebparm_bkp ;
@@ -1395,23 +1412,24 @@ namespace GeneXus.Programs {
       private string divLayoutmaintable_Internalname ;
       private string divTable_Internalname ;
       private string divTransactiondetail_tableattributes_Internalname ;
+      private string divTransactiondetail_tableform_Internalname ;
+      private string edtPageTemplateId_Internalname ;
+      private string edtPageTemplateId_Jsonclick ;
       private string edtPageTemplateName_Internalname ;
       private string edtPageTemplateName_Jsonclick ;
-      private string imgPageTemplateImage_Internalname ;
+      private string edtPageTemplateDescription_Internalname ;
       private string ClassString ;
       private string StyleString ;
-      private string sImgUrl ;
-      private string edtPageTemplateDescription_Internalname ;
       private string edtPageTemplateHtml_Internalname ;
       private string edtPageTemplateCSS_Internalname ;
+      private string imgPageTemplateImage_Internalname ;
+      private string sImgUrl ;
+      private string divTransactiondetail_actionstable_Internalname ;
       private string TempTags ;
       private string bttBtnupdate_Internalname ;
       private string bttBtnupdate_Jsonclick ;
       private string bttBtndelete_Internalname ;
       private string bttBtndelete_Jsonclick ;
-      private string divHtml_bottomauxiliarcontrols_Internalname ;
-      private string edtPageTemplateId_Internalname ;
-      private string edtPageTemplateId_Jsonclick ;
       private string sXEvt ;
       private string sEvt ;
       private string EvtGridId ;
@@ -1433,18 +1451,18 @@ namespace GeneXus.Programs {
       private string A114PageTemplateHtml ;
       private string A113PageTemplateCSS ;
       private string A103PageTemplateName ;
-      private string A40000PageTemplateImage_GXI ;
       private string A106PageTemplateDescription ;
+      private string A40000PageTemplateImage_GXI ;
       private string A105PageTemplateImage ;
       private GXWebForm Form ;
       private IGxDataStore dsGAM ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
       private short[] H00352_A102PageTemplateId ;
+      private string[] H00352_A40000PageTemplateImage_GXI ;
       private string[] H00352_A113PageTemplateCSS ;
       private string[] H00352_A114PageTemplateHtml ;
       private string[] H00352_A106PageTemplateDescription ;
-      private string[] H00352_A40000PageTemplateImage_GXI ;
       private string[] H00352_A103PageTemplateName ;
       private string[] H00352_A105PageTemplateImage ;
       private msglist BackMsgLst ;
@@ -1475,7 +1493,7 @@ namespace GeneXus.Programs {
           new ParDef("PageTemplateId",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
-              new CursorDef("H00352", "SELECT PageTemplateId, PageTemplateCSS, PageTemplateHtml, PageTemplateDescription, PageTemplateImage_GXI, PageTemplateName, PageTemplateImage FROM PageTemplate WHERE PageTemplateId = :PageTemplateId ORDER BY PageTemplateId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00352,1, GxCacheFrequency.OFF ,true,true )
+              new CursorDef("H00352", "SELECT PageTemplateId, PageTemplateImage_GXI, PageTemplateCSS, PageTemplateHtml, PageTemplateDescription, PageTemplateName, PageTemplateImage FROM PageTemplate WHERE PageTemplateId = :PageTemplateId ORDER BY PageTemplateId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00352,1, GxCacheFrequency.OFF ,true,true )
           };
        }
     }
@@ -1488,12 +1506,12 @@ namespace GeneXus.Programs {
        {
              case 0 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
-                ((string[]) buf[1])[0] = rslt.getLongVarchar(2);
+                ((string[]) buf[1])[0] = rslt.getMultimediaUri(2);
                 ((string[]) buf[2])[0] = rslt.getLongVarchar(3);
-                ((string[]) buf[3])[0] = rslt.getVarchar(4);
-                ((string[]) buf[4])[0] = rslt.getMultimediaUri(5);
+                ((string[]) buf[3])[0] = rslt.getLongVarchar(4);
+                ((string[]) buf[4])[0] = rslt.getVarchar(5);
                 ((string[]) buf[5])[0] = rslt.getVarchar(6);
-                ((string[]) buf[6])[0] = rslt.getMultimediaFile(7, rslt.getVarchar(5));
+                ((string[]) buf[6])[0] = rslt.getMultimediaFile(7, rslt.getVarchar(2));
                 return;
        }
     }

@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: "Comforta11"
-  version: "20240821170205"
+  version: "20240822072031"
 servers:
   - url: http://localhost:8082/Comforta11NETPostgreSQL1/rest
 paths:
@@ -278,6 +278,31 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/PageLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /PageTemplateWWGetFilterData:
+    post:
+      tags:
+        - PageTemplateWWGetFilterData
+      operationId: "PageTemplateWWGetFilterData"
+      summary: "Page Template WWGet Filter Data"
+      security: 
+        - oAuthGXGAM: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PageTemplateWWGetFilterDataInput"
+
+
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PageTemplateWWGetFilterDataOutput"
         404:
           description: "Not found"
   /PageWWGetFilterData:
@@ -824,6 +849,14 @@ components:
           type: "string"
         Combo_DataJson:
           type: "string"
+    PageTemplateWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
     PageWWGetFilterDataOutput:
       properties:
         OptionsJson:
@@ -1017,6 +1050,14 @@ components:
           type: "integer"
           format: "int32"
         SearchTxtParms:
+          type: "string"
+    PageTemplateWWGetFilterDataInput:
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
           type: "string"
     PageWWGetFilterDataInput:
       properties:
