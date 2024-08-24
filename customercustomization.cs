@@ -613,6 +613,7 @@ namespace GeneXus.Programs {
                Ddc_selectcolor_Load = cgiGet( "DDC_SELECTCOLOR_Load");
                Ddc_selectcolor_Keepopened = StringUtil.StrToBool( cgiGet( "DDC_SELECTCOLOR_Keepopened"));
                Ddc_selectcolor_Trigger = cgiGet( "DDC_SELECTCOLOR_Trigger");
+               Ddc_selectcolor_Gxcontroltype = (int)(Math.Round(context.localUtil.CToN( cgiGet( "DDC_SELECTCOLOR_Gxcontroltype"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                /* Read variables values. */
                A3CustomerName = cgiGet( edtCustomerName_Internalname);
                AssignAttri("", false, "A3CustomerName", A3CustomerName);
@@ -968,13 +969,16 @@ namespace GeneXus.Programs {
       {
          /* 'SELECTFONT' Routine */
          returnInSub = false;
-         GXt_SdtWWP_DesignSystemSettings1 = AV28WWP_DesignSystemSettings;
-         new GeneXus.Programs.wwpbaseobjects.wwp_getdesignsystemsettings(context ).execute( out  GXt_SdtWWP_DesignSystemSettings1) ;
-         AV28WWP_DesignSystemSettings = GXt_SdtWWP_DesignSystemSettings1;
-         AV28WWP_DesignSystemSettings.gxTpr_Fontsize = A132CustomerCustomizationFontSize;
-         new GeneXus.Programs.wwpbaseobjects.saveuserkeyvalue(context ).execute(  "DesignSystemSettings",  AV28WWP_DesignSystemSettings.ToJSonString(false, true)) ;
-         this.executeExternalObjectMethod("", false, "gx.core.ds", "setOption", new Object[] {(string)"font-size",AV28WWP_DesignSystemSettings.gxTpr_Fontsize}, false);
-         this.executeExternalObjectMethod("", false, "WWPActions", "EmpoweredGrids_Refresh", new Object[] {}, false);
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( A132CustomerCustomizationFontSize)) )
+         {
+            GXt_SdtWWP_DesignSystemSettings1 = AV28WWP_DesignSystemSettings;
+            new GeneXus.Programs.wwpbaseobjects.wwp_getdesignsystemsettings(context ).execute( out  GXt_SdtWWP_DesignSystemSettings1) ;
+            AV28WWP_DesignSystemSettings = GXt_SdtWWP_DesignSystemSettings1;
+            AV28WWP_DesignSystemSettings.gxTpr_Fontsize = A132CustomerCustomizationFontSize;
+            new GeneXus.Programs.wwpbaseobjects.saveuserkeyvalue(context ).execute(  "DesignSystemSettings",  AV28WWP_DesignSystemSettings.ToJSonString(false, true)) ;
+            this.executeExternalObjectMethod("", false, "gx.core.ds", "setOption", new Object[] {(string)"font-size",AV28WWP_DesignSystemSettings.gxTpr_Fontsize}, false);
+            this.executeExternalObjectMethod("", false, "WWPActions", "EmpoweredGrids_Refresh", new Object[] {}, false);
+         }
       }
 
       protected void ZM0H27( short GX_JID )
@@ -2075,7 +2079,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915565547", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2024824413126", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2091,7 +2095,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("customercustomization.js", "?202481915565549", false, true);
+         context.AddJavascriptSource("customercustomization.js", "?2024824413128", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -2487,6 +2491,7 @@ namespace GeneXus.Programs {
       private int edtCustomerCustomizationId_Visible ;
       private int edtCustomerCustomizationBaseColor_Visible ;
       private int edtCustomerCustomizationBaseColor_Enabled ;
+      private int Ddc_selectcolor_Gxcontroltype ;
       private int AV32GXV1 ;
       private int idxLst ;
       private string sPrefix ;

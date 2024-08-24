@@ -62,7 +62,7 @@ namespace GeneXus.Programs {
          restLocation = new GxLocation();
          restLocation.Host = "localhost";
          restLocation.Port = 8082;
-         restLocation.BaseUrl = "Comforta11NETPostgreSQL1/ResidentService";
+         restLocation.BaseUrl = "comforta.yukon.software/ResidentService";
          gxProperties = new GxObjectProperties();
       }
 

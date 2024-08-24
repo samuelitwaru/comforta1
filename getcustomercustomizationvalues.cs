@@ -111,8 +111,8 @@ namespace GeneXus.Programs {
          pr_default.close(0);
          if ( AV10GXLvl1 == 0 )
          {
-            AV9CustomeCustomize.gxTpr_Customercustomizationbasecolor = context.GetMessage( "Teal", "");
-            AV9CustomeCustomize.gxTpr_Customercustomizationfontsize = context.GetMessage( "Medium", "");
+            AV9CustomeCustomize.gxTpr_Customercustomizationbasecolor = "Teal";
+            AV9CustomeCustomize.gxTpr_Customercustomizationfontsize = "Medium";
          }
          this.cleanup();
       }

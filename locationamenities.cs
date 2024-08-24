@@ -1067,14 +1067,14 @@ namespace GeneXus.Programs {
          GXt_SdtGAMUser1 = AV6GAMUser;
          new getloggedinuser(context ).execute( out  GXt_SdtGAMUser1) ;
          AV6GAMUser = GXt_SdtGAMUser1;
-         if ( AV6GAMUser.checkrole(context.GetMessage( "Customer Manager", "")) )
+         if ( AV6GAMUser.checkrole("Customer Manager") )
          {
             dynavLocationoption.Visible = 1;
             AssignProp("", false, dynavLocationoption_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(dynavLocationoption.Visible), 5, 0), true);
          }
          else
          {
-            if ( AV6GAMUser.checkrole(context.GetMessage( "Receptionist", "")) )
+            if ( AV6GAMUser.checkrole("Receptionist") )
             {
                GXt_int2 = AV18LocationOption;
                new getreceptionistlocationid(context ).execute( out  GXt_int2) ;
@@ -1207,7 +1207,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482119593169", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248244151477", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1225,7 +1225,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("locationamenities.js", "?202482119593170", false, true);
+            context.AddJavascriptSource("locationamenities.js", "?20248244151478", false, true);
          }
          /* End function include_jscripts */
       }

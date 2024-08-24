@@ -86,7 +86,7 @@ namespace GeneXus.Programs {
          /* Output device settings */
          AV13GAMSession = new GeneXus.Programs.genexussecurity.SdtGAMSession(context).get(out  AV12GAMErrors);
          AV14GAMUser = AV13GAMSession.gxTpr_User;
-         if ( AV14GAMUser.checkrole(context.GetMessage( "Customer Manager", "")) )
+         if ( AV14GAMUser.checkrole("Customer Manager") )
          {
             /* Using cursor P002V2 */
             pr_default.execute(0, new Object[] {AV14GAMUser.gxTpr_Guid, AV14GAMUser.gxTpr_Email});
@@ -101,7 +101,7 @@ namespace GeneXus.Programs {
             }
             pr_default.close(0);
          }
-         if ( AV14GAMUser.checkrole(context.GetMessage( "Receptionist", "")) )
+         if ( AV14GAMUser.checkrole("Receptionist") )
          {
             /* Using cursor P002V3 */
             pr_default.execute(1, new Object[] {AV14GAMUser.gxTpr_Guid, AV14GAMUser.gxTpr_Email});

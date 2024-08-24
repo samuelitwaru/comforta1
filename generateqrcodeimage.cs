@@ -86,9 +86,9 @@ namespace GeneXus.Programs {
          AV12nonce = context.GetMessage( "10dd993308d37a15b55f64a0e763f353", "");
          AV13EncryptedEmail = Encrypt64( AV19email, AV11key);
          AV14EncryptedPassword = Encrypt64( context.GetMessage( "user123", ""), AV11key);
-         AV16EncryptedContent = context.GetMessage( "{\"user\": \"", "") + AV13EncryptedEmail + context.GetMessage( "\", \"code\": \"", "") + AV14EncryptedPassword + "\"}";
+         AV16EncryptedContent = "{\"user\": \"" + AV13EncryptedEmail + context.GetMessage( "\", \"code\": \"", "") + AV14EncryptedPassword + "\"}";
          AV15FinalEncryption = AV17SymmetricBlockCipher.doaeadencrypt("AES", "AEAD_EAX", AV11key, 128, AV12nonce, AV16EncryptedContent);
-         AV8linkURL = AV18GenerateQRCode.generateandsaveqrcode(AV15FinalEncryption, context.GetMessage( "Resources/Qrcode.png", ""));
+         AV8linkURL = AV18GenerateQRCode.generateandsaveqrcode(AV15FinalEncryption, "Resources/Qrcode.png");
          AV10QRCodeImage = AV8linkURL;
          AV20Qrcodeimage_GXI = GXDbFile.PathToUrl( AV8linkURL);
          this.cleanup();

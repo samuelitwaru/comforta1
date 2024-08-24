@@ -1474,7 +1474,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202481915564463", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248244124975", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1492,7 +1492,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("pagetemplateselector.js", "?202481915564463", false, true);
+            context.AddJavascriptSource("pagetemplateselector.js", "?20248244124975", false, true);
             context.AddJavascriptSource("Window/InNewWindowRender.js", "", false, true);
          }
          /* End function include_jscripts */

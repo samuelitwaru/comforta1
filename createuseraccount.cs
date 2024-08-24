@@ -109,10 +109,10 @@ namespace GeneXus.Programs {
          AV11GAMUser.gxTpr_Lastname = AV14LastName;
          AV11GAMUser.gxTpr_Email = AV9Email;
          AV11GAMUser.gxTpr_Mustchangepassword = false;
-         AV17Password = context.GetMessage( "user123", "");
+         AV17Password = "user123";
          AV11GAMUser.gxTpr_Password = AV17Password;
-         AV11GAMUser.gxTpr_Authenticationtypename = context.GetMessage( "local", "");
-         AV11GAMUser.gxTpr_Namespace = context.GetMessage( "Comforta", "");
+         AV11GAMUser.gxTpr_Authenticationtypename = "local";
+         AV11GAMUser.gxTpr_Namespace = "Comforta";
          AV11GAMUser.save();
          if ( AV11GAMUser.success() )
          {

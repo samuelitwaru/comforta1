@@ -102,10 +102,10 @@ namespace GeneXus.Programs {
          AV10httpclient.AddVariable(context.GetMessage( "password", ""), AV11password);
          AV10httpclient.Execute(context.GetMessage( "POST", ""), AV13url);
          AV12result = AV10httpclient.ToString();
-         if ( StringUtil.Contains( AV12result, context.GetMessage( "error", "")) )
+         if ( StringUtil.Contains( AV12result, "error") )
          {
             AV17response.gxTpr_Expires_in = (decimal)(0);
-            AV17response.gxTpr_Scope = context.GetMessage( "Invalid Key", "");
+            AV17response.gxTpr_Scope = "Invalid Key";
          }
          else
          {
