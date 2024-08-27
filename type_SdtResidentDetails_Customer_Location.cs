@@ -38,6 +38,10 @@ namespace GeneXus.Programs
 
 			gxTv_SdtResidentDetails_Customer_Location_Customerlocationphone = "";
 
+			gxTv_SdtResidentDetails_Customer_Location_Customerlocationname = "";
+
+			gxTv_SdtResidentDetails_Customer_Location_Customerlocationdescription = "";
+
 		}
 
 		public SdtResidentDetails_Customer_Location(IGxContext context)
@@ -78,6 +82,12 @@ namespace GeneXus.Programs
 
 
 			AddObjectProperty("CustomerLocationPhone", gxTpr_Customerlocationphone, false);
+
+
+			AddObjectProperty("CustomerLocationName", gxTpr_Customerlocationname, false);
+
+
+			AddObjectProperty("CustomerLocationDescription", gxTpr_Customerlocationdescription, false);
 
 			if (gxTpr_Amenities != null)
 			{
@@ -169,6 +179,38 @@ namespace GeneXus.Programs
 
 
 
+		[SoapElement(ElementName="CustomerLocationName")]
+		[XmlElement(ElementName="CustomerLocationName")]
+		public string gxTpr_Customerlocationname
+		{
+			get {
+				return gxTv_SdtResidentDetails_Customer_Location_Customerlocationname; 
+			}
+			set {
+				gxTv_SdtResidentDetails_Customer_Location_Customerlocationname = value;
+				SetDirty("Customerlocationname");
+			}
+		}
+
+
+
+
+		[SoapElement(ElementName="CustomerLocationDescription")]
+		[XmlElement(ElementName="CustomerLocationDescription")]
+		public string gxTpr_Customerlocationdescription
+		{
+			get {
+				return gxTv_SdtResidentDetails_Customer_Location_Customerlocationdescription; 
+			}
+			set {
+				gxTv_SdtResidentDetails_Customer_Location_Customerlocationdescription = value;
+				SetDirty("Customerlocationdescription");
+			}
+		}
+
+
+
+
 		[SoapElement(ElementName="Amenities" )]
 		[XmlArray(ElementName="Amenities"  )]
 		[XmlArrayItemAttribute(ElementName="AmenitiesItem" , IsNullable=false )]
@@ -215,6 +257,8 @@ namespace GeneXus.Programs
 			gxTv_SdtResidentDetails_Customer_Location_Customerlocationpostaladdress = "";
 			gxTv_SdtResidentDetails_Customer_Location_Customerlocationemail = "";
 			gxTv_SdtResidentDetails_Customer_Location_Customerlocationphone = "";
+			gxTv_SdtResidentDetails_Customer_Location_Customerlocationname = "";
+			gxTv_SdtResidentDetails_Customer_Location_Customerlocationdescription = "";
 
 			return  ;
 		}
@@ -238,6 +282,12 @@ namespace GeneXus.Programs
 		 
 
 		protected string gxTv_SdtResidentDetails_Customer_Location_Customerlocationphone;
+		 
+
+		protected string gxTv_SdtResidentDetails_Customer_Location_Customerlocationname;
+		 
+
+		protected string gxTv_SdtResidentDetails_Customer_Location_Customerlocationdescription;
 		 
 
 		protected GXBaseCollection<SdtResidentDetails_Customer_Location_AmenitiesItem> gxTv_SdtResidentDetails_Customer_Location_Amenities = null; 
@@ -320,7 +370,31 @@ namespace GeneXus.Programs
 			}
 		}
 
-		[DataMember(Name="Amenities", Order=5)]
+		[DataMember(Name="CustomerLocationName", Order=5)]
+		public  string gxTpr_Customerlocationname
+		{
+			get { 
+				return sdt.gxTpr_Customerlocationname;
+
+			}
+			set { 
+				 sdt.gxTpr_Customerlocationname = value;
+			}
+		}
+
+		[DataMember(Name="CustomerLocationDescription", Order=6)]
+		public  string gxTpr_Customerlocationdescription
+		{
+			get { 
+				return sdt.gxTpr_Customerlocationdescription;
+
+			}
+			set { 
+				 sdt.gxTpr_Customerlocationdescription = value;
+			}
+		}
+
+		[DataMember(Name="Amenities", Order=7)]
 		public GxGenericCollection<SdtResidentDetails_Customer_Location_AmenitiesItem_RESTInterface> gxTpr_Amenities
 		{
 			get {

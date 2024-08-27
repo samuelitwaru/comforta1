@@ -238,11 +238,15 @@ namespace GeneXus.Programs {
             A21CustomerLocationEmail = P002R7_A21CustomerLocationEmail[0];
             A22CustomerLocationPhone = P002R7_A22CustomerLocationPhone[0];
             A20CustomerLocationPostalAddress = P002R7_A20CustomerLocationPostalAddress[0];
+            A134CustomerLocationName = P002R7_A134CustomerLocationName[0];
+            A133CustomerLocationDescription = P002R7_A133CustomerLocationDescription[0];
             A19CustomerLocationVisitingAddres = P002R7_A19CustomerLocationVisitingAddres[0];
             AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Customerlocationid = A18CustomerLocationId;
             AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Customerlocationemail = A21CustomerLocationEmail;
             AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Customerlocationphone = A22CustomerLocationPhone;
             AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Customerlocationpostaladdress = A20CustomerLocationPostalAddress;
+            AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Customerlocationname = A134CustomerLocationName;
+            AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Customerlocationdescription = A133CustomerLocationDescription;
             AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Customerlocationvisitingaddress = A19CustomerLocationVisitingAddres;
             /* Exiting from a For First loop. */
             if (true) break;
@@ -430,10 +434,14 @@ namespace GeneXus.Programs {
          P002R7_A21CustomerLocationEmail = new string[] {""} ;
          P002R7_A22CustomerLocationPhone = new string[] {""} ;
          P002R7_A20CustomerLocationPostalAddress = new string[] {""} ;
+         P002R7_A134CustomerLocationName = new string[] {""} ;
+         P002R7_A133CustomerLocationDescription = new string[] {""} ;
          P002R7_A19CustomerLocationVisitingAddres = new string[] {""} ;
          A21CustomerLocationEmail = "";
          A22CustomerLocationPhone = "";
          A20CustomerLocationPostalAddress = "";
+         A134CustomerLocationName = "";
+         A133CustomerLocationDescription = "";
          A19CustomerLocationVisitingAddres = "";
          P002R8_A107AmenitiesId = new short[1] ;
          P002R8_A18CustomerLocationId = new short[1] ;
@@ -462,7 +470,7 @@ namespace GeneXus.Programs {
                P002R6_n6CustomerVisitingAddress, P002R6_A14CustomerVatNumber
                }
                , new Object[] {
-               P002R7_A18CustomerLocationId, P002R7_A1CustomerId, P002R7_A21CustomerLocationEmail, P002R7_A22CustomerLocationPhone, P002R7_A20CustomerLocationPostalAddress, P002R7_A19CustomerLocationVisitingAddres
+               P002R7_A18CustomerLocationId, P002R7_A1CustomerId, P002R7_A21CustomerLocationEmail, P002R7_A22CustomerLocationPhone, P002R7_A20CustomerLocationPostalAddress, P002R7_A134CustomerLocationName, P002R7_A133CustomerLocationDescription, P002R7_A19CustomerLocationVisitingAddres
                }
                , new Object[] {
                P002R8_A107AmenitiesId, P002R8_A18CustomerLocationId, P002R8_A1CustomerId, P002R8_A110AmenitiesName
@@ -532,6 +540,8 @@ namespace GeneXus.Programs {
       private string A14CustomerVatNumber ;
       private string A21CustomerLocationEmail ;
       private string A20CustomerLocationPostalAddress ;
+      private string A134CustomerLocationName ;
+      private string A133CustomerLocationDescription ;
       private string A19CustomerLocationVisitingAddres ;
       private string A110AmenitiesName ;
       private string A77ProductServicePicture ;
@@ -600,6 +610,8 @@ namespace GeneXus.Programs {
       private string[] P002R7_A21CustomerLocationEmail ;
       private string[] P002R7_A22CustomerLocationPhone ;
       private string[] P002R7_A20CustomerLocationPostalAddress ;
+      private string[] P002R7_A134CustomerLocationName ;
+      private string[] P002R7_A133CustomerLocationDescription ;
       private string[] P002R7_A19CustomerLocationVisitingAddres ;
       private short[] P002R8_A107AmenitiesId ;
       private short[] P002R8_A18CustomerLocationId ;
@@ -670,7 +682,7 @@ namespace GeneXus.Programs {
              ,new CursorDef("P002R4", "SELECT ResidentId, ResidentINCompanyKvkNumber, ResidentINCompanyName, ResidentINCompanyEmail, ResidentINCompanyPhone, ResidentINCompanyId FROM ResidentINCompany WHERE ResidentId = :ResidentId ORDER BY ResidentId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R4,100, GxCacheFrequency.OFF ,false,false )
              ,new CursorDef("P002R5", "SELECT T1.ProductServiceId, T1.ResidentId, T2.ProductServicePicture_GXI, T2.ProductServiceName, T2.ProductServiceDescription, T2.ProductServiceQuantity, T2.ProductServiceTypeId, T3.ProductServiceTypeName, T2.ProductServicePicture FROM ((ResidentProductService T1 INNER JOIN ProductService T2 ON T2.ProductServiceId = T1.ProductServiceId) INNER JOIN ProductServiceType T3 ON T3.ProductServiceTypeId = T2.ProductServiceTypeId) WHERE T1.ResidentId = :ResidentId ORDER BY T1.ResidentId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R5,100, GxCacheFrequency.OFF ,false,false )
              ,new CursorDef("P002R6", "SELECT CustomerId, CustomerKvkNumber, CustomerName, CustomerEmail, CustomerPhone, CustomerPostalAddress, CustomerVisitingAddress, CustomerVatNumber FROM Customer WHERE CustomerId = :AV14CustomerId ORDER BY CustomerId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R6,1, GxCacheFrequency.OFF ,false,true )
-             ,new CursorDef("P002R7", "SELECT CustomerLocationId, CustomerId, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationPostalAddress, CustomerLocationVisitingAddres FROM CustomerLocation WHERE CustomerId = :AV14CustomerId and CustomerLocationId = :AV15LocationId ORDER BY CustomerId, CustomerLocationId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R7,1, GxCacheFrequency.OFF ,false,true )
+             ,new CursorDef("P002R7", "SELECT CustomerLocationId, CustomerId, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationPostalAddress, CustomerLocationName, CustomerLocationDescription, CustomerLocationVisitingAddres FROM CustomerLocation WHERE CustomerId = :AV14CustomerId and CustomerLocationId = :AV15LocationId ORDER BY CustomerId, CustomerLocationId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R7,1, GxCacheFrequency.OFF ,false,true )
              ,new CursorDef("P002R8", "SELECT T1.AmenitiesId, T1.CustomerLocationId, T1.CustomerId, T2.AmenitiesName FROM (CustomerLocationsAmenities T1 INNER JOIN Amenities T2 ON T2.AmenitiesId = T1.AmenitiesId) WHERE T1.CustomerId = :AV14CustomerId and T1.CustomerLocationId = :AV15LocationId ORDER BY T1.CustomerId, T1.CustomerLocationId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R8,100, GxCacheFrequency.OFF ,false,false )
           };
        }
@@ -756,6 +768,8 @@ namespace GeneXus.Programs {
                 ((string[]) buf[3])[0] = rslt.getString(4, 20);
                 ((string[]) buf[4])[0] = rslt.getVarchar(5);
                 ((string[]) buf[5])[0] = rslt.getVarchar(6);
+                ((string[]) buf[6])[0] = rslt.getVarchar(7);
+                ((string[]) buf[7])[0] = rslt.getVarchar(8);
                 return;
              case 6 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);

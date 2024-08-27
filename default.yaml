@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: "Comforta11"
-  version: "20240827051000"
+  version: "20240827071212"
 servers:
   - url: https://comforta.yukon.software//rest
 paths:
@@ -1317,6 +1317,12 @@ components:
           type: "string"
         CustomerLocationPhone:
           description: "Customer Location Phone"
+          type: "string"
+        CustomerLocationName:
+          description: "Customer Location Name"
+          type: "string"
+        CustomerLocationDescription:
+          description: "Customer Location Description"
           type: "string"
 
         Amenities:
