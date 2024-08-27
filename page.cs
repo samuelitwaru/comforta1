@@ -326,72 +326,17 @@ namespace GeneXus.Programs {
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
          /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtPageId_Internalname+"\"", "", "div");
-         /* Attribute/Variable Label */
-         GxWebStd.gx_label_element( context, edtPageId_Internalname, context.GetMessage( "Id", ""), " AttributeLabel", 1, true, "");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
-         /* Single line edit */
-         GxWebStd.gx_single_line_edit( context, edtPageId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A98PageId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( ((edtPageId_Enabled!=0) ? context.localUtil.Format( (decimal)(A98PageId), "ZZZ9") : context.localUtil.Format( (decimal)(A98PageId), "ZZZ9"))), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtPageId_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtPageId_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Page.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
-         /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtPageName_Internalname+"\"", "", "div");
          /* Attribute/Variable Label */
          GxWebStd.gx_label_element( context, edtPageName_Internalname, context.GetMessage( "Name", ""), " AttributeLabel", 1, true, "");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 28,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtPageName_Internalname, A99PageName, StringUtil.RTrim( context.localUtil.Format( A99PageName, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,28);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtPageName_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtPageName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "Name", "start", true, "", "HLP_Page.htm");
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 24,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtPageName_Internalname, A99PageName, StringUtil.RTrim( context.localUtil.Format( A99PageName, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,24);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtPageName_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtPageName_Enabled, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "Name", "start", true, "", "HLP_Page.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtPageHtmlContent_Internalname+"\"", "", "div");
-         /* Attribute/Variable Label */
-         GxWebStd.gx_label_element( context, edtPageHtmlContent_Internalname, context.GetMessage( "Html Content", ""), " AttributeLabel", 1, true, "");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
-         /* Multiple line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 33,'',false,'',0)\"";
-         ClassString = "Attribute";
-         StyleString = "";
-         ClassString = "Attribute";
-         StyleString = "";
-         GxWebStd.gx_html_textarea( context, edtPageHtmlContent_Internalname, A100PageHtmlContent, "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,33);\"", 0, 1, edtPageHtmlContent_Enabled, 0, 80, "chr", 10, "row", 0, StyleString, ClassString, "", "", "5242880", -1, 0, "", "", -1, true, "", "'"+""+"'"+",false,"+"'"+""+"'", 0, "", "HLP_Page.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "start", "top", ""+" data-gx-for=\""+edtPageJsonContent_Internalname+"\"", "", "div");
-         /* Attribute/Variable Label */
-         GxWebStd.gx_label_element( context, edtPageJsonContent_Internalname, context.GetMessage( "Json Content", ""), " AttributeLabel", 1, true, "");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "start", "top", "", "", "div");
-         /* Multiple line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 37,'',false,'',0)\"";
-         ClassString = "Attribute";
-         StyleString = "";
-         ClassString = "Attribute";
-         StyleString = "";
-         GxWebStd.gx_html_textarea( context, edtPageJsonContent_Internalname, A101PageJsonContent, "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,37);\"", 0, 1, edtPageJsonContent_Enabled, 0, 80, "chr", 10, "row", 0, StyleString, ClassString, "", "", "2097152", -1, 0, "", "", -1, true, "", "'"+""+"'"+",false,"+"'"+""+"'", 0, "", "HLP_Page.htm");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop ExtendedComboCell", "start", "top", "", "", "div");
          /* Div Control */
@@ -422,13 +367,16 @@ namespace GeneXus.Programs {
          /* Attribute/Variable Label */
          GxWebStd.gx_label_element( context, edtCustomerId_Internalname, context.GetMessage( "Customer Id", ""), "col-sm-3 AttributeLabel", 0, true, "");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 48,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtCustomerId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A1CustomerId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(A1CustomerId), "ZZZ9")), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,48);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtCustomerId_Jsonclick, 0, "Attribute", "", "", "", "", edtCustomerId_Visible, edtCustomerId_Enabled, 1, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Page.htm");
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 34,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtCustomerId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A1CustomerId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(A1CustomerId), "ZZZ9")), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,gx.thousandSeparator);"+";gx.evt.onblur(this,34);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtCustomerId_Jsonclick, 0, "Attribute", "", "", "", "", edtCustomerId_Visible, edtCustomerId_Enabled, 1, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Page.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
+         GxWebStd.gx_div_end( context, "start", "top", "div");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
          /* Div Control */
@@ -442,9 +390,6 @@ namespace GeneXus.Programs {
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
-         GxWebStd.gx_div_end( context, "start", "top", "div");
-         /* Div Control */
-         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "start", "top", "", "", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6 DataContentCell DscTop", "start", "top", "", "", "div");
          /* Div Control */
@@ -474,21 +419,21 @@ namespace GeneXus.Programs {
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-action-group CellMarginTop10", "start", "top", " "+"data-gx-actiongroup-type=\"toolbar\""+" ", "", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 64,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 50,'',false,'',0)\"";
          ClassString = "Button";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtntrn_enter_Internalname, "", context.GetMessage( "GX_BtnEnter", ""), bttBtntrn_enter_Jsonclick, 5, context.GetMessage( "GX_BtnEnter", ""), "", StyleString, ClassString, bttBtntrn_enter_Visible, bttBtntrn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Page.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 66,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 52,'',false,'',0)\"";
          ClassString = "BtnDefault";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtntrn_cancel_Internalname, "", context.GetMessage( "GX_BtnCancel", ""), bttBtntrn_cancel_Jsonclick, 1, context.GetMessage( "GX_BtnCancel", ""), "", StyleString, ClassString, bttBtntrn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_Page.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "start", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 68,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 54,'',false,'',0)\"";
          ClassString = "BtnDefault";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtntrn_delete_Internalname, "", context.GetMessage( "GX_BtnDelete", ""), bttBtntrn_delete_Jsonclick, 5, context.GetMessage( "GX_BtnDelete", ""), "", StyleString, ClassString, bttBtntrn_delete_Visible, bttBtntrn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_Page.htm");
@@ -519,6 +464,22 @@ namespace GeneXus.Programs {
          /* Single line edit */
          GxWebStd.gx_single_line_edit( context, edtavCombocustomerid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV20ComboCustomerId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( ((edtavCombocustomerid_Enabled!=0) ? context.localUtil.Format( (decimal)(AV20ComboCustomerId), "ZZZ9") : context.localUtil.Format( (decimal)(AV20ComboCustomerId), "ZZZ9"))), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCombocustomerid_Jsonclick, 0, "Attribute", "", "", "", "", edtavCombocustomerid_Visible, edtavCombocustomerid_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "", "end", false, "", "HLP_Page.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
+         /* Single line edit */
+         GxWebStd.gx_single_line_edit( context, edtPageId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A98PageId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")), StringUtil.LTrim( ((edtPageId_Enabled!=0) ? context.localUtil.Format( (decimal)(A98PageId), "ZZZ9") : context.localUtil.Format( (decimal)(A98PageId), "ZZZ9"))), " dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtPageId_Jsonclick, 0, "Attribute", "", "", "", "", edtPageId_Visible, edtPageId_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 0, -1, 0, true, "Id", "end", false, "", "HLP_Page.htm");
+         /* Multiple line edit */
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 61,'',false,'',0)\"";
+         ClassString = "Attribute";
+         StyleString = "";
+         ClassString = "Attribute";
+         StyleString = "";
+         GxWebStd.gx_html_textarea( context, edtPageHtmlContent_Internalname, A100PageHtmlContent, "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,61);\"", 0, edtPageHtmlContent_Visible, edtPageHtmlContent_Enabled, 0, 80, "chr", 10, "row", 0, StyleString, ClassString, "", "", "5242880", -1, 0, "", "", -1, true, "", "'"+""+"'"+",false,"+"'"+""+"'", 0, "", "HLP_Page.htm");
+         /* Multiple line edit */
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 62,'',false,'',0)\"";
+         ClassString = "Attribute";
+         StyleString = "";
+         ClassString = "Attribute";
+         StyleString = "";
+         GxWebStd.gx_html_textarea( context, edtPageJsonContent_Internalname, A101PageJsonContent, "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,62);\"", 0, edtPageJsonContent_Visible, edtPageJsonContent_Enabled, 0, 80, "chr", 10, "row", 0, StyleString, ClassString, "", "", "2097152", -1, 0, "", "", -1, true, "", "'"+""+"'"+",false,"+"'"+""+"'", 0, "", "HLP_Page.htm");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
          GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -617,14 +578,8 @@ namespace GeneXus.Programs {
                Combo_customerid_Addnewoptiontext = cgiGet( "COMBO_CUSTOMERID_Addnewoptiontext");
                Combo_customerid_Gxcontroltype = (int)(Math.Round(context.localUtil.CToN( cgiGet( "COMBO_CUSTOMERID_Gxcontroltype"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                /* Read variables values. */
-               A98PageId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtPageId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
-               AssignAttri("", false, "A98PageId", StringUtil.LTrimStr( (decimal)(A98PageId), 4, 0));
                A99PageName = cgiGet( edtPageName_Internalname);
                AssignAttri("", false, "A99PageName", A99PageName);
-               A100PageHtmlContent = cgiGet( edtPageHtmlContent_Internalname);
-               AssignAttri("", false, "A100PageHtmlContent", A100PageHtmlContent);
-               A101PageJsonContent = cgiGet( edtPageJsonContent_Internalname);
-               AssignAttri("", false, "A101PageJsonContent", A101PageJsonContent);
                if ( ( ( context.localUtil.CToN( cgiGet( edtCustomerId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtCustomerId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")) > Convert.ToDecimal( 9999 )) ) )
                {
                   GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "CUSTOMERID");
@@ -647,6 +602,12 @@ namespace GeneXus.Programs {
                AssignAttri("", false, "A5CustomerEmail", A5CustomerEmail);
                AV20ComboCustomerId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtavCombocustomerid_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                AssignAttri("", false, "AV20ComboCustomerId", StringUtil.LTrimStr( (decimal)(AV20ComboCustomerId), 4, 0));
+               A98PageId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtPageId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               AssignAttri("", false, "A98PageId", StringUtil.LTrimStr( (decimal)(A98PageId), 4, 0));
+               A100PageHtmlContent = cgiGet( edtPageHtmlContent_Internalname);
+               AssignAttri("", false, "A100PageHtmlContent", A100PageHtmlContent);
+               A101PageJsonContent = cgiGet( edtPageJsonContent_Internalname);
+               AssignAttri("", false, "A101PageJsonContent", A101PageJsonContent);
                /* Read subfile selected row values. */
                /* Read hidden variables. */
                GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -935,6 +896,12 @@ namespace GeneXus.Programs {
                AssignAttri("", false, "AV24GXV1", StringUtil.LTrimStr( (decimal)(AV24GXV1), 8, 0));
             }
          }
+         edtPageId_Visible = 0;
+         AssignProp("", false, edtPageId_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtPageId_Visible), 5, 0), true);
+         edtPageHtmlContent_Visible = 0;
+         AssignProp("", false, edtPageHtmlContent_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtPageHtmlContent_Visible), 5, 0), true);
+         edtPageJsonContent_Visible = 0;
+         AssignProp("", false, edtPageJsonContent_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtPageJsonContent_Visible), 5, 0), true);
       }
 
       protected void E120C2( )
@@ -1724,14 +1691,8 @@ namespace GeneXus.Programs {
 
       protected void DisableAttributes0C21( )
       {
-         edtPageId_Enabled = 0;
-         AssignProp("", false, edtPageId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageId_Enabled), 5, 0), true);
          edtPageName_Enabled = 0;
          AssignProp("", false, edtPageName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageName_Enabled), 5, 0), true);
-         edtPageHtmlContent_Enabled = 0;
-         AssignProp("", false, edtPageHtmlContent_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageHtmlContent_Enabled), 5, 0), true);
-         edtPageJsonContent_Enabled = 0;
-         AssignProp("", false, edtPageJsonContent_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageJsonContent_Enabled), 5, 0), true);
          edtCustomerId_Enabled = 0;
          AssignProp("", false, edtCustomerId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerId_Enabled), 5, 0), true);
          edtCustomerName_Enabled = 0;
@@ -1740,6 +1701,12 @@ namespace GeneXus.Programs {
          AssignProp("", false, edtCustomerEmail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerEmail_Enabled), 5, 0), true);
          edtavCombocustomerid_Enabled = 0;
          AssignProp("", false, edtavCombocustomerid_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavCombocustomerid_Enabled), 5, 0), true);
+         edtPageId_Enabled = 0;
+         AssignProp("", false, edtPageId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageId_Enabled), 5, 0), true);
+         edtPageHtmlContent_Enabled = 0;
+         AssignProp("", false, edtPageHtmlContent_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageHtmlContent_Enabled), 5, 0), true);
+         edtPageJsonContent_Enabled = 0;
+         AssignProp("", false, edtPageJsonContent_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtPageJsonContent_Enabled), 5, 0), true);
       }
 
       protected void send_integrity_lvl_hashes0C21( )
@@ -2016,7 +1983,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2024827821810", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2024827893113", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2032,7 +1999,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("page.js", "?2024827821812", false, true);
+         context.AddJavascriptSource("page.js", "?2024827893114", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -2041,10 +2008,7 @@ namespace GeneXus.Programs {
 
       protected void init_default_properties( )
       {
-         edtPageId_Internalname = "PAGEID";
          edtPageName_Internalname = "PAGENAME";
-         edtPageHtmlContent_Internalname = "PAGEHTMLCONTENT";
-         edtPageJsonContent_Internalname = "PAGEJSONCONTENT";
          lblTextblockcustomerid_Internalname = "TEXTBLOCKCUSTOMERID";
          Combo_customerid_Internalname = "COMBO_CUSTOMERID";
          edtCustomerId_Internalname = "CUSTOMERID";
@@ -2062,6 +2026,9 @@ namespace GeneXus.Programs {
          divTablemain_Internalname = "TABLEMAIN";
          edtavCombocustomerid_Internalname = "vCOMBOCUSTOMERID";
          divSectionattribute_customerid_Internalname = "SECTIONATTRIBUTE_CUSTOMERID";
+         edtPageId_Internalname = "PAGEID";
+         edtPageHtmlContent_Internalname = "PAGEHTMLCONTENT";
+         edtPageJsonContent_Internalname = "PAGEJSONCONTENT";
          divHtml_bottomauxiliarcontrols_Internalname = "HTML_BOTTOMAUXILIARCONTROLS";
          divLayoutmaintable_Internalname = "LAYOUTMAINTABLE";
          Form.Internalname = "FORM";
@@ -2080,6 +2047,13 @@ namespace GeneXus.Programs {
          Form.Textcolor = 0;
          Form.Backcolor = (int)(0xFFFFFF);
          Form.Caption = context.GetMessage( "Page", "");
+         edtPageJsonContent_Enabled = 1;
+         edtPageJsonContent_Visible = 1;
+         edtPageHtmlContent_Enabled = 1;
+         edtPageHtmlContent_Visible = 1;
+         edtPageId_Jsonclick = "";
+         edtPageId_Enabled = 0;
+         edtPageId_Visible = 1;
          edtavCombocustomerid_Jsonclick = "";
          edtavCombocustomerid_Enabled = 0;
          edtavCombocustomerid_Visible = 1;
@@ -2101,12 +2075,8 @@ namespace GeneXus.Programs {
          Combo_customerid_Cls = "ExtendedCombo Attribute";
          Combo_customerid_Caption = "";
          Combo_customerid_Enabled = Convert.ToBoolean( -1);
-         edtPageJsonContent_Enabled = 1;
-         edtPageHtmlContent_Enabled = 1;
          edtPageName_Jsonclick = "";
          edtPageName_Enabled = 1;
-         edtPageId_Jsonclick = "";
-         edtPageId_Enabled = 0;
          divTablecontent_Width = 0;
          divLayoutmaintable_Class = "Table";
          context.GX_msglist.DisplayMode = 1;
@@ -2180,12 +2150,12 @@ namespace GeneXus.Programs {
          setEventMetadata("REFRESH",",oparms:[]}");
          setEventMetadata("AFTER TRN","{handler:'E120C2',iparms:[{av:'Gx_mode',fld:'vMODE',pic:'@!',hsh:true},{av:'AV11TrnContext',fld:'vTRNCONTEXT',pic:'',hsh:true}]");
          setEventMetadata("AFTER TRN",",oparms:[]}");
-         setEventMetadata("VALID_PAGEID","{handler:'Valid_Pageid',iparms:[]");
-         setEventMetadata("VALID_PAGEID",",oparms:[]}");
          setEventMetadata("VALID_CUSTOMERID","{handler:'Valid_Customerid',iparms:[{av:'A1CustomerId',fld:'CUSTOMERID',pic:'ZZZ9'},{av:'A3CustomerName',fld:'CUSTOMERNAME',pic:''},{av:'A5CustomerEmail',fld:'CUSTOMEREMAIL',pic:''}]");
          setEventMetadata("VALID_CUSTOMERID",",oparms:[{av:'A3CustomerName',fld:'CUSTOMERNAME',pic:''},{av:'A5CustomerEmail',fld:'CUSTOMEREMAIL',pic:''}]}");
          setEventMetadata("VALIDV_COMBOCUSTOMERID","{handler:'Validv_Combocustomerid',iparms:[]");
          setEventMetadata("VALIDV_COMBOCUSTOMERID",",oparms:[]}");
+         setEventMetadata("VALID_PAGEID","{handler:'Valid_Pageid',iparms:[]");
+         setEventMetadata("VALID_PAGEID",",oparms:[]}");
          return  ;
       }
 
@@ -2223,8 +2193,6 @@ namespace GeneXus.Programs {
          StyleString = "";
          TempTags = "";
          A99PageName = "";
-         A100PageHtmlContent = "";
-         A101PageJsonContent = "";
          lblTextblockcustomerid_Jsonclick = "";
          ucCombo_customerid = new GXUserControl();
          AV16DDO_TitleSettingsIcons = new GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons(context);
@@ -2234,6 +2202,8 @@ namespace GeneXus.Programs {
          bttBtntrn_enter_Jsonclick = "";
          bttBtntrn_cancel_Jsonclick = "";
          bttBtntrn_delete_Jsonclick = "";
+         A100PageHtmlContent = "";
+         A101PageJsonContent = "";
          A112PageCssContent = "";
          AV23Pgmname = "";
          Combo_customerid_Objectcall = "";
@@ -2387,8 +2357,8 @@ namespace GeneXus.Programs {
       private short AnyError ;
       private short nKeyPressed ;
       private short initialized ;
-      private short A98PageId ;
       private short AV20ComboCustomerId ;
+      private short A98PageId ;
       private short AV13Insert_CustomerId ;
       private short RcdFound21 ;
       private short GX_JID ;
@@ -2397,10 +2367,7 @@ namespace GeneXus.Programs {
       private short gxajaxcallmode ;
       private int trnEnded ;
       private int divTablecontent_Width ;
-      private int edtPageId_Enabled ;
       private int edtPageName_Enabled ;
-      private int edtPageHtmlContent_Enabled ;
-      private int edtPageJsonContent_Enabled ;
       private int edtCustomerId_Visible ;
       private int edtCustomerId_Enabled ;
       private int edtCustomerName_Enabled ;
@@ -2412,6 +2379,12 @@ namespace GeneXus.Programs {
       private int bttBtntrn_delete_Enabled ;
       private int edtavCombocustomerid_Enabled ;
       private int edtavCombocustomerid_Visible ;
+      private int edtPageId_Enabled ;
+      private int edtPageId_Visible ;
+      private int edtPageHtmlContent_Visible ;
+      private int edtPageHtmlContent_Enabled ;
+      private int edtPageJsonContent_Visible ;
+      private int edtPageJsonContent_Enabled ;
       private int Combo_customerid_Datalistupdateminimumcharacters ;
       private int Combo_customerid_Gxcontroltype ;
       private int AV24GXV1 ;
@@ -2437,12 +2410,8 @@ namespace GeneXus.Programs {
       private string grpUnnamedgroup1_Internalname ;
       private string divTableattributes_Internalname ;
       private string divTableform_Internalname ;
-      private string edtPageId_Internalname ;
-      private string edtPageId_Jsonclick ;
       private string TempTags ;
       private string edtPageName_Jsonclick ;
-      private string edtPageHtmlContent_Internalname ;
-      private string edtPageJsonContent_Internalname ;
       private string divTablesplittedcustomerid_Internalname ;
       private string lblTextblockcustomerid_Internalname ;
       private string lblTextblockcustomerid_Jsonclick ;
@@ -2468,6 +2437,10 @@ namespace GeneXus.Programs {
       private string divSectionattribute_customerid_Internalname ;
       private string edtavCombocustomerid_Internalname ;
       private string edtavCombocustomerid_Jsonclick ;
+      private string edtPageId_Internalname ;
+      private string edtPageId_Jsonclick ;
+      private string edtPageHtmlContent_Internalname ;
+      private string edtPageJsonContent_Internalname ;
       private string AV23Pgmname ;
       private string Combo_customerid_Objectcall ;
       private string Combo_customerid_Class ;

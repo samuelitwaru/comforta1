@@ -12,7 +12,6 @@ type_SdtSupplier_Agb_ProductService.cs
 workwithplus\type_SdtWWP_Parameter.cs
 wwpbaseobjects\type_SdtUserCustomizations.cs
 type_SdtCustomerCustomization.cs
-type_SdtPageTemplate.cs
 type_SdtCustomer.cs
 type_SdtCustomer_Locations.cs
 type_SdtCustomer_Locations_Amenities.cs
@@ -27,6 +26,7 @@ type_SdtResident.cs
 type_SdtResident_INCompany.cs
 type_SdtResident_INIndividual.cs
 type_SdtResident_ProductService.cs
+type_SdtPageTemplate.cs
 type_SdtPage.cs
 type_SdtQRCodeLibrary.cs
 wwpbaseobjects\gxdomainwwpcardsmenuoptiontype.cs

@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: "ResidentService"
   description: "Resident Service"
-  version: "20240827050243"
+  version: "20240827051000"
 servers:
   - url: https://comforta.yukon.software//ResidentService
 paths:
