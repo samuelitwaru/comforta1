@@ -411,7 +411,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "start", "top", "", "", "div");
             /* User Defined Control */
-            ucUsercontrol1.Render(context, "ucpagetree", Usercontrol1_Internalname, "USERCONTROL1Container");
+            ucPagetree.Render(context, "ucpagetree", Pagetree_Internalname, "PAGETREEContainer");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -720,7 +720,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482712455973", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482714162030", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -738,7 +738,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("applicationdesign.js", "?202482712455974", false, true);
+            context.AddJavascriptSource("applicationdesign.js", "?202482714162030", false, true);
             context.AddJavascriptSource("UserControls/UCPageTreeRender.js", "", false, true);
          }
          /* End function include_jscripts */
@@ -751,7 +751,7 @@ namespace GeneXus.Programs {
 
       protected void init_default_properties( )
       {
-         Usercontrol1_Internalname = "USERCONTROL1";
+         Pagetree_Internalname = "PAGETREE";
          divTablecontent_Internalname = "TABLECONTENT";
          divTablemain_Internalname = "TABLEMAIN";
          divLayoutmaintable_Internalname = "LAYOUTMAINTABLE";
@@ -817,7 +817,7 @@ namespace GeneXus.Programs {
          sPrefix = "";
          ClassString = "";
          StyleString = "";
-         ucUsercontrol1 = new GXUserControl();
+         ucPagetree = new GXUserControl();
          sEvt = "";
          EvtGridId = "";
          EvtRowId = "";
@@ -850,7 +850,7 @@ namespace GeneXus.Programs {
       private string ClassString ;
       private string StyleString ;
       private string divTablecontent_Internalname ;
-      private string Usercontrol1_Internalname ;
+      private string Pagetree_Internalname ;
       private string sEvt ;
       private string EvtGridId ;
       private string EvtRowId ;
@@ -862,7 +862,7 @@ namespace GeneXus.Programs {
       private bool wbErr ;
       private bool gxdyncontrolsrefreshing ;
       private bool returnInSub ;
-      private GXUserControl ucUsercontrol1 ;
+      private GXUserControl ucPagetree ;
       private IGxDataStore dsGAM ;
       private IGxDataStore dsDefault ;
       private msglist BackMsgLst ;
