@@ -1,9 +1,9 @@
 openapi: 3.0.0
 info:
   title: "Comforta11"
-  version: "20240827071212"
+  version: "20240827113412"
 servers:
-  - url: https://comforta.yukon.software//rest
+  - url: http://localhost:8082/Comforta11NETPostgreSQL1/rest
 paths:
   /AddAgbSuppliersLoadDVCombo:
     post:
@@ -768,7 +768,7 @@ components:
       description: GAM OAuth 2
       flows:
         password:          
-          tokenUrl: https://comforta.yukon.software//oauth/gam/v2.0/access_token
+          tokenUrl: http://localhost:8082/Comforta11NETPostgreSQL1/oauth/gam/v2.0/access_token
           scopes: 
             fullcontrol: Full access
 

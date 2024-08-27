@@ -2,9 +2,9 @@ openapi: 3.0.0
 info:
   title: "ResidentService"
   description: "Resident Service"
-  version: "20240827071212"
+  version: "20240827113412"
 servers:
-  - url: https://comforta.yukon.software/ResidentService
+  - url: https://comforta.yukon.software/Comforta11NETPostgreSQL1/ResidentService
 paths:
   /api/auth/login:
     post:
@@ -93,7 +93,7 @@ components:
       description: GAM OAuth 2
       flows:
         password:          
-          tokenUrl: https://comforta.yukon.software/oauth/gam/v2.0/access_token
+          tokenUrl: https://comforta.yukon.software/Comforta11NETPostgreSQL1/oauth/gam/v2.0/access_token
           scopes: 
             fullcontrol: Full access
 
