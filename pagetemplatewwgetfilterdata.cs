@@ -243,21 +243,21 @@ namespace GeneXus.Programs {
          lV40Pagetemplatewwds_1_filterfulltext = StringUtil.Concat( StringUtil.RTrim( AV40Pagetemplatewwds_1_filterfulltext), "%", "");
          lV41Pagetemplatewwds_2_tfpagetemplatename = StringUtil.Concat( StringUtil.RTrim( AV41Pagetemplatewwds_2_tfpagetemplatename), "%", "");
          lV43Pagetemplatewwds_4_tfpagetemplatedescription = StringUtil.Concat( StringUtil.RTrim( AV43Pagetemplatewwds_4_tfpagetemplatedescription), "%", "");
-         /* Using cursor P003L2 */
+         /* Using cursor P003M2 */
          pr_default.execute(0, new Object[] {lV40Pagetemplatewwds_1_filterfulltext, lV40Pagetemplatewwds_1_filterfulltext, lV41Pagetemplatewwds_2_tfpagetemplatename, AV42Pagetemplatewwds_3_tfpagetemplatename_sel, lV43Pagetemplatewwds_4_tfpagetemplatedescription, AV44Pagetemplatewwds_5_tfpagetemplatedescription_sel});
          while ( (pr_default.getStatus(0) != 101) )
          {
-            BRK3L2 = false;
-            A103PageTemplateName = P003L2_A103PageTemplateName[0];
-            A106PageTemplateDescription = P003L2_A106PageTemplateDescription[0];
-            A102PageTemplateId = P003L2_A102PageTemplateId[0];
+            BRK3M2 = false;
+            A103PageTemplateName = P003M2_A103PageTemplateName[0];
+            A106PageTemplateDescription = P003M2_A106PageTemplateDescription[0];
+            A102PageTemplateId = P003M2_A102PageTemplateId[0];
             AV25count = 0;
-            while ( (pr_default.getStatus(0) != 101) && ( StringUtil.StrCmp(P003L2_A103PageTemplateName[0], A103PageTemplateName) == 0 ) )
+            while ( (pr_default.getStatus(0) != 101) && ( StringUtil.StrCmp(P003M2_A103PageTemplateName[0], A103PageTemplateName) == 0 ) )
             {
-               BRK3L2 = false;
-               A102PageTemplateId = P003L2_A102PageTemplateId[0];
+               BRK3M2 = false;
+               A102PageTemplateId = P003M2_A102PageTemplateId[0];
                AV25count = (long)(AV25count+1);
-               BRK3L2 = true;
+               BRK3M2 = true;
                pr_default.readNext(0);
             }
             if ( (0==AV16SkipItems) )
@@ -275,9 +275,9 @@ namespace GeneXus.Programs {
             {
                AV16SkipItems = (short)(AV16SkipItems-1);
             }
-            if ( ! BRK3L2 )
+            if ( ! BRK3M2 )
             {
-               BRK3L2 = true;
+               BRK3M2 = true;
                pr_default.readNext(0);
             }
          }
@@ -310,21 +310,21 @@ namespace GeneXus.Programs {
          lV40Pagetemplatewwds_1_filterfulltext = StringUtil.Concat( StringUtil.RTrim( AV40Pagetemplatewwds_1_filterfulltext), "%", "");
          lV41Pagetemplatewwds_2_tfpagetemplatename = StringUtil.Concat( StringUtil.RTrim( AV41Pagetemplatewwds_2_tfpagetemplatename), "%", "");
          lV43Pagetemplatewwds_4_tfpagetemplatedescription = StringUtil.Concat( StringUtil.RTrim( AV43Pagetemplatewwds_4_tfpagetemplatedescription), "%", "");
-         /* Using cursor P003L3 */
+         /* Using cursor P003M3 */
          pr_default.execute(1, new Object[] {lV40Pagetemplatewwds_1_filterfulltext, lV40Pagetemplatewwds_1_filterfulltext, lV41Pagetemplatewwds_2_tfpagetemplatename, AV42Pagetemplatewwds_3_tfpagetemplatename_sel, lV43Pagetemplatewwds_4_tfpagetemplatedescription, AV44Pagetemplatewwds_5_tfpagetemplatedescription_sel});
          while ( (pr_default.getStatus(1) != 101) )
          {
-            BRK3L4 = false;
-            A106PageTemplateDescription = P003L3_A106PageTemplateDescription[0];
-            A103PageTemplateName = P003L3_A103PageTemplateName[0];
-            A102PageTemplateId = P003L3_A102PageTemplateId[0];
+            BRK3M4 = false;
+            A106PageTemplateDescription = P003M3_A106PageTemplateDescription[0];
+            A103PageTemplateName = P003M3_A103PageTemplateName[0];
+            A102PageTemplateId = P003M3_A102PageTemplateId[0];
             AV25count = 0;
-            while ( (pr_default.getStatus(1) != 101) && ( StringUtil.StrCmp(P003L3_A106PageTemplateDescription[0], A106PageTemplateDescription) == 0 ) )
+            while ( (pr_default.getStatus(1) != 101) && ( StringUtil.StrCmp(P003M3_A106PageTemplateDescription[0], A106PageTemplateDescription) == 0 ) )
             {
-               BRK3L4 = false;
-               A102PageTemplateId = P003L3_A102PageTemplateId[0];
+               BRK3M4 = false;
+               A102PageTemplateId = P003M3_A102PageTemplateId[0];
                AV25count = (long)(AV25count+1);
-               BRK3L4 = true;
+               BRK3M4 = true;
                pr_default.readNext(1);
             }
             if ( (0==AV16SkipItems) )
@@ -342,9 +342,9 @@ namespace GeneXus.Programs {
             {
                AV16SkipItems = (short)(AV16SkipItems-1);
             }
-            if ( ! BRK3L4 )
+            if ( ! BRK3M4 )
             {
-               BRK3L4 = true;
+               BRK3M4 = true;
                pr_default.readNext(1);
             }
          }
@@ -394,20 +394,20 @@ namespace GeneXus.Programs {
          lV43Pagetemplatewwds_4_tfpagetemplatedescription = "";
          A103PageTemplateName = "";
          A106PageTemplateDescription = "";
-         P003L2_A103PageTemplateName = new string[] {""} ;
-         P003L2_A106PageTemplateDescription = new string[] {""} ;
-         P003L2_A102PageTemplateId = new short[1] ;
+         P003M2_A103PageTemplateName = new string[] {""} ;
+         P003M2_A106PageTemplateDescription = new string[] {""} ;
+         P003M2_A102PageTemplateId = new short[1] ;
          AV20Option = "";
-         P003L3_A106PageTemplateDescription = new string[] {""} ;
-         P003L3_A103PageTemplateName = new string[] {""} ;
-         P003L3_A102PageTemplateId = new short[1] ;
+         P003M3_A106PageTemplateDescription = new string[] {""} ;
+         P003M3_A103PageTemplateName = new string[] {""} ;
+         P003M3_A102PageTemplateId = new short[1] ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.pagetemplatewwgetfilterdata__default(),
             new Object[][] {
                 new Object[] {
-               P003L2_A103PageTemplateName, P003L2_A106PageTemplateDescription, P003L2_A102PageTemplateId
+               P003M2_A103PageTemplateName, P003M2_A106PageTemplateDescription, P003M2_A102PageTemplateId
                }
                , new Object[] {
-               P003L3_A106PageTemplateDescription, P003L3_A103PageTemplateName, P003L3_A102PageTemplateId
+               P003M3_A106PageTemplateDescription, P003M3_A103PageTemplateName, P003M3_A102PageTemplateId
                }
             }
          );
@@ -422,8 +422,8 @@ namespace GeneXus.Programs {
       private long AV25count ;
       private string scmdbuf ;
       private bool returnInSub ;
-      private bool BRK3L2 ;
-      private bool BRK3L4 ;
+      private bool BRK3M2 ;
+      private bool BRK3M4 ;
       private string AV34OptionsJson ;
       private string AV35OptionsDescJson ;
       private string AV36OptionIndexesJson ;
@@ -451,12 +451,12 @@ namespace GeneXus.Programs {
       private IGxDataStore dsGAM ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private string[] P003L2_A103PageTemplateName ;
-      private string[] P003L2_A106PageTemplateDescription ;
-      private short[] P003L2_A102PageTemplateId ;
-      private string[] P003L3_A106PageTemplateDescription ;
-      private string[] P003L3_A103PageTemplateName ;
-      private short[] P003L3_A102PageTemplateId ;
+      private string[] P003M2_A103PageTemplateName ;
+      private string[] P003M2_A106PageTemplateDescription ;
+      private short[] P003M2_A102PageTemplateId ;
+      private string[] P003M3_A106PageTemplateDescription ;
+      private string[] P003M3_A103PageTemplateName ;
+      private short[] P003M3_A102PageTemplateId ;
       private string aP3_OptionsJson ;
       private string aP4_OptionsDescJson ;
       private string aP5_OptionIndexesJson ;
@@ -470,7 +470,7 @@ namespace GeneXus.Programs {
 
    public class pagetemplatewwgetfilterdata__default : DataStoreHelperBase, IDataStoreHelper
    {
-      protected Object[] conditional_P003L2( IGxContext context ,
+      protected Object[] conditional_P003M2( IGxContext context ,
                                              string AV40Pagetemplatewwds_1_filterfulltext ,
                                              string AV42Pagetemplatewwds_3_tfpagetemplatename_sel ,
                                              string AV41Pagetemplatewwds_2_tfpagetemplatename ,
@@ -540,7 +540,7 @@ namespace GeneXus.Programs {
          return GXv_Object2 ;
       }
 
-      protected Object[] conditional_P003L3( IGxContext context ,
+      protected Object[] conditional_P003M3( IGxContext context ,
                                              string AV40Pagetemplatewwds_1_filterfulltext ,
                                              string AV42Pagetemplatewwds_3_tfpagetemplatename_sel ,
                                              string AV41Pagetemplatewwds_2_tfpagetemplatename ,
@@ -617,9 +617,9 @@ namespace GeneXus.Programs {
          switch ( cursor )
          {
                case 0 :
-                     return conditional_P003L2(context, (string)dynConstraints[0] , (string)dynConstraints[1] , (string)dynConstraints[2] , (string)dynConstraints[3] , (string)dynConstraints[4] , (string)dynConstraints[5] , (string)dynConstraints[6] );
+                     return conditional_P003M2(context, (string)dynConstraints[0] , (string)dynConstraints[1] , (string)dynConstraints[2] , (string)dynConstraints[3] , (string)dynConstraints[4] , (string)dynConstraints[5] , (string)dynConstraints[6] );
                case 1 :
-                     return conditional_P003L3(context, (string)dynConstraints[0] , (string)dynConstraints[1] , (string)dynConstraints[2] , (string)dynConstraints[3] , (string)dynConstraints[4] , (string)dynConstraints[5] , (string)dynConstraints[6] );
+                     return conditional_P003M3(context, (string)dynConstraints[0] , (string)dynConstraints[1] , (string)dynConstraints[2] , (string)dynConstraints[3] , (string)dynConstraints[4] , (string)dynConstraints[5] , (string)dynConstraints[6] );
          }
          return base.getDynamicStatement(cursor, context, dynConstraints);
       }
@@ -638,8 +638,8 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmP003L2;
-          prmP003L2 = new Object[] {
+          Object[] prmP003M2;
+          prmP003M2 = new Object[] {
           new ParDef("lV40Pagetemplatewwds_1_filterfulltext",GXType.VarChar,100,0) ,
           new ParDef("lV40Pagetemplatewwds_1_filterfulltext",GXType.VarChar,100,0) ,
           new ParDef("lV41Pagetemplatewwds_2_tfpagetemplatename",GXType.VarChar,40,0) ,
@@ -647,8 +647,8 @@ namespace GeneXus.Programs {
           new ParDef("lV43Pagetemplatewwds_4_tfpagetemplatedescription",GXType.VarChar,200,0) ,
           new ParDef("AV44Pagetemplatewwds_5_tfpagetemplatedescription_sel",GXType.VarChar,200,0)
           };
-          Object[] prmP003L3;
-          prmP003L3 = new Object[] {
+          Object[] prmP003M3;
+          prmP003M3 = new Object[] {
           new ParDef("lV40Pagetemplatewwds_1_filterfulltext",GXType.VarChar,100,0) ,
           new ParDef("lV40Pagetemplatewwds_1_filterfulltext",GXType.VarChar,100,0) ,
           new ParDef("lV41Pagetemplatewwds_2_tfpagetemplatename",GXType.VarChar,40,0) ,
@@ -657,8 +657,8 @@ namespace GeneXus.Programs {
           new ParDef("AV44Pagetemplatewwds_5_tfpagetemplatedescription_sel",GXType.VarChar,200,0)
           };
           def= new CursorDef[] {
-              new CursorDef("P003L2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP003L2,100, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("P003L3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP003L3,100, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("P003M2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP003M2,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("P003M3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP003M3,100, GxCacheFrequency.OFF ,true,false )
           };
        }
     }

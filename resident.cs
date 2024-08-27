@@ -2576,7 +2576,7 @@ namespace GeneXus.Programs {
          pr_default.execute(12, new Object[] {A1CustomerId, A18CustomerLocationId});
          if ( (pr_default.getStatus(12) == 101) )
          {
-            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_ForeignKeyNotFound", ""), context.GetMessage( "Location", ""), "", "", "", "", "", "", "", ""), "ForeignKeyNotFound", 1, "CUSTOMERLOCATIONID");
+            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_ForeignKeyNotFound", ""), context.GetMessage( "CustomerLocation", ""), "", "", "", "", "", "", "", ""), "ForeignKeyNotFound", 1, "CUSTOMERLOCATIONID");
             AnyError = 1;
             GX_FocusControl = edtCustomerId_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -2653,7 +2653,7 @@ namespace GeneXus.Programs {
          pr_default.execute(17, new Object[] {A1CustomerId, A18CustomerLocationId});
          if ( (pr_default.getStatus(17) == 101) )
          {
-            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_ForeignKeyNotFound", ""), context.GetMessage( "Location", ""), "", "", "", "", "", "", "", ""), "ForeignKeyNotFound", 1, "CUSTOMERLOCATIONID");
+            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_ForeignKeyNotFound", ""), context.GetMessage( "CustomerLocation", ""), "", "", "", "", "", "", "", ""), "ForeignKeyNotFound", 1, "CUSTOMERLOCATIONID");
             AnyError = 1;
             GX_FocusControl = edtCustomerId_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -6449,7 +6449,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248244122162", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248277334849", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -6465,7 +6465,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("resident.js", "?20248244122164", false, true);
+         context.AddJavascriptSource("resident.js", "?20248277334851", false, true);
          context.AddJavascriptSource("shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/rsh/rsh.js", "", false, true);
@@ -7036,7 +7036,7 @@ namespace GeneXus.Programs {
          pr_default.execute(51, new Object[] {A1CustomerId, A18CustomerLocationId});
          if ( (pr_default.getStatus(51) == 101) )
          {
-            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_ForeignKeyNotFound", ""), context.GetMessage( "Location", ""), "", "", "", "", "", "", "", ""), "ForeignKeyNotFound", 1, "CUSTOMERLOCATIONID");
+            GX_msglist.addItem(StringUtil.Format( context.GetMessage( "GXSPC_ForeignKeyNotFound", ""), context.GetMessage( "CustomerLocation", ""), "", "", "", "", "", "", "", ""), "ForeignKeyNotFound", 1, "CUSTOMERLOCATIONID");
             AnyError = 1;
             GX_FocusControl = edtCustomerId_Internalname;
          }

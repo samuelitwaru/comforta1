@@ -42,6 +42,7 @@
  	<Compile Include="$(WebDirectory)\type_SdtResidentDetails.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtResidentDetails_Customer.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtResidentDetails_Customer_Location.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtResidentDetails_Customer_Location_AmenitiesItem.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtResidentDetails_ResidentNetworkIndividualsItem.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtResidentDetails_ResidentNetworkCompaniesItem.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtResidentDetails_ResidentServicesAndProductsItem.cs" />
@@ -54,6 +55,9 @@
  	<Compile Include="$(WebDirectory)\type_SdtSDTCustomer_LocationItem_ReceptionistItem.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtSDTCustomer_LocationItem_Supplier_AgbItem.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtSDTCustomer_LocationItem_Supplier_GenItem.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtUpdateLocationData.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtUpdateLocationData_Step1.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtUpdateLocationData_Step2.cs" />
  	<Compile Include="$(WebDirectory)\workwithplus\type_SdtWWPConfFormattingVariable.cs" />
  	<Compile Include="$(WebDirectory)\workwithplus\type_SdtWWP_Calendar_Events_Item.cs" />
  	<Compile Include="$(WebDirectory)\workwithplus\type_SdtWWP_Calendar_Events_Item_ActionsItem.cs" />

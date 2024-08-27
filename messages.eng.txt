@@ -3045,3 +3045,4 @@ WWP_AIAssistantAppliedFilters_MultiplesQueries_SortingBySuffix=, sorting by {0}
 WWP_AIDashboard_MoveUp=Move up
 WWP_AIDashboardItemSize_Medium=Medium
 WWP_AIAssistantAppliedFilters_FilteringBy=filtering by {0}
+Step %1/%2 :: %3=Step {0}/{1} : {2}

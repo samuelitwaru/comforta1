@@ -248,6 +248,70 @@ namespace GeneXus.Programs {
             if (true) break;
          }
          pr_default.close(5);
+         /* Using cursor P002R8 */
+         pr_default.execute(6, new Object[] {AV14CustomerId, AV15LocationId});
+         while ( (pr_default.getStatus(6) != 101) )
+         {
+            A107AmenitiesId = P002R8_A107AmenitiesId[0];
+            A18CustomerLocationId = P002R8_A18CustomerLocationId[0];
+            A1CustomerId = P002R8_A1CustomerId[0];
+            A110AmenitiesName = P002R8_A110AmenitiesName[0];
+            A110AmenitiesName = P002R8_A110AmenitiesName[0];
+            AV18LocationAmenity = new SdtResidentDetails_Customer_Location_AmenitiesItem(context);
+            if ( StringUtil.StrCmp(A110AmenitiesName, "The Restaurant") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "Restaurant";
+            }
+            else if ( StringUtil.StrCmp(A110AmenitiesName, "Activity Center") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "ActivityCenter";
+            }
+            else if ( StringUtil.StrCmp(A110AmenitiesName, "Laundrette") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "Laundrette";
+            }
+            else if ( StringUtil.StrCmp(A110AmenitiesName, "Business Centre") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "BusinessCentre";
+            }
+            else if ( StringUtil.StrCmp(A110AmenitiesName, "Crafts Workshop") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "CraftsWorkshop";
+            }
+            else if ( StringUtil.StrCmp(A110AmenitiesName, "Social Lounge") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "SocialLounge";
+            }
+            else if ( StringUtil.StrCmp(A110AmenitiesName, "Car Parking") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "CarParking";
+            }
+            else if ( StringUtil.StrCmp(A110AmenitiesName, "Terras") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "Terras";
+            }
+            else if ( StringUtil.StrCmp(A110AmenitiesName, "Park and Recreation") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "ParkAndRecreation";
+            }
+            else if ( StringUtil.StrCmp(A110AmenitiesName, "e-Bike Charging points") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "Ebike";
+            }
+            else if ( StringUtil.StrCmp(A110AmenitiesName, "Vegetable Garden") == 0 )
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "VegetableGarden";
+            }
+            else
+            {
+               AV18LocationAmenity.gxTpr_Amenityid = "";
+            }
+            AV18LocationAmenity.gxTpr_Amenityname = A110AmenitiesName;
+            AV18LocationAmenity.gxTpr_Isavailable = true;
+            AV10ResidentDetails.gxTpr_Customer.gxTpr_Location.gxTpr_Amenities.Add(AV18LocationAmenity, 0);
+            pr_default.readNext(6);
+         }
+         pr_default.close(6);
          this.cleanup();
       }
 
@@ -371,6 +435,12 @@ namespace GeneXus.Programs {
          A22CustomerLocationPhone = "";
          A20CustomerLocationPostalAddress = "";
          A19CustomerLocationVisitingAddres = "";
+         P002R8_A107AmenitiesId = new short[1] ;
+         P002R8_A18CustomerLocationId = new short[1] ;
+         P002R8_A1CustomerId = new short[1] ;
+         P002R8_A110AmenitiesName = new string[] {""} ;
+         A110AmenitiesName = "";
+         AV18LocationAmenity = new SdtResidentDetails_Customer_Location_AmenitiesItem(context);
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.getresidentinfo__default(),
             new Object[][] {
                 new Object[] {
@@ -394,6 +464,9 @@ namespace GeneXus.Programs {
                , new Object[] {
                P002R7_A18CustomerLocationId, P002R7_A1CustomerId, P002R7_A21CustomerLocationEmail, P002R7_A22CustomerLocationPhone, P002R7_A20CustomerLocationPostalAddress, P002R7_A19CustomerLocationVisitingAddres
                }
+               , new Object[] {
+               P002R8_A107AmenitiesId, P002R8_A18CustomerLocationId, P002R8_A1CustomerId, P002R8_A110AmenitiesName
+               }
             }
          );
          /* GeneXus formulas. */
@@ -410,6 +483,7 @@ namespace GeneXus.Programs {
       private short A73ProductServiceId ;
       private short A76ProductServiceQuantity ;
       private short A71ProductServiceTypeId ;
+      private short A107AmenitiesId ;
       private string scmdbuf ;
       private string A38ResidentPhone ;
       private string A35ResidentInitials ;
@@ -459,6 +533,7 @@ namespace GeneXus.Programs {
       private string A21CustomerLocationEmail ;
       private string A20CustomerLocationPostalAddress ;
       private string A19CustomerLocationVisitingAddres ;
+      private string A110AmenitiesName ;
       private string A77ProductServicePicture ;
       private IGxDataStore dsGAM ;
       private IGxDataStore dsDefault ;
@@ -526,8 +601,13 @@ namespace GeneXus.Programs {
       private string[] P002R7_A22CustomerLocationPhone ;
       private string[] P002R7_A20CustomerLocationPostalAddress ;
       private string[] P002R7_A19CustomerLocationVisitingAddres ;
+      private short[] P002R8_A107AmenitiesId ;
+      private short[] P002R8_A18CustomerLocationId ;
+      private short[] P002R8_A1CustomerId ;
+      private string[] P002R8_A110AmenitiesName ;
       private SdtResidentDetails aP1_ResidentDetails ;
       private SdtResidentDetails AV10ResidentDetails ;
+      private SdtResidentDetails_Customer_Location_AmenitiesItem AV18LocationAmenity ;
       private SdtResidentDetails_ResidentNetworkIndividualsItem AV11ResidentNetworkIndividual ;
       private SdtResidentDetails_ResidentNetworkCompaniesItem AV12ResidentNetworkCompany ;
       private SdtResidentDetails_ResidentServicesAndProductsItem AV13ResidentService ;
@@ -545,6 +625,7 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[3])
          ,new ForEachCursor(def[4])
          ,new ForEachCursor(def[5])
+         ,new ForEachCursor(def[6])
        };
     }
 
@@ -578,6 +659,11 @@ namespace GeneXus.Programs {
           new ParDef("AV14CustomerId",GXType.Int16,4,0) ,
           new ParDef("AV15LocationId",GXType.Int16,4,0)
           };
+          Object[] prmP002R8;
+          prmP002R8 = new Object[] {
+          new ParDef("AV14CustomerId",GXType.Int16,4,0) ,
+          new ParDef("AV15LocationId",GXType.Int16,4,0)
+          };
           def= new CursorDef[] {
               new CursorDef("P002R2", "SELECT T1.ResidentId, T1.ResidentGAMGUID, T1.ResidentGivenName, T1.ResidentLastName, T1.ResidentEmail, T1.ResidentAddress, T1.ResidentPhone, T1.ResidentInitials, T1.ResidentBsnNumber, T1.ResidentTypeId, T2.ResidentTypeName, T1.CustomerId, T1.CustomerLocationId FROM (Resident T1 INNER JOIN ResidentType T2 ON T2.ResidentTypeId = T1.ResidentTypeId) WHERE T1.ResidentGAMGUID = ( :AV9userId) ORDER BY T1.ResidentId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R2,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("P002R3", "SELECT ResidentId, ResidentINIndividualBsnNumber, ResidentINIndividualGivenName, ResidentINIndividualLastName, ResidentINIndividualGender, ResidentINIndividualEmail, ResidentINIndividualPhone, ResidentINIndividualAddress, ResidentINIndividualId FROM ResidentINIndividual WHERE ResidentId = :ResidentId ORDER BY ResidentId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R3,100, GxCacheFrequency.OFF ,false,false )
@@ -585,6 +671,7 @@ namespace GeneXus.Programs {
              ,new CursorDef("P002R5", "SELECT T1.ProductServiceId, T1.ResidentId, T2.ProductServicePicture_GXI, T2.ProductServiceName, T2.ProductServiceDescription, T2.ProductServiceQuantity, T2.ProductServiceTypeId, T3.ProductServiceTypeName, T2.ProductServicePicture FROM ((ResidentProductService T1 INNER JOIN ProductService T2 ON T2.ProductServiceId = T1.ProductServiceId) INNER JOIN ProductServiceType T3 ON T3.ProductServiceTypeId = T2.ProductServiceTypeId) WHERE T1.ResidentId = :ResidentId ORDER BY T1.ResidentId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R5,100, GxCacheFrequency.OFF ,false,false )
              ,new CursorDef("P002R6", "SELECT CustomerId, CustomerKvkNumber, CustomerName, CustomerEmail, CustomerPhone, CustomerPostalAddress, CustomerVisitingAddress, CustomerVatNumber FROM Customer WHERE CustomerId = :AV14CustomerId ORDER BY CustomerId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R6,1, GxCacheFrequency.OFF ,false,true )
              ,new CursorDef("P002R7", "SELECT CustomerLocationId, CustomerId, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationPostalAddress, CustomerLocationVisitingAddres FROM CustomerLocation WHERE CustomerId = :AV14CustomerId and CustomerLocationId = :AV15LocationId ORDER BY CustomerId, CustomerLocationId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R7,1, GxCacheFrequency.OFF ,false,true )
+             ,new CursorDef("P002R8", "SELECT T1.AmenitiesId, T1.CustomerLocationId, T1.CustomerId, T2.AmenitiesName FROM (CustomerLocationsAmenities T1 INNER JOIN Amenities T2 ON T2.AmenitiesId = T1.AmenitiesId) WHERE T1.CustomerId = :AV14CustomerId and T1.CustomerLocationId = :AV15LocationId ORDER BY T1.CustomerId, T1.CustomerLocationId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002R8,100, GxCacheFrequency.OFF ,false,false )
           };
        }
     }
@@ -669,6 +756,12 @@ namespace GeneXus.Programs {
                 ((string[]) buf[3])[0] = rslt.getString(4, 20);
                 ((string[]) buf[4])[0] = rslt.getVarchar(5);
                 ((string[]) buf[5])[0] = rslt.getVarchar(6);
+                return;
+             case 6 :
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                ((short[]) buf[1])[0] = rslt.getShort(2);
+                ((short[]) buf[2])[0] = rslt.getShort(3);
+                ((string[]) buf[3])[0] = rslt.getVarchar(4);
                 return;
        }
     }

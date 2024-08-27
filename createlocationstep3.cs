@@ -1920,6 +1920,8 @@ namespace GeneXus.Programs {
          AV29CustomerLocation.gxTpr_Customerlocationphone = AV26WizardData.gxTpr_Step1.gxTpr_Customerlocationphone;
          AV29CustomerLocation.gxTpr_Customerlocationpostaladdress = AV26WizardData.gxTpr_Step1.gxTpr_Customerlocationpostaladdress;
          AV29CustomerLocation.gxTpr_Customerlocationvisitingaddress = AV26WizardData.gxTpr_Step1.gxTpr_Customerlocationvisitingaddress;
+         AV29CustomerLocation.gxTpr_Customerlocationname = AV26WizardData.gxTpr_Step1.gxTpr_Customerlocationname;
+         AV29CustomerLocation.gxTpr_Customerlocationdescription = AV26WizardData.gxTpr_Step1.gxTpr_Customerlocationdescription;
          AV47GXV9 = 1;
          while ( AV47GXV9 <= AV26WizardData.gxTpr_Step2.gxTpr_Grid.Count )
          {
@@ -2291,7 +2293,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248244115872", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2024827732612", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2307,7 +2309,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("createlocationstep3.js", "?20248244115872", false, true);
+         context.AddJavascriptSource("createlocationstep3.js", "?2024827732613", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/DVPaginationBar/DVPaginationBarRender.js", "", false, true);

@@ -83,6 +83,17 @@ namespace GeneXus.Programs {
                dyncall( GetNextPar( )) ;
                return  ;
             }
+            else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxCallCrl"+"_"+"vLOCATIONOPTION") == 0 )
+            {
+               setAjaxCallMode();
+               if ( ! IsValidAjaxCall( true) )
+               {
+                  GxWebError = 1;
+                  return  ;
+               }
+               GXDLVvLOCATIONOPTION3R2( ) ;
+               return  ;
+            }
             else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxEvt") == 0 )
             {
                setAjaxEventMode();
@@ -777,14 +788,14 @@ namespace GeneXus.Programs {
          /* End function dynload_actions */
       }
 
-      protected void GXDLVvLOCATIONOPTION3R1( )
+      protected void GXDLVvLOCATIONOPTION3R2( )
       {
          if ( ! context.isAjaxRequest( ) )
          {
             context.GX_webresponse.AppendHeader("Cache-Control", "no-store");
          }
          AddString( "[[") ;
-         GXDLVvLOCATIONOPTION_data3R1( ) ;
+         GXDLVvLOCATIONOPTION_data3R2( ) ;
          gxdynajaxindex = 1;
          while ( gxdynajaxindex <= gxdynajaxctrlcodr.Count )
          {
@@ -800,10 +811,10 @@ namespace GeneXus.Programs {
          AddString( "]") ;
       }
 
-      protected void GXVvLOCATIONOPTION_html3R1( )
+      protected void GXVvLOCATIONOPTION_html3R2( )
       {
          short gxdynajaxvalue;
-         GXDLVvLOCATIONOPTION_data3R1( ) ;
+         GXDLVvLOCATIONOPTION_data3R2( ) ;
          gxdynajaxindex = 1;
          if ( ! ( gxdyncontrolsrefreshing && context.isAjaxRequest( ) ) )
          {
@@ -822,7 +833,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void GXDLVvLOCATIONOPTION_data3R1( )
+      protected void GXDLVvLOCATIONOPTION_data3R2( )
       {
          gxdynajaxctrlcodr.Clear();
          gxdynajaxctrldescr.Clear();
@@ -830,8 +841,11 @@ namespace GeneXus.Programs {
          pr_default.execute(0);
          while ( (pr_default.getStatus(0) != 101) )
          {
-            gxdynajaxctrlcodr.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(H003R2_A18CustomerLocationId[0]), 4, 0, ".", "")));
-            gxdynajaxctrldescr.Add(H003R2_A19CustomerLocationVisitingAddres[0]);
+            if ( H003R2_A1CustomerId[0] == new getloggedinusercustomerid(context).executeUdp( ) )
+            {
+               gxdynajaxctrlcodr.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(H003R2_A18CustomerLocationId[0]), 4, 0, ".", "")));
+               gxdynajaxctrldescr.Add(H003R2_A19CustomerLocationVisitingAddres[0]);
+            }
             pr_default.readNext(0);
          }
          pr_default.close(0);
@@ -873,22 +887,7 @@ namespace GeneXus.Programs {
       {
          if ( context.isAjaxRequest( ) )
          {
-            dynavLocationoption.Name = "vLOCATIONOPTION";
-            dynavLocationoption.WebTags = "";
-            dynavLocationoption.removeAllItems();
-            /* Using cursor H003R3 */
-            pr_default.execute(1);
-            while ( (pr_default.getStatus(1) != 101) )
-            {
-               dynavLocationoption.addItem(StringUtil.Trim( StringUtil.Str( (decimal)(H003R3_A18CustomerLocationId[0]), 4, 0)), H003R3_A19CustomerLocationVisitingAddres[0], 0);
-               pr_default.readNext(1);
-            }
-            pr_default.close(1);
-            if ( dynavLocationoption.ItemCount > 0 )
-            {
-               AV18LocationOption = (short)(Math.Round(NumberUtil.Val( dynavLocationoption.getValidValue(StringUtil.Trim( StringUtil.Str( (decimal)(AV18LocationOption), 4, 0))), "."), 18, MidpointRounding.ToEven));
-               AssignAttri("", false, "AV18LocationOption", StringUtil.LTrimStr( (decimal)(AV18LocationOption), 4, 0));
-            }
+            GXVvLOCATIONOPTION_html3R2( ) ;
             dynload_actions( ) ;
             before_start_formulas( ) ;
          }
@@ -994,6 +993,7 @@ namespace GeneXus.Programs {
          AssignProp("", false, chkavLocationamenitiessdts__selected_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(chkavLocationamenitiessdts__selected.Enabled), 5, 0), !bGXsfl_26_Refreshing);
          edtavLocationamenitiessdts__amenitiesname_Enabled = 0;
          AssignProp("", false, edtavLocationamenitiessdts__amenitiesname_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtavLocationamenitiessdts__amenitiesname_Enabled), 5, 0), !bGXsfl_26_Refreshing);
+         GXVvLOCATIONOPTION_html3R2( ) ;
          fix_multi_value_controls( ) ;
       }
 
@@ -1139,7 +1139,7 @@ namespace GeneXus.Programs {
          AV17LocationAmenitiesSDTs.Clear();
          gx_BV26 = true;
          AV27Udparg1 = new getloggedinusercustomerid(context).executeUdp( );
-         pr_default.dynParam(2, new Object[]{ new Object[]{
+         pr_default.dynParam(1, new Object[]{ new Object[]{
                                               AV18LocationOption ,
                                               A18CustomerLocationId ,
                                               AV27Udparg1 ,
@@ -1148,24 +1148,24 @@ namespace GeneXus.Programs {
                                               TypeConstants.SHORT, TypeConstants.SHORT, TypeConstants.SHORT, TypeConstants.SHORT
                                               }
          });
-         /* Using cursor H003R4 */
-         pr_default.execute(2, new Object[] {AV27Udparg1, AV18LocationOption});
-         while ( (pr_default.getStatus(2) != 101) )
+         /* Using cursor H003R3 */
+         pr_default.execute(1, new Object[] {AV27Udparg1, AV18LocationOption});
+         while ( (pr_default.getStatus(1) != 101) )
          {
-            A18CustomerLocationId = H003R4_A18CustomerLocationId[0];
-            A1CustomerId = H003R4_A1CustomerId[0];
-            A107AmenitiesId = H003R4_A107AmenitiesId[0];
-            A110AmenitiesName = H003R4_A110AmenitiesName[0];
-            A110AmenitiesName = H003R4_A110AmenitiesName[0];
+            A18CustomerLocationId = H003R3_A18CustomerLocationId[0];
+            A1CustomerId = H003R3_A1CustomerId[0];
+            A107AmenitiesId = H003R3_A107AmenitiesId[0];
+            A110AmenitiesName = H003R3_A110AmenitiesName[0];
+            A110AmenitiesName = H003R3_A110AmenitiesName[0];
             AV21LocationAmenitiesSDT = new SdtLocationAmenitiesSDT(context);
             AV21LocationAmenitiesSDT.gxTpr_Amenitiesid = A107AmenitiesId;
             AV21LocationAmenitiesSDT.gxTpr_Amenitiesname = A110AmenitiesName;
             AV21LocationAmenitiesSDT.gxTpr_Selected = true;
             AV17LocationAmenitiesSDTs.Add(AV21LocationAmenitiesSDT, 0);
             gx_BV26 = true;
-            pr_default.readNext(2);
+            pr_default.readNext(1);
          }
-         pr_default.close(2);
+         pr_default.close(1);
       }
 
       public override void setparameters( Object[] obj )
@@ -1207,7 +1207,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248244151477", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248277331840", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1225,7 +1225,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("locationamenities.js", "?20248244151478", false, true);
+            context.AddJavascriptSource("locationamenities.js", "?20248277331841", false, true);
          }
          /* End function include_jscripts */
       }
@@ -1381,20 +1381,6 @@ namespace GeneXus.Programs {
       {
          dynavLocationoption.Name = "vLOCATIONOPTION";
          dynavLocationoption.WebTags = "";
-         dynavLocationoption.removeAllItems();
-         /* Using cursor H003R5 */
-         pr_default.execute(3);
-         while ( (pr_default.getStatus(3) != 101) )
-         {
-            dynavLocationoption.addItem(StringUtil.Trim( StringUtil.Str( (decimal)(H003R5_A18CustomerLocationId[0]), 4, 0)), H003R5_A19CustomerLocationVisitingAddres[0], 0);
-            pr_default.readNext(3);
-         }
-         pr_default.close(3);
-         if ( dynavLocationoption.ItemCount > 0 )
-         {
-            AV18LocationOption = (short)(Math.Round(NumberUtil.Val( dynavLocationoption.getValidValue(StringUtil.Trim( StringUtil.Str( (decimal)(AV18LocationOption), 4, 0))), "."), 18, MidpointRounding.ToEven));
-            AssignAttri("", false, "AV18LocationOption", StringUtil.LTrimStr( (decimal)(AV18LocationOption), 4, 0));
-         }
          GXCCtl = "LOCATIONAMENITIESSDTS__SELECTED_" + sGXsfl_26_idx;
          chkavLocationamenitiessdts__selected.Name = GXCCtl;
          chkavLocationamenitiessdts__selected.WebTags = "";
@@ -1576,43 +1562,31 @@ namespace GeneXus.Programs {
          gxdynajaxctrldescr = new GeneXus.Utils.GxStringCollection();
          gxwrpcisep = "";
          scmdbuf = "";
-         H003R2_A1CustomerId = new short[1] ;
          H003R2_A18CustomerLocationId = new short[1] ;
          H003R2_A19CustomerLocationVisitingAddres = new string[] {""} ;
-         H003R3_A1CustomerId = new short[1] ;
-         H003R3_A18CustomerLocationId = new short[1] ;
-         H003R3_A19CustomerLocationVisitingAddres = new string[] {""} ;
+         H003R2_A1CustomerId = new short[1] ;
          AV6GAMUser = new GeneXus.Programs.genexussecurity.SdtGAMUser(context);
          GXt_SdtGAMUser1 = new GeneXus.Programs.genexussecurity.SdtGAMUser(context);
          GridsRow = new GXWebRow();
-         H003R4_A18CustomerLocationId = new short[1] ;
-         H003R4_A1CustomerId = new short[1] ;
-         H003R4_A107AmenitiesId = new short[1] ;
-         H003R4_A110AmenitiesName = new string[] {""} ;
+         H003R3_A18CustomerLocationId = new short[1] ;
+         H003R3_A1CustomerId = new short[1] ;
+         H003R3_A107AmenitiesId = new short[1] ;
+         H003R3_A110AmenitiesName = new string[] {""} ;
          AV21LocationAmenitiesSDT = new SdtLocationAmenitiesSDT(context);
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
          subGrids_Linesclass = "";
          GXCCtl = "";
          ROClassString = "";
-         H003R5_A1CustomerId = new short[1] ;
-         H003R5_A18CustomerLocationId = new short[1] ;
-         H003R5_A19CustomerLocationVisitingAddres = new string[] {""} ;
          subGrids_Header = "";
          GridsColumn = new GXWebColumn();
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.locationamenities__default(),
             new Object[][] {
                 new Object[] {
-               H003R2_A1CustomerId, H003R2_A18CustomerLocationId, H003R2_A19CustomerLocationVisitingAddres
+               H003R2_A18CustomerLocationId, H003R2_A19CustomerLocationVisitingAddres, H003R2_A1CustomerId
                }
                , new Object[] {
-               H003R3_A1CustomerId, H003R3_A18CustomerLocationId, H003R3_A19CustomerLocationVisitingAddres
-               }
-               , new Object[] {
-               H003R4_A18CustomerLocationId, H003R4_A1CustomerId, H003R4_A107AmenitiesId, H003R4_A110AmenitiesName
-               }
-               , new Object[] {
-               H003R5_A1CustomerId, H003R5_A18CustomerLocationId, H003R5_A19CustomerLocationVisitingAddres
+               H003R3_A18CustomerLocationId, H003R3_A1CustomerId, H003R3_A107AmenitiesId, H003R3_A110AmenitiesName
                }
             }
          );
@@ -1724,21 +1698,15 @@ namespace GeneXus.Programs {
       private GXCombobox dynavLocationoption ;
       private GXCheckbox chkavLocationamenitiessdts__selected ;
       private IDataStoreProvider pr_default ;
-      private short[] H003R2_A1CustomerId ;
       private short[] H003R2_A18CustomerLocationId ;
       private string[] H003R2_A19CustomerLocationVisitingAddres ;
-      private short[] H003R3_A1CustomerId ;
+      private short[] H003R2_A1CustomerId ;
       private short[] H003R3_A18CustomerLocationId ;
-      private string[] H003R3_A19CustomerLocationVisitingAddres ;
-      private short[] H003R4_A18CustomerLocationId ;
-      private short[] H003R4_A1CustomerId ;
-      private short[] H003R4_A107AmenitiesId ;
-      private string[] H003R4_A110AmenitiesName ;
+      private short[] H003R3_A1CustomerId ;
+      private short[] H003R3_A107AmenitiesId ;
+      private string[] H003R3_A110AmenitiesName ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
-      private short[] H003R5_A1CustomerId ;
-      private short[] H003R5_A18CustomerLocationId ;
-      private string[] H003R5_A19CustomerLocationVisitingAddres ;
       private GXBaseCollection<SdtLocationAmenitiesSDT> AV17LocationAmenitiesSDTs ;
       private GXWebForm Form ;
       private GeneXus.Programs.genexussecurity.SdtGAMUser AV6GAMUser ;
@@ -1748,7 +1716,7 @@ namespace GeneXus.Programs {
 
    public class locationamenities__default : DataStoreHelperBase, IDataStoreHelper
    {
-      protected Object[] conditional_H003R4( IGxContext context ,
+      protected Object[] conditional_H003R3( IGxContext context ,
                                              short AV18LocationOption ,
                                              short A18CustomerLocationId ,
                                              short AV27Udparg1 ,
@@ -1781,8 +1749,8 @@ namespace GeneXus.Programs {
       {
          switch ( cursor )
          {
-               case 2 :
-                     return conditional_H003R4(context, (short)dynConstraints[0] , (short)dynConstraints[1] , (short)dynConstraints[2] , (short)dynConstraints[3] );
+               case 1 :
+                     return conditional_H003R3(context, (short)dynConstraints[0] , (short)dynConstraints[1] , (short)dynConstraints[2] , (short)dynConstraints[3] );
          }
          return base.getDynamicStatement(cursor, context, dynConstraints);
       }
@@ -1793,8 +1761,6 @@ namespace GeneXus.Programs {
          return new Cursor[] {
           new ForEachCursor(def[0])
          ,new ForEachCursor(def[1])
-         ,new ForEachCursor(def[2])
-         ,new ForEachCursor(def[3])
        };
     }
 
@@ -1808,20 +1774,12 @@ namespace GeneXus.Programs {
           };
           Object[] prmH003R3;
           prmH003R3 = new Object[] {
-          };
-          Object[] prmH003R5;
-          prmH003R5 = new Object[] {
-          };
-          Object[] prmH003R4;
-          prmH003R4 = new Object[] {
           new ParDef("AV27Udparg1",GXType.Int16,4,0) ,
           new ParDef("AV18LocationOption",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
-              new CursorDef("H003R2", "SELECT CustomerId, CustomerLocationId, CustomerLocationVisitingAddres FROM CustomerLocation ORDER BY CustomerLocationVisitingAddres ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003R2,0, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("H003R3", "SELECT CustomerId, CustomerLocationId, CustomerLocationVisitingAddres FROM CustomerLocation ORDER BY CustomerLocationVisitingAddres ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003R3,0, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("H003R4", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003R4,100, GxCacheFrequency.OFF ,false,false )
-             ,new CursorDef("H003R5", "SELECT CustomerId, CustomerLocationId, CustomerLocationVisitingAddres FROM CustomerLocation ORDER BY CustomerLocationVisitingAddres ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003R5,0, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("H003R2", "SELECT CustomerLocationId, CustomerLocationVisitingAddres, CustomerId FROM CustomerLocation ORDER BY CustomerLocationVisitingAddres ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003R2,0, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("H003R3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003R3,100, GxCacheFrequency.OFF ,false,false )
           };
        }
     }
@@ -1834,24 +1792,14 @@ namespace GeneXus.Programs {
        {
              case 0 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
-                ((short[]) buf[1])[0] = rslt.getShort(2);
-                ((string[]) buf[2])[0] = rslt.getVarchar(3);
+                ((string[]) buf[1])[0] = rslt.getVarchar(2);
+                ((short[]) buf[2])[0] = rslt.getShort(3);
                 return;
              case 1 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((short[]) buf[1])[0] = rslt.getShort(2);
-                ((string[]) buf[2])[0] = rslt.getVarchar(3);
-                return;
-             case 2 :
-                ((short[]) buf[0])[0] = rslt.getShort(1);
-                ((short[]) buf[1])[0] = rslt.getShort(2);
                 ((short[]) buf[2])[0] = rslt.getShort(3);
                 ((string[]) buf[3])[0] = rslt.getVarchar(4);
-                return;
-             case 3 :
-                ((short[]) buf[0])[0] = rslt.getShort(1);
-                ((short[]) buf[1])[0] = rslt.getShort(2);
-                ((string[]) buf[2])[0] = rslt.getVarchar(3);
                 return;
        }
     }

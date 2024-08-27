@@ -30,6 +30,8 @@ namespace GeneXus.Programs
 		public SdtCreateLocationData_Step1( )
 		{
 			/* Constructor for serialization */
+			gxTv_SdtCreateLocationData_Step1_Customerlocationname = "";
+
 			gxTv_SdtCreateLocationData_Step1_Customerlocationemail = "";
 
 			gxTv_SdtCreateLocationData_Step1_Customerlocationphone = "";
@@ -37,6 +39,8 @@ namespace GeneXus.Programs
 			gxTv_SdtCreateLocationData_Step1_Customerlocationpostaladdress = "";
 
 			gxTv_SdtCreateLocationData_Step1_Customerlocationvisitingaddress = "";
+
+			gxTv_SdtCreateLocationData_Step1_Customerlocationdescription = "";
 
 		}
 
@@ -65,6 +69,9 @@ namespace GeneXus.Programs
 
 		public override void ToJSON(bool includeState)
 		{
+			AddObjectProperty("CustomerLocationName", gxTpr_Customerlocationname, false);
+
+
 			AddObjectProperty("CustomerLocationId", gxTpr_Customerlocationid, false);
 
 
@@ -79,11 +86,30 @@ namespace GeneXus.Programs
 
 			AddObjectProperty("CustomerLocationVisitingAddress", gxTpr_Customerlocationvisitingaddress, false);
 
+
+			AddObjectProperty("CustomerLocationDescription", gxTpr_Customerlocationdescription, false);
+
 			return;
 		}
 		#endregion
 
 		#region Properties
+
+		[SoapElement(ElementName="CustomerLocationName")]
+		[XmlElement(ElementName="CustomerLocationName")]
+		public string gxTpr_Customerlocationname
+		{
+			get {
+				return gxTv_SdtCreateLocationData_Step1_Customerlocationname; 
+			}
+			set {
+				gxTv_SdtCreateLocationData_Step1_Customerlocationname = value;
+				SetDirty("Customerlocationname");
+			}
+		}
+
+
+
 
 		[SoapElement(ElementName="CustomerLocationId")]
 		[XmlElement(ElementName="CustomerLocationId")]
@@ -164,6 +190,22 @@ namespace GeneXus.Programs
 
 
 
+
+		[SoapElement(ElementName="CustomerLocationDescription")]
+		[XmlElement(ElementName="CustomerLocationDescription")]
+		public string gxTpr_Customerlocationdescription
+		{
+			get {
+				return gxTv_SdtCreateLocationData_Step1_Customerlocationdescription; 
+			}
+			set {
+				gxTv_SdtCreateLocationData_Step1_Customerlocationdescription = value;
+				SetDirty("Customerlocationdescription");
+			}
+		}
+
+
+
 		public override bool ShouldSerializeSdtJson()
 		{
 			return true;
@@ -177,10 +219,13 @@ namespace GeneXus.Programs
 
 		public void initialize( )
 		{
+			gxTv_SdtCreateLocationData_Step1_Customerlocationname = "";
+
 			gxTv_SdtCreateLocationData_Step1_Customerlocationemail = "";
 			gxTv_SdtCreateLocationData_Step1_Customerlocationphone = "";
 			gxTv_SdtCreateLocationData_Step1_Customerlocationpostaladdress = "";
 			gxTv_SdtCreateLocationData_Step1_Customerlocationvisitingaddress = "";
+			gxTv_SdtCreateLocationData_Step1_Customerlocationdescription = "";
 			return  ;
 		}
 
@@ -189,6 +234,9 @@ namespace GeneXus.Programs
 		#endregion
 
 		#region Declaration
+
+		protected string gxTv_SdtCreateLocationData_Step1_Customerlocationname;
+		 
 
 		protected short gxTv_SdtCreateLocationData_Step1_Customerlocationid;
 		 
@@ -203,6 +251,9 @@ namespace GeneXus.Programs
 		 
 
 		protected string gxTv_SdtCreateLocationData_Step1_Customerlocationvisitingaddress;
+		 
+
+		protected string gxTv_SdtCreateLocationData_Step1_Customerlocationdescription;
 		 
 
 
@@ -222,7 +273,19 @@ namespace GeneXus.Programs
 		}
 
 		#region Rest Properties
-		[DataMember(Name="CustomerLocationId", Order=0)]
+		[DataMember(Name="CustomerLocationName", Order=0)]
+		public  string gxTpr_Customerlocationname
+		{
+			get { 
+				return sdt.gxTpr_Customerlocationname;
+
+			}
+			set { 
+				 sdt.gxTpr_Customerlocationname = value;
+			}
+		}
+
+		[DataMember(Name="CustomerLocationId", Order=1)]
 		public short gxTpr_Customerlocationid
 		{
 			get { 
@@ -234,7 +297,7 @@ namespace GeneXus.Programs
 			}
 		}
 
-		[DataMember(Name="CustomerLocationEmail", Order=1)]
+		[DataMember(Name="CustomerLocationEmail", Order=2)]
 		public  string gxTpr_Customerlocationemail
 		{
 			get { 
@@ -246,7 +309,7 @@ namespace GeneXus.Programs
 			}
 		}
 
-		[DataMember(Name="CustomerLocationPhone", Order=2)]
+		[DataMember(Name="CustomerLocationPhone", Order=3)]
 		public  string gxTpr_Customerlocationphone
 		{
 			get { 
@@ -258,7 +321,7 @@ namespace GeneXus.Programs
 			}
 		}
 
-		[DataMember(Name="CustomerLocationPostalAddress", Order=3)]
+		[DataMember(Name="CustomerLocationPostalAddress", Order=4)]
 		public  string gxTpr_Customerlocationpostaladdress
 		{
 			get { 
@@ -270,7 +333,7 @@ namespace GeneXus.Programs
 			}
 		}
 
-		[DataMember(Name="CustomerLocationVisitingAddress", Order=4)]
+		[DataMember(Name="CustomerLocationVisitingAddress", Order=5)]
 		public  string gxTpr_Customerlocationvisitingaddress
 		{
 			get { 
@@ -279,6 +342,18 @@ namespace GeneXus.Programs
 			}
 			set { 
 				 sdt.gxTpr_Customerlocationvisitingaddress = value;
+			}
+		}
+
+		[DataMember(Name="CustomerLocationDescription", Order=6)]
+		public  string gxTpr_Customerlocationdescription
+		{
+			get { 
+				return sdt.gxTpr_Customerlocationdescription;
+
+			}
+			set { 
+				 sdt.gxTpr_Customerlocationdescription = value;
 			}
 		}
 

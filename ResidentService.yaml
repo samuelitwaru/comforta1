@@ -2,9 +2,9 @@ openapi: 3.0.0
 info:
   title: "ResidentService"
   description: "Resident Service"
-  version: "20240824011608"
+  version: "20240827044411"
 servers:
-  - url: https://comforta.yukon.software//ResidentService
+  - url: https://comforta.yukon.software/Comforta11NETPostgreSQL1/ResidentService
 paths:
   /api/auth/login:
     post:
@@ -93,7 +93,7 @@ components:
       description: GAM OAuth 2
       flows:
         password:          
-          tokenUrl: https://comforta.yukon.software//oauth/gam/v2.0/access_token
+          tokenUrl: https://comforta.yukon.software/oauth/gam/v2.0/access_token
           scopes: 
             fullcontrol: Full access
 
@@ -253,8 +253,28 @@ components:
           description: "Customer Location Phone"
           type: "string"
 
+        Amenities:
+          type: array
+          items:
+            description: AmenitiesItem
+            $ref: "#/components/schemas/ResidentDetails.Customer.Location.Amenities_AmenitiesItem"
 
       x-gx-level: "ResidentDetails.Customer"
+
+    ResidentDetails.Customer.Location.Amenities_AmenitiesItem:
+      properties:
+        AmenityId:
+          description: "Amenity Id"
+          type: "string"
+        AmenityName:
+          description: "Amenity Name"
+          type: "string"
+        IsAvailable:
+          description: "Is Available"
+          type: "boolean"
+
+
+      x-gx-level: "ResidentDetails.Customer.Location"
 
 
     ResidentDetails.ResidentNetworkIndividuals_ResidentNetworkIndividualsItem:

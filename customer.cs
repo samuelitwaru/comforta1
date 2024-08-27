@@ -1275,6 +1275,8 @@ namespace GeneXus.Programs {
                AV30Pgmname = cgiGet( "vPGMNAME");
                Gx_BScreen = (short)(Math.Round(context.localUtil.CToN( cgiGet( "vGXBSCREEN"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                A94CustomerLocationLastLine = (short)(Math.Round(context.localUtil.CToN( cgiGet( "CUSTOMERLOCATIONLASTLINE"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+               A133CustomerLocationDescription = cgiGet( "CUSTOMERLOCATIONDESCRIPTION");
+               A134CustomerLocationName = cgiGet( "CUSTOMERLOCATIONNAME");
                Combo_customertypeid_Objectcall = cgiGet( "COMBO_CUSTOMERTYPEID_Objectcall");
                Combo_customertypeid_Class = cgiGet( "COMBO_CUSTOMERTYPEID_Class");
                Combo_customertypeid_Icontype = cgiGet( "COMBO_CUSTOMERTYPEID_Icontype");
@@ -2431,6 +2433,8 @@ namespace GeneXus.Programs {
             ChangePostValue( "ZT_"+"Z21CustomerLocationEmail_"+sGXsfl_97_idx, Z21CustomerLocationEmail) ;
             ChangePostValue( "ZT_"+"Z22CustomerLocationPhone_"+sGXsfl_97_idx, StringUtil.RTrim( Z22CustomerLocationPhone)) ;
             ChangePostValue( "ZT_"+"Z94CustomerLocationLastLine_"+sGXsfl_97_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z94CustomerLocationLastLine), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z133CustomerLocationDescription_"+sGXsfl_97_idx, Z133CustomerLocationDescription) ;
+            ChangePostValue( "ZT_"+"Z134CustomerLocationName_"+sGXsfl_97_idx, Z134CustomerLocationName) ;
             ChangePostValue( "T94CustomerLocationLastLine_"+sGXsfl_97_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(O94CustomerLocationLastLine), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             ChangePostValue( "nRC_GXsfl_129_"+sGXsfl_97_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRC_GXsfl_129), 8, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             ChangePostValue( "nRC_GXsfl_143_"+sGXsfl_97_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRC_GXsfl_143), 8, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
@@ -3602,7 +3606,7 @@ namespace GeneXus.Programs {
             pr_default.execute(31, new Object[] {A1CustomerId});
             if ( (pr_default.getStatus(31) != 101) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {context.GetMessage( "Location", "")}), "CannotDeleteReferencedRecord", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {context.GetMessage( "CustomerLocation", "")}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
             pr_default.close(31);
@@ -3770,6 +3774,8 @@ namespace GeneXus.Programs {
             ChangePostValue( "ZT_"+"Z21CustomerLocationEmail_"+sGXsfl_97_idx, Z21CustomerLocationEmail) ;
             ChangePostValue( "ZT_"+"Z22CustomerLocationPhone_"+sGXsfl_97_idx, StringUtil.RTrim( Z22CustomerLocationPhone)) ;
             ChangePostValue( "ZT_"+"Z94CustomerLocationLastLine_"+sGXsfl_97_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z94CustomerLocationLastLine), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
+            ChangePostValue( "ZT_"+"Z133CustomerLocationDescription_"+sGXsfl_97_idx, Z133CustomerLocationDescription) ;
+            ChangePostValue( "ZT_"+"Z134CustomerLocationName_"+sGXsfl_97_idx, Z134CustomerLocationName) ;
             ChangePostValue( "T94CustomerLocationLastLine_"+sGXsfl_97_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(O94CustomerLocationLastLine), 4, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             ChangePostValue( "nRC_GXsfl_129_"+sGXsfl_97_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRC_GXsfl_129), 8, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
             ChangePostValue( "nRC_GXsfl_143_"+sGXsfl_97_idx, StringUtil.LTrim( StringUtil.NToC( (decimal)(nRC_GXsfl_143), 8, 0, context.GetLanguageProperty( "decimal_point"), ""))) ;
@@ -4492,6 +4498,8 @@ namespace GeneXus.Programs {
                Z21CustomerLocationEmail = T000115_A21CustomerLocationEmail[0];
                Z22CustomerLocationPhone = T000115_A22CustomerLocationPhone[0];
                Z94CustomerLocationLastLine = T000115_A94CustomerLocationLastLine[0];
+               Z133CustomerLocationDescription = T000115_A133CustomerLocationDescription[0];
+               Z134CustomerLocationName = T000115_A134CustomerLocationName[0];
             }
             else
             {
@@ -4500,6 +4508,8 @@ namespace GeneXus.Programs {
                Z21CustomerLocationEmail = A21CustomerLocationEmail;
                Z22CustomerLocationPhone = A22CustomerLocationPhone;
                Z94CustomerLocationLastLine = A94CustomerLocationLastLine;
+               Z133CustomerLocationDescription = A133CustomerLocationDescription;
+               Z134CustomerLocationName = A134CustomerLocationName;
             }
          }
          if ( GX_JID == -30 )
@@ -4511,6 +4521,8 @@ namespace GeneXus.Programs {
             Z21CustomerLocationEmail = A21CustomerLocationEmail;
             Z22CustomerLocationPhone = A22CustomerLocationPhone;
             Z94CustomerLocationLastLine = A94CustomerLocationLastLine;
+            Z133CustomerLocationDescription = A133CustomerLocationDescription;
+            Z134CustomerLocationName = A134CustomerLocationName;
          }
       }
 
@@ -4553,6 +4565,8 @@ namespace GeneXus.Programs {
             A21CustomerLocationEmail = T000142_A21CustomerLocationEmail[0];
             A22CustomerLocationPhone = T000142_A22CustomerLocationPhone[0];
             A94CustomerLocationLastLine = T000142_A94CustomerLocationLastLine[0];
+            A133CustomerLocationDescription = T000142_A133CustomerLocationDescription[0];
+            A134CustomerLocationName = T000142_A134CustomerLocationName[0];
             ZM013( -30) ;
          }
          pr_default.close(40);
@@ -4617,6 +4631,8 @@ namespace GeneXus.Programs {
             A21CustomerLocationEmail = T000115_A21CustomerLocationEmail[0];
             A22CustomerLocationPhone = T000115_A22CustomerLocationPhone[0];
             A94CustomerLocationLastLine = T000115_A94CustomerLocationLastLine[0];
+            A133CustomerLocationDescription = T000115_A133CustomerLocationDescription[0];
+            A134CustomerLocationName = T000115_A134CustomerLocationName[0];
             O94CustomerLocationLastLine = A94CustomerLocationLastLine;
             AssignAttri("", false, "A94CustomerLocationLastLine", StringUtil.LTrimStr( (decimal)(A94CustomerLocationLastLine), 4, 0));
             Z1CustomerId = A1CustomerId;
@@ -4658,7 +4674,12 @@ namespace GeneXus.Programs {
                AnyError = 1;
                return  ;
             }
+            Gx_longc = false;
             if ( (pr_default.getStatus(12) == 101) || ( StringUtil.StrCmp(Z19CustomerLocationVisitingAddres, T000114_A19CustomerLocationVisitingAddres[0]) != 0 ) || ( StringUtil.StrCmp(Z20CustomerLocationPostalAddress, T000114_A20CustomerLocationPostalAddress[0]) != 0 ) || ( StringUtil.StrCmp(Z21CustomerLocationEmail, T000114_A21CustomerLocationEmail[0]) != 0 ) || ( StringUtil.StrCmp(Z22CustomerLocationPhone, T000114_A22CustomerLocationPhone[0]) != 0 ) || ( Z94CustomerLocationLastLine != T000114_A94CustomerLocationLastLine[0] ) )
+            {
+               Gx_longc = true;
+            }
+            if ( Gx_longc || ( StringUtil.StrCmp(Z133CustomerLocationDescription, T000114_A133CustomerLocationDescription[0]) != 0 ) || ( StringUtil.StrCmp(Z134CustomerLocationName, T000114_A134CustomerLocationName[0]) != 0 ) )
             {
                if ( StringUtil.StrCmp(Z19CustomerLocationVisitingAddres, T000114_A19CustomerLocationVisitingAddres[0]) != 0 )
                {
@@ -4689,6 +4710,18 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLog("customer:[seudo value changed for attri]"+"CustomerLocationLastLine");
                   GXUtil.WriteLogRaw("Old: ",Z94CustomerLocationLastLine);
                   GXUtil.WriteLogRaw("Current: ",T000114_A94CustomerLocationLastLine[0]);
+               }
+               if ( StringUtil.StrCmp(Z133CustomerLocationDescription, T000114_A133CustomerLocationDescription[0]) != 0 )
+               {
+                  GXUtil.WriteLog("customer:[seudo value changed for attri]"+"CustomerLocationDescription");
+                  GXUtil.WriteLogRaw("Old: ",Z133CustomerLocationDescription);
+                  GXUtil.WriteLogRaw("Current: ",T000114_A133CustomerLocationDescription[0]);
+               }
+               if ( StringUtil.StrCmp(Z134CustomerLocationName, T000114_A134CustomerLocationName[0]) != 0 )
+               {
+                  GXUtil.WriteLog("customer:[seudo value changed for attri]"+"CustomerLocationName");
+                  GXUtil.WriteLogRaw("Old: ",Z134CustomerLocationName);
+                  GXUtil.WriteLogRaw("Current: ",T000114_A134CustomerLocationName[0]);
                }
                GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"CustomerLocation"}), "RecordWasChanged", 1, "");
                AnyError = 1;
@@ -4723,7 +4756,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor T000144 */
-                     pr_default.execute(42, new Object[] {A1CustomerId, A18CustomerLocationId, A19CustomerLocationVisitingAddres, A20CustomerLocationPostalAddress, A21CustomerLocationEmail, A22CustomerLocationPhone, A94CustomerLocationLastLine});
+                     pr_default.execute(42, new Object[] {A1CustomerId, A18CustomerLocationId, A19CustomerLocationVisitingAddres, A20CustomerLocationPostalAddress, A21CustomerLocationEmail, A22CustomerLocationPhone, A94CustomerLocationLastLine, A133CustomerLocationDescription, A134CustomerLocationName});
                      pr_default.close(42);
                      pr_default.SmartCacheProvider.SetUpdated("CustomerLocation");
                      if ( (pr_default.getStatus(42) == 1) )
@@ -4788,7 +4821,7 @@ namespace GeneXus.Programs {
                      if ( AnyError == 0 )
                      {
                         /* Using cursor T000145 */
-                        pr_default.execute(43, new Object[] {A19CustomerLocationVisitingAddres, A20CustomerLocationPostalAddress, A21CustomerLocationEmail, A22CustomerLocationPhone, A94CustomerLocationLastLine, A1CustomerId, A18CustomerLocationId});
+                        pr_default.execute(43, new Object[] {A19CustomerLocationVisitingAddres, A20CustomerLocationPostalAddress, A21CustomerLocationEmail, A22CustomerLocationPhone, A94CustomerLocationLastLine, A133CustomerLocationDescription, A134CustomerLocationName, A1CustomerId, A18CustomerLocationId});
                         pr_default.close(43);
                         pr_default.SmartCacheProvider.SetUpdated("CustomerLocation");
                         if ( (pr_default.getStatus(43) == 103) )
@@ -7868,13 +7901,10 @@ namespace GeneXus.Programs {
          Freestylelevel_locationsRow.AddColumnProperties("html_label", -1, isAjaxCallMode( ), new Object[] {(string)edtCustomerLocationPostalAddress_Internalname,context.GetMessage( "Postal Address", ""),(string)" AttributeLabel",(short)1,(bool)true,(string)""});
          /* Div Control */
          Freestylelevel_locationsRow.AddColumnProperties("div_start", -1, isAjaxCallMode( ), new Object[] {(string)"",(short)1,(short)0,(string)"px",(short)0,(string)"px",(string)" gx-attribute",(string)"start",(string)"top",(string)"",(string)"",(string)"div"});
-         /* Multiple line edit */
+         /* Single line edit */
          TempTags = " data-gxoch1=\"gx.fn.setControlValue('nIsMod_3_" + sGXsfl_97_idx + "',1);\"  onfocus=\"gx.evt.onfocus(this, 115,'',false,'" + sGXsfl_97_idx + "',97)\"";
-         ClassString = "Attribute";
-         StyleString = "";
-         ClassString = "Attribute";
-         StyleString = "";
-         Freestylelevel_locationsRow.AddColumnProperties("html_textarea", 1, isAjaxCallMode( ), new Object[] {(string)edtCustomerLocationPostalAddress_Internalname,(string)A20CustomerLocationPostalAddress,"http://maps.google.com/maps?q="+GXUtil.UrlEncode( A20CustomerLocationPostalAddress),TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,115);\"",(short)0,(short)1,(int)edtCustomerLocationPostalAddress_Enabled,(short)0,(short)80,(string)"chr",(short)10,(string)"row",(short)0,(string)StyleString,(string)ClassString,(string)"",(string)"",(string)"1024",(short)-1,(short)0,(string)"_blank",(string)"",(short)0,(bool)true,(string)"GeneXus\\Address",(string)"'"+""+"'"+",false,"+"'"+""+"'",(short)0,(string)""});
+         ROClassString = "Attribute";
+         Freestylelevel_locationsRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtCustomerLocationPostalAddress_Internalname,(string)A20CustomerLocationPostalAddress,(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,115);\"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtCustomerLocationPostalAddress_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"",(string)"",(short)1,(int)edtCustomerLocationPostalAddress_Enabled,(short)0,(string)"text",(string)"",(short)80,(string)"chr",(short)1,(string)"row",(short)100,(short)0,(short)0,(short)97,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
          Freestylelevel_locationsRow.AddColumnProperties("div_end", -1, isAjaxCallMode( ), new Object[] {(string)"start",(string)"top",(string)"div"});
          Freestylelevel_locationsRow.AddColumnProperties("div_end", -1, isAjaxCallMode( ), new Object[] {(string)"start",(string)"top",(string)"div"});
          Freestylelevel_locationsRow.AddColumnProperties("div_end", -1, isAjaxCallMode( ), new Object[] {(string)"start",(string)"top",(string)"div"});
@@ -8610,6 +8640,10 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.RTrim( Z22CustomerLocationPhone));
          GXCCtl = "Z94CustomerLocationLastLine_" + sGXsfl_97_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(Z94CustomerLocationLastLine), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
+         GXCCtl = "Z133CustomerLocationDescription_" + sGXsfl_97_idx;
+         GxWebStd.gx_hidden_field( context, GXCCtl, Z133CustomerLocationDescription);
+         GXCCtl = "Z134CustomerLocationName_" + sGXsfl_97_idx;
+         GxWebStd.gx_hidden_field( context, GXCCtl, Z134CustomerLocationName);
          GXCCtl = "O94CustomerLocationLastLine_" + sGXsfl_97_idx;
          GxWebStd.gx_hidden_field( context, GXCCtl, StringUtil.LTrim( StringUtil.NToC( (decimal)(O94CustomerLocationLastLine), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
          GXCCtl = "nRC_GXsfl_129_" + sGXsfl_97_idx;
@@ -8702,8 +8736,16 @@ namespace GeneXus.Programs {
          Z22CustomerLocationPhone = cgiGet( GXCCtl);
          GXCCtl = "Z94CustomerLocationLastLine_" + sGXsfl_97_idx;
          Z94CustomerLocationLastLine = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         GXCCtl = "Z133CustomerLocationDescription_" + sGXsfl_97_idx;
+         Z133CustomerLocationDescription = cgiGet( GXCCtl);
+         GXCCtl = "Z134CustomerLocationName_" + sGXsfl_97_idx;
+         Z134CustomerLocationName = cgiGet( GXCCtl);
          GXCCtl = "Z94CustomerLocationLastLine_" + sGXsfl_97_idx;
          A94CustomerLocationLastLine = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
+         GXCCtl = "Z133CustomerLocationDescription_" + sGXsfl_97_idx;
+         A133CustomerLocationDescription = cgiGet( GXCCtl);
+         GXCCtl = "Z134CustomerLocationName_" + sGXsfl_97_idx;
+         A134CustomerLocationName = cgiGet( GXCCtl);
          GXCCtl = "O94CustomerLocationLastLine_" + sGXsfl_97_idx;
          O94CustomerLocationLastLine = (short)(Math.Round(context.localUtil.CToN( cgiGet( GXCCtl), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
          GXCCtl = "nRC_GXsfl_129_" + sGXsfl_97_idx;
@@ -9639,6 +9681,10 @@ namespace GeneXus.Programs {
             DeletePostValue( "ZT_"+"Z22CustomerLocationPhone_"+sGXsfl_97_idx) ;
             ChangePostValue( "Z94CustomerLocationLastLine_"+sGXsfl_97_idx, cgiGet( "ZT_"+"Z94CustomerLocationLastLine_"+sGXsfl_97_idx)) ;
             DeletePostValue( "ZT_"+"Z94CustomerLocationLastLine_"+sGXsfl_97_idx) ;
+            ChangePostValue( "Z133CustomerLocationDescription_"+sGXsfl_97_idx, cgiGet( "ZT_"+"Z133CustomerLocationDescription_"+sGXsfl_97_idx)) ;
+            DeletePostValue( "ZT_"+"Z133CustomerLocationDescription_"+sGXsfl_97_idx) ;
+            ChangePostValue( "Z134CustomerLocationName_"+sGXsfl_97_idx, cgiGet( "ZT_"+"Z134CustomerLocationName_"+sGXsfl_97_idx)) ;
+            DeletePostValue( "ZT_"+"Z134CustomerLocationName_"+sGXsfl_97_idx) ;
          }
       }
 
@@ -9827,6 +9873,8 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "vPGMNAME", StringUtil.RTrim( AV30Pgmname));
          GxWebStd.gx_hidden_field( context, "vGXBSCREEN", StringUtil.LTrim( StringUtil.NToC( (decimal)(Gx_BScreen), 1, 0, context.GetLanguageProperty( "decimal_point"), "")));
          GxWebStd.gx_hidden_field( context, "CUSTOMERLOCATIONLASTLINE", StringUtil.LTrim( StringUtil.NToC( (decimal)(A94CustomerLocationLastLine), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
+         GxWebStd.gx_hidden_field( context, "CUSTOMERLOCATIONDESCRIPTION", A133CustomerLocationDescription);
+         GxWebStd.gx_hidden_field( context, "CUSTOMERLOCATIONNAME", A134CustomerLocationName);
          GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERTYPEID_Objectcall", StringUtil.RTrim( Combo_customertypeid_Objectcall));
          GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERTYPEID_Cls", StringUtil.RTrim( Combo_customertypeid_Cls));
          GxWebStd.gx_hidden_field( context, "COMBO_CUSTOMERTYPEID_Selectedvalue_set", StringUtil.RTrim( Combo_customertypeid_Selectedvalue_set));
@@ -10056,6 +10104,10 @@ namespace GeneXus.Programs {
          A22CustomerLocationPhone = "";
          A94CustomerLocationLastLine = 0;
          AssignAttri("", false, "A94CustomerLocationLastLine", StringUtil.LTrimStr( (decimal)(A94CustomerLocationLastLine), 4, 0));
+         A133CustomerLocationDescription = "";
+         AssignAttri("", false, "A133CustomerLocationDescription", A133CustomerLocationDescription);
+         A134CustomerLocationName = "";
+         AssignAttri("", false, "A134CustomerLocationName", A134CustomerLocationName);
          O94CustomerLocationLastLine = A94CustomerLocationLastLine;
          AssignAttri("", false, "A94CustomerLocationLastLine", StringUtil.LTrimStr( (decimal)(A94CustomerLocationLastLine), 4, 0));
          Z19CustomerLocationVisitingAddres = "";
@@ -10063,6 +10115,8 @@ namespace GeneXus.Programs {
          Z21CustomerLocationEmail = "";
          Z22CustomerLocationPhone = "";
          Z94CustomerLocationLastLine = 0;
+         Z133CustomerLocationDescription = "";
+         Z134CustomerLocationName = "";
       }
 
       protected void InitAll013( )
@@ -10191,7 +10245,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248244122870", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248277325482", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -10207,7 +10261,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("customer.js", "?20248244122871", false, true);
+         context.AddJavascriptSource("customer.js", "?20248277325484", false, true);
          context.AddJavascriptSource("shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/rsh/rsh.js", "", false, true);
@@ -10777,6 +10831,7 @@ namespace GeneXus.Programs {
          subGridlevel_receptionist_Backcolorstyle = 0;
          edtCustomerLocationPhone_Jsonclick = "";
          edtCustomerLocationEmail_Jsonclick = "";
+         edtCustomerLocationPostalAddress_Jsonclick = "";
          edtCustomerLocationId_Jsonclick = "";
          subFreestylelevel_locations_Class = "FreeStyleGrid";
          subFreestylelevel_locations_Backcolorstyle = 0;
@@ -11422,6 +11477,8 @@ namespace GeneXus.Programs {
          Z20CustomerLocationPostalAddress = "";
          Z21CustomerLocationEmail = "";
          Z22CustomerLocationPhone = "";
+         Z133CustomerLocationDescription = "";
+         Z134CustomerLocationName = "";
          Z30CustomerLocationReceptionistGA = "";
          Z26CustomerLocationReceptionistIn = "";
          Z24CustomerLocationReceptionistGi = "";
@@ -11479,6 +11536,8 @@ namespace GeneXus.Programs {
          sMode3 = "";
          A79CustomerTypeName = "";
          AV30Pgmname = "";
+         A133CustomerLocationDescription = "";
+         A134CustomerLocationName = "";
          Combo_customertypeid_Objectcall = "";
          Combo_customertypeid_Class = "";
          Combo_customertypeid_Icontype = "";
@@ -11745,6 +11804,8 @@ namespace GeneXus.Programs {
          T000142_A21CustomerLocationEmail = new string[] {""} ;
          T000142_A22CustomerLocationPhone = new string[] {""} ;
          T000142_A94CustomerLocationLastLine = new short[1] ;
+         T000142_A133CustomerLocationDescription = new string[] {""} ;
+         T000142_A134CustomerLocationName = new string[] {""} ;
          T000143_A1CustomerId = new short[1] ;
          T000143_A18CustomerLocationId = new short[1] ;
          T000115_A1CustomerId = new short[1] ;
@@ -11754,6 +11815,8 @@ namespace GeneXus.Programs {
          T000115_A21CustomerLocationEmail = new string[] {""} ;
          T000115_A22CustomerLocationPhone = new string[] {""} ;
          T000115_A94CustomerLocationLastLine = new short[1] ;
+         T000115_A133CustomerLocationDescription = new string[] {""} ;
+         T000115_A134CustomerLocationName = new string[] {""} ;
          T000114_A1CustomerId = new short[1] ;
          T000114_A18CustomerLocationId = new short[1] ;
          T000114_A19CustomerLocationVisitingAddres = new string[] {""} ;
@@ -11761,6 +11824,8 @@ namespace GeneXus.Programs {
          T000114_A21CustomerLocationEmail = new string[] {""} ;
          T000114_A22CustomerLocationPhone = new string[] {""} ;
          T000114_A94CustomerLocationLastLine = new short[1] ;
+         T000114_A133CustomerLocationDescription = new string[] {""} ;
+         T000114_A134CustomerLocationName = new string[] {""} ;
          T000147_A115LocationEventId = new short[1] ;
          T000148_A31ResidentId = new short[1] ;
          T000150_A1CustomerId = new short[1] ;
@@ -12052,10 +12117,10 @@ namespace GeneXus.Programs {
                T000113_n28CustomerLocationReceptionistAd, T000113_A29CustomerLocationReceptionistPh
                }
                , new Object[] {
-               T000114_A1CustomerId, T000114_A18CustomerLocationId, T000114_A19CustomerLocationVisitingAddres, T000114_A20CustomerLocationPostalAddress, T000114_A21CustomerLocationEmail, T000114_A22CustomerLocationPhone, T000114_A94CustomerLocationLastLine
+               T000114_A1CustomerId, T000114_A18CustomerLocationId, T000114_A19CustomerLocationVisitingAddres, T000114_A20CustomerLocationPostalAddress, T000114_A21CustomerLocationEmail, T000114_A22CustomerLocationPhone, T000114_A94CustomerLocationLastLine, T000114_A133CustomerLocationDescription, T000114_A134CustomerLocationName
                }
                , new Object[] {
-               T000115_A1CustomerId, T000115_A18CustomerLocationId, T000115_A19CustomerLocationVisitingAddres, T000115_A20CustomerLocationPostalAddress, T000115_A21CustomerLocationEmail, T000115_A22CustomerLocationPhone, T000115_A94CustomerLocationLastLine
+               T000115_A1CustomerId, T000115_A18CustomerLocationId, T000115_A19CustomerLocationVisitingAddres, T000115_A20CustomerLocationPostalAddress, T000115_A21CustomerLocationEmail, T000115_A22CustomerLocationPhone, T000115_A94CustomerLocationLastLine, T000115_A133CustomerLocationDescription, T000115_A134CustomerLocationName
                }
                , new Object[] {
                T000116_A1CustomerId, T000116_A15CustomerManagerId, T000116_A13CustomerManagerGAMGUID, T000116_A17CustomerManagerInitials, T000116_n17CustomerManagerInitials, T000116_A16CustomerManagerGivenName, T000116_A9CustomerManagerLastName, T000116_A10CustomerManagerEmail, T000116_A11CustomerManagerPhone, T000116_n11CustomerManagerPhone,
@@ -12135,7 +12200,7 @@ namespace GeneXus.Programs {
                T000141_A1CustomerId, T000141_A15CustomerManagerId
                }
                , new Object[] {
-               T000142_A1CustomerId, T000142_A18CustomerLocationId, T000142_A19CustomerLocationVisitingAddres, T000142_A20CustomerLocationPostalAddress, T000142_A21CustomerLocationEmail, T000142_A22CustomerLocationPhone, T000142_A94CustomerLocationLastLine
+               T000142_A1CustomerId, T000142_A18CustomerLocationId, T000142_A19CustomerLocationVisitingAddres, T000142_A20CustomerLocationPostalAddress, T000142_A21CustomerLocationEmail, T000142_A22CustomerLocationPhone, T000142_A94CustomerLocationLastLine, T000142_A133CustomerLocationDescription, T000142_A134CustomerLocationName
                }
                , new Object[] {
                T000143_A1CustomerId, T000143_A18CustomerLocationId
@@ -12814,6 +12879,7 @@ namespace GeneXus.Programs {
       private string tblUnnamedtablefsfreestylelevel_locations_Internalname ;
       private string divTableintermediateinslevel_locations_Internalname ;
       private string edtCustomerLocationId_Jsonclick ;
+      private string edtCustomerLocationPostalAddress_Jsonclick ;
       private string edtCustomerLocationEmail_Jsonclick ;
       private string edtCustomerLocationPhone_Jsonclick ;
       private string divTableleaflevel_receptionist_Internalname ;
@@ -12952,6 +13018,8 @@ namespace GeneXus.Programs {
       private string Z19CustomerLocationVisitingAddres ;
       private string Z20CustomerLocationPostalAddress ;
       private string Z21CustomerLocationEmail ;
+      private string Z133CustomerLocationDescription ;
+      private string Z134CustomerLocationName ;
       private string Z30CustomerLocationReceptionistGA ;
       private string Z24CustomerLocationReceptionistGi ;
       private string Z25CustomerLocationReceptionistLa ;
@@ -12968,6 +13036,8 @@ namespace GeneXus.Programs {
       private string A6CustomerVisitingAddress ;
       private string A14CustomerVatNumber ;
       private string A79CustomerTypeName ;
+      private string A133CustomerLocationDescription ;
+      private string A134CustomerLocationName ;
       private string A10CustomerManagerEmail ;
       private string A13CustomerManagerGAMGUID ;
       private string A109AmenitiesTypeName ;
@@ -13145,6 +13215,8 @@ namespace GeneXus.Programs {
       private string[] T000142_A21CustomerLocationEmail ;
       private string[] T000142_A22CustomerLocationPhone ;
       private short[] T000142_A94CustomerLocationLastLine ;
+      private string[] T000142_A133CustomerLocationDescription ;
+      private string[] T000142_A134CustomerLocationName ;
       private short[] T000143_A1CustomerId ;
       private short[] T000143_A18CustomerLocationId ;
       private short[] T000115_A1CustomerId ;
@@ -13154,6 +13226,8 @@ namespace GeneXus.Programs {
       private string[] T000115_A21CustomerLocationEmail ;
       private string[] T000115_A22CustomerLocationPhone ;
       private short[] T000115_A94CustomerLocationLastLine ;
+      private string[] T000115_A133CustomerLocationDescription ;
+      private string[] T000115_A134CustomerLocationName ;
       private short[] T000114_A1CustomerId ;
       private short[] T000114_A18CustomerLocationId ;
       private string[] T000114_A19CustomerLocationVisitingAddres ;
@@ -13161,6 +13235,8 @@ namespace GeneXus.Programs {
       private string[] T000114_A21CustomerLocationEmail ;
       private string[] T000114_A22CustomerLocationPhone ;
       private short[] T000114_A94CustomerLocationLastLine ;
+      private string[] T000114_A133CustomerLocationDescription ;
+      private string[] T000114_A134CustomerLocationName ;
       private short[] T000147_A115LocationEventId ;
       private short[] T000148_A31ResidentId ;
       private short[] T000150_A1CustomerId ;
@@ -13661,18 +13737,22 @@ namespace GeneXus.Programs {
         new ParDef("CustomerId",GXType.Int16,4,0) ,
         new ParDef("CustomerLocationId",GXType.Int16,4,0) ,
         new ParDef("CustomerLocationVisitingAddres",GXType.VarChar,1024,0) ,
-        new ParDef("CustomerLocationPostalAddress",GXType.VarChar,1024,0) ,
+        new ParDef("CustomerLocationPostalAddress",GXType.VarChar,100,0) ,
         new ParDef("CustomerLocationEmail",GXType.VarChar,100,0) ,
         new ParDef("CustomerLocationPhone",GXType.Char,20,0) ,
-        new ParDef("CustomerLocationLastLine",GXType.Int16,4,0)
+        new ParDef("CustomerLocationLastLine",GXType.Int16,4,0) ,
+        new ParDef("CustomerLocationDescription",GXType.VarChar,200,0) ,
+        new ParDef("CustomerLocationName",GXType.VarChar,40,0)
         };
         Object[] prmT000145;
         prmT000145 = new Object[] {
         new ParDef("CustomerLocationVisitingAddres",GXType.VarChar,1024,0) ,
-        new ParDef("CustomerLocationPostalAddress",GXType.VarChar,1024,0) ,
+        new ParDef("CustomerLocationPostalAddress",GXType.VarChar,100,0) ,
         new ParDef("CustomerLocationEmail",GXType.VarChar,100,0) ,
         new ParDef("CustomerLocationPhone",GXType.Char,20,0) ,
         new ParDef("CustomerLocationLastLine",GXType.Int16,4,0) ,
+        new ParDef("CustomerLocationDescription",GXType.VarChar,200,0) ,
+        new ParDef("CustomerLocationName",GXType.VarChar,40,0) ,
         new ParDef("CustomerId",GXType.Int16,4,0) ,
         new ParDef("CustomerLocationId",GXType.Int16,4,0)
         };
@@ -13950,8 +14030,8 @@ namespace GeneXus.Programs {
            ,new CursorDef("T000111", "SELECT Supplier_AgbNumber, Supplier_AgbName, Supplier_AgbKvkNumber, Supplier_AgbVisitingAddress, Supplier_AgbPostalAddress, Supplier_AgbEmail, Supplier_AgbPhone, Supplier_AgbContactName FROM Supplier_AGB WHERE Supplier_AgbId = :Supplier_AgbId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000111,1, GxCacheFrequency.OFF ,true,false )
            ,new CursorDef("T000112", "SELECT CustomerId, CustomerLocationId, CustomerLocationReceptionistId, CustomerLocationReceptionistGA, CustomerLocationReceptionistIn, CustomerLocationReceptionistGi, CustomerLocationReceptionistLa, CustomerLocationReceptionistEm, CustomerLocationReceptionistAd, CustomerLocationReceptionistPh FROM CustomerLocationReceptionist WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId AND CustomerLocationReceptionistId = :CustomerLocationReceptionistId  FOR UPDATE OF CustomerLocationReceptionist NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000112,1, GxCacheFrequency.OFF ,true,false )
            ,new CursorDef("T000113", "SELECT CustomerId, CustomerLocationId, CustomerLocationReceptionistId, CustomerLocationReceptionistGA, CustomerLocationReceptionistIn, CustomerLocationReceptionistGi, CustomerLocationReceptionistLa, CustomerLocationReceptionistEm, CustomerLocationReceptionistAd, CustomerLocationReceptionistPh FROM CustomerLocationReceptionist WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId AND CustomerLocationReceptionistId = :CustomerLocationReceptionistId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000113,1, GxCacheFrequency.OFF ,true,false )
-           ,new CursorDef("T000114", "SELECT CustomerId, CustomerLocationId, CustomerLocationVisitingAddres, CustomerLocationPostalAddress, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationLastLine FROM CustomerLocation WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId  FOR UPDATE OF CustomerLocation NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000114,1, GxCacheFrequency.OFF ,true,false )
-           ,new CursorDef("T000115", "SELECT CustomerId, CustomerLocationId, CustomerLocationVisitingAddres, CustomerLocationPostalAddress, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationLastLine FROM CustomerLocation WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000115,1, GxCacheFrequency.OFF ,true,false )
+           ,new CursorDef("T000114", "SELECT CustomerId, CustomerLocationId, CustomerLocationVisitingAddres, CustomerLocationPostalAddress, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationLastLine, CustomerLocationDescription, CustomerLocationName FROM CustomerLocation WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId  FOR UPDATE OF CustomerLocation NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000114,1, GxCacheFrequency.OFF ,true,false )
+           ,new CursorDef("T000115", "SELECT CustomerId, CustomerLocationId, CustomerLocationVisitingAddres, CustomerLocationPostalAddress, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationLastLine, CustomerLocationDescription, CustomerLocationName FROM CustomerLocation WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000115,1, GxCacheFrequency.OFF ,true,false )
            ,new CursorDef("T000116", "SELECT CustomerId, CustomerManagerId, CustomerManagerGAMGUID, CustomerManagerInitials, CustomerManagerGivenName, CustomerManagerLastName, CustomerManagerEmail, CustomerManagerPhone, CustomerManagerGender FROM CustomerManager WHERE CustomerId = :CustomerId AND CustomerManagerId = :CustomerManagerId  FOR UPDATE OF CustomerManager NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000116,1, GxCacheFrequency.OFF ,true,false )
            ,new CursorDef("T000117", "SELECT CustomerId, CustomerManagerId, CustomerManagerGAMGUID, CustomerManagerInitials, CustomerManagerGivenName, CustomerManagerLastName, CustomerManagerEmail, CustomerManagerPhone, CustomerManagerGender FROM CustomerManager WHERE CustomerId = :CustomerId AND CustomerManagerId = :CustomerManagerId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000117,1, GxCacheFrequency.OFF ,true,false )
            ,new CursorDef("T000118", "SELECT CustomerId, CustomerKvkNumber, CustomerName, CustomerPostalAddress, CustomerEmail, CustomerVisitingAddress, CustomerPhone, CustomerVatNumber, CustomerLastLine, CustomerLastLineLocation, CustomerTypeId FROM Customer WHERE CustomerId = :CustomerId  FOR UPDATE OF Customer NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000118,1, GxCacheFrequency.OFF ,true,false )
@@ -13978,10 +14058,10 @@ namespace GeneXus.Programs {
            ,new CursorDef("T000139", "SAVEPOINT gxupdate;UPDATE CustomerManager SET CustomerManagerGAMGUID=:CustomerManagerGAMGUID, CustomerManagerInitials=:CustomerManagerInitials, CustomerManagerGivenName=:CustomerManagerGivenName, CustomerManagerLastName=:CustomerManagerLastName, CustomerManagerEmail=:CustomerManagerEmail, CustomerManagerPhone=:CustomerManagerPhone, CustomerManagerGender=:CustomerManagerGender  WHERE CustomerId = :CustomerId AND CustomerManagerId = :CustomerManagerId;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000139)
            ,new CursorDef("T000140", "SAVEPOINT gxupdate;DELETE FROM CustomerManager  WHERE CustomerId = :CustomerId AND CustomerManagerId = :CustomerManagerId;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000140)
            ,new CursorDef("T000141", "SELECT CustomerId, CustomerManagerId FROM CustomerManager WHERE CustomerId = :CustomerId ORDER BY CustomerId, CustomerManagerId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000141,3, GxCacheFrequency.OFF ,true,false )
-           ,new CursorDef("T000142", "SELECT CustomerId, CustomerLocationId, CustomerLocationVisitingAddres, CustomerLocationPostalAddress, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationLastLine FROM CustomerLocation WHERE CustomerId = :CustomerId and CustomerLocationId = :CustomerLocationId ORDER BY CustomerId, CustomerLocationId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000142,6, GxCacheFrequency.OFF ,true,false )
+           ,new CursorDef("T000142", "SELECT CustomerId, CustomerLocationId, CustomerLocationVisitingAddres, CustomerLocationPostalAddress, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationLastLine, CustomerLocationDescription, CustomerLocationName FROM CustomerLocation WHERE CustomerId = :CustomerId and CustomerLocationId = :CustomerLocationId ORDER BY CustomerId, CustomerLocationId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000142,6, GxCacheFrequency.OFF ,true,false )
            ,new CursorDef("T000143", "SELECT CustomerId, CustomerLocationId FROM CustomerLocation WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000143,1, GxCacheFrequency.OFF ,true,false )
-           ,new CursorDef("T000144", "SAVEPOINT gxupdate;INSERT INTO CustomerLocation(CustomerId, CustomerLocationId, CustomerLocationVisitingAddres, CustomerLocationPostalAddress, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationLastLine) VALUES(:CustomerId, :CustomerLocationId, :CustomerLocationVisitingAddres, :CustomerLocationPostalAddress, :CustomerLocationEmail, :CustomerLocationPhone, :CustomerLocationLastLine);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000144)
-           ,new CursorDef("T000145", "SAVEPOINT gxupdate;UPDATE CustomerLocation SET CustomerLocationVisitingAddres=:CustomerLocationVisitingAddres, CustomerLocationPostalAddress=:CustomerLocationPostalAddress, CustomerLocationEmail=:CustomerLocationEmail, CustomerLocationPhone=:CustomerLocationPhone, CustomerLocationLastLine=:CustomerLocationLastLine  WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000145)
+           ,new CursorDef("T000144", "SAVEPOINT gxupdate;INSERT INTO CustomerLocation(CustomerId, CustomerLocationId, CustomerLocationVisitingAddres, CustomerLocationPostalAddress, CustomerLocationEmail, CustomerLocationPhone, CustomerLocationLastLine, CustomerLocationDescription, CustomerLocationName) VALUES(:CustomerId, :CustomerLocationId, :CustomerLocationVisitingAddres, :CustomerLocationPostalAddress, :CustomerLocationEmail, :CustomerLocationPhone, :CustomerLocationLastLine, :CustomerLocationDescription, :CustomerLocationName);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000144)
+           ,new CursorDef("T000145", "SAVEPOINT gxupdate;UPDATE CustomerLocation SET CustomerLocationVisitingAddres=:CustomerLocationVisitingAddres, CustomerLocationPostalAddress=:CustomerLocationPostalAddress, CustomerLocationEmail=:CustomerLocationEmail, CustomerLocationPhone=:CustomerLocationPhone, CustomerLocationLastLine=:CustomerLocationLastLine, CustomerLocationDescription=:CustomerLocationDescription, CustomerLocationName=:CustomerLocationName  WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000145)
            ,new CursorDef("T000146", "SAVEPOINT gxupdate;DELETE FROM CustomerLocation  WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000146)
            ,new CursorDef("T000147", "SELECT LocationEventId FROM LocationEvent WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000147,1, GxCacheFrequency.OFF ,true,true )
            ,new CursorDef("T000148", "SELECT ResidentId FROM Resident WHERE CustomerId = :CustomerId AND CustomerLocationId = :CustomerLocationId ",true, GxErrorMask.GX_NOMASK, false, this,prmT000148,1, GxCacheFrequency.OFF ,true,true )
@@ -14126,6 +14206,8 @@ namespace GeneXus.Programs {
               ((string[]) buf[4])[0] = rslt.getVarchar(5);
               ((string[]) buf[5])[0] = rslt.getString(6, 20);
               ((short[]) buf[6])[0] = rslt.getShort(7);
+              ((string[]) buf[7])[0] = rslt.getVarchar(8);
+              ((string[]) buf[8])[0] = rslt.getVarchar(9);
               return;
            case 13 :
               ((short[]) buf[0])[0] = rslt.getShort(1);
@@ -14135,6 +14217,8 @@ namespace GeneXus.Programs {
               ((string[]) buf[4])[0] = rslt.getVarchar(5);
               ((string[]) buf[5])[0] = rslt.getString(6, 20);
               ((short[]) buf[6])[0] = rslt.getShort(7);
+              ((string[]) buf[7])[0] = rslt.getVarchar(8);
+              ((string[]) buf[8])[0] = rslt.getVarchar(9);
               return;
            case 14 :
               ((short[]) buf[0])[0] = rslt.getShort(1);
@@ -14293,6 +14377,8 @@ namespace GeneXus.Programs {
               ((string[]) buf[4])[0] = rslt.getVarchar(5);
               ((string[]) buf[5])[0] = rslt.getString(6, 20);
               ((short[]) buf[6])[0] = rslt.getShort(7);
+              ((string[]) buf[7])[0] = rslt.getVarchar(8);
+              ((string[]) buf[8])[0] = rslt.getVarchar(9);
               return;
            case 41 :
               ((short[]) buf[0])[0] = rslt.getShort(1);

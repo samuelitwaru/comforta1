@@ -159,16 +159,16 @@ namespace GeneXus.Programs {
          AV28TFCustomerKvkNumber_Sel = GetPar( "TFCustomerKvkNumber_Sel");
          AV29TFCustomerName = GetPar( "TFCustomerName");
          AV30TFCustomerName_Sel = GetPar( "TFCustomerName_Sel");
-         AV31TFCustomerPostalAddress = GetPar( "TFCustomerPostalAddress");
-         AV32TFCustomerPostalAddress_Sel = GetPar( "TFCustomerPostalAddress_Sel");
          AV33TFCustomerEmail = GetPar( "TFCustomerEmail");
          AV34TFCustomerEmail_Sel = GetPar( "TFCustomerEmail_Sel");
-         AV35TFCustomerVisitingAddress = GetPar( "TFCustomerVisitingAddress");
-         AV36TFCustomerVisitingAddress_Sel = GetPar( "TFCustomerVisitingAddress_Sel");
          AV37TFCustomerPhone = GetPar( "TFCustomerPhone");
          AV38TFCustomerPhone_Sel = GetPar( "TFCustomerPhone_Sel");
          AV39TFCustomerVatNumber = GetPar( "TFCustomerVatNumber");
          AV40TFCustomerVatNumber_Sel = GetPar( "TFCustomerVatNumber_Sel");
+         AV35TFCustomerVisitingAddress = GetPar( "TFCustomerVisitingAddress");
+         AV36TFCustomerVisitingAddress_Sel = GetPar( "TFCustomerVisitingAddress_Sel");
+         AV31TFCustomerPostalAddress = GetPar( "TFCustomerPostalAddress");
+         AV32TFCustomerPostalAddress_Sel = GetPar( "TFCustomerPostalAddress_Sel");
          AV43TFCustomerTypeName = GetPar( "TFCustomerTypeName");
          AV44TFCustomerTypeName_Sel = GetPar( "TFCustomerTypeName_Sel");
          AV13OrderedBy = (short)(Math.Round(NumberUtil.Val( GetPar( "OrderedBy"), "."), 18, MidpointRounding.ToEven));
@@ -179,7 +179,7 @@ namespace GeneXus.Programs {
             GxWebError = 1;
             return  ;
          }
-         gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
+         gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
          AddString( context.getJSONResponse( )) ;
          /* End function gxgrGrid_refresh_invoke */
       }
@@ -397,16 +397,16 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMERKVKNUMBER_SEL", AV28TFCustomerKvkNumber_Sel);
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMERNAME", AV29TFCustomerName);
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMERNAME_SEL", AV30TFCustomerName_Sel);
-         GxWebStd.gx_hidden_field( context, "vTFCUSTOMERPOSTALADDRESS", AV31TFCustomerPostalAddress);
-         GxWebStd.gx_hidden_field( context, "vTFCUSTOMERPOSTALADDRESS_SEL", AV32TFCustomerPostalAddress_Sel);
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMEREMAIL", AV33TFCustomerEmail);
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMEREMAIL_SEL", AV34TFCustomerEmail_Sel);
-         GxWebStd.gx_hidden_field( context, "vTFCUSTOMERVISITINGADDRESS", AV35TFCustomerVisitingAddress);
-         GxWebStd.gx_hidden_field( context, "vTFCUSTOMERVISITINGADDRESS_SEL", AV36TFCustomerVisitingAddress_Sel);
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMERPHONE", StringUtil.RTrim( AV37TFCustomerPhone));
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMERPHONE_SEL", StringUtil.RTrim( AV38TFCustomerPhone_Sel));
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMERVATNUMBER", AV39TFCustomerVatNumber);
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMERVATNUMBER_SEL", AV40TFCustomerVatNumber_Sel);
+         GxWebStd.gx_hidden_field( context, "vTFCUSTOMERVISITINGADDRESS", AV35TFCustomerVisitingAddress);
+         GxWebStd.gx_hidden_field( context, "vTFCUSTOMERVISITINGADDRESS_SEL", AV36TFCustomerVisitingAddress_Sel);
+         GxWebStd.gx_hidden_field( context, "vTFCUSTOMERPOSTALADDRESS", AV31TFCustomerPostalAddress);
+         GxWebStd.gx_hidden_field( context, "vTFCUSTOMERPOSTALADDRESS_SEL", AV32TFCustomerPostalAddress_Sel);
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMERTYPENAME", AV43TFCustomerTypeName);
          GxWebStd.gx_hidden_field( context, "vTFCUSTOMERTYPENAME_SEL", AV44TFCustomerTypeName_Sel);
          GxWebStd.gx_hidden_field( context, "vORDEREDBY", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV13OrderedBy), 4, 0, context.GetLanguageProperty( "decimal_point"), "")));
@@ -926,15 +926,15 @@ namespace GeneXus.Programs {
                               A1CustomerId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtCustomerId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                               A41CustomerKvkNumber = cgiGet( edtCustomerKvkNumber_Internalname);
                               A3CustomerName = cgiGet( edtCustomerName_Internalname);
-                              A4CustomerPostalAddress = cgiGet( edtCustomerPostalAddress_Internalname);
-                              n4CustomerPostalAddress = false;
                               A5CustomerEmail = cgiGet( edtCustomerEmail_Internalname);
                               n5CustomerEmail = false;
-                              A6CustomerVisitingAddress = cgiGet( edtCustomerVisitingAddress_Internalname);
-                              n6CustomerVisitingAddress = false;
                               A7CustomerPhone = cgiGet( edtCustomerPhone_Internalname);
                               n7CustomerPhone = false;
                               A14CustomerVatNumber = cgiGet( edtCustomerVatNumber_Internalname);
+                              A6CustomerVisitingAddress = cgiGet( edtCustomerVisitingAddress_Internalname);
+                              n6CustomerVisitingAddress = false;
+                              A4CustomerPostalAddress = cgiGet( edtCustomerPostalAddress_Internalname);
+                              n4CustomerPostalAddress = false;
                               A78CustomerTypeId = (short)(Math.Round(context.localUtil.CToN( cgiGet( edtCustomerTypeId_Internalname), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
                               n78CustomerTypeId = false;
                               A79CustomerTypeName = cgiGet( edtCustomerTypeName_Internalname);
@@ -1080,16 +1080,16 @@ namespace GeneXus.Programs {
                                        string AV28TFCustomerKvkNumber_Sel ,
                                        string AV29TFCustomerName ,
                                        string AV30TFCustomerName_Sel ,
-                                       string AV31TFCustomerPostalAddress ,
-                                       string AV32TFCustomerPostalAddress_Sel ,
                                        string AV33TFCustomerEmail ,
                                        string AV34TFCustomerEmail_Sel ,
-                                       string AV35TFCustomerVisitingAddress ,
-                                       string AV36TFCustomerVisitingAddress_Sel ,
                                        string AV37TFCustomerPhone ,
                                        string AV38TFCustomerPhone_Sel ,
                                        string AV39TFCustomerVatNumber ,
                                        string AV40TFCustomerVatNumber_Sel ,
+                                       string AV35TFCustomerVisitingAddress ,
+                                       string AV36TFCustomerVisitingAddress_Sel ,
+                                       string AV31TFCustomerPostalAddress ,
+                                       string AV32TFCustomerPostalAddress_Sel ,
                                        string AV43TFCustomerTypeName ,
                                        string AV44TFCustomerTypeName_Sel ,
                                        short AV13OrderedBy ,
@@ -1180,25 +1180,25 @@ namespace GeneXus.Programs {
                                                  AV62Customerwwds_2_tfcustomerkvknumber ,
                                                  AV65Customerwwds_5_tfcustomername_sel ,
                                                  AV64Customerwwds_4_tfcustomername ,
-                                                 AV67Customerwwds_7_tfcustomerpostaladdress_sel ,
-                                                 AV66Customerwwds_6_tfcustomerpostaladdress ,
-                                                 AV69Customerwwds_9_tfcustomeremail_sel ,
-                                                 AV68Customerwwds_8_tfcustomeremail ,
-                                                 AV71Customerwwds_11_tfcustomervisitingaddress_sel ,
-                                                 AV70Customerwwds_10_tfcustomervisitingaddress ,
-                                                 AV73Customerwwds_13_tfcustomerphone_sel ,
-                                                 AV72Customerwwds_12_tfcustomerphone ,
-                                                 AV75Customerwwds_15_tfcustomervatnumber_sel ,
-                                                 AV74Customerwwds_14_tfcustomervatnumber ,
+                                                 AV67Customerwwds_7_tfcustomeremail_sel ,
+                                                 AV66Customerwwds_6_tfcustomeremail ,
+                                                 AV69Customerwwds_9_tfcustomerphone_sel ,
+                                                 AV68Customerwwds_8_tfcustomerphone ,
+                                                 AV71Customerwwds_11_tfcustomervatnumber_sel ,
+                                                 AV70Customerwwds_10_tfcustomervatnumber ,
+                                                 AV73Customerwwds_13_tfcustomervisitingaddress_sel ,
+                                                 AV72Customerwwds_12_tfcustomervisitingaddress ,
+                                                 AV75Customerwwds_15_tfcustomerpostaladdress_sel ,
+                                                 AV74Customerwwds_14_tfcustomerpostaladdress ,
                                                  AV77Customerwwds_17_tfcustomertypename_sel ,
                                                  AV76Customerwwds_16_tfcustomertypename ,
                                                  A41CustomerKvkNumber ,
                                                  A3CustomerName ,
-                                                 A4CustomerPostalAddress ,
                                                  A5CustomerEmail ,
-                                                 A6CustomerVisitingAddress ,
                                                  A7CustomerPhone ,
                                                  A14CustomerVatNumber ,
+                                                 A6CustomerVisitingAddress ,
+                                                 A4CustomerPostalAddress ,
                                                  A79CustomerTypeName ,
                                                  AV13OrderedBy ,
                                                  AV14OrderedDsc } ,
@@ -1216,14 +1216,14 @@ namespace GeneXus.Programs {
             lV61Customerwwds_1_filterfulltext = StringUtil.Concat( StringUtil.RTrim( AV61Customerwwds_1_filterfulltext), "%", "");
             lV62Customerwwds_2_tfcustomerkvknumber = StringUtil.Concat( StringUtil.RTrim( AV62Customerwwds_2_tfcustomerkvknumber), "%", "");
             lV64Customerwwds_4_tfcustomername = StringUtil.Concat( StringUtil.RTrim( AV64Customerwwds_4_tfcustomername), "%", "");
-            lV66Customerwwds_6_tfcustomerpostaladdress = StringUtil.Concat( StringUtil.RTrim( AV66Customerwwds_6_tfcustomerpostaladdress), "%", "");
-            lV68Customerwwds_8_tfcustomeremail = StringUtil.Concat( StringUtil.RTrim( AV68Customerwwds_8_tfcustomeremail), "%", "");
-            lV70Customerwwds_10_tfcustomervisitingaddress = StringUtil.Concat( StringUtil.RTrim( AV70Customerwwds_10_tfcustomervisitingaddress), "%", "");
-            lV72Customerwwds_12_tfcustomerphone = StringUtil.PadR( StringUtil.RTrim( AV72Customerwwds_12_tfcustomerphone), 20, "%");
-            lV74Customerwwds_14_tfcustomervatnumber = StringUtil.Concat( StringUtil.RTrim( AV74Customerwwds_14_tfcustomervatnumber), "%", "");
+            lV66Customerwwds_6_tfcustomeremail = StringUtil.Concat( StringUtil.RTrim( AV66Customerwwds_6_tfcustomeremail), "%", "");
+            lV68Customerwwds_8_tfcustomerphone = StringUtil.PadR( StringUtil.RTrim( AV68Customerwwds_8_tfcustomerphone), 20, "%");
+            lV70Customerwwds_10_tfcustomervatnumber = StringUtil.Concat( StringUtil.RTrim( AV70Customerwwds_10_tfcustomervatnumber), "%", "");
+            lV72Customerwwds_12_tfcustomervisitingaddress = StringUtil.Concat( StringUtil.RTrim( AV72Customerwwds_12_tfcustomervisitingaddress), "%", "");
+            lV74Customerwwds_14_tfcustomerpostaladdress = StringUtil.Concat( StringUtil.RTrim( AV74Customerwwds_14_tfcustomerpostaladdress), "%", "");
             lV76Customerwwds_16_tfcustomertypename = StringUtil.Concat( StringUtil.RTrim( AV76Customerwwds_16_tfcustomertypename), "%", "");
             /* Using cursor H001J2 */
-            pr_default.execute(0, new Object[] {lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV62Customerwwds_2_tfcustomerkvknumber, AV63Customerwwds_3_tfcustomerkvknumber_sel, lV64Customerwwds_4_tfcustomername, AV65Customerwwds_5_tfcustomername_sel, lV66Customerwwds_6_tfcustomerpostaladdress, AV67Customerwwds_7_tfcustomerpostaladdress_sel, lV68Customerwwds_8_tfcustomeremail, AV69Customerwwds_9_tfcustomeremail_sel, lV70Customerwwds_10_tfcustomervisitingaddress, AV71Customerwwds_11_tfcustomervisitingaddress_sel, lV72Customerwwds_12_tfcustomerphone, AV73Customerwwds_13_tfcustomerphone_sel, lV74Customerwwds_14_tfcustomervatnumber, AV75Customerwwds_15_tfcustomervatnumber_sel, lV76Customerwwds_16_tfcustomertypename, AV77Customerwwds_17_tfcustomertypename_sel, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
+            pr_default.execute(0, new Object[] {lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV62Customerwwds_2_tfcustomerkvknumber, AV63Customerwwds_3_tfcustomerkvknumber_sel, lV64Customerwwds_4_tfcustomername, AV65Customerwwds_5_tfcustomername_sel, lV66Customerwwds_6_tfcustomeremail, AV67Customerwwds_7_tfcustomeremail_sel, lV68Customerwwds_8_tfcustomerphone, AV69Customerwwds_9_tfcustomerphone_sel, lV70Customerwwds_10_tfcustomervatnumber, AV71Customerwwds_11_tfcustomervatnumber_sel, lV72Customerwwds_12_tfcustomervisitingaddress, AV73Customerwwds_13_tfcustomervisitingaddress_sel, lV74Customerwwds_14_tfcustomerpostaladdress, AV75Customerwwds_15_tfcustomerpostaladdress_sel, lV76Customerwwds_16_tfcustomertypename, AV77Customerwwds_17_tfcustomertypename_sel, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_37_idx = 1;
             sGXsfl_37_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_37_idx), 4, 0), 4, "0");
             SubsflControlProps_372( ) ;
@@ -1233,15 +1233,15 @@ namespace GeneXus.Programs {
                A79CustomerTypeName = H001J2_A79CustomerTypeName[0];
                A78CustomerTypeId = H001J2_A78CustomerTypeId[0];
                n78CustomerTypeId = H001J2_n78CustomerTypeId[0];
+               A4CustomerPostalAddress = H001J2_A4CustomerPostalAddress[0];
+               n4CustomerPostalAddress = H001J2_n4CustomerPostalAddress[0];
+               A6CustomerVisitingAddress = H001J2_A6CustomerVisitingAddress[0];
+               n6CustomerVisitingAddress = H001J2_n6CustomerVisitingAddress[0];
                A14CustomerVatNumber = H001J2_A14CustomerVatNumber[0];
                A7CustomerPhone = H001J2_A7CustomerPhone[0];
                n7CustomerPhone = H001J2_n7CustomerPhone[0];
-               A6CustomerVisitingAddress = H001J2_A6CustomerVisitingAddress[0];
-               n6CustomerVisitingAddress = H001J2_n6CustomerVisitingAddress[0];
                A5CustomerEmail = H001J2_A5CustomerEmail[0];
                n5CustomerEmail = H001J2_n5CustomerEmail[0];
-               A4CustomerPostalAddress = H001J2_A4CustomerPostalAddress[0];
-               n4CustomerPostalAddress = H001J2_n4CustomerPostalAddress[0];
                A3CustomerName = H001J2_A3CustomerName[0];
                A41CustomerKvkNumber = H001J2_A41CustomerKvkNumber[0];
                A1CustomerId = H001J2_A1CustomerId[0];
@@ -1281,16 +1281,16 @@ namespace GeneXus.Programs {
          AV63Customerwwds_3_tfcustomerkvknumber_sel = AV28TFCustomerKvkNumber_Sel;
          AV64Customerwwds_4_tfcustomername = AV29TFCustomerName;
          AV65Customerwwds_5_tfcustomername_sel = AV30TFCustomerName_Sel;
-         AV66Customerwwds_6_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
-         AV67Customerwwds_7_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
-         AV68Customerwwds_8_tfcustomeremail = AV33TFCustomerEmail;
-         AV69Customerwwds_9_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
-         AV70Customerwwds_10_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
-         AV71Customerwwds_11_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
-         AV72Customerwwds_12_tfcustomerphone = AV37TFCustomerPhone;
-         AV73Customerwwds_13_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
-         AV74Customerwwds_14_tfcustomervatnumber = AV39TFCustomerVatNumber;
-         AV75Customerwwds_15_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV66Customerwwds_6_tfcustomeremail = AV33TFCustomerEmail;
+         AV67Customerwwds_7_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
+         AV68Customerwwds_8_tfcustomerphone = AV37TFCustomerPhone;
+         AV69Customerwwds_9_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
+         AV70Customerwwds_10_tfcustomervatnumber = AV39TFCustomerVatNumber;
+         AV71Customerwwds_11_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV72Customerwwds_12_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
+         AV73Customerwwds_13_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
+         AV74Customerwwds_14_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
+         AV75Customerwwds_15_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
          AV76Customerwwds_16_tfcustomertypename = AV43TFCustomerTypeName;
          AV77Customerwwds_17_tfcustomertypename_sel = AV44TFCustomerTypeName_Sel;
          pr_default.dynParam(1, new Object[]{ new Object[]{
@@ -1299,25 +1299,25 @@ namespace GeneXus.Programs {
                                               AV62Customerwwds_2_tfcustomerkvknumber ,
                                               AV65Customerwwds_5_tfcustomername_sel ,
                                               AV64Customerwwds_4_tfcustomername ,
-                                              AV67Customerwwds_7_tfcustomerpostaladdress_sel ,
-                                              AV66Customerwwds_6_tfcustomerpostaladdress ,
-                                              AV69Customerwwds_9_tfcustomeremail_sel ,
-                                              AV68Customerwwds_8_tfcustomeremail ,
-                                              AV71Customerwwds_11_tfcustomervisitingaddress_sel ,
-                                              AV70Customerwwds_10_tfcustomervisitingaddress ,
-                                              AV73Customerwwds_13_tfcustomerphone_sel ,
-                                              AV72Customerwwds_12_tfcustomerphone ,
-                                              AV75Customerwwds_15_tfcustomervatnumber_sel ,
-                                              AV74Customerwwds_14_tfcustomervatnumber ,
+                                              AV67Customerwwds_7_tfcustomeremail_sel ,
+                                              AV66Customerwwds_6_tfcustomeremail ,
+                                              AV69Customerwwds_9_tfcustomerphone_sel ,
+                                              AV68Customerwwds_8_tfcustomerphone ,
+                                              AV71Customerwwds_11_tfcustomervatnumber_sel ,
+                                              AV70Customerwwds_10_tfcustomervatnumber ,
+                                              AV73Customerwwds_13_tfcustomervisitingaddress_sel ,
+                                              AV72Customerwwds_12_tfcustomervisitingaddress ,
+                                              AV75Customerwwds_15_tfcustomerpostaladdress_sel ,
+                                              AV74Customerwwds_14_tfcustomerpostaladdress ,
                                               AV77Customerwwds_17_tfcustomertypename_sel ,
                                               AV76Customerwwds_16_tfcustomertypename ,
                                               A41CustomerKvkNumber ,
                                               A3CustomerName ,
-                                              A4CustomerPostalAddress ,
                                               A5CustomerEmail ,
-                                              A6CustomerVisitingAddress ,
                                               A7CustomerPhone ,
                                               A14CustomerVatNumber ,
+                                              A6CustomerVisitingAddress ,
+                                              A4CustomerPostalAddress ,
                                               A79CustomerTypeName ,
                                               AV13OrderedBy ,
                                               AV14OrderedDsc } ,
@@ -1335,14 +1335,14 @@ namespace GeneXus.Programs {
          lV61Customerwwds_1_filterfulltext = StringUtil.Concat( StringUtil.RTrim( AV61Customerwwds_1_filterfulltext), "%", "");
          lV62Customerwwds_2_tfcustomerkvknumber = StringUtil.Concat( StringUtil.RTrim( AV62Customerwwds_2_tfcustomerkvknumber), "%", "");
          lV64Customerwwds_4_tfcustomername = StringUtil.Concat( StringUtil.RTrim( AV64Customerwwds_4_tfcustomername), "%", "");
-         lV66Customerwwds_6_tfcustomerpostaladdress = StringUtil.Concat( StringUtil.RTrim( AV66Customerwwds_6_tfcustomerpostaladdress), "%", "");
-         lV68Customerwwds_8_tfcustomeremail = StringUtil.Concat( StringUtil.RTrim( AV68Customerwwds_8_tfcustomeremail), "%", "");
-         lV70Customerwwds_10_tfcustomervisitingaddress = StringUtil.Concat( StringUtil.RTrim( AV70Customerwwds_10_tfcustomervisitingaddress), "%", "");
-         lV72Customerwwds_12_tfcustomerphone = StringUtil.PadR( StringUtil.RTrim( AV72Customerwwds_12_tfcustomerphone), 20, "%");
-         lV74Customerwwds_14_tfcustomervatnumber = StringUtil.Concat( StringUtil.RTrim( AV74Customerwwds_14_tfcustomervatnumber), "%", "");
+         lV66Customerwwds_6_tfcustomeremail = StringUtil.Concat( StringUtil.RTrim( AV66Customerwwds_6_tfcustomeremail), "%", "");
+         lV68Customerwwds_8_tfcustomerphone = StringUtil.PadR( StringUtil.RTrim( AV68Customerwwds_8_tfcustomerphone), 20, "%");
+         lV70Customerwwds_10_tfcustomervatnumber = StringUtil.Concat( StringUtil.RTrim( AV70Customerwwds_10_tfcustomervatnumber), "%", "");
+         lV72Customerwwds_12_tfcustomervisitingaddress = StringUtil.Concat( StringUtil.RTrim( AV72Customerwwds_12_tfcustomervisitingaddress), "%", "");
+         lV74Customerwwds_14_tfcustomerpostaladdress = StringUtil.Concat( StringUtil.RTrim( AV74Customerwwds_14_tfcustomerpostaladdress), "%", "");
          lV76Customerwwds_16_tfcustomertypename = StringUtil.Concat( StringUtil.RTrim( AV76Customerwwds_16_tfcustomertypename), "%", "");
          /* Using cursor H001J3 */
-         pr_default.execute(1, new Object[] {lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV62Customerwwds_2_tfcustomerkvknumber, AV63Customerwwds_3_tfcustomerkvknumber_sel, lV64Customerwwds_4_tfcustomername, AV65Customerwwds_5_tfcustomername_sel, lV66Customerwwds_6_tfcustomerpostaladdress, AV67Customerwwds_7_tfcustomerpostaladdress_sel, lV68Customerwwds_8_tfcustomeremail, AV69Customerwwds_9_tfcustomeremail_sel, lV70Customerwwds_10_tfcustomervisitingaddress, AV71Customerwwds_11_tfcustomervisitingaddress_sel, lV72Customerwwds_12_tfcustomerphone, AV73Customerwwds_13_tfcustomerphone_sel, lV74Customerwwds_14_tfcustomervatnumber, AV75Customerwwds_15_tfcustomervatnumber_sel, lV76Customerwwds_16_tfcustomertypename, AV77Customerwwds_17_tfcustomertypename_sel});
+         pr_default.execute(1, new Object[] {lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV61Customerwwds_1_filterfulltext, lV62Customerwwds_2_tfcustomerkvknumber, AV63Customerwwds_3_tfcustomerkvknumber_sel, lV64Customerwwds_4_tfcustomername, AV65Customerwwds_5_tfcustomername_sel, lV66Customerwwds_6_tfcustomeremail, AV67Customerwwds_7_tfcustomeremail_sel, lV68Customerwwds_8_tfcustomerphone, AV69Customerwwds_9_tfcustomerphone_sel, lV70Customerwwds_10_tfcustomervatnumber, AV71Customerwwds_11_tfcustomervatnumber_sel, lV72Customerwwds_12_tfcustomervisitingaddress, AV73Customerwwds_13_tfcustomervisitingaddress_sel, lV74Customerwwds_14_tfcustomerpostaladdress, AV75Customerwwds_15_tfcustomerpostaladdress_sel, lV76Customerwwds_16_tfcustomertypename, AV77Customerwwds_17_tfcustomertypename_sel});
          GRID_nRecordCount = H001J3_AGRID_nRecordCount[0];
          pr_default.close(1);
          return (int)(GRID_nRecordCount) ;
@@ -1372,23 +1372,23 @@ namespace GeneXus.Programs {
          AV63Customerwwds_3_tfcustomerkvknumber_sel = AV28TFCustomerKvkNumber_Sel;
          AV64Customerwwds_4_tfcustomername = AV29TFCustomerName;
          AV65Customerwwds_5_tfcustomername_sel = AV30TFCustomerName_Sel;
-         AV66Customerwwds_6_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
-         AV67Customerwwds_7_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
-         AV68Customerwwds_8_tfcustomeremail = AV33TFCustomerEmail;
-         AV69Customerwwds_9_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
-         AV70Customerwwds_10_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
-         AV71Customerwwds_11_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
-         AV72Customerwwds_12_tfcustomerphone = AV37TFCustomerPhone;
-         AV73Customerwwds_13_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
-         AV74Customerwwds_14_tfcustomervatnumber = AV39TFCustomerVatNumber;
-         AV75Customerwwds_15_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV66Customerwwds_6_tfcustomeremail = AV33TFCustomerEmail;
+         AV67Customerwwds_7_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
+         AV68Customerwwds_8_tfcustomerphone = AV37TFCustomerPhone;
+         AV69Customerwwds_9_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
+         AV70Customerwwds_10_tfcustomervatnumber = AV39TFCustomerVatNumber;
+         AV71Customerwwds_11_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV72Customerwwds_12_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
+         AV73Customerwwds_13_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
+         AV74Customerwwds_14_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
+         AV75Customerwwds_15_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
          AV76Customerwwds_16_tfcustomertypename = AV43TFCustomerTypeName;
          AV77Customerwwds_17_tfcustomertypename_sel = AV44TFCustomerTypeName_Sel;
          GRID_nFirstRecordOnPage = 0;
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
+            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
          }
          send_integrity_footer_hashes( ) ;
          return 0 ;
@@ -1401,16 +1401,16 @@ namespace GeneXus.Programs {
          AV63Customerwwds_3_tfcustomerkvknumber_sel = AV28TFCustomerKvkNumber_Sel;
          AV64Customerwwds_4_tfcustomername = AV29TFCustomerName;
          AV65Customerwwds_5_tfcustomername_sel = AV30TFCustomerName_Sel;
-         AV66Customerwwds_6_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
-         AV67Customerwwds_7_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
-         AV68Customerwwds_8_tfcustomeremail = AV33TFCustomerEmail;
-         AV69Customerwwds_9_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
-         AV70Customerwwds_10_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
-         AV71Customerwwds_11_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
-         AV72Customerwwds_12_tfcustomerphone = AV37TFCustomerPhone;
-         AV73Customerwwds_13_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
-         AV74Customerwwds_14_tfcustomervatnumber = AV39TFCustomerVatNumber;
-         AV75Customerwwds_15_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV66Customerwwds_6_tfcustomeremail = AV33TFCustomerEmail;
+         AV67Customerwwds_7_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
+         AV68Customerwwds_8_tfcustomerphone = AV37TFCustomerPhone;
+         AV69Customerwwds_9_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
+         AV70Customerwwds_10_tfcustomervatnumber = AV39TFCustomerVatNumber;
+         AV71Customerwwds_11_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV72Customerwwds_12_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
+         AV73Customerwwds_13_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
+         AV74Customerwwds_14_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
+         AV75Customerwwds_15_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
          AV76Customerwwds_16_tfcustomertypename = AV43TFCustomerTypeName;
          AV77Customerwwds_17_tfcustomertypename_sel = AV44TFCustomerTypeName_Sel;
          GRID_nRecordCount = subGrid_fnc_Recordcount( );
@@ -1426,7 +1426,7 @@ namespace GeneXus.Programs {
          GridContainer.AddObjectProperty("GRID_nFirstRecordOnPage", GRID_nFirstRecordOnPage);
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
+            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
          }
          send_integrity_footer_hashes( ) ;
          return (short)(((GRID_nEOF==0) ? 0 : 2)) ;
@@ -1439,16 +1439,16 @@ namespace GeneXus.Programs {
          AV63Customerwwds_3_tfcustomerkvknumber_sel = AV28TFCustomerKvkNumber_Sel;
          AV64Customerwwds_4_tfcustomername = AV29TFCustomerName;
          AV65Customerwwds_5_tfcustomername_sel = AV30TFCustomerName_Sel;
-         AV66Customerwwds_6_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
-         AV67Customerwwds_7_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
-         AV68Customerwwds_8_tfcustomeremail = AV33TFCustomerEmail;
-         AV69Customerwwds_9_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
-         AV70Customerwwds_10_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
-         AV71Customerwwds_11_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
-         AV72Customerwwds_12_tfcustomerphone = AV37TFCustomerPhone;
-         AV73Customerwwds_13_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
-         AV74Customerwwds_14_tfcustomervatnumber = AV39TFCustomerVatNumber;
-         AV75Customerwwds_15_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV66Customerwwds_6_tfcustomeremail = AV33TFCustomerEmail;
+         AV67Customerwwds_7_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
+         AV68Customerwwds_8_tfcustomerphone = AV37TFCustomerPhone;
+         AV69Customerwwds_9_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
+         AV70Customerwwds_10_tfcustomervatnumber = AV39TFCustomerVatNumber;
+         AV71Customerwwds_11_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV72Customerwwds_12_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
+         AV73Customerwwds_13_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
+         AV74Customerwwds_14_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
+         AV75Customerwwds_15_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
          AV76Customerwwds_16_tfcustomertypename = AV43TFCustomerTypeName;
          AV77Customerwwds_17_tfcustomertypename_sel = AV44TFCustomerTypeName_Sel;
          if ( GRID_nFirstRecordOnPage >= subGrid_fnc_Recordsperpage( ) )
@@ -1462,7 +1462,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
+            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
          }
          send_integrity_footer_hashes( ) ;
          return 0 ;
@@ -1475,16 +1475,16 @@ namespace GeneXus.Programs {
          AV63Customerwwds_3_tfcustomerkvknumber_sel = AV28TFCustomerKvkNumber_Sel;
          AV64Customerwwds_4_tfcustomername = AV29TFCustomerName;
          AV65Customerwwds_5_tfcustomername_sel = AV30TFCustomerName_Sel;
-         AV66Customerwwds_6_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
-         AV67Customerwwds_7_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
-         AV68Customerwwds_8_tfcustomeremail = AV33TFCustomerEmail;
-         AV69Customerwwds_9_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
-         AV70Customerwwds_10_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
-         AV71Customerwwds_11_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
-         AV72Customerwwds_12_tfcustomerphone = AV37TFCustomerPhone;
-         AV73Customerwwds_13_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
-         AV74Customerwwds_14_tfcustomervatnumber = AV39TFCustomerVatNumber;
-         AV75Customerwwds_15_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV66Customerwwds_6_tfcustomeremail = AV33TFCustomerEmail;
+         AV67Customerwwds_7_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
+         AV68Customerwwds_8_tfcustomerphone = AV37TFCustomerPhone;
+         AV69Customerwwds_9_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
+         AV70Customerwwds_10_tfcustomervatnumber = AV39TFCustomerVatNumber;
+         AV71Customerwwds_11_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV72Customerwwds_12_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
+         AV73Customerwwds_13_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
+         AV74Customerwwds_14_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
+         AV75Customerwwds_15_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
          AV76Customerwwds_16_tfcustomertypename = AV43TFCustomerTypeName;
          AV77Customerwwds_17_tfcustomertypename_sel = AV44TFCustomerTypeName_Sel;
          GRID_nRecordCount = subGrid_fnc_Recordcount( );
@@ -1506,7 +1506,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
+            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
          }
          send_integrity_footer_hashes( ) ;
          return 0 ;
@@ -1519,16 +1519,16 @@ namespace GeneXus.Programs {
          AV63Customerwwds_3_tfcustomerkvknumber_sel = AV28TFCustomerKvkNumber_Sel;
          AV64Customerwwds_4_tfcustomername = AV29TFCustomerName;
          AV65Customerwwds_5_tfcustomername_sel = AV30TFCustomerName_Sel;
-         AV66Customerwwds_6_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
-         AV67Customerwwds_7_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
-         AV68Customerwwds_8_tfcustomeremail = AV33TFCustomerEmail;
-         AV69Customerwwds_9_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
-         AV70Customerwwds_10_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
-         AV71Customerwwds_11_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
-         AV72Customerwwds_12_tfcustomerphone = AV37TFCustomerPhone;
-         AV73Customerwwds_13_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
-         AV74Customerwwds_14_tfcustomervatnumber = AV39TFCustomerVatNumber;
-         AV75Customerwwds_15_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV66Customerwwds_6_tfcustomeremail = AV33TFCustomerEmail;
+         AV67Customerwwds_7_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
+         AV68Customerwwds_8_tfcustomerphone = AV37TFCustomerPhone;
+         AV69Customerwwds_9_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
+         AV70Customerwwds_10_tfcustomervatnumber = AV39TFCustomerVatNumber;
+         AV71Customerwwds_11_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV72Customerwwds_12_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
+         AV73Customerwwds_13_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
+         AV74Customerwwds_14_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
+         AV75Customerwwds_15_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
          AV76Customerwwds_16_tfcustomertypename = AV43TFCustomerTypeName;
          AV77Customerwwds_17_tfcustomertypename_sel = AV44TFCustomerTypeName_Sel;
          if ( nPageNo > 0 )
@@ -1542,7 +1542,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
+            gxgrGrid_refresh( subGrid_Rows, AV16FilterFullText, AV24ManageFiltersExecutionStep, AV19ColumnsSelector, AV60Pgmname, AV27TFCustomerKvkNumber, AV28TFCustomerKvkNumber_Sel, AV29TFCustomerName, AV30TFCustomerName_Sel, AV33TFCustomerEmail, AV34TFCustomerEmail_Sel, AV37TFCustomerPhone, AV38TFCustomerPhone_Sel, AV39TFCustomerVatNumber, AV40TFCustomerVatNumber_Sel, AV35TFCustomerVisitingAddress, AV36TFCustomerVisitingAddress_Sel, AV31TFCustomerPostalAddress, AV32TFCustomerPostalAddress_Sel, AV43TFCustomerTypeName, AV44TFCustomerTypeName_Sel, AV13OrderedBy, AV14OrderedDsc) ;
          }
          send_integrity_footer_hashes( ) ;
          return (int)(0) ;
@@ -1561,16 +1561,16 @@ namespace GeneXus.Programs {
          AssignProp("", false, edtCustomerKvkNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerKvkNumber_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtCustomerName_Enabled = 0;
          AssignProp("", false, edtCustomerName_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerName_Enabled), 5, 0), !bGXsfl_37_Refreshing);
-         edtCustomerPostalAddress_Enabled = 0;
-         AssignProp("", false, edtCustomerPostalAddress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerPostalAddress_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtCustomerEmail_Enabled = 0;
          AssignProp("", false, edtCustomerEmail_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerEmail_Enabled), 5, 0), !bGXsfl_37_Refreshing);
-         edtCustomerVisitingAddress_Enabled = 0;
-         AssignProp("", false, edtCustomerVisitingAddress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerVisitingAddress_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtCustomerPhone_Enabled = 0;
          AssignProp("", false, edtCustomerPhone_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerPhone_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtCustomerVatNumber_Enabled = 0;
          AssignProp("", false, edtCustomerVatNumber_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerVatNumber_Enabled), 5, 0), !bGXsfl_37_Refreshing);
+         edtCustomerVisitingAddress_Enabled = 0;
+         AssignProp("", false, edtCustomerVisitingAddress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerVisitingAddress_Enabled), 5, 0), !bGXsfl_37_Refreshing);
+         edtCustomerPostalAddress_Enabled = 0;
+         AssignProp("", false, edtCustomerPostalAddress_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerPostalAddress_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtCustomerTypeId_Enabled = 0;
          AssignProp("", false, edtCustomerTypeId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtCustomerTypeId_Enabled), 5, 0), !bGXsfl_37_Refreshing);
          edtCustomerTypeName_Enabled = 0;
@@ -1808,16 +1808,16 @@ namespace GeneXus.Programs {
          AssignProp("", false, edtCustomerKvkNumber_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerKvkNumber_Visible), 5, 0), !bGXsfl_37_Refreshing);
          edtCustomerName_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(2)).gxTpr_Isvisible ? 1 : 0);
          AssignProp("", false, edtCustomerName_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerName_Visible), 5, 0), !bGXsfl_37_Refreshing);
-         edtCustomerPostalAddress_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(3)).gxTpr_Isvisible ? 1 : 0);
-         AssignProp("", false, edtCustomerPostalAddress_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerPostalAddress_Visible), 5, 0), !bGXsfl_37_Refreshing);
-         edtCustomerEmail_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(4)).gxTpr_Isvisible ? 1 : 0);
+         edtCustomerEmail_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(3)).gxTpr_Isvisible ? 1 : 0);
          AssignProp("", false, edtCustomerEmail_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerEmail_Visible), 5, 0), !bGXsfl_37_Refreshing);
-         edtCustomerVisitingAddress_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(5)).gxTpr_Isvisible ? 1 : 0);
-         AssignProp("", false, edtCustomerVisitingAddress_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerVisitingAddress_Visible), 5, 0), !bGXsfl_37_Refreshing);
-         edtCustomerPhone_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(6)).gxTpr_Isvisible ? 1 : 0);
+         edtCustomerPhone_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(4)).gxTpr_Isvisible ? 1 : 0);
          AssignProp("", false, edtCustomerPhone_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerPhone_Visible), 5, 0), !bGXsfl_37_Refreshing);
-         edtCustomerVatNumber_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(7)).gxTpr_Isvisible ? 1 : 0);
+         edtCustomerVatNumber_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(5)).gxTpr_Isvisible ? 1 : 0);
          AssignProp("", false, edtCustomerVatNumber_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerVatNumber_Visible), 5, 0), !bGXsfl_37_Refreshing);
+         edtCustomerVisitingAddress_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(6)).gxTpr_Isvisible ? 1 : 0);
+         AssignProp("", false, edtCustomerVisitingAddress_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerVisitingAddress_Visible), 5, 0), !bGXsfl_37_Refreshing);
+         edtCustomerPostalAddress_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(7)).gxTpr_Isvisible ? 1 : 0);
+         AssignProp("", false, edtCustomerPostalAddress_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerPostalAddress_Visible), 5, 0), !bGXsfl_37_Refreshing);
          edtCustomerTypeName_Visible = (((GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector_Column)AV19ColumnsSelector.gxTpr_Columns.Item(8)).gxTpr_Isvisible ? 1 : 0);
          AssignProp("", false, edtCustomerTypeName_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtCustomerTypeName_Visible), 5, 0), !bGXsfl_37_Refreshing);
          AV49GridCurrentPage = subGrid_fnc_Currentpage( );
@@ -1833,16 +1833,16 @@ namespace GeneXus.Programs {
          AV63Customerwwds_3_tfcustomerkvknumber_sel = AV28TFCustomerKvkNumber_Sel;
          AV64Customerwwds_4_tfcustomername = AV29TFCustomerName;
          AV65Customerwwds_5_tfcustomername_sel = AV30TFCustomerName_Sel;
-         AV66Customerwwds_6_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
-         AV67Customerwwds_7_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
-         AV68Customerwwds_8_tfcustomeremail = AV33TFCustomerEmail;
-         AV69Customerwwds_9_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
-         AV70Customerwwds_10_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
-         AV71Customerwwds_11_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
-         AV72Customerwwds_12_tfcustomerphone = AV37TFCustomerPhone;
-         AV73Customerwwds_13_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
-         AV74Customerwwds_14_tfcustomervatnumber = AV39TFCustomerVatNumber;
-         AV75Customerwwds_15_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV66Customerwwds_6_tfcustomeremail = AV33TFCustomerEmail;
+         AV67Customerwwds_7_tfcustomeremail_sel = AV34TFCustomerEmail_Sel;
+         AV68Customerwwds_8_tfcustomerphone = AV37TFCustomerPhone;
+         AV69Customerwwds_9_tfcustomerphone_sel = AV38TFCustomerPhone_Sel;
+         AV70Customerwwds_10_tfcustomervatnumber = AV39TFCustomerVatNumber;
+         AV71Customerwwds_11_tfcustomervatnumber_sel = AV40TFCustomerVatNumber_Sel;
+         AV72Customerwwds_12_tfcustomervisitingaddress = AV35TFCustomerVisitingAddress;
+         AV73Customerwwds_13_tfcustomervisitingaddress_sel = AV36TFCustomerVisitingAddress_Sel;
+         AV74Customerwwds_14_tfcustomerpostaladdress = AV31TFCustomerPostalAddress;
+         AV75Customerwwds_15_tfcustomerpostaladdress_sel = AV32TFCustomerPostalAddress_Sel;
          AV76Customerwwds_16_tfcustomertypename = AV43TFCustomerTypeName;
          AV77Customerwwds_17_tfcustomertypename_sel = AV44TFCustomerTypeName_Sel;
          /*  Sending Event outputs  */
@@ -1915,26 +1915,12 @@ namespace GeneXus.Programs {
                AV30TFCustomerName_Sel = Ddo_grid_Selectedvalue_get;
                AssignAttri("", false, "AV30TFCustomerName_Sel", AV30TFCustomerName_Sel);
             }
-            else if ( StringUtil.StrCmp(Ddo_grid_Selectedcolumn, "CustomerPostalAddress") == 0 )
-            {
-               AV31TFCustomerPostalAddress = Ddo_grid_Filteredtext_get;
-               AssignAttri("", false, "AV31TFCustomerPostalAddress", AV31TFCustomerPostalAddress);
-               AV32TFCustomerPostalAddress_Sel = Ddo_grid_Selectedvalue_get;
-               AssignAttri("", false, "AV32TFCustomerPostalAddress_Sel", AV32TFCustomerPostalAddress_Sel);
-            }
             else if ( StringUtil.StrCmp(Ddo_grid_Selectedcolumn, "CustomerEmail") == 0 )
             {
                AV33TFCustomerEmail = Ddo_grid_Filteredtext_get;
                AssignAttri("", false, "AV33TFCustomerEmail", AV33TFCustomerEmail);
                AV34TFCustomerEmail_Sel = Ddo_grid_Selectedvalue_get;
                AssignAttri("", false, "AV34TFCustomerEmail_Sel", AV34TFCustomerEmail_Sel);
-            }
-            else if ( StringUtil.StrCmp(Ddo_grid_Selectedcolumn, "CustomerVisitingAddress") == 0 )
-            {
-               AV35TFCustomerVisitingAddress = Ddo_grid_Filteredtext_get;
-               AssignAttri("", false, "AV35TFCustomerVisitingAddress", AV35TFCustomerVisitingAddress);
-               AV36TFCustomerVisitingAddress_Sel = Ddo_grid_Selectedvalue_get;
-               AssignAttri("", false, "AV36TFCustomerVisitingAddress_Sel", AV36TFCustomerVisitingAddress_Sel);
             }
             else if ( StringUtil.StrCmp(Ddo_grid_Selectedcolumn, "CustomerPhone") == 0 )
             {
@@ -1949,6 +1935,20 @@ namespace GeneXus.Programs {
                AssignAttri("", false, "AV39TFCustomerVatNumber", AV39TFCustomerVatNumber);
                AV40TFCustomerVatNumber_Sel = Ddo_grid_Selectedvalue_get;
                AssignAttri("", false, "AV40TFCustomerVatNumber_Sel", AV40TFCustomerVatNumber_Sel);
+            }
+            else if ( StringUtil.StrCmp(Ddo_grid_Selectedcolumn, "CustomerVisitingAddress") == 0 )
+            {
+               AV35TFCustomerVisitingAddress = Ddo_grid_Filteredtext_get;
+               AssignAttri("", false, "AV35TFCustomerVisitingAddress", AV35TFCustomerVisitingAddress);
+               AV36TFCustomerVisitingAddress_Sel = Ddo_grid_Selectedvalue_get;
+               AssignAttri("", false, "AV36TFCustomerVisitingAddress_Sel", AV36TFCustomerVisitingAddress_Sel);
+            }
+            else if ( StringUtil.StrCmp(Ddo_grid_Selectedcolumn, "CustomerPostalAddress") == 0 )
+            {
+               AV31TFCustomerPostalAddress = Ddo_grid_Filteredtext_get;
+               AssignAttri("", false, "AV31TFCustomerPostalAddress", AV31TFCustomerPostalAddress);
+               AV32TFCustomerPostalAddress_Sel = Ddo_grid_Selectedvalue_get;
+               AssignAttri("", false, "AV32TFCustomerPostalAddress_Sel", AV32TFCustomerPostalAddress_Sel);
             }
             else if ( StringUtil.StrCmp(Ddo_grid_Selectedcolumn, "CustomerTypeName") == 0 )
             {
@@ -2096,11 +2096,11 @@ namespace GeneXus.Programs {
          AV19ColumnsSelector = new GeneXus.Programs.wwpbaseobjects.SdtWWPColumnsSelector(context);
          new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "CustomerKvkNumber",  "",  "KVK Number",  true,  "") ;
          new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "CustomerName",  "",  "Name",  true,  "") ;
-         new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "CustomerPostalAddress",  "",  "Postal Address",  true,  "") ;
          new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "CustomerEmail",  "",  "Email",  true,  "") ;
-         new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "CustomerVisitingAddress",  "",  "Visiting Address",  true,  "") ;
          new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "CustomerPhone",  "",  "Phone",  true,  "") ;
          new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "CustomerVatNumber",  "",  "VAT",  true,  "") ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "CustomerVisitingAddress",  "",  "Visiting Address",  true,  "") ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "CustomerPostalAddress",  "",  "Postal Address",  true,  "") ;
          new GeneXus.Programs.wwpbaseobjects.wwp_columnsselector_add(context ).execute( ref  AV19ColumnsSelector,  "CustomerTypeName",  "",  "Type",  true,  "") ;
          GXt_char2 = AV18UserCustomValue;
          new GeneXus.Programs.wwpbaseobjects.loadcolumnsselectorstate(context ).execute(  "CustomerWWColumnsSelector", out  GXt_char2) ;
@@ -2135,18 +2135,10 @@ namespace GeneXus.Programs {
          AssignAttri("", false, "AV29TFCustomerName", AV29TFCustomerName);
          AV30TFCustomerName_Sel = "";
          AssignAttri("", false, "AV30TFCustomerName_Sel", AV30TFCustomerName_Sel);
-         AV31TFCustomerPostalAddress = "";
-         AssignAttri("", false, "AV31TFCustomerPostalAddress", AV31TFCustomerPostalAddress);
-         AV32TFCustomerPostalAddress_Sel = "";
-         AssignAttri("", false, "AV32TFCustomerPostalAddress_Sel", AV32TFCustomerPostalAddress_Sel);
          AV33TFCustomerEmail = "";
          AssignAttri("", false, "AV33TFCustomerEmail", AV33TFCustomerEmail);
          AV34TFCustomerEmail_Sel = "";
          AssignAttri("", false, "AV34TFCustomerEmail_Sel", AV34TFCustomerEmail_Sel);
-         AV35TFCustomerVisitingAddress = "";
-         AssignAttri("", false, "AV35TFCustomerVisitingAddress", AV35TFCustomerVisitingAddress);
-         AV36TFCustomerVisitingAddress_Sel = "";
-         AssignAttri("", false, "AV36TFCustomerVisitingAddress_Sel", AV36TFCustomerVisitingAddress_Sel);
          AV37TFCustomerPhone = "";
          AssignAttri("", false, "AV37TFCustomerPhone", AV37TFCustomerPhone);
          AV38TFCustomerPhone_Sel = "";
@@ -2155,6 +2147,14 @@ namespace GeneXus.Programs {
          AssignAttri("", false, "AV39TFCustomerVatNumber", AV39TFCustomerVatNumber);
          AV40TFCustomerVatNumber_Sel = "";
          AssignAttri("", false, "AV40TFCustomerVatNumber_Sel", AV40TFCustomerVatNumber_Sel);
+         AV35TFCustomerVisitingAddress = "";
+         AssignAttri("", false, "AV35TFCustomerVisitingAddress", AV35TFCustomerVisitingAddress);
+         AV36TFCustomerVisitingAddress_Sel = "";
+         AssignAttri("", false, "AV36TFCustomerVisitingAddress_Sel", AV36TFCustomerVisitingAddress_Sel);
+         AV31TFCustomerPostalAddress = "";
+         AssignAttri("", false, "AV31TFCustomerPostalAddress", AV31TFCustomerPostalAddress);
+         AV32TFCustomerPostalAddress_Sel = "";
+         AssignAttri("", false, "AV32TFCustomerPostalAddress_Sel", AV32TFCustomerPostalAddress_Sel);
          AV43TFCustomerTypeName = "";
          AssignAttri("", false, "AV43TFCustomerTypeName", AV43TFCustomerTypeName);
          AV44TFCustomerTypeName_Sel = "";
@@ -2236,16 +2236,6 @@ namespace GeneXus.Programs {
                AV30TFCustomerName_Sel = AV12GridStateFilterValue.gxTpr_Value;
                AssignAttri("", false, "AV30TFCustomerName_Sel", AV30TFCustomerName_Sel);
             }
-            else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMERPOSTALADDRESS") == 0 )
-            {
-               AV31TFCustomerPostalAddress = AV12GridStateFilterValue.gxTpr_Value;
-               AssignAttri("", false, "AV31TFCustomerPostalAddress", AV31TFCustomerPostalAddress);
-            }
-            else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMERPOSTALADDRESS_SEL") == 0 )
-            {
-               AV32TFCustomerPostalAddress_Sel = AV12GridStateFilterValue.gxTpr_Value;
-               AssignAttri("", false, "AV32TFCustomerPostalAddress_Sel", AV32TFCustomerPostalAddress_Sel);
-            }
             else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMEREMAIL") == 0 )
             {
                AV33TFCustomerEmail = AV12GridStateFilterValue.gxTpr_Value;
@@ -2255,16 +2245,6 @@ namespace GeneXus.Programs {
             {
                AV34TFCustomerEmail_Sel = AV12GridStateFilterValue.gxTpr_Value;
                AssignAttri("", false, "AV34TFCustomerEmail_Sel", AV34TFCustomerEmail_Sel);
-            }
-            else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMERVISITINGADDRESS") == 0 )
-            {
-               AV35TFCustomerVisitingAddress = AV12GridStateFilterValue.gxTpr_Value;
-               AssignAttri("", false, "AV35TFCustomerVisitingAddress", AV35TFCustomerVisitingAddress);
-            }
-            else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMERVISITINGADDRESS_SEL") == 0 )
-            {
-               AV36TFCustomerVisitingAddress_Sel = AV12GridStateFilterValue.gxTpr_Value;
-               AssignAttri("", false, "AV36TFCustomerVisitingAddress_Sel", AV36TFCustomerVisitingAddress_Sel);
             }
             else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMERPHONE") == 0 )
             {
@@ -2286,6 +2266,26 @@ namespace GeneXus.Programs {
                AV40TFCustomerVatNumber_Sel = AV12GridStateFilterValue.gxTpr_Value;
                AssignAttri("", false, "AV40TFCustomerVatNumber_Sel", AV40TFCustomerVatNumber_Sel);
             }
+            else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMERVISITINGADDRESS") == 0 )
+            {
+               AV35TFCustomerVisitingAddress = AV12GridStateFilterValue.gxTpr_Value;
+               AssignAttri("", false, "AV35TFCustomerVisitingAddress", AV35TFCustomerVisitingAddress);
+            }
+            else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMERVISITINGADDRESS_SEL") == 0 )
+            {
+               AV36TFCustomerVisitingAddress_Sel = AV12GridStateFilterValue.gxTpr_Value;
+               AssignAttri("", false, "AV36TFCustomerVisitingAddress_Sel", AV36TFCustomerVisitingAddress_Sel);
+            }
+            else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMERPOSTALADDRESS") == 0 )
+            {
+               AV31TFCustomerPostalAddress = AV12GridStateFilterValue.gxTpr_Value;
+               AssignAttri("", false, "AV31TFCustomerPostalAddress", AV31TFCustomerPostalAddress);
+            }
+            else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMERPOSTALADDRESS_SEL") == 0 )
+            {
+               AV32TFCustomerPostalAddress_Sel = AV12GridStateFilterValue.gxTpr_Value;
+               AssignAttri("", false, "AV32TFCustomerPostalAddress_Sel", AV32TFCustomerPostalAddress_Sel);
+            }
             else if ( StringUtil.StrCmp(AV12GridStateFilterValue.gxTpr_Name, "TFCUSTOMERTYPENAME") == 0 )
             {
                AV43TFCustomerTypeName = AV12GridStateFilterValue.gxTpr_Value;
@@ -2303,15 +2303,15 @@ namespace GeneXus.Programs {
          GXt_char4 = "";
          new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV30TFCustomerName_Sel)),  AV30TFCustomerName_Sel, out  GXt_char4) ;
          GXt_char5 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV32TFCustomerPostalAddress_Sel)),  AV32TFCustomerPostalAddress_Sel, out  GXt_char5) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV34TFCustomerEmail_Sel)),  AV34TFCustomerEmail_Sel, out  GXt_char5) ;
          GXt_char6 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV34TFCustomerEmail_Sel)),  AV34TFCustomerEmail_Sel, out  GXt_char6) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV38TFCustomerPhone_Sel)),  AV38TFCustomerPhone_Sel, out  GXt_char6) ;
          GXt_char7 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV36TFCustomerVisitingAddress_Sel)),  AV36TFCustomerVisitingAddress_Sel, out  GXt_char7) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV40TFCustomerVatNumber_Sel)),  AV40TFCustomerVatNumber_Sel, out  GXt_char7) ;
          GXt_char8 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV38TFCustomerPhone_Sel)),  AV38TFCustomerPhone_Sel, out  GXt_char8) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV36TFCustomerVisitingAddress_Sel)),  AV36TFCustomerVisitingAddress_Sel, out  GXt_char8) ;
          GXt_char9 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV40TFCustomerVatNumber_Sel)),  AV40TFCustomerVatNumber_Sel, out  GXt_char9) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV32TFCustomerPostalAddress_Sel)),  AV32TFCustomerPostalAddress_Sel, out  GXt_char9) ;
          GXt_char10 = "";
          new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV44TFCustomerTypeName_Sel)),  AV44TFCustomerTypeName_Sel, out  GXt_char10) ;
          Ddo_grid_Selectedvalue_set = GXt_char2+"|"+GXt_char4+"|"+GXt_char5+"|"+GXt_char6+"|"+GXt_char7+"|"+GXt_char8+"|"+GXt_char9+"|"+GXt_char10;
@@ -2321,15 +2321,15 @@ namespace GeneXus.Programs {
          GXt_char9 = "";
          new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV29TFCustomerName)),  AV29TFCustomerName, out  GXt_char9) ;
          GXt_char8 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV31TFCustomerPostalAddress)),  AV31TFCustomerPostalAddress, out  GXt_char8) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV33TFCustomerEmail)),  AV33TFCustomerEmail, out  GXt_char8) ;
          GXt_char7 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV33TFCustomerEmail)),  AV33TFCustomerEmail, out  GXt_char7) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV37TFCustomerPhone)),  AV37TFCustomerPhone, out  GXt_char7) ;
          GXt_char6 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV35TFCustomerVisitingAddress)),  AV35TFCustomerVisitingAddress, out  GXt_char6) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV39TFCustomerVatNumber)),  AV39TFCustomerVatNumber, out  GXt_char6) ;
          GXt_char5 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV37TFCustomerPhone)),  AV37TFCustomerPhone, out  GXt_char5) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV35TFCustomerVisitingAddress)),  AV35TFCustomerVisitingAddress, out  GXt_char5) ;
          GXt_char4 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV39TFCustomerVatNumber)),  AV39TFCustomerVatNumber, out  GXt_char4) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV31TFCustomerPostalAddress)),  AV31TFCustomerPostalAddress, out  GXt_char4) ;
          GXt_char2 = "";
          new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV43TFCustomerTypeName)),  AV43TFCustomerTypeName, out  GXt_char2) ;
          Ddo_grid_Filteredtext_set = GXt_char10+"|"+GXt_char9+"|"+GXt_char8+"|"+GXt_char7+"|"+GXt_char6+"|"+GXt_char5+"|"+GXt_char4+"|"+GXt_char2;
@@ -2347,11 +2347,11 @@ namespace GeneXus.Programs {
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalue(context ).execute( ref  AV11GridState,  "FILTERFULLTEXT",  context.GetMessage( "WWP_FullTextFilterDescription", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV16FilterFullText)),  0,  AV16FilterFullText,  AV16FilterFullText,  false,  "",  "") ;
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV11GridState,  "TFCUSTOMERKVKNUMBER",  context.GetMessage( "KVK Number", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV27TFCustomerKvkNumber)),  0,  AV27TFCustomerKvkNumber,  AV27TFCustomerKvkNumber,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV28TFCustomerKvkNumber_Sel)),  AV28TFCustomerKvkNumber_Sel,  AV28TFCustomerKvkNumber_Sel) ;
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV11GridState,  "TFCUSTOMERNAME",  context.GetMessage( "Name", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV29TFCustomerName)),  0,  AV29TFCustomerName,  AV29TFCustomerName,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV30TFCustomerName_Sel)),  AV30TFCustomerName_Sel,  AV30TFCustomerName_Sel) ;
-         new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV11GridState,  "TFCUSTOMERPOSTALADDRESS",  context.GetMessage( "Postal Address", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV31TFCustomerPostalAddress)),  0,  AV31TFCustomerPostalAddress,  AV31TFCustomerPostalAddress,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV32TFCustomerPostalAddress_Sel)),  AV32TFCustomerPostalAddress_Sel,  AV32TFCustomerPostalAddress_Sel) ;
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV11GridState,  "TFCUSTOMEREMAIL",  context.GetMessage( "Email", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV33TFCustomerEmail)),  0,  AV33TFCustomerEmail,  AV33TFCustomerEmail,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV34TFCustomerEmail_Sel)),  AV34TFCustomerEmail_Sel,  AV34TFCustomerEmail_Sel) ;
-         new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV11GridState,  "TFCUSTOMERVISITINGADDRESS",  context.GetMessage( "Visiting Address", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV35TFCustomerVisitingAddress)),  0,  AV35TFCustomerVisitingAddress,  AV35TFCustomerVisitingAddress,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV36TFCustomerVisitingAddress_Sel)),  AV36TFCustomerVisitingAddress_Sel,  AV36TFCustomerVisitingAddress_Sel) ;
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV11GridState,  "TFCUSTOMERPHONE",  context.GetMessage( "Phone", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV37TFCustomerPhone)),  0,  AV37TFCustomerPhone,  AV37TFCustomerPhone,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV38TFCustomerPhone_Sel)),  AV38TFCustomerPhone_Sel,  AV38TFCustomerPhone_Sel) ;
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV11GridState,  "TFCUSTOMERVATNUMBER",  context.GetMessage( "VAT", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV39TFCustomerVatNumber)),  0,  AV39TFCustomerVatNumber,  AV39TFCustomerVatNumber,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV40TFCustomerVatNumber_Sel)),  AV40TFCustomerVatNumber_Sel,  AV40TFCustomerVatNumber_Sel) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV11GridState,  "TFCUSTOMERVISITINGADDRESS",  context.GetMessage( "Visiting Address", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV35TFCustomerVisitingAddress)),  0,  AV35TFCustomerVisitingAddress,  AV35TFCustomerVisitingAddress,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV36TFCustomerVisitingAddress_Sel)),  AV36TFCustomerVisitingAddress_Sel,  AV36TFCustomerVisitingAddress_Sel) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV11GridState,  "TFCUSTOMERPOSTALADDRESS",  context.GetMessage( "Postal Address", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV31TFCustomerPostalAddress)),  0,  AV31TFCustomerPostalAddress,  AV31TFCustomerPostalAddress,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV32TFCustomerPostalAddress_Sel)),  AV32TFCustomerPostalAddress_Sel,  AV32TFCustomerPostalAddress_Sel) ;
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV11GridState,  "TFCUSTOMERTYPENAME",  context.GetMessage( "Type", ""),  !String.IsNullOrEmpty(StringUtil.RTrim( AV43TFCustomerTypeName)),  0,  AV43TFCustomerTypeName,  AV43TFCustomerTypeName,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV44TFCustomerTypeName_Sel)),  AV44TFCustomerTypeName_Sel,  AV44TFCustomerTypeName_Sel) ;
          AV11GridState.gxTpr_Pagesize = StringUtil.Str( (decimal)(subGrid_Rows), 10, 0);
          AV11GridState.gxTpr_Currentpage = (short)(subGrid_fnc_Currentpage( ));
@@ -2410,7 +2410,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248244142641", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248277431539", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2426,7 +2426,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("customerww.js", "?20248244142643", false, true);
+         context.AddJavascriptSource("customerww.js", "?20248277431542", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -2449,11 +2449,11 @@ namespace GeneXus.Programs {
          edtCustomerId_Internalname = "CUSTOMERID_"+sGXsfl_37_idx;
          edtCustomerKvkNumber_Internalname = "CUSTOMERKVKNUMBER_"+sGXsfl_37_idx;
          edtCustomerName_Internalname = "CUSTOMERNAME_"+sGXsfl_37_idx;
-         edtCustomerPostalAddress_Internalname = "CUSTOMERPOSTALADDRESS_"+sGXsfl_37_idx;
          edtCustomerEmail_Internalname = "CUSTOMEREMAIL_"+sGXsfl_37_idx;
-         edtCustomerVisitingAddress_Internalname = "CUSTOMERVISITINGADDRESS_"+sGXsfl_37_idx;
          edtCustomerPhone_Internalname = "CUSTOMERPHONE_"+sGXsfl_37_idx;
          edtCustomerVatNumber_Internalname = "CUSTOMERVATNUMBER_"+sGXsfl_37_idx;
+         edtCustomerVisitingAddress_Internalname = "CUSTOMERVISITINGADDRESS_"+sGXsfl_37_idx;
+         edtCustomerPostalAddress_Internalname = "CUSTOMERPOSTALADDRESS_"+sGXsfl_37_idx;
          edtCustomerTypeId_Internalname = "CUSTOMERTYPEID_"+sGXsfl_37_idx;
          edtCustomerTypeName_Internalname = "CUSTOMERTYPENAME_"+sGXsfl_37_idx;
          edtCustomerLastLine_Internalname = "CUSTOMERLASTLINE_"+sGXsfl_37_idx;
@@ -2466,11 +2466,11 @@ namespace GeneXus.Programs {
          edtCustomerId_Internalname = "CUSTOMERID_"+sGXsfl_37_fel_idx;
          edtCustomerKvkNumber_Internalname = "CUSTOMERKVKNUMBER_"+sGXsfl_37_fel_idx;
          edtCustomerName_Internalname = "CUSTOMERNAME_"+sGXsfl_37_fel_idx;
-         edtCustomerPostalAddress_Internalname = "CUSTOMERPOSTALADDRESS_"+sGXsfl_37_fel_idx;
          edtCustomerEmail_Internalname = "CUSTOMEREMAIL_"+sGXsfl_37_fel_idx;
-         edtCustomerVisitingAddress_Internalname = "CUSTOMERVISITINGADDRESS_"+sGXsfl_37_fel_idx;
          edtCustomerPhone_Internalname = "CUSTOMERPHONE_"+sGXsfl_37_fel_idx;
          edtCustomerVatNumber_Internalname = "CUSTOMERVATNUMBER_"+sGXsfl_37_fel_idx;
+         edtCustomerVisitingAddress_Internalname = "CUSTOMERVISITINGADDRESS_"+sGXsfl_37_fel_idx;
+         edtCustomerPostalAddress_Internalname = "CUSTOMERPOSTALADDRESS_"+sGXsfl_37_fel_idx;
          edtCustomerTypeId_Internalname = "CUSTOMERTYPEID_"+sGXsfl_37_fel_idx;
          edtCustomerTypeName_Internalname = "CUSTOMERTYPENAME_"+sGXsfl_37_fel_idx;
          edtCustomerLastLine_Internalname = "CUSTOMERLASTLINE_"+sGXsfl_37_fel_idx;
@@ -2568,27 +2568,11 @@ namespace GeneXus.Programs {
             /* Subfile cell */
             if ( GridContainer.GetWrapped() == 1 )
             {
-               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+((edtCustomerPostalAddress_Visible==0) ? "display:none;" : "")+"\">") ;
-            }
-            /* Single line edit */
-            ROClassString = "Attribute";
-            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtCustomerPostalAddress_Internalname,(string)A4CustomerPostalAddress,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'","http://maps.google.com/maps?q="+GXUtil.UrlEncode( A4CustomerPostalAddress),(string)"_blank",(string)"",(string)"",(string)edtCustomerPostalAddress_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(int)edtCustomerPostalAddress_Visible,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)1024,(short)0,(short)0,(short)37,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Address",(string)"start",(bool)true,(string)""});
-            /* Subfile cell */
-            if ( GridContainer.GetWrapped() == 1 )
-            {
                context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+((edtCustomerEmail_Visible==0) ? "display:none;" : "")+"\">") ;
             }
             /* Single line edit */
             ROClassString = "Attribute";
             GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtCustomerEmail_Internalname,(string)A5CustomerEmail,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"mailto:"+A5CustomerEmail,(string)"",(string)"",(string)"",(string)edtCustomerEmail_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(int)edtCustomerEmail_Visible,(short)0,(short)0,(string)"email",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)100,(short)0,(short)0,(short)37,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Email",(string)"start",(bool)true,(string)""});
-            /* Subfile cell */
-            if ( GridContainer.GetWrapped() == 1 )
-            {
-               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+((edtCustomerVisitingAddress_Visible==0) ? "display:none;" : "")+"\">") ;
-            }
-            /* Single line edit */
-            ROClassString = "Attribute";
-            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtCustomerVisitingAddress_Internalname,(string)A6CustomerVisitingAddress,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'","http://maps.google.com/maps?q="+GXUtil.UrlEncode( A6CustomerVisitingAddress),(string)"_blank",(string)"",(string)"",(string)edtCustomerVisitingAddress_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(int)edtCustomerVisitingAddress_Visible,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)1024,(short)0,(short)0,(short)37,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Address",(string)"start",(bool)true,(string)""});
             /* Subfile cell */
             if ( GridContainer.GetWrapped() == 1 )
             {
@@ -2609,6 +2593,22 @@ namespace GeneXus.Programs {
             /* Single line edit */
             ROClassString = "Attribute";
             GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtCustomerVatNumber_Internalname,(string)A14CustomerVatNumber,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtCustomerVatNumber_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(int)edtCustomerVatNumber_Visible,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)14,(short)0,(short)0,(short)37,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
+            /* Subfile cell */
+            if ( GridContainer.GetWrapped() == 1 )
+            {
+               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+((edtCustomerVisitingAddress_Visible==0) ? "display:none;" : "")+"\">") ;
+            }
+            /* Single line edit */
+            ROClassString = "Attribute";
+            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtCustomerVisitingAddress_Internalname,(string)A6CustomerVisitingAddress,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'","http://maps.google.com/maps?q="+GXUtil.UrlEncode( A6CustomerVisitingAddress),(string)"_blank",(string)"",(string)"",(string)edtCustomerVisitingAddress_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(int)edtCustomerVisitingAddress_Visible,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)1024,(short)0,(short)0,(short)37,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Address",(string)"start",(bool)true,(string)""});
+            /* Subfile cell */
+            if ( GridContainer.GetWrapped() == 1 )
+            {
+               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+((edtCustomerPostalAddress_Visible==0) ? "display:none;" : "")+"\">") ;
+            }
+            /* Single line edit */
+            ROClassString = "Attribute";
+            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtCustomerPostalAddress_Internalname,(string)A4CustomerPostalAddress,(string)"",(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'","http://maps.google.com/maps?q="+GXUtil.UrlEncode( A4CustomerPostalAddress),(string)"_blank",(string)"",(string)"",(string)edtCustomerPostalAddress_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(int)edtCustomerPostalAddress_Visible,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)1024,(short)0,(short)0,(short)37,(short)0,(short)-1,(short)0,(bool)true,(string)"GeneXus\\Address",(string)"start",(bool)true,(string)""});
             /* Subfile cell */
             if ( GridContainer.GetWrapped() == 1 )
             {
@@ -2709,20 +2709,20 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+((edtCustomerName_Visible==0) ? "display:none;" : "")+""+"\" "+">") ;
             context.SendWebValue( context.GetMessage( "Name", "")) ;
             context.WriteHtmlTextNl( "</th>") ;
-            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+((edtCustomerPostalAddress_Visible==0) ? "display:none;" : "")+""+"\" "+">") ;
-            context.SendWebValue( context.GetMessage( "Postal Address", "")) ;
-            context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+((edtCustomerEmail_Visible==0) ? "display:none;" : "")+""+"\" "+">") ;
             context.SendWebValue( context.GetMessage( "Email", "")) ;
-            context.WriteHtmlTextNl( "</th>") ;
-            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+((edtCustomerVisitingAddress_Visible==0) ? "display:none;" : "")+""+"\" "+">") ;
-            context.SendWebValue( context.GetMessage( "Visiting Address", "")) ;
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+((edtCustomerPhone_Visible==0) ? "display:none;" : "")+""+"\" "+">") ;
             context.SendWebValue( context.GetMessage( "Phone", "")) ;
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+((edtCustomerVatNumber_Visible==0) ? "display:none;" : "")+""+"\" "+">") ;
             context.SendWebValue( context.GetMessage( "VAT", "")) ;
+            context.WriteHtmlTextNl( "</th>") ;
+            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+((edtCustomerVisitingAddress_Visible==0) ? "display:none;" : "")+""+"\" "+">") ;
+            context.SendWebValue( context.GetMessage( "Visiting Address", "")) ;
+            context.WriteHtmlTextNl( "</th>") ;
+            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+((edtCustomerPostalAddress_Visible==0) ? "display:none;" : "")+""+"\" "+">") ;
+            context.SendWebValue( context.GetMessage( "Postal Address", "")) ;
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"end"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+"display:none;"+""+"\" "+">") ;
             context.SendWebValue( "") ;
@@ -2774,16 +2774,8 @@ namespace GeneXus.Programs {
             GridColumn.AddObjectProperty("Visible", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtCustomerName_Visible), 5, 0, ".", "")));
             GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
-            GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( A4CustomerPostalAddress));
-            GridColumn.AddObjectProperty("Visible", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtCustomerPostalAddress_Visible), 5, 0, ".", "")));
-            GridContainer.AddColumnProperties(GridColumn);
-            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( A5CustomerEmail));
             GridColumn.AddObjectProperty("Visible", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtCustomerEmail_Visible), 5, 0, ".", "")));
-            GridContainer.AddColumnProperties(GridColumn);
-            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
-            GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( A6CustomerVisitingAddress));
-            GridColumn.AddObjectProperty("Visible", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtCustomerVisitingAddress_Visible), 5, 0, ".", "")));
             GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( StringUtil.RTrim( A7CustomerPhone)));
@@ -2792,6 +2784,14 @@ namespace GeneXus.Programs {
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( A14CustomerVatNumber));
             GridColumn.AddObjectProperty("Visible", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtCustomerVatNumber_Visible), 5, 0, ".", "")));
+            GridContainer.AddColumnProperties(GridColumn);
+            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
+            GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( A6CustomerVisitingAddress));
+            GridColumn.AddObjectProperty("Visible", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtCustomerVisitingAddress_Visible), 5, 0, ".", "")));
+            GridContainer.AddColumnProperties(GridColumn);
+            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
+            GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( A4CustomerPostalAddress));
+            GridColumn.AddObjectProperty("Visible", StringUtil.LTrim( StringUtil.NToC( (decimal)(edtCustomerPostalAddress_Visible), 5, 0, ".", "")));
             GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( StringUtil.LTrim( StringUtil.NToC( (decimal)(A78CustomerTypeId), 4, 0, ".", ""))));
@@ -2835,11 +2835,11 @@ namespace GeneXus.Programs {
          edtCustomerId_Internalname = "CUSTOMERID";
          edtCustomerKvkNumber_Internalname = "CUSTOMERKVKNUMBER";
          edtCustomerName_Internalname = "CUSTOMERNAME";
-         edtCustomerPostalAddress_Internalname = "CUSTOMERPOSTALADDRESS";
          edtCustomerEmail_Internalname = "CUSTOMEREMAIL";
-         edtCustomerVisitingAddress_Internalname = "CUSTOMERVISITINGADDRESS";
          edtCustomerPhone_Internalname = "CUSTOMERPHONE";
          edtCustomerVatNumber_Internalname = "CUSTOMERVATNUMBER";
+         edtCustomerVisitingAddress_Internalname = "CUSTOMERVISITINGADDRESS";
+         edtCustomerPostalAddress_Internalname = "CUSTOMERPOSTALADDRESS";
          edtCustomerTypeId_Internalname = "CUSTOMERTYPEID";
          edtCustomerTypeName_Internalname = "CUSTOMERTYPENAME";
          edtCustomerLastLine_Internalname = "CUSTOMERLASTLINE";
@@ -2875,32 +2875,32 @@ namespace GeneXus.Programs {
          edtCustomerLastLine_Jsonclick = "";
          edtCustomerTypeName_Jsonclick = "";
          edtCustomerTypeId_Jsonclick = "";
+         edtCustomerPostalAddress_Jsonclick = "";
+         edtCustomerVisitingAddress_Jsonclick = "";
          edtCustomerVatNumber_Jsonclick = "";
          edtCustomerPhone_Jsonclick = "";
-         edtCustomerVisitingAddress_Jsonclick = "";
          edtCustomerEmail_Jsonclick = "";
-         edtCustomerPostalAddress_Jsonclick = "";
          edtCustomerName_Jsonclick = "";
          edtCustomerKvkNumber_Jsonclick = "";
          edtCustomerId_Jsonclick = "";
          subGrid_Class = "GridWithPaginationBar WorkWith";
          subGrid_Backcolorstyle = 0;
          edtCustomerTypeName_Visible = -1;
+         edtCustomerPostalAddress_Visible = -1;
+         edtCustomerVisitingAddress_Visible = -1;
          edtCustomerVatNumber_Visible = -1;
          edtCustomerPhone_Visible = -1;
-         edtCustomerVisitingAddress_Visible = -1;
          edtCustomerEmail_Visible = -1;
-         edtCustomerPostalAddress_Visible = -1;
          edtCustomerName_Visible = -1;
          edtCustomerKvkNumber_Visible = -1;
          edtCustomerLastLine_Enabled = 0;
          edtCustomerTypeName_Enabled = 0;
          edtCustomerTypeId_Enabled = 0;
+         edtCustomerPostalAddress_Enabled = 0;
+         edtCustomerVisitingAddress_Enabled = 0;
          edtCustomerVatNumber_Enabled = 0;
          edtCustomerPhone_Enabled = 0;
-         edtCustomerVisitingAddress_Enabled = 0;
          edtCustomerEmail_Enabled = 0;
-         edtCustomerPostalAddress_Enabled = 0;
          edtCustomerName_Enabled = 0;
          edtCustomerKvkNumber_Enabled = 0;
          edtCustomerId_Enabled = 0;
@@ -2924,7 +2924,7 @@ namespace GeneXus.Programs {
          Ddo_grid_Fixable = "T";
          Ddo_grid_Includesortasc = "T";
          Ddo_grid_Columnssortvalues = "1|2|3|4|5|6|7|8";
-         Ddo_grid_Columnids = "1:CustomerKvkNumber|2:CustomerName|3:CustomerPostalAddress|4:CustomerEmail|5:CustomerVisitingAddress|6:CustomerPhone|7:CustomerVatNumber|9:CustomerTypeName";
+         Ddo_grid_Columnids = "1:CustomerKvkNumber|2:CustomerName|3:CustomerEmail|4:CustomerPhone|5:CustomerVatNumber|6:CustomerVisitingAddress|7:CustomerPostalAddress|9:CustomerTypeName";
          Ddo_grid_Gridinternalname = "";
          Gridpaginationbar_Rowsperpagecaption = "WWP_PagingRowsPerPage";
          Gridpaginationbar_Emptygridcaption = "WWP_PagingEmptyGridCaption";
@@ -2967,20 +2967,20 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''}]");
-         setEventMetadata("REFRESH",",oparms:[{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'edtCustomerKvkNumber_Visible',ctrl:'CUSTOMERKVKNUMBER',prop:'Visible'},{av:'edtCustomerName_Visible',ctrl:'CUSTOMERNAME',prop:'Visible'},{av:'edtCustomerPostalAddress_Visible',ctrl:'CUSTOMERPOSTALADDRESS',prop:'Visible'},{av:'edtCustomerEmail_Visible',ctrl:'CUSTOMEREMAIL',prop:'Visible'},{av:'edtCustomerVisitingAddress_Visible',ctrl:'CUSTOMERVISITINGADDRESS',prop:'Visible'},{av:'edtCustomerPhone_Visible',ctrl:'CUSTOMERPHONE',prop:'Visible'},{av:'edtCustomerVatNumber_Visible',ctrl:'CUSTOMERVATNUMBER',prop:'Visible'},{av:'edtCustomerTypeName_Visible',ctrl:'CUSTOMERTYPENAME',prop:'Visible'},{av:'AV49GridCurrentPage',fld:'vGRIDCURRENTPAGE',pic:'ZZZZZZZZZ9'},{av:'AV50GridPageCount',fld:'vGRIDPAGECOUNT',pic:'ZZZZZZZZZ9'},{av:'AV51GridAppliedFilters',fld:'vGRIDAPPLIEDFILTERS',pic:''},{av:'AV22ManageFiltersData',fld:'vMANAGEFILTERSDATA',pic:''},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]}");
-         setEventMetadata("GRIDPAGINATIONBAR.CHANGEPAGE","{handler:'E131J2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'Gridpaginationbar_Selectedpage',ctrl:'GRIDPAGINATIONBAR',prop:'SelectedPage'}]");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''}]");
+         setEventMetadata("REFRESH",",oparms:[{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'edtCustomerKvkNumber_Visible',ctrl:'CUSTOMERKVKNUMBER',prop:'Visible'},{av:'edtCustomerName_Visible',ctrl:'CUSTOMERNAME',prop:'Visible'},{av:'edtCustomerEmail_Visible',ctrl:'CUSTOMEREMAIL',prop:'Visible'},{av:'edtCustomerPhone_Visible',ctrl:'CUSTOMERPHONE',prop:'Visible'},{av:'edtCustomerVatNumber_Visible',ctrl:'CUSTOMERVATNUMBER',prop:'Visible'},{av:'edtCustomerVisitingAddress_Visible',ctrl:'CUSTOMERVISITINGADDRESS',prop:'Visible'},{av:'edtCustomerPostalAddress_Visible',ctrl:'CUSTOMERPOSTALADDRESS',prop:'Visible'},{av:'edtCustomerTypeName_Visible',ctrl:'CUSTOMERTYPENAME',prop:'Visible'},{av:'AV49GridCurrentPage',fld:'vGRIDCURRENTPAGE',pic:'ZZZZZZZZZ9'},{av:'AV50GridPageCount',fld:'vGRIDPAGECOUNT',pic:'ZZZZZZZZZ9'},{av:'AV51GridAppliedFilters',fld:'vGRIDAPPLIEDFILTERS',pic:''},{av:'AV22ManageFiltersData',fld:'vMANAGEFILTERSDATA',pic:''},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]}");
+         setEventMetadata("GRIDPAGINATIONBAR.CHANGEPAGE","{handler:'E131J2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'Gridpaginationbar_Selectedpage',ctrl:'GRIDPAGINATIONBAR',prop:'SelectedPage'}]");
          setEventMetadata("GRIDPAGINATIONBAR.CHANGEPAGE",",oparms:[]}");
-         setEventMetadata("GRIDPAGINATIONBAR.CHANGEROWSPERPAGE","{handler:'E141J2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'Gridpaginationbar_Rowsperpageselectedvalue',ctrl:'GRIDPAGINATIONBAR',prop:'RowsPerPageSelectedValue'}]");
+         setEventMetadata("GRIDPAGINATIONBAR.CHANGEROWSPERPAGE","{handler:'E141J2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'Gridpaginationbar_Rowsperpageselectedvalue',ctrl:'GRIDPAGINATIONBAR',prop:'RowsPerPageSelectedValue'}]");
          setEventMetadata("GRIDPAGINATIONBAR.CHANGEROWSPERPAGE",",oparms:[{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'}]}");
-         setEventMetadata("DDO_GRID.ONOPTIONCLICKED","{handler:'E151J2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'Ddo_grid_Activeeventkey',ctrl:'DDO_GRID',prop:'ActiveEventKey'},{av:'Ddo_grid_Selectedvalue_get',ctrl:'DDO_GRID',prop:'SelectedValue_get'},{av:'Ddo_grid_Filteredtext_get',ctrl:'DDO_GRID',prop:'FilteredText_get'},{av:'Ddo_grid_Selectedcolumn',ctrl:'DDO_GRID',prop:'SelectedColumn'}]");
-         setEventMetadata("DDO_GRID.ONOPTIONCLICKED",",oparms:[{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'Ddo_grid_Sortedstatus',ctrl:'DDO_GRID',prop:'SortedStatus'}]}");
+         setEventMetadata("DDO_GRID.ONOPTIONCLICKED","{handler:'E151J2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'Ddo_grid_Activeeventkey',ctrl:'DDO_GRID',prop:'ActiveEventKey'},{av:'Ddo_grid_Selectedvalue_get',ctrl:'DDO_GRID',prop:'SelectedValue_get'},{av:'Ddo_grid_Filteredtext_get',ctrl:'DDO_GRID',prop:'FilteredText_get'},{av:'Ddo_grid_Selectedcolumn',ctrl:'DDO_GRID',prop:'SelectedColumn'}]");
+         setEventMetadata("DDO_GRID.ONOPTIONCLICKED",",oparms:[{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'Ddo_grid_Sortedstatus',ctrl:'DDO_GRID',prop:'SortedStatus'}]}");
          setEventMetadata("GRID.LOAD","{handler:'E191J2',iparms:[]");
          setEventMetadata("GRID.LOAD",",oparms:[{av:'AV58UpdateAction',fld:'vUPDATEACTION',pic:''},{av:'AV59DeleteAction',fld:'vDELETEACTION',pic:''}]}");
-         setEventMetadata("DDO_GRIDCOLUMNSSELECTOR.ONCOLUMNSCHANGED","{handler:'E161J2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'Ddo_gridcolumnsselector_Columnsselectorvalues',ctrl:'DDO_GRIDCOLUMNSSELECTOR',prop:'ColumnsSelectorValues'}]");
-         setEventMetadata("DDO_GRIDCOLUMNSSELECTOR.ONCOLUMNSCHANGED",",oparms:[{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'edtCustomerKvkNumber_Visible',ctrl:'CUSTOMERKVKNUMBER',prop:'Visible'},{av:'edtCustomerName_Visible',ctrl:'CUSTOMERNAME',prop:'Visible'},{av:'edtCustomerPostalAddress_Visible',ctrl:'CUSTOMERPOSTALADDRESS',prop:'Visible'},{av:'edtCustomerEmail_Visible',ctrl:'CUSTOMEREMAIL',prop:'Visible'},{av:'edtCustomerVisitingAddress_Visible',ctrl:'CUSTOMERVISITINGADDRESS',prop:'Visible'},{av:'edtCustomerPhone_Visible',ctrl:'CUSTOMERPHONE',prop:'Visible'},{av:'edtCustomerVatNumber_Visible',ctrl:'CUSTOMERVATNUMBER',prop:'Visible'},{av:'edtCustomerTypeName_Visible',ctrl:'CUSTOMERTYPENAME',prop:'Visible'},{av:'AV49GridCurrentPage',fld:'vGRIDCURRENTPAGE',pic:'ZZZZZZZZZ9'},{av:'AV50GridPageCount',fld:'vGRIDPAGECOUNT',pic:'ZZZZZZZZZ9'},{av:'AV51GridAppliedFilters',fld:'vGRIDAPPLIEDFILTERS',pic:''},{av:'AV22ManageFiltersData',fld:'vMANAGEFILTERSDATA',pic:''},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]}");
-         setEventMetadata("DDO_MANAGEFILTERS.ONOPTIONCLICKED","{handler:'E121J2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'Ddo_managefilters_Activeeventkey',ctrl:'DDO_MANAGEFILTERS',prop:'ActiveEventKey'},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]");
-         setEventMetadata("DDO_MANAGEFILTERS.ONOPTIONCLICKED",",oparms:[{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'Ddo_grid_Selectedvalue_set',ctrl:'DDO_GRID',prop:'SelectedValue_set'},{av:'Ddo_grid_Filteredtext_set',ctrl:'DDO_GRID',prop:'FilteredText_set'},{av:'Ddo_grid_Sortedstatus',ctrl:'DDO_GRID',prop:'SortedStatus'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'edtCustomerKvkNumber_Visible',ctrl:'CUSTOMERKVKNUMBER',prop:'Visible'},{av:'edtCustomerName_Visible',ctrl:'CUSTOMERNAME',prop:'Visible'},{av:'edtCustomerPostalAddress_Visible',ctrl:'CUSTOMERPOSTALADDRESS',prop:'Visible'},{av:'edtCustomerEmail_Visible',ctrl:'CUSTOMEREMAIL',prop:'Visible'},{av:'edtCustomerVisitingAddress_Visible',ctrl:'CUSTOMERVISITINGADDRESS',prop:'Visible'},{av:'edtCustomerPhone_Visible',ctrl:'CUSTOMERPHONE',prop:'Visible'},{av:'edtCustomerVatNumber_Visible',ctrl:'CUSTOMERVATNUMBER',prop:'Visible'},{av:'edtCustomerTypeName_Visible',ctrl:'CUSTOMERTYPENAME',prop:'Visible'},{av:'AV49GridCurrentPage',fld:'vGRIDCURRENTPAGE',pic:'ZZZZZZZZZ9'},{av:'AV50GridPageCount',fld:'vGRIDPAGECOUNT',pic:'ZZZZZZZZZ9'},{av:'AV51GridAppliedFilters',fld:'vGRIDAPPLIEDFILTERS',pic:''},{av:'AV22ManageFiltersData',fld:'vMANAGEFILTERSDATA',pic:''}]}");
+         setEventMetadata("DDO_GRIDCOLUMNSSELECTOR.ONCOLUMNSCHANGED","{handler:'E161J2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'Ddo_gridcolumnsselector_Columnsselectorvalues',ctrl:'DDO_GRIDCOLUMNSSELECTOR',prop:'ColumnsSelectorValues'}]");
+         setEventMetadata("DDO_GRIDCOLUMNSSELECTOR.ONCOLUMNSCHANGED",",oparms:[{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'edtCustomerKvkNumber_Visible',ctrl:'CUSTOMERKVKNUMBER',prop:'Visible'},{av:'edtCustomerName_Visible',ctrl:'CUSTOMERNAME',prop:'Visible'},{av:'edtCustomerEmail_Visible',ctrl:'CUSTOMEREMAIL',prop:'Visible'},{av:'edtCustomerPhone_Visible',ctrl:'CUSTOMERPHONE',prop:'Visible'},{av:'edtCustomerVatNumber_Visible',ctrl:'CUSTOMERVATNUMBER',prop:'Visible'},{av:'edtCustomerVisitingAddress_Visible',ctrl:'CUSTOMERVISITINGADDRESS',prop:'Visible'},{av:'edtCustomerPostalAddress_Visible',ctrl:'CUSTOMERPOSTALADDRESS',prop:'Visible'},{av:'edtCustomerTypeName_Visible',ctrl:'CUSTOMERTYPENAME',prop:'Visible'},{av:'AV49GridCurrentPage',fld:'vGRIDCURRENTPAGE',pic:'ZZZZZZZZZ9'},{av:'AV50GridPageCount',fld:'vGRIDPAGECOUNT',pic:'ZZZZZZZZZ9'},{av:'AV51GridAppliedFilters',fld:'vGRIDAPPLIEDFILTERS',pic:''},{av:'AV22ManageFiltersData',fld:'vMANAGEFILTERSDATA',pic:''},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]}");
+         setEventMetadata("DDO_MANAGEFILTERS.ONOPTIONCLICKED","{handler:'E121J2',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'AV60Pgmname',fld:'vPGMNAME',pic:'',hsh:true},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'Ddo_managefilters_Activeeventkey',ctrl:'DDO_MANAGEFILTERS',prop:'ActiveEventKey'},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''}]");
+         setEventMetadata("DDO_MANAGEFILTERS.ONOPTIONCLICKED",",oparms:[{av:'AV24ManageFiltersExecutionStep',fld:'vMANAGEFILTERSEXECUTIONSTEP',pic:'9'},{av:'AV11GridState',fld:'vGRIDSTATE',pic:''},{av:'AV13OrderedBy',fld:'vORDEREDBY',pic:'ZZZ9'},{av:'AV14OrderedDsc',fld:'vORDEREDDSC',pic:''},{av:'AV16FilterFullText',fld:'vFILTERFULLTEXT',pic:''},{av:'AV27TFCustomerKvkNumber',fld:'vTFCUSTOMERKVKNUMBER',pic:''},{av:'AV28TFCustomerKvkNumber_Sel',fld:'vTFCUSTOMERKVKNUMBER_SEL',pic:''},{av:'AV29TFCustomerName',fld:'vTFCUSTOMERNAME',pic:''},{av:'AV30TFCustomerName_Sel',fld:'vTFCUSTOMERNAME_SEL',pic:''},{av:'AV33TFCustomerEmail',fld:'vTFCUSTOMEREMAIL',pic:''},{av:'AV34TFCustomerEmail_Sel',fld:'vTFCUSTOMEREMAIL_SEL',pic:''},{av:'AV37TFCustomerPhone',fld:'vTFCUSTOMERPHONE',pic:''},{av:'AV38TFCustomerPhone_Sel',fld:'vTFCUSTOMERPHONE_SEL',pic:''},{av:'AV39TFCustomerVatNumber',fld:'vTFCUSTOMERVATNUMBER',pic:''},{av:'AV40TFCustomerVatNumber_Sel',fld:'vTFCUSTOMERVATNUMBER_SEL',pic:''},{av:'AV35TFCustomerVisitingAddress',fld:'vTFCUSTOMERVISITINGADDRESS',pic:''},{av:'AV36TFCustomerVisitingAddress_Sel',fld:'vTFCUSTOMERVISITINGADDRESS_SEL',pic:''},{av:'AV31TFCustomerPostalAddress',fld:'vTFCUSTOMERPOSTALADDRESS',pic:''},{av:'AV32TFCustomerPostalAddress_Sel',fld:'vTFCUSTOMERPOSTALADDRESS_SEL',pic:''},{av:'AV43TFCustomerTypeName',fld:'vTFCUSTOMERTYPENAME',pic:''},{av:'AV44TFCustomerTypeName_Sel',fld:'vTFCUSTOMERTYPENAME_SEL',pic:''},{av:'Ddo_grid_Selectedvalue_set',ctrl:'DDO_GRID',prop:'SelectedValue_set'},{av:'Ddo_grid_Filteredtext_set',ctrl:'DDO_GRID',prop:'FilteredText_set'},{av:'Ddo_grid_Sortedstatus',ctrl:'DDO_GRID',prop:'SortedStatus'},{av:'AV19ColumnsSelector',fld:'vCOLUMNSSELECTOR',pic:''},{av:'edtCustomerKvkNumber_Visible',ctrl:'CUSTOMERKVKNUMBER',prop:'Visible'},{av:'edtCustomerName_Visible',ctrl:'CUSTOMERNAME',prop:'Visible'},{av:'edtCustomerEmail_Visible',ctrl:'CUSTOMEREMAIL',prop:'Visible'},{av:'edtCustomerPhone_Visible',ctrl:'CUSTOMERPHONE',prop:'Visible'},{av:'edtCustomerVatNumber_Visible',ctrl:'CUSTOMERVATNUMBER',prop:'Visible'},{av:'edtCustomerVisitingAddress_Visible',ctrl:'CUSTOMERVISITINGADDRESS',prop:'Visible'},{av:'edtCustomerPostalAddress_Visible',ctrl:'CUSTOMERPOSTALADDRESS',prop:'Visible'},{av:'edtCustomerTypeName_Visible',ctrl:'CUSTOMERTYPENAME',prop:'Visible'},{av:'AV49GridCurrentPage',fld:'vGRIDCURRENTPAGE',pic:'ZZZZZZZZZ9'},{av:'AV50GridPageCount',fld:'vGRIDPAGECOUNT',pic:'ZZZZZZZZZ9'},{av:'AV51GridAppliedFilters',fld:'vGRIDAPPLIEDFILTERS',pic:''},{av:'AV22ManageFiltersData',fld:'vMANAGEFILTERSDATA',pic:''}]}");
          setEventMetadata("'DOCREATECUSTOMERACTION'","{handler:'E111J1',iparms:[]");
          setEventMetadata("'DOCREATECUSTOMERACTION'",",oparms:[]}");
          setEventMetadata("VALID_CUSTOMERTYPEID","{handler:'Valid_Customertypeid',iparms:[]");
@@ -3022,16 +3022,16 @@ namespace GeneXus.Programs {
          AV28TFCustomerKvkNumber_Sel = "";
          AV29TFCustomerName = "";
          AV30TFCustomerName_Sel = "";
-         AV31TFCustomerPostalAddress = "";
-         AV32TFCustomerPostalAddress_Sel = "";
          AV33TFCustomerEmail = "";
          AV34TFCustomerEmail_Sel = "";
-         AV35TFCustomerVisitingAddress = "";
-         AV36TFCustomerVisitingAddress_Sel = "";
          AV37TFCustomerPhone = "";
          AV38TFCustomerPhone_Sel = "";
          AV39TFCustomerVatNumber = "";
          AV40TFCustomerVatNumber_Sel = "";
+         AV35TFCustomerVisitingAddress = "";
+         AV36TFCustomerVisitingAddress_Sel = "";
+         AV31TFCustomerPostalAddress = "";
+         AV32TFCustomerPostalAddress_Sel = "";
          AV43TFCustomerTypeName = "";
          AV44TFCustomerTypeName_Sel = "";
          sDynURL = "";
@@ -3071,11 +3071,11 @@ namespace GeneXus.Programs {
          sEvtType = "";
          A41CustomerKvkNumber = "";
          A3CustomerName = "";
-         A4CustomerPostalAddress = "";
          A5CustomerEmail = "";
-         A6CustomerVisitingAddress = "";
          A7CustomerPhone = "";
          A14CustomerVatNumber = "";
+         A6CustomerVisitingAddress = "";
+         A4CustomerPostalAddress = "";
          A79CustomerTypeName = "";
          AV58UpdateAction = "";
          AV59DeleteAction = "";
@@ -3083,42 +3083,42 @@ namespace GeneXus.Programs {
          lV61Customerwwds_1_filterfulltext = "";
          lV62Customerwwds_2_tfcustomerkvknumber = "";
          lV64Customerwwds_4_tfcustomername = "";
-         lV66Customerwwds_6_tfcustomerpostaladdress = "";
-         lV68Customerwwds_8_tfcustomeremail = "";
-         lV70Customerwwds_10_tfcustomervisitingaddress = "";
-         lV72Customerwwds_12_tfcustomerphone = "";
-         lV74Customerwwds_14_tfcustomervatnumber = "";
+         lV66Customerwwds_6_tfcustomeremail = "";
+         lV68Customerwwds_8_tfcustomerphone = "";
+         lV70Customerwwds_10_tfcustomervatnumber = "";
+         lV72Customerwwds_12_tfcustomervisitingaddress = "";
+         lV74Customerwwds_14_tfcustomerpostaladdress = "";
          lV76Customerwwds_16_tfcustomertypename = "";
          AV61Customerwwds_1_filterfulltext = "";
          AV63Customerwwds_3_tfcustomerkvknumber_sel = "";
          AV62Customerwwds_2_tfcustomerkvknumber = "";
          AV65Customerwwds_5_tfcustomername_sel = "";
          AV64Customerwwds_4_tfcustomername = "";
-         AV67Customerwwds_7_tfcustomerpostaladdress_sel = "";
-         AV66Customerwwds_6_tfcustomerpostaladdress = "";
-         AV69Customerwwds_9_tfcustomeremail_sel = "";
-         AV68Customerwwds_8_tfcustomeremail = "";
-         AV71Customerwwds_11_tfcustomervisitingaddress_sel = "";
-         AV70Customerwwds_10_tfcustomervisitingaddress = "";
-         AV73Customerwwds_13_tfcustomerphone_sel = "";
-         AV72Customerwwds_12_tfcustomerphone = "";
-         AV75Customerwwds_15_tfcustomervatnumber_sel = "";
-         AV74Customerwwds_14_tfcustomervatnumber = "";
+         AV67Customerwwds_7_tfcustomeremail_sel = "";
+         AV66Customerwwds_6_tfcustomeremail = "";
+         AV69Customerwwds_9_tfcustomerphone_sel = "";
+         AV68Customerwwds_8_tfcustomerphone = "";
+         AV71Customerwwds_11_tfcustomervatnumber_sel = "";
+         AV70Customerwwds_10_tfcustomervatnumber = "";
+         AV73Customerwwds_13_tfcustomervisitingaddress_sel = "";
+         AV72Customerwwds_12_tfcustomervisitingaddress = "";
+         AV75Customerwwds_15_tfcustomerpostaladdress_sel = "";
+         AV74Customerwwds_14_tfcustomerpostaladdress = "";
          AV77Customerwwds_17_tfcustomertypename_sel = "";
          AV76Customerwwds_16_tfcustomertypename = "";
          H001J2_A93CustomerLastLine = new short[1] ;
          H001J2_A79CustomerTypeName = new string[] {""} ;
          H001J2_A78CustomerTypeId = new short[1] ;
          H001J2_n78CustomerTypeId = new bool[] {false} ;
+         H001J2_A4CustomerPostalAddress = new string[] {""} ;
+         H001J2_n4CustomerPostalAddress = new bool[] {false} ;
+         H001J2_A6CustomerVisitingAddress = new string[] {""} ;
+         H001J2_n6CustomerVisitingAddress = new bool[] {false} ;
          H001J2_A14CustomerVatNumber = new string[] {""} ;
          H001J2_A7CustomerPhone = new string[] {""} ;
          H001J2_n7CustomerPhone = new bool[] {false} ;
-         H001J2_A6CustomerVisitingAddress = new string[] {""} ;
-         H001J2_n6CustomerVisitingAddress = new bool[] {false} ;
          H001J2_A5CustomerEmail = new string[] {""} ;
          H001J2_n5CustomerEmail = new bool[] {false} ;
-         H001J2_A4CustomerPostalAddress = new string[] {""} ;
-         H001J2_n4CustomerPostalAddress = new bool[] {false} ;
          H001J2_A3CustomerName = new string[] {""} ;
          H001J2_A41CustomerKvkNumber = new string[] {""} ;
          H001J2_A1CustomerId = new short[1] ;
@@ -3154,8 +3154,8 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.customerww__default(),
             new Object[][] {
                 new Object[] {
-               H001J2_A93CustomerLastLine, H001J2_A79CustomerTypeName, H001J2_A78CustomerTypeId, H001J2_n78CustomerTypeId, H001J2_A14CustomerVatNumber, H001J2_A7CustomerPhone, H001J2_n7CustomerPhone, H001J2_A6CustomerVisitingAddress, H001J2_n6CustomerVisitingAddress, H001J2_A5CustomerEmail,
-               H001J2_n5CustomerEmail, H001J2_A4CustomerPostalAddress, H001J2_n4CustomerPostalAddress, H001J2_A3CustomerName, H001J2_A41CustomerKvkNumber, H001J2_A1CustomerId
+               H001J2_A93CustomerLastLine, H001J2_A79CustomerTypeName, H001J2_A78CustomerTypeId, H001J2_n78CustomerTypeId, H001J2_A4CustomerPostalAddress, H001J2_n4CustomerPostalAddress, H001J2_A6CustomerVisitingAddress, H001J2_n6CustomerVisitingAddress, H001J2_A14CustomerVatNumber, H001J2_A7CustomerPhone,
+               H001J2_n7CustomerPhone, H001J2_A5CustomerEmail, H001J2_n5CustomerEmail, H001J2_A3CustomerName, H001J2_A41CustomerKvkNumber, H001J2_A1CustomerId
                }
                , new Object[] {
                H001J3_AGRID_nRecordCount
@@ -3206,21 +3206,21 @@ namespace GeneXus.Programs {
       private int edtCustomerId_Enabled ;
       private int edtCustomerKvkNumber_Enabled ;
       private int edtCustomerName_Enabled ;
-      private int edtCustomerPostalAddress_Enabled ;
       private int edtCustomerEmail_Enabled ;
-      private int edtCustomerVisitingAddress_Enabled ;
       private int edtCustomerPhone_Enabled ;
       private int edtCustomerVatNumber_Enabled ;
+      private int edtCustomerVisitingAddress_Enabled ;
+      private int edtCustomerPostalAddress_Enabled ;
       private int edtCustomerTypeId_Enabled ;
       private int edtCustomerTypeName_Enabled ;
       private int edtCustomerLastLine_Enabled ;
       private int edtCustomerKvkNumber_Visible ;
       private int edtCustomerName_Visible ;
-      private int edtCustomerPostalAddress_Visible ;
       private int edtCustomerEmail_Visible ;
-      private int edtCustomerVisitingAddress_Visible ;
       private int edtCustomerPhone_Visible ;
       private int edtCustomerVatNumber_Visible ;
+      private int edtCustomerVisitingAddress_Visible ;
+      private int edtCustomerPostalAddress_Visible ;
       private int edtCustomerTypeName_Visible ;
       private int AV48PageToGo ;
       private int AV78GXV1 ;
@@ -3326,12 +3326,12 @@ namespace GeneXus.Programs {
       private string edtCustomerId_Internalname ;
       private string edtCustomerKvkNumber_Internalname ;
       private string edtCustomerName_Internalname ;
-      private string edtCustomerPostalAddress_Internalname ;
       private string edtCustomerEmail_Internalname ;
-      private string edtCustomerVisitingAddress_Internalname ;
       private string A7CustomerPhone ;
       private string edtCustomerPhone_Internalname ;
       private string edtCustomerVatNumber_Internalname ;
+      private string edtCustomerVisitingAddress_Internalname ;
+      private string edtCustomerPostalAddress_Internalname ;
       private string edtCustomerTypeId_Internalname ;
       private string edtCustomerTypeName_Internalname ;
       private string edtCustomerLastLine_Internalname ;
@@ -3340,9 +3340,9 @@ namespace GeneXus.Programs {
       private string AV59DeleteAction ;
       private string edtavDeleteaction_Internalname ;
       private string scmdbuf ;
-      private string lV72Customerwwds_12_tfcustomerphone ;
-      private string AV73Customerwwds_13_tfcustomerphone_sel ;
-      private string AV72Customerwwds_12_tfcustomerphone ;
+      private string lV68Customerwwds_8_tfcustomerphone ;
+      private string AV69Customerwwds_9_tfcustomerphone_sel ;
+      private string AV68Customerwwds_8_tfcustomerphone ;
       private string GXt_char10 ;
       private string GXt_char9 ;
       private string GXt_char8 ;
@@ -3358,12 +3358,12 @@ namespace GeneXus.Programs {
       private string edtCustomerId_Jsonclick ;
       private string edtCustomerKvkNumber_Jsonclick ;
       private string edtCustomerName_Jsonclick ;
-      private string edtCustomerPostalAddress_Jsonclick ;
       private string edtCustomerEmail_Jsonclick ;
-      private string edtCustomerVisitingAddress_Jsonclick ;
       private string gxphoneLink ;
       private string edtCustomerPhone_Jsonclick ;
       private string edtCustomerVatNumber_Jsonclick ;
+      private string edtCustomerVisitingAddress_Jsonclick ;
+      private string edtCustomerPostalAddress_Jsonclick ;
       private string edtCustomerTypeId_Jsonclick ;
       private string edtCustomerTypeName_Jsonclick ;
       private string edtCustomerLastLine_Jsonclick ;
@@ -3383,10 +3383,10 @@ namespace GeneXus.Programs {
       private bool wbLoad ;
       private bool Rfr0gs ;
       private bool wbErr ;
-      private bool n4CustomerPostalAddress ;
       private bool n5CustomerEmail ;
-      private bool n6CustomerVisitingAddress ;
       private bool n7CustomerPhone ;
+      private bool n6CustomerVisitingAddress ;
+      private bool n4CustomerPostalAddress ;
       private bool n78CustomerTypeId ;
       private bool bGXsfl_37_Refreshing=false ;
       private bool gxdyncontrolsrefreshing ;
@@ -3400,45 +3400,45 @@ namespace GeneXus.Programs {
       private string AV28TFCustomerKvkNumber_Sel ;
       private string AV29TFCustomerName ;
       private string AV30TFCustomerName_Sel ;
-      private string AV31TFCustomerPostalAddress ;
-      private string AV32TFCustomerPostalAddress_Sel ;
       private string AV33TFCustomerEmail ;
       private string AV34TFCustomerEmail_Sel ;
-      private string AV35TFCustomerVisitingAddress ;
-      private string AV36TFCustomerVisitingAddress_Sel ;
       private string AV39TFCustomerVatNumber ;
       private string AV40TFCustomerVatNumber_Sel ;
+      private string AV35TFCustomerVisitingAddress ;
+      private string AV36TFCustomerVisitingAddress_Sel ;
+      private string AV31TFCustomerPostalAddress ;
+      private string AV32TFCustomerPostalAddress_Sel ;
       private string AV43TFCustomerTypeName ;
       private string AV44TFCustomerTypeName_Sel ;
       private string AV51GridAppliedFilters ;
       private string A41CustomerKvkNumber ;
       private string A3CustomerName ;
-      private string A4CustomerPostalAddress ;
       private string A5CustomerEmail ;
-      private string A6CustomerVisitingAddress ;
       private string A14CustomerVatNumber ;
+      private string A6CustomerVisitingAddress ;
+      private string A4CustomerPostalAddress ;
       private string A79CustomerTypeName ;
       private string lV61Customerwwds_1_filterfulltext ;
       private string lV62Customerwwds_2_tfcustomerkvknumber ;
       private string lV64Customerwwds_4_tfcustomername ;
-      private string lV66Customerwwds_6_tfcustomerpostaladdress ;
-      private string lV68Customerwwds_8_tfcustomeremail ;
-      private string lV70Customerwwds_10_tfcustomervisitingaddress ;
-      private string lV74Customerwwds_14_tfcustomervatnumber ;
+      private string lV66Customerwwds_6_tfcustomeremail ;
+      private string lV70Customerwwds_10_tfcustomervatnumber ;
+      private string lV72Customerwwds_12_tfcustomervisitingaddress ;
+      private string lV74Customerwwds_14_tfcustomerpostaladdress ;
       private string lV76Customerwwds_16_tfcustomertypename ;
       private string AV61Customerwwds_1_filterfulltext ;
       private string AV63Customerwwds_3_tfcustomerkvknumber_sel ;
       private string AV62Customerwwds_2_tfcustomerkvknumber ;
       private string AV65Customerwwds_5_tfcustomername_sel ;
       private string AV64Customerwwds_4_tfcustomername ;
-      private string AV67Customerwwds_7_tfcustomerpostaladdress_sel ;
-      private string AV66Customerwwds_6_tfcustomerpostaladdress ;
-      private string AV69Customerwwds_9_tfcustomeremail_sel ;
-      private string AV68Customerwwds_8_tfcustomeremail ;
-      private string AV71Customerwwds_11_tfcustomervisitingaddress_sel ;
-      private string AV70Customerwwds_10_tfcustomervisitingaddress ;
-      private string AV75Customerwwds_15_tfcustomervatnumber_sel ;
-      private string AV74Customerwwds_14_tfcustomervatnumber ;
+      private string AV67Customerwwds_7_tfcustomeremail_sel ;
+      private string AV66Customerwwds_6_tfcustomeremail ;
+      private string AV71Customerwwds_11_tfcustomervatnumber_sel ;
+      private string AV70Customerwwds_10_tfcustomervatnumber ;
+      private string AV73Customerwwds_13_tfcustomervisitingaddress_sel ;
+      private string AV72Customerwwds_12_tfcustomervisitingaddress ;
+      private string AV75Customerwwds_15_tfcustomerpostaladdress_sel ;
+      private string AV74Customerwwds_14_tfcustomerpostaladdress ;
       private string AV77Customerwwds_17_tfcustomertypename_sel ;
       private string AV76Customerwwds_16_tfcustomertypename ;
       private IGxSession AV21Session ;
@@ -3457,15 +3457,15 @@ namespace GeneXus.Programs {
       private string[] H001J2_A79CustomerTypeName ;
       private short[] H001J2_A78CustomerTypeId ;
       private bool[] H001J2_n78CustomerTypeId ;
+      private string[] H001J2_A4CustomerPostalAddress ;
+      private bool[] H001J2_n4CustomerPostalAddress ;
+      private string[] H001J2_A6CustomerVisitingAddress ;
+      private bool[] H001J2_n6CustomerVisitingAddress ;
       private string[] H001J2_A14CustomerVatNumber ;
       private string[] H001J2_A7CustomerPhone ;
       private bool[] H001J2_n7CustomerPhone ;
-      private string[] H001J2_A6CustomerVisitingAddress ;
-      private bool[] H001J2_n6CustomerVisitingAddress ;
       private string[] H001J2_A5CustomerEmail ;
       private bool[] H001J2_n5CustomerEmail ;
-      private string[] H001J2_A4CustomerPostalAddress ;
-      private bool[] H001J2_n4CustomerPostalAddress ;
       private string[] H001J2_A3CustomerName ;
       private string[] H001J2_A41CustomerKvkNumber ;
       private short[] H001J2_A1CustomerId ;
@@ -3496,25 +3496,25 @@ namespace GeneXus.Programs {
                                              string AV62Customerwwds_2_tfcustomerkvknumber ,
                                              string AV65Customerwwds_5_tfcustomername_sel ,
                                              string AV64Customerwwds_4_tfcustomername ,
-                                             string AV67Customerwwds_7_tfcustomerpostaladdress_sel ,
-                                             string AV66Customerwwds_6_tfcustomerpostaladdress ,
-                                             string AV69Customerwwds_9_tfcustomeremail_sel ,
-                                             string AV68Customerwwds_8_tfcustomeremail ,
-                                             string AV71Customerwwds_11_tfcustomervisitingaddress_sel ,
-                                             string AV70Customerwwds_10_tfcustomervisitingaddress ,
-                                             string AV73Customerwwds_13_tfcustomerphone_sel ,
-                                             string AV72Customerwwds_12_tfcustomerphone ,
-                                             string AV75Customerwwds_15_tfcustomervatnumber_sel ,
-                                             string AV74Customerwwds_14_tfcustomervatnumber ,
+                                             string AV67Customerwwds_7_tfcustomeremail_sel ,
+                                             string AV66Customerwwds_6_tfcustomeremail ,
+                                             string AV69Customerwwds_9_tfcustomerphone_sel ,
+                                             string AV68Customerwwds_8_tfcustomerphone ,
+                                             string AV71Customerwwds_11_tfcustomervatnumber_sel ,
+                                             string AV70Customerwwds_10_tfcustomervatnumber ,
+                                             string AV73Customerwwds_13_tfcustomervisitingaddress_sel ,
+                                             string AV72Customerwwds_12_tfcustomervisitingaddress ,
+                                             string AV75Customerwwds_15_tfcustomerpostaladdress_sel ,
+                                             string AV74Customerwwds_14_tfcustomerpostaladdress ,
                                              string AV77Customerwwds_17_tfcustomertypename_sel ,
                                              string AV76Customerwwds_16_tfcustomertypename ,
                                              string A41CustomerKvkNumber ,
                                              string A3CustomerName ,
-                                             string A4CustomerPostalAddress ,
                                              string A5CustomerEmail ,
-                                             string A6CustomerVisitingAddress ,
                                              string A7CustomerPhone ,
                                              string A14CustomerVatNumber ,
+                                             string A6CustomerVisitingAddress ,
+                                             string A4CustomerPostalAddress ,
                                              string A79CustomerTypeName ,
                                              short AV13OrderedBy ,
                                              bool AV14OrderedDsc )
@@ -3526,12 +3526,12 @@ namespace GeneXus.Programs {
          string sSelectString;
          string sFromString;
          string sOrderString;
-         sSelectString = " T1.CustomerLastLine, T2.CustomerTypeName, T1.CustomerTypeId, T1.CustomerVatNumber, T1.CustomerPhone, T1.CustomerVisitingAddress, T1.CustomerEmail, T1.CustomerPostalAddress, T1.CustomerName, T1.CustomerKvkNumber, T1.CustomerId";
+         sSelectString = " T1.CustomerLastLine, T2.CustomerTypeName, T1.CustomerTypeId, T1.CustomerPostalAddress, T1.CustomerVisitingAddress, T1.CustomerVatNumber, T1.CustomerPhone, T1.CustomerEmail, T1.CustomerName, T1.CustomerKvkNumber, T1.CustomerId";
          sFromString = " FROM (Customer T1 LEFT JOIN CustomerType T2 ON T2.CustomerTypeId = T1.CustomerTypeId)";
          sOrderString = "";
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV61Customerwwds_1_filterfulltext)) )
          {
-            AddWhere(sWhereString, "(( T1.CustomerKvkNumber like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerName like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerPostalAddress like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerEmail like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerVisitingAddress like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerPhone like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerVatNumber like '%' || :lV61Customerwwds_1_filterfulltext) or ( T2.CustomerTypeName like '%' || :lV61Customerwwds_1_filterfulltext))");
+            AddWhere(sWhereString, "(( T1.CustomerKvkNumber like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerName like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerEmail like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerPhone like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerVatNumber like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerVisitingAddress like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerPostalAddress like '%' || :lV61Customerwwds_1_filterfulltext) or ( T2.CustomerTypeName like '%' || :lV61Customerwwds_1_filterfulltext))");
          }
          else
          {
@@ -3584,105 +3584,105 @@ namespace GeneXus.Programs {
          {
             AddWhere(sWhereString, "((char_length(trim(trailing ' ' from T1.CustomerName))=0))");
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV67Customerwwds_7_tfcustomerpostaladdress_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV66Customerwwds_6_tfcustomerpostaladdress)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV67Customerwwds_7_tfcustomeremail_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV66Customerwwds_6_tfcustomeremail)) ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerPostalAddress like :lV66Customerwwds_6_tfcustomerpostaladdress)");
+            AddWhere(sWhereString, "(T1.CustomerEmail like :lV66Customerwwds_6_tfcustomeremail)");
          }
          else
          {
             GXv_int11[12] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV67Customerwwds_7_tfcustomerpostaladdress_sel)) && ! ( StringUtil.StrCmp(AV67Customerwwds_7_tfcustomerpostaladdress_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV67Customerwwds_7_tfcustomeremail_sel)) && ! ( StringUtil.StrCmp(AV67Customerwwds_7_tfcustomeremail_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerPostalAddress = ( :AV67Customerwwds_7_tfcustomerpostaladdress_sel))");
+            AddWhere(sWhereString, "(T1.CustomerEmail = ( :AV67Customerwwds_7_tfcustomeremail_sel))");
          }
          else
          {
             GXv_int11[13] = 1;
          }
-         if ( StringUtil.StrCmp(AV67Customerwwds_7_tfcustomerpostaladdress_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV67Customerwwds_7_tfcustomeremail_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "(T1.CustomerPostalAddress IS NULL or (char_length(trim(trailing ' ' from T1.CustomerPostalAddress))=0))");
+            AddWhere(sWhereString, "(T1.CustomerEmail IS NULL or (char_length(trim(trailing ' ' from T1.CustomerEmail))=0))");
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV69Customerwwds_9_tfcustomeremail_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV68Customerwwds_8_tfcustomeremail)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV69Customerwwds_9_tfcustomerphone_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV68Customerwwds_8_tfcustomerphone)) ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerEmail like :lV68Customerwwds_8_tfcustomeremail)");
+            AddWhere(sWhereString, "(T1.CustomerPhone like :lV68Customerwwds_8_tfcustomerphone)");
          }
          else
          {
             GXv_int11[14] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV69Customerwwds_9_tfcustomeremail_sel)) && ! ( StringUtil.StrCmp(AV69Customerwwds_9_tfcustomeremail_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV69Customerwwds_9_tfcustomerphone_sel)) && ! ( StringUtil.StrCmp(AV69Customerwwds_9_tfcustomerphone_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerEmail = ( :AV69Customerwwds_9_tfcustomeremail_sel))");
+            AddWhere(sWhereString, "(T1.CustomerPhone = ( :AV69Customerwwds_9_tfcustomerphone_sel))");
          }
          else
          {
             GXv_int11[15] = 1;
          }
-         if ( StringUtil.StrCmp(AV69Customerwwds_9_tfcustomeremail_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV69Customerwwds_9_tfcustomerphone_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "(T1.CustomerEmail IS NULL or (char_length(trim(trailing ' ' from T1.CustomerEmail))=0))");
+            AddWhere(sWhereString, "(T1.CustomerPhone IS NULL or (char_length(trim(trailing ' ' from T1.CustomerPhone))=0))");
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV71Customerwwds_11_tfcustomervisitingaddress_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV70Customerwwds_10_tfcustomervisitingaddress)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV71Customerwwds_11_tfcustomervatnumber_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV70Customerwwds_10_tfcustomervatnumber)) ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerVisitingAddress like :lV70Customerwwds_10_tfcustomervisitingaddress)");
+            AddWhere(sWhereString, "(T1.CustomerVatNumber like :lV70Customerwwds_10_tfcustomervatnumber)");
          }
          else
          {
             GXv_int11[16] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV71Customerwwds_11_tfcustomervisitingaddress_sel)) && ! ( StringUtil.StrCmp(AV71Customerwwds_11_tfcustomervisitingaddress_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV71Customerwwds_11_tfcustomervatnumber_sel)) && ! ( StringUtil.StrCmp(AV71Customerwwds_11_tfcustomervatnumber_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerVisitingAddress = ( :AV71Customerwwds_11_tfcustomervisitingaddress_sel))");
+            AddWhere(sWhereString, "(T1.CustomerVatNumber = ( :AV71Customerwwds_11_tfcustomervatnumber_sel))");
          }
          else
          {
             GXv_int11[17] = 1;
          }
-         if ( StringUtil.StrCmp(AV71Customerwwds_11_tfcustomervisitingaddress_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV71Customerwwds_11_tfcustomervatnumber_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "(T1.CustomerVisitingAddress IS NULL or (char_length(trim(trailing ' ' from T1.CustomerVisitingAddress))=0))");
+            AddWhere(sWhereString, "((char_length(trim(trailing ' ' from T1.CustomerVatNumber))=0))");
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV73Customerwwds_13_tfcustomerphone_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV72Customerwwds_12_tfcustomerphone)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV73Customerwwds_13_tfcustomervisitingaddress_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV72Customerwwds_12_tfcustomervisitingaddress)) ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerPhone like :lV72Customerwwds_12_tfcustomerphone)");
+            AddWhere(sWhereString, "(T1.CustomerVisitingAddress like :lV72Customerwwds_12_tfcustomervisitingaddress)");
          }
          else
          {
             GXv_int11[18] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV73Customerwwds_13_tfcustomerphone_sel)) && ! ( StringUtil.StrCmp(AV73Customerwwds_13_tfcustomerphone_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV73Customerwwds_13_tfcustomervisitingaddress_sel)) && ! ( StringUtil.StrCmp(AV73Customerwwds_13_tfcustomervisitingaddress_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerPhone = ( :AV73Customerwwds_13_tfcustomerphone_sel))");
+            AddWhere(sWhereString, "(T1.CustomerVisitingAddress = ( :AV73Customerwwds_13_tfcustomervisitingaddress_sel))");
          }
          else
          {
             GXv_int11[19] = 1;
          }
-         if ( StringUtil.StrCmp(AV73Customerwwds_13_tfcustomerphone_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV73Customerwwds_13_tfcustomervisitingaddress_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "(T1.CustomerPhone IS NULL or (char_length(trim(trailing ' ' from T1.CustomerPhone))=0))");
+            AddWhere(sWhereString, "(T1.CustomerVisitingAddress IS NULL or (char_length(trim(trailing ' ' from T1.CustomerVisitingAddress))=0))");
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV75Customerwwds_15_tfcustomervatnumber_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV74Customerwwds_14_tfcustomervatnumber)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV75Customerwwds_15_tfcustomerpostaladdress_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV74Customerwwds_14_tfcustomerpostaladdress)) ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerVatNumber like :lV74Customerwwds_14_tfcustomervatnumber)");
+            AddWhere(sWhereString, "(T1.CustomerPostalAddress like :lV74Customerwwds_14_tfcustomerpostaladdress)");
          }
          else
          {
             GXv_int11[20] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV75Customerwwds_15_tfcustomervatnumber_sel)) && ! ( StringUtil.StrCmp(AV75Customerwwds_15_tfcustomervatnumber_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV75Customerwwds_15_tfcustomerpostaladdress_sel)) && ! ( StringUtil.StrCmp(AV75Customerwwds_15_tfcustomerpostaladdress_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerVatNumber = ( :AV75Customerwwds_15_tfcustomervatnumber_sel))");
+            AddWhere(sWhereString, "(T1.CustomerPostalAddress = ( :AV75Customerwwds_15_tfcustomerpostaladdress_sel))");
          }
          else
          {
             GXv_int11[21] = 1;
          }
-         if ( StringUtil.StrCmp(AV75Customerwwds_15_tfcustomervatnumber_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV75Customerwwds_15_tfcustomerpostaladdress_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "((char_length(trim(trailing ' ' from T1.CustomerVatNumber))=0))");
+            AddWhere(sWhereString, "(T1.CustomerPostalAddress IS NULL or (char_length(trim(trailing ' ' from T1.CustomerPostalAddress))=0))");
          }
          if ( String.IsNullOrEmpty(StringUtil.RTrim( AV77Customerwwds_17_tfcustomertypename_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV76Customerwwds_16_tfcustomertypename)) ) )
          {
@@ -3722,43 +3722,43 @@ namespace GeneXus.Programs {
          }
          else if ( ( AV13OrderedBy == 3 ) && ! AV14OrderedDsc )
          {
-            sOrderString += " ORDER BY T1.CustomerPostalAddress, T1.CustomerId";
+            sOrderString += " ORDER BY T1.CustomerEmail, T1.CustomerId";
          }
          else if ( ( AV13OrderedBy == 3 ) && ( AV14OrderedDsc ) )
          {
-            sOrderString += " ORDER BY T1.CustomerPostalAddress DESC, T1.CustomerId";
+            sOrderString += " ORDER BY T1.CustomerEmail DESC, T1.CustomerId";
          }
          else if ( ( AV13OrderedBy == 4 ) && ! AV14OrderedDsc )
          {
-            sOrderString += " ORDER BY T1.CustomerEmail, T1.CustomerId";
+            sOrderString += " ORDER BY T1.CustomerPhone, T1.CustomerId";
          }
          else if ( ( AV13OrderedBy == 4 ) && ( AV14OrderedDsc ) )
          {
-            sOrderString += " ORDER BY T1.CustomerEmail DESC, T1.CustomerId";
+            sOrderString += " ORDER BY T1.CustomerPhone DESC, T1.CustomerId";
          }
          else if ( ( AV13OrderedBy == 5 ) && ! AV14OrderedDsc )
          {
-            sOrderString += " ORDER BY T1.CustomerVisitingAddress, T1.CustomerId";
+            sOrderString += " ORDER BY T1.CustomerVatNumber, T1.CustomerId";
          }
          else if ( ( AV13OrderedBy == 5 ) && ( AV14OrderedDsc ) )
          {
-            sOrderString += " ORDER BY T1.CustomerVisitingAddress DESC, T1.CustomerId";
+            sOrderString += " ORDER BY T1.CustomerVatNumber DESC, T1.CustomerId";
          }
          else if ( ( AV13OrderedBy == 6 ) && ! AV14OrderedDsc )
          {
-            sOrderString += " ORDER BY T1.CustomerPhone, T1.CustomerId";
+            sOrderString += " ORDER BY T1.CustomerVisitingAddress, T1.CustomerId";
          }
          else if ( ( AV13OrderedBy == 6 ) && ( AV14OrderedDsc ) )
          {
-            sOrderString += " ORDER BY T1.CustomerPhone DESC, T1.CustomerId";
+            sOrderString += " ORDER BY T1.CustomerVisitingAddress DESC, T1.CustomerId";
          }
          else if ( ( AV13OrderedBy == 7 ) && ! AV14OrderedDsc )
          {
-            sOrderString += " ORDER BY T1.CustomerVatNumber, T1.CustomerId";
+            sOrderString += " ORDER BY T1.CustomerPostalAddress, T1.CustomerId";
          }
          else if ( ( AV13OrderedBy == 7 ) && ( AV14OrderedDsc ) )
          {
-            sOrderString += " ORDER BY T1.CustomerVatNumber DESC, T1.CustomerId";
+            sOrderString += " ORDER BY T1.CustomerPostalAddress DESC, T1.CustomerId";
          }
          else if ( ( AV13OrderedBy == 8 ) && ! AV14OrderedDsc )
          {
@@ -3784,25 +3784,25 @@ namespace GeneXus.Programs {
                                              string AV62Customerwwds_2_tfcustomerkvknumber ,
                                              string AV65Customerwwds_5_tfcustomername_sel ,
                                              string AV64Customerwwds_4_tfcustomername ,
-                                             string AV67Customerwwds_7_tfcustomerpostaladdress_sel ,
-                                             string AV66Customerwwds_6_tfcustomerpostaladdress ,
-                                             string AV69Customerwwds_9_tfcustomeremail_sel ,
-                                             string AV68Customerwwds_8_tfcustomeremail ,
-                                             string AV71Customerwwds_11_tfcustomervisitingaddress_sel ,
-                                             string AV70Customerwwds_10_tfcustomervisitingaddress ,
-                                             string AV73Customerwwds_13_tfcustomerphone_sel ,
-                                             string AV72Customerwwds_12_tfcustomerphone ,
-                                             string AV75Customerwwds_15_tfcustomervatnumber_sel ,
-                                             string AV74Customerwwds_14_tfcustomervatnumber ,
+                                             string AV67Customerwwds_7_tfcustomeremail_sel ,
+                                             string AV66Customerwwds_6_tfcustomeremail ,
+                                             string AV69Customerwwds_9_tfcustomerphone_sel ,
+                                             string AV68Customerwwds_8_tfcustomerphone ,
+                                             string AV71Customerwwds_11_tfcustomervatnumber_sel ,
+                                             string AV70Customerwwds_10_tfcustomervatnumber ,
+                                             string AV73Customerwwds_13_tfcustomervisitingaddress_sel ,
+                                             string AV72Customerwwds_12_tfcustomervisitingaddress ,
+                                             string AV75Customerwwds_15_tfcustomerpostaladdress_sel ,
+                                             string AV74Customerwwds_14_tfcustomerpostaladdress ,
                                              string AV77Customerwwds_17_tfcustomertypename_sel ,
                                              string AV76Customerwwds_16_tfcustomertypename ,
                                              string A41CustomerKvkNumber ,
                                              string A3CustomerName ,
-                                             string A4CustomerPostalAddress ,
                                              string A5CustomerEmail ,
-                                             string A6CustomerVisitingAddress ,
                                              string A7CustomerPhone ,
                                              string A14CustomerVatNumber ,
+                                             string A6CustomerVisitingAddress ,
+                                             string A4CustomerPostalAddress ,
                                              string A79CustomerTypeName ,
                                              short AV13OrderedBy ,
                                              bool AV14OrderedDsc )
@@ -3814,7 +3814,7 @@ namespace GeneXus.Programs {
          scmdbuf = "SELECT COUNT(*) FROM (Customer T1 LEFT JOIN CustomerType T2 ON T2.CustomerTypeId = T1.CustomerTypeId)";
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV61Customerwwds_1_filterfulltext)) )
          {
-            AddWhere(sWhereString, "(( T1.CustomerKvkNumber like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerName like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerPostalAddress like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerEmail like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerVisitingAddress like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerPhone like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerVatNumber like '%' || :lV61Customerwwds_1_filterfulltext) or ( T2.CustomerTypeName like '%' || :lV61Customerwwds_1_filterfulltext))");
+            AddWhere(sWhereString, "(( T1.CustomerKvkNumber like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerName like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerEmail like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerPhone like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerVatNumber like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerVisitingAddress like '%' || :lV61Customerwwds_1_filterfulltext) or ( T1.CustomerPostalAddress like '%' || :lV61Customerwwds_1_filterfulltext) or ( T2.CustomerTypeName like '%' || :lV61Customerwwds_1_filterfulltext))");
          }
          else
          {
@@ -3867,105 +3867,105 @@ namespace GeneXus.Programs {
          {
             AddWhere(sWhereString, "((char_length(trim(trailing ' ' from T1.CustomerName))=0))");
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV67Customerwwds_7_tfcustomerpostaladdress_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV66Customerwwds_6_tfcustomerpostaladdress)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV67Customerwwds_7_tfcustomeremail_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV66Customerwwds_6_tfcustomeremail)) ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerPostalAddress like :lV66Customerwwds_6_tfcustomerpostaladdress)");
+            AddWhere(sWhereString, "(T1.CustomerEmail like :lV66Customerwwds_6_tfcustomeremail)");
          }
          else
          {
             GXv_int13[12] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV67Customerwwds_7_tfcustomerpostaladdress_sel)) && ! ( StringUtil.StrCmp(AV67Customerwwds_7_tfcustomerpostaladdress_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV67Customerwwds_7_tfcustomeremail_sel)) && ! ( StringUtil.StrCmp(AV67Customerwwds_7_tfcustomeremail_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerPostalAddress = ( :AV67Customerwwds_7_tfcustomerpostaladdress_sel))");
+            AddWhere(sWhereString, "(T1.CustomerEmail = ( :AV67Customerwwds_7_tfcustomeremail_sel))");
          }
          else
          {
             GXv_int13[13] = 1;
          }
-         if ( StringUtil.StrCmp(AV67Customerwwds_7_tfcustomerpostaladdress_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV67Customerwwds_7_tfcustomeremail_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "(T1.CustomerPostalAddress IS NULL or (char_length(trim(trailing ' ' from T1.CustomerPostalAddress))=0))");
+            AddWhere(sWhereString, "(T1.CustomerEmail IS NULL or (char_length(trim(trailing ' ' from T1.CustomerEmail))=0))");
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV69Customerwwds_9_tfcustomeremail_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV68Customerwwds_8_tfcustomeremail)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV69Customerwwds_9_tfcustomerphone_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV68Customerwwds_8_tfcustomerphone)) ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerEmail like :lV68Customerwwds_8_tfcustomeremail)");
+            AddWhere(sWhereString, "(T1.CustomerPhone like :lV68Customerwwds_8_tfcustomerphone)");
          }
          else
          {
             GXv_int13[14] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV69Customerwwds_9_tfcustomeremail_sel)) && ! ( StringUtil.StrCmp(AV69Customerwwds_9_tfcustomeremail_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV69Customerwwds_9_tfcustomerphone_sel)) && ! ( StringUtil.StrCmp(AV69Customerwwds_9_tfcustomerphone_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerEmail = ( :AV69Customerwwds_9_tfcustomeremail_sel))");
+            AddWhere(sWhereString, "(T1.CustomerPhone = ( :AV69Customerwwds_9_tfcustomerphone_sel))");
          }
          else
          {
             GXv_int13[15] = 1;
          }
-         if ( StringUtil.StrCmp(AV69Customerwwds_9_tfcustomeremail_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV69Customerwwds_9_tfcustomerphone_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "(T1.CustomerEmail IS NULL or (char_length(trim(trailing ' ' from T1.CustomerEmail))=0))");
+            AddWhere(sWhereString, "(T1.CustomerPhone IS NULL or (char_length(trim(trailing ' ' from T1.CustomerPhone))=0))");
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV71Customerwwds_11_tfcustomervisitingaddress_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV70Customerwwds_10_tfcustomervisitingaddress)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV71Customerwwds_11_tfcustomervatnumber_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV70Customerwwds_10_tfcustomervatnumber)) ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerVisitingAddress like :lV70Customerwwds_10_tfcustomervisitingaddress)");
+            AddWhere(sWhereString, "(T1.CustomerVatNumber like :lV70Customerwwds_10_tfcustomervatnumber)");
          }
          else
          {
             GXv_int13[16] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV71Customerwwds_11_tfcustomervisitingaddress_sel)) && ! ( StringUtil.StrCmp(AV71Customerwwds_11_tfcustomervisitingaddress_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV71Customerwwds_11_tfcustomervatnumber_sel)) && ! ( StringUtil.StrCmp(AV71Customerwwds_11_tfcustomervatnumber_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerVisitingAddress = ( :AV71Customerwwds_11_tfcustomervisitingaddress_sel))");
+            AddWhere(sWhereString, "(T1.CustomerVatNumber = ( :AV71Customerwwds_11_tfcustomervatnumber_sel))");
          }
          else
          {
             GXv_int13[17] = 1;
          }
-         if ( StringUtil.StrCmp(AV71Customerwwds_11_tfcustomervisitingaddress_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV71Customerwwds_11_tfcustomervatnumber_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "(T1.CustomerVisitingAddress IS NULL or (char_length(trim(trailing ' ' from T1.CustomerVisitingAddress))=0))");
+            AddWhere(sWhereString, "((char_length(trim(trailing ' ' from T1.CustomerVatNumber))=0))");
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV73Customerwwds_13_tfcustomerphone_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV72Customerwwds_12_tfcustomerphone)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV73Customerwwds_13_tfcustomervisitingaddress_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV72Customerwwds_12_tfcustomervisitingaddress)) ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerPhone like :lV72Customerwwds_12_tfcustomerphone)");
+            AddWhere(sWhereString, "(T1.CustomerVisitingAddress like :lV72Customerwwds_12_tfcustomervisitingaddress)");
          }
          else
          {
             GXv_int13[18] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV73Customerwwds_13_tfcustomerphone_sel)) && ! ( StringUtil.StrCmp(AV73Customerwwds_13_tfcustomerphone_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV73Customerwwds_13_tfcustomervisitingaddress_sel)) && ! ( StringUtil.StrCmp(AV73Customerwwds_13_tfcustomervisitingaddress_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerPhone = ( :AV73Customerwwds_13_tfcustomerphone_sel))");
+            AddWhere(sWhereString, "(T1.CustomerVisitingAddress = ( :AV73Customerwwds_13_tfcustomervisitingaddress_sel))");
          }
          else
          {
             GXv_int13[19] = 1;
          }
-         if ( StringUtil.StrCmp(AV73Customerwwds_13_tfcustomerphone_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV73Customerwwds_13_tfcustomervisitingaddress_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "(T1.CustomerPhone IS NULL or (char_length(trim(trailing ' ' from T1.CustomerPhone))=0))");
+            AddWhere(sWhereString, "(T1.CustomerVisitingAddress IS NULL or (char_length(trim(trailing ' ' from T1.CustomerVisitingAddress))=0))");
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV75Customerwwds_15_tfcustomervatnumber_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV74Customerwwds_14_tfcustomervatnumber)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV75Customerwwds_15_tfcustomerpostaladdress_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV74Customerwwds_14_tfcustomerpostaladdress)) ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerVatNumber like :lV74Customerwwds_14_tfcustomervatnumber)");
+            AddWhere(sWhereString, "(T1.CustomerPostalAddress like :lV74Customerwwds_14_tfcustomerpostaladdress)");
          }
          else
          {
             GXv_int13[20] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV75Customerwwds_15_tfcustomervatnumber_sel)) && ! ( StringUtil.StrCmp(AV75Customerwwds_15_tfcustomervatnumber_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV75Customerwwds_15_tfcustomerpostaladdress_sel)) && ! ( StringUtil.StrCmp(AV75Customerwwds_15_tfcustomerpostaladdress_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.CustomerVatNumber = ( :AV75Customerwwds_15_tfcustomervatnumber_sel))");
+            AddWhere(sWhereString, "(T1.CustomerPostalAddress = ( :AV75Customerwwds_15_tfcustomerpostaladdress_sel))");
          }
          else
          {
             GXv_int13[21] = 1;
          }
-         if ( StringUtil.StrCmp(AV75Customerwwds_15_tfcustomervatnumber_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV75Customerwwds_15_tfcustomerpostaladdress_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "((char_length(trim(trailing ' ' from T1.CustomerVatNumber))=0))");
+            AddWhere(sWhereString, "(T1.CustomerPostalAddress IS NULL or (char_length(trim(trailing ' ' from T1.CustomerPostalAddress))=0))");
          }
          if ( String.IsNullOrEmpty(StringUtil.RTrim( AV77Customerwwds_17_tfcustomertypename_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV76Customerwwds_16_tfcustomertypename)) ) )
          {
@@ -4103,16 +4103,16 @@ namespace GeneXus.Programs {
           new ParDef("AV63Customerwwds_3_tfcustomerkvknumber_sel",GXType.VarChar,8,0) ,
           new ParDef("lV64Customerwwds_4_tfcustomername",GXType.VarChar,40,0) ,
           new ParDef("AV65Customerwwds_5_tfcustomername_sel",GXType.VarChar,40,0) ,
-          new ParDef("lV66Customerwwds_6_tfcustomerpostaladdress",GXType.VarChar,1024,0) ,
-          new ParDef("AV67Customerwwds_7_tfcustomerpostaladdress_sel",GXType.VarChar,1024,0) ,
-          new ParDef("lV68Customerwwds_8_tfcustomeremail",GXType.VarChar,100,0) ,
-          new ParDef("AV69Customerwwds_9_tfcustomeremail_sel",GXType.VarChar,100,0) ,
-          new ParDef("lV70Customerwwds_10_tfcustomervisitingaddress",GXType.VarChar,1024,0) ,
-          new ParDef("AV71Customerwwds_11_tfcustomervisitingaddress_sel",GXType.VarChar,1024,0) ,
-          new ParDef("lV72Customerwwds_12_tfcustomerphone",GXType.Char,20,0) ,
-          new ParDef("AV73Customerwwds_13_tfcustomerphone_sel",GXType.Char,20,0) ,
-          new ParDef("lV74Customerwwds_14_tfcustomervatnumber",GXType.VarChar,14,0) ,
-          new ParDef("AV75Customerwwds_15_tfcustomervatnumber_sel",GXType.VarChar,14,0) ,
+          new ParDef("lV66Customerwwds_6_tfcustomeremail",GXType.VarChar,100,0) ,
+          new ParDef("AV67Customerwwds_7_tfcustomeremail_sel",GXType.VarChar,100,0) ,
+          new ParDef("lV68Customerwwds_8_tfcustomerphone",GXType.Char,20,0) ,
+          new ParDef("AV69Customerwwds_9_tfcustomerphone_sel",GXType.Char,20,0) ,
+          new ParDef("lV70Customerwwds_10_tfcustomervatnumber",GXType.VarChar,14,0) ,
+          new ParDef("AV71Customerwwds_11_tfcustomervatnumber_sel",GXType.VarChar,14,0) ,
+          new ParDef("lV72Customerwwds_12_tfcustomervisitingaddress",GXType.VarChar,1024,0) ,
+          new ParDef("AV73Customerwwds_13_tfcustomervisitingaddress_sel",GXType.VarChar,1024,0) ,
+          new ParDef("lV74Customerwwds_14_tfcustomerpostaladdress",GXType.VarChar,1024,0) ,
+          new ParDef("AV75Customerwwds_15_tfcustomerpostaladdress_sel",GXType.VarChar,1024,0) ,
           new ParDef("lV76Customerwwds_16_tfcustomertypename",GXType.VarChar,40,0) ,
           new ParDef("AV77Customerwwds_17_tfcustomertypename_sel",GXType.VarChar,40,0) ,
           new ParDef("GXPagingFrom2",GXType.Int32,9,0) ,
@@ -4133,16 +4133,16 @@ namespace GeneXus.Programs {
           new ParDef("AV63Customerwwds_3_tfcustomerkvknumber_sel",GXType.VarChar,8,0) ,
           new ParDef("lV64Customerwwds_4_tfcustomername",GXType.VarChar,40,0) ,
           new ParDef("AV65Customerwwds_5_tfcustomername_sel",GXType.VarChar,40,0) ,
-          new ParDef("lV66Customerwwds_6_tfcustomerpostaladdress",GXType.VarChar,1024,0) ,
-          new ParDef("AV67Customerwwds_7_tfcustomerpostaladdress_sel",GXType.VarChar,1024,0) ,
-          new ParDef("lV68Customerwwds_8_tfcustomeremail",GXType.VarChar,100,0) ,
-          new ParDef("AV69Customerwwds_9_tfcustomeremail_sel",GXType.VarChar,100,0) ,
-          new ParDef("lV70Customerwwds_10_tfcustomervisitingaddress",GXType.VarChar,1024,0) ,
-          new ParDef("AV71Customerwwds_11_tfcustomervisitingaddress_sel",GXType.VarChar,1024,0) ,
-          new ParDef("lV72Customerwwds_12_tfcustomerphone",GXType.Char,20,0) ,
-          new ParDef("AV73Customerwwds_13_tfcustomerphone_sel",GXType.Char,20,0) ,
-          new ParDef("lV74Customerwwds_14_tfcustomervatnumber",GXType.VarChar,14,0) ,
-          new ParDef("AV75Customerwwds_15_tfcustomervatnumber_sel",GXType.VarChar,14,0) ,
+          new ParDef("lV66Customerwwds_6_tfcustomeremail",GXType.VarChar,100,0) ,
+          new ParDef("AV67Customerwwds_7_tfcustomeremail_sel",GXType.VarChar,100,0) ,
+          new ParDef("lV68Customerwwds_8_tfcustomerphone",GXType.Char,20,0) ,
+          new ParDef("AV69Customerwwds_9_tfcustomerphone_sel",GXType.Char,20,0) ,
+          new ParDef("lV70Customerwwds_10_tfcustomervatnumber",GXType.VarChar,14,0) ,
+          new ParDef("AV71Customerwwds_11_tfcustomervatnumber_sel",GXType.VarChar,14,0) ,
+          new ParDef("lV72Customerwwds_12_tfcustomervisitingaddress",GXType.VarChar,1024,0) ,
+          new ParDef("AV73Customerwwds_13_tfcustomervisitingaddress_sel",GXType.VarChar,1024,0) ,
+          new ParDef("lV74Customerwwds_14_tfcustomerpostaladdress",GXType.VarChar,1024,0) ,
+          new ParDef("AV75Customerwwds_15_tfcustomerpostaladdress_sel",GXType.VarChar,1024,0) ,
           new ParDef("lV76Customerwwds_16_tfcustomertypename",GXType.VarChar,40,0) ,
           new ParDef("AV77Customerwwds_17_tfcustomertypename_sel",GXType.VarChar,40,0)
           };
@@ -4165,11 +4165,11 @@ namespace GeneXus.Programs {
                 ((short[]) buf[2])[0] = rslt.getShort(3);
                 ((bool[]) buf[3])[0] = rslt.wasNull(3);
                 ((string[]) buf[4])[0] = rslt.getVarchar(4);
-                ((string[]) buf[5])[0] = rslt.getString(5, 20);
-                ((bool[]) buf[6])[0] = rslt.wasNull(5);
-                ((string[]) buf[7])[0] = rslt.getVarchar(6);
-                ((bool[]) buf[8])[0] = rslt.wasNull(6);
-                ((string[]) buf[9])[0] = rslt.getVarchar(7);
+                ((bool[]) buf[5])[0] = rslt.wasNull(4);
+                ((string[]) buf[6])[0] = rslt.getVarchar(5);
+                ((bool[]) buf[7])[0] = rslt.wasNull(5);
+                ((string[]) buf[8])[0] = rslt.getVarchar(6);
+                ((string[]) buf[9])[0] = rslt.getString(7, 20);
                 ((bool[]) buf[10])[0] = rslt.wasNull(7);
                 ((string[]) buf[11])[0] = rslt.getVarchar(8);
                 ((bool[]) buf[12])[0] = rslt.wasNull(8);

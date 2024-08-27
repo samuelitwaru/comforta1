@@ -79,6 +79,10 @@ namespace GeneXus.Programs
 
 			AddObjectProperty("CustomerLocationPhone", gxTpr_Customerlocationphone, false);
 
+			if (gxTpr_Amenities != null)
+			{
+				AddObjectProperty("Amenities", gxTpr_Amenities, false);
+			}
 			return;
 		}
 		#endregion
@@ -164,6 +168,36 @@ namespace GeneXus.Programs
 
 
 
+
+		[SoapElement(ElementName="Amenities" )]
+		[XmlArray(ElementName="Amenities"  )]
+		[XmlArrayItemAttribute(ElementName="AmenitiesItem" , IsNullable=false )]
+		public GXBaseCollection<SdtResidentDetails_Customer_Location_AmenitiesItem> gxTpr_Amenities
+		{
+			get {
+				if ( gxTv_SdtResidentDetails_Customer_Location_Amenities == null )
+				{
+					gxTv_SdtResidentDetails_Customer_Location_Amenities = new GXBaseCollection<SdtResidentDetails_Customer_Location_AmenitiesItem>( context, "ResidentDetails.Customer.Location.AmenitiesItem", "");
+				}
+				return gxTv_SdtResidentDetails_Customer_Location_Amenities;
+			}
+			set {
+				gxTv_SdtResidentDetails_Customer_Location_Amenities = value;
+				SetDirty("Amenities");
+			}
+		}
+
+		public void gxTv_SdtResidentDetails_Customer_Location_Amenities_SetNull()
+		{
+			gxTv_SdtResidentDetails_Customer_Location_Amenities = null;
+		}
+
+		public bool gxTv_SdtResidentDetails_Customer_Location_Amenities_IsNull()
+		{
+			return gxTv_SdtResidentDetails_Customer_Location_Amenities == null;
+		}
+
+
 		public override bool ShouldSerializeSdtJson()
 		{
 			return true;
@@ -181,6 +215,7 @@ namespace GeneXus.Programs
 			gxTv_SdtResidentDetails_Customer_Location_Customerlocationpostaladdress = "";
 			gxTv_SdtResidentDetails_Customer_Location_Customerlocationemail = "";
 			gxTv_SdtResidentDetails_Customer_Location_Customerlocationphone = "";
+
 			return  ;
 		}
 
@@ -204,6 +239,9 @@ namespace GeneXus.Programs
 
 		protected string gxTv_SdtResidentDetails_Customer_Location_Customerlocationphone;
 		 
+
+		protected GXBaseCollection<SdtResidentDetails_Customer_Location_AmenitiesItem> gxTv_SdtResidentDetails_Customer_Location_Amenities = null; 
+
 
 
 		#endregion
@@ -279,6 +317,18 @@ namespace GeneXus.Programs
 			}
 			set { 
 				 sdt.gxTpr_Customerlocationphone = value;
+			}
+		}
+
+		[DataMember(Name="Amenities", Order=5)]
+		public GxGenericCollection<SdtResidentDetails_Customer_Location_AmenitiesItem_RESTInterface> gxTpr_Amenities
+		{
+			get {
+				return new GxGenericCollection<SdtResidentDetails_Customer_Location_AmenitiesItem_RESTInterface>(sdt.gxTpr_Amenities);
+
+			}
+			set {
+				value.LoadCollection(sdt.gxTpr_Amenities);
 			}
 		}
 

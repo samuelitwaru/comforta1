@@ -551,8 +551,8 @@ namespace GeneXus.Programs {
             ucCombo_suppliergenoptions.SetProperty("DataListProc", Combo_suppliergenoptions_Datalistproc);
             ucCombo_suppliergenoptions.SetProperty("DataListProcParametersPrefix", Combo_suppliergenoptions_Datalistprocparametersprefix);
             ucCombo_suppliergenoptions.SetProperty("IncludeOnlySelectedOption", Combo_suppliergenoptions_Includeonlyselectedoption);
+            ucCombo_suppliergenoptions.SetProperty("EmptyItem", Combo_suppliergenoptions_Emptyitem);
             ucCombo_suppliergenoptions.SetProperty("MultipleValuesType", Combo_suppliergenoptions_Multiplevaluestype);
-            ucCombo_suppliergenoptions.SetProperty("EmptyItemText", Combo_suppliergenoptions_Emptyitemtext);
             ucCombo_suppliergenoptions.SetProperty("DropDownOptionsTitleSettingsIcons", AV13DDO_TitleSettingsIcons);
             ucCombo_suppliergenoptions.SetProperty("DropDownOptionsData", AV47SupplierGenOptions_Data);
             ucCombo_suppliergenoptions.Render(context, "dvelop.gxbootstrap.ddoextendedcombo", Combo_suppliergenoptions_Internalname, "COMBO_SUPPLIERGENOPTIONSContainer");
@@ -1367,14 +1367,14 @@ namespace GeneXus.Programs {
          GXt_SdtGAMUser3 = AV16GAMUser;
          new getloggedinuser(context ).execute( out  GXt_SdtGAMUser3) ;
          AV16GAMUser = GXt_SdtGAMUser3;
-         if ( AV16GAMUser.checkrole(context.GetMessage( "Customer Manager", "")) )
+         if ( AV16GAMUser.checkrole("Customer Manager") )
          {
             dynavLocationoption.Visible = 1;
             AssignProp("", false, dynavLocationoption_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(dynavLocationoption.Visible), 5, 0), true);
          }
          else
          {
-            if ( AV16GAMUser.checkrole(context.GetMessage( "Receptionist", "")) )
+            if ( AV16GAMUser.checkrole("Receptionist") )
             {
                GXt_int2 = AV26LocationOption;
                new getreceptionistlocationid(context ).execute( out  GXt_int2) ;
@@ -1629,7 +1629,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2024824415126", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248277333860", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1645,7 +1645,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("addgensuppliers.js", "?2024824415128", false, true);
+         context.AddJavascriptSource("addgensuppliers.js", "?20248277333862", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -2006,13 +2006,13 @@ namespace GeneXus.Programs {
          Btnback_Class = "BtnDefault";
          Btnback_Caption = context.GetMessage( "Cancel", "");
          Btnback_Tooltiptext = "";
-         Combo_suppliergenoptions_Emptyitemtext = "Select AGB Supplier to add";
          Combo_suppliergenoptions_Multiplevaluestype = "Tags";
+         Combo_suppliergenoptions_Emptyitem = Convert.ToBoolean( 0);
          Combo_suppliergenoptions_Includeonlyselectedoption = Convert.ToBoolean( -1);
          Combo_suppliergenoptions_Datalistprocparametersprefix = " \"ComboName\": \"SupplierGenOptions\"";
          Combo_suppliergenoptions_Datalistproc = "AddGenSuppliersLoadDVCombo";
          Combo_suppliergenoptions_Allowmultipleselection = Convert.ToBoolean( -1);
-         Combo_suppliergenoptions_Cls = "ExtendedCombo AddressAttribute ";
+         Combo_suppliergenoptions_Cls = "ExtendedCombo AddressAttribute";
          Combo_suppliergenoptions_Caption = "";
          dynavLocationoption_Jsonclick = "";
          dynavLocationoption.Visible = 1;
@@ -2252,7 +2252,6 @@ namespace GeneXus.Programs {
       private string Combo_suppliergenoptions_Datalistproc ;
       private string Combo_suppliergenoptions_Datalistprocparametersprefix ;
       private string Combo_suppliergenoptions_Multiplevaluestype ;
-      private string Combo_suppliergenoptions_Emptyitemtext ;
       private string Combo_suppliergenoptions_Internalname ;
       private string lblSpacer2_Internalname ;
       private string lblSpacer2_Jsonclick ;
@@ -2309,6 +2308,7 @@ namespace GeneXus.Programs {
       private bool wbLoad ;
       private bool Combo_suppliergenoptions_Allowmultipleselection ;
       private bool Combo_suppliergenoptions_Includeonlyselectedoption ;
+      private bool Combo_suppliergenoptions_Emptyitem ;
       private bool Rfr0gs ;
       private bool wbErr ;
       private bool gxdyncontrolsrefreshing ;

@@ -70,6 +70,8 @@ namespace GeneXus.Programs {
          state.Add("gxTpr_Customerlocationemail_Z");
          state.Add("gxTpr_Customerlocationphone_Z");
          state.Add("gxTpr_Customerlocationlastline_Z");
+         state.Add("gxTpr_Customerlocationdescription_Z");
+         state.Add("gxTpr_Customerlocationname_Z");
          return state ;
       }
 
@@ -83,6 +85,8 @@ namespace GeneXus.Programs {
          gxTv_SdtCustomer_Locations_Customerlocationemail = sdt.gxTv_SdtCustomer_Locations_Customerlocationemail ;
          gxTv_SdtCustomer_Locations_Customerlocationphone = sdt.gxTv_SdtCustomer_Locations_Customerlocationphone ;
          gxTv_SdtCustomer_Locations_Customerlocationlastline = sdt.gxTv_SdtCustomer_Locations_Customerlocationlastline ;
+         gxTv_SdtCustomer_Locations_Customerlocationdescription = sdt.gxTv_SdtCustomer_Locations_Customerlocationdescription ;
+         gxTv_SdtCustomer_Locations_Customerlocationname = sdt.gxTv_SdtCustomer_Locations_Customerlocationname ;
          gxTv_SdtCustomer_Locations_Receptionist = sdt.gxTv_SdtCustomer_Locations_Receptionist ;
          gxTv_SdtCustomer_Locations_Supplier_agb = sdt.gxTv_SdtCustomer_Locations_Supplier_agb ;
          gxTv_SdtCustomer_Locations_Supplier_gen = sdt.gxTv_SdtCustomer_Locations_Supplier_gen ;
@@ -96,6 +100,8 @@ namespace GeneXus.Programs {
          gxTv_SdtCustomer_Locations_Customerlocationemail_Z = sdt.gxTv_SdtCustomer_Locations_Customerlocationemail_Z ;
          gxTv_SdtCustomer_Locations_Customerlocationphone_Z = sdt.gxTv_SdtCustomer_Locations_Customerlocationphone_Z ;
          gxTv_SdtCustomer_Locations_Customerlocationlastline_Z = sdt.gxTv_SdtCustomer_Locations_Customerlocationlastline_Z ;
+         gxTv_SdtCustomer_Locations_Customerlocationdescription_Z = sdt.gxTv_SdtCustomer_Locations_Customerlocationdescription_Z ;
+         gxTv_SdtCustomer_Locations_Customerlocationname_Z = sdt.gxTv_SdtCustomer_Locations_Customerlocationname_Z ;
          return  ;
       }
 
@@ -120,6 +126,8 @@ namespace GeneXus.Programs {
          AddObjectProperty("CustomerLocationEmail", gxTv_SdtCustomer_Locations_Customerlocationemail, false, includeNonInitialized);
          AddObjectProperty("CustomerLocationPhone", gxTv_SdtCustomer_Locations_Customerlocationphone, false, includeNonInitialized);
          AddObjectProperty("CustomerLocationLastLine", gxTv_SdtCustomer_Locations_Customerlocationlastline, false, includeNonInitialized);
+         AddObjectProperty("CustomerLocationDescription", gxTv_SdtCustomer_Locations_Customerlocationdescription, false, includeNonInitialized);
+         AddObjectProperty("CustomerLocationName", gxTv_SdtCustomer_Locations_Customerlocationname, false, includeNonInitialized);
          if ( gxTv_SdtCustomer_Locations_Receptionist != null )
          {
             AddObjectProperty("Receptionist", gxTv_SdtCustomer_Locations_Receptionist, includeState, includeNonInitialized);
@@ -147,6 +155,8 @@ namespace GeneXus.Programs {
             AddObjectProperty("CustomerLocationEmail_Z", gxTv_SdtCustomer_Locations_Customerlocationemail_Z, false, includeNonInitialized);
             AddObjectProperty("CustomerLocationPhone_Z", gxTv_SdtCustomer_Locations_Customerlocationphone_Z, false, includeNonInitialized);
             AddObjectProperty("CustomerLocationLastLine_Z", gxTv_SdtCustomer_Locations_Customerlocationlastline_Z, false, includeNonInitialized);
+            AddObjectProperty("CustomerLocationDescription_Z", gxTv_SdtCustomer_Locations_Customerlocationdescription_Z, false, includeNonInitialized);
+            AddObjectProperty("CustomerLocationName_Z", gxTv_SdtCustomer_Locations_Customerlocationname_Z, false, includeNonInitialized);
          }
          return  ;
       }
@@ -182,6 +192,16 @@ namespace GeneXus.Programs {
          {
             sdtIsNull = 0;
             gxTv_SdtCustomer_Locations_Customerlocationlastline = sdt.gxTv_SdtCustomer_Locations_Customerlocationlastline ;
+         }
+         if ( sdt.IsDirty("CustomerLocationDescription") )
+         {
+            sdtIsNull = 0;
+            gxTv_SdtCustomer_Locations_Customerlocationdescription = sdt.gxTv_SdtCustomer_Locations_Customerlocationdescription ;
+         }
+         if ( sdt.IsDirty("CustomerLocationName") )
+         {
+            sdtIsNull = 0;
+            gxTv_SdtCustomer_Locations_Customerlocationname = sdt.gxTv_SdtCustomer_Locations_Customerlocationname ;
          }
          if ( gxTv_SdtCustomer_Locations_Receptionist != null )
          {
@@ -388,6 +408,40 @@ namespace GeneXus.Programs {
             gxTv_SdtCustomer_Locations_Customerlocationlastline = value;
             gxTv_SdtCustomer_Locations_Modified = 1;
             SetDirty("Customerlocationlastline");
+         }
+
+      }
+
+      [  SoapElement( ElementName = "CustomerLocationDescription" )]
+      [  XmlElement( ElementName = "CustomerLocationDescription"   )]
+      public string gxTpr_Customerlocationdescription
+      {
+         get {
+            return gxTv_SdtCustomer_Locations_Customerlocationdescription ;
+         }
+
+         set {
+            sdtIsNull = 0;
+            gxTv_SdtCustomer_Locations_Customerlocationdescription = value;
+            gxTv_SdtCustomer_Locations_Modified = 1;
+            SetDirty("Customerlocationdescription");
+         }
+
+      }
+
+      [  SoapElement( ElementName = "CustomerLocationName" )]
+      [  XmlElement( ElementName = "CustomerLocationName"   )]
+      public string gxTpr_Customerlocationname
+      {
+         get {
+            return gxTv_SdtCustomer_Locations_Customerlocationname ;
+         }
+
+         set {
+            sdtIsNull = 0;
+            gxTv_SdtCustomer_Locations_Customerlocationname = value;
+            gxTv_SdtCustomer_Locations_Modified = 1;
+            SetDirty("Customerlocationname");
          }
 
       }
@@ -899,6 +953,64 @@ namespace GeneXus.Programs {
          return false ;
       }
 
+      [  SoapElement( ElementName = "CustomerLocationDescription_Z" )]
+      [  XmlElement( ElementName = "CustomerLocationDescription_Z"   )]
+      public string gxTpr_Customerlocationdescription_Z
+      {
+         get {
+            return gxTv_SdtCustomer_Locations_Customerlocationdescription_Z ;
+         }
+
+         set {
+            sdtIsNull = 0;
+            gxTv_SdtCustomer_Locations_Customerlocationdescription_Z = value;
+            gxTv_SdtCustomer_Locations_Modified = 1;
+            SetDirty("Customerlocationdescription_Z");
+         }
+
+      }
+
+      public void gxTv_SdtCustomer_Locations_Customerlocationdescription_Z_SetNull( )
+      {
+         gxTv_SdtCustomer_Locations_Customerlocationdescription_Z = "";
+         SetDirty("Customerlocationdescription_Z");
+         return  ;
+      }
+
+      public bool gxTv_SdtCustomer_Locations_Customerlocationdescription_Z_IsNull( )
+      {
+         return false ;
+      }
+
+      [  SoapElement( ElementName = "CustomerLocationName_Z" )]
+      [  XmlElement( ElementName = "CustomerLocationName_Z"   )]
+      public string gxTpr_Customerlocationname_Z
+      {
+         get {
+            return gxTv_SdtCustomer_Locations_Customerlocationname_Z ;
+         }
+
+         set {
+            sdtIsNull = 0;
+            gxTv_SdtCustomer_Locations_Customerlocationname_Z = value;
+            gxTv_SdtCustomer_Locations_Modified = 1;
+            SetDirty("Customerlocationname_Z");
+         }
+
+      }
+
+      public void gxTv_SdtCustomer_Locations_Customerlocationname_Z_SetNull( )
+      {
+         gxTv_SdtCustomer_Locations_Customerlocationname_Z = "";
+         SetDirty("Customerlocationname_Z");
+         return  ;
+      }
+
+      public bool gxTv_SdtCustomer_Locations_Customerlocationname_Z_IsNull( )
+      {
+         return false ;
+      }
+
       public void initialize( )
       {
          sdtIsNull = 1;
@@ -906,11 +1018,15 @@ namespace GeneXus.Programs {
          gxTv_SdtCustomer_Locations_Customerlocationpostaladdress = "";
          gxTv_SdtCustomer_Locations_Customerlocationemail = "";
          gxTv_SdtCustomer_Locations_Customerlocationphone = "";
+         gxTv_SdtCustomer_Locations_Customerlocationdescription = "";
+         gxTv_SdtCustomer_Locations_Customerlocationname = "";
          gxTv_SdtCustomer_Locations_Mode = "";
          gxTv_SdtCustomer_Locations_Customerlocationvisitingaddress_Z = "";
          gxTv_SdtCustomer_Locations_Customerlocationpostaladdress_Z = "";
          gxTv_SdtCustomer_Locations_Customerlocationemail_Z = "";
          gxTv_SdtCustomer_Locations_Customerlocationphone_Z = "";
+         gxTv_SdtCustomer_Locations_Customerlocationdescription_Z = "";
+         gxTv_SdtCustomer_Locations_Customerlocationname_Z = "";
          return  ;
       }
 
@@ -932,9 +1048,13 @@ namespace GeneXus.Programs {
       private string gxTv_SdtCustomer_Locations_Customerlocationvisitingaddress ;
       private string gxTv_SdtCustomer_Locations_Customerlocationpostaladdress ;
       private string gxTv_SdtCustomer_Locations_Customerlocationemail ;
+      private string gxTv_SdtCustomer_Locations_Customerlocationdescription ;
+      private string gxTv_SdtCustomer_Locations_Customerlocationname ;
       private string gxTv_SdtCustomer_Locations_Customerlocationvisitingaddress_Z ;
       private string gxTv_SdtCustomer_Locations_Customerlocationpostaladdress_Z ;
       private string gxTv_SdtCustomer_Locations_Customerlocationemail_Z ;
+      private string gxTv_SdtCustomer_Locations_Customerlocationdescription_Z ;
+      private string gxTv_SdtCustomer_Locations_Customerlocationname_Z ;
       private GXBCLevelCollection<SdtCustomer_Locations_Receptionist> gxTv_SdtCustomer_Locations_Receptionist=null ;
       private GXBCLevelCollection<SdtCustomer_Locations_Supplier_Agb> gxTv_SdtCustomer_Locations_Supplier_agb=null ;
       private GXBCLevelCollection<SdtCustomer_Locations_Supplier_Gen> gxTv_SdtCustomer_Locations_Supplier_gen=null ;
@@ -1036,7 +1156,35 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "Receptionist" , Order = 6 )]
+      [DataMember( Name = "CustomerLocationDescription" , Order = 6 )]
+      [GxSeudo()]
+      public string gxTpr_Customerlocationdescription
+      {
+         get {
+            return sdt.gxTpr_Customerlocationdescription ;
+         }
+
+         set {
+            sdt.gxTpr_Customerlocationdescription = value;
+         }
+
+      }
+
+      [DataMember( Name = "CustomerLocationName" , Order = 7 )]
+      [GxSeudo()]
+      public string gxTpr_Customerlocationname
+      {
+         get {
+            return sdt.gxTpr_Customerlocationname ;
+         }
+
+         set {
+            sdt.gxTpr_Customerlocationname = value;
+         }
+
+      }
+
+      [DataMember( Name = "Receptionist" , Order = 8 )]
       public GxGenericCollection<SdtCustomer_Locations_Receptionist_RESTInterface> gxTpr_Receptionist
       {
          get {
@@ -1049,7 +1197,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "Supplier_Agb" , Order = 7 )]
+      [DataMember( Name = "Supplier_Agb" , Order = 9 )]
       public GxGenericCollection<SdtCustomer_Locations_Supplier_Agb_RESTInterface> gxTpr_Supplier_agb
       {
          get {
@@ -1062,7 +1210,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "Supplier_Gen" , Order = 8 )]
+      [DataMember( Name = "Supplier_Gen" , Order = 10 )]
       public GxGenericCollection<SdtCustomer_Locations_Supplier_Gen_RESTInterface> gxTpr_Supplier_gen
       {
          get {
@@ -1075,7 +1223,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "Amenities" , Order = 9 )]
+      [DataMember( Name = "Amenities" , Order = 11 )]
       public GxGenericCollection<SdtCustomer_Locations_Amenities_RESTInterface> gxTpr_Amenities
       {
          get {

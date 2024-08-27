@@ -100,7 +100,6 @@ namespace GeneXus.Programs {
          GXt_objcol_SdtHomeModulesSDT_HomeModulesSDTItem2 = AV10DashboardItems;
          new getdashboarditemsdp(context ).execute( out  GXt_objcol_SdtHomeModulesSDT_HomeModulesSDTItem2) ;
          AV10DashboardItems = GXt_objcol_SdtHomeModulesSDT_HomeModulesSDTItem2;
-         new logtofile(context ).execute(  AV10DashboardItems.ToJSonString(false)) ;
          AV13GXV1 = 1;
          while ( AV13GXV1 <= AV10DashboardItems.Count )
          {
