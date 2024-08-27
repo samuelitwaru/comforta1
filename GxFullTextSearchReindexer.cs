@@ -30,9 +30,6 @@ namespace GeneXus.Programs {
          obj = new GeneXus.Programs.wwpbaseobjects.SdtUserCustomizations(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
-         obj = new SdtPage(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
          obj = new SdtCustomerCustomization(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
@@ -49,6 +46,9 @@ namespace GeneXus.Programs {
          trn = obj.getTransaction();
          result = trn.Reindex();
          obj = new SdtResident(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
+         obj = new SdtPage(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
          return 1 ;
