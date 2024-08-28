@@ -1807,13 +1807,18 @@ namespace GeneXus.Programs {
          AssignAttri(sPrefix, false, "AV28CheckRequiredFieldsResult", AV28CheckRequiredFieldsResult);
          if ( String.IsNullOrEmpty(StringUtil.RTrim( AV17ResidentINCompanyName)) )
          {
-            GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "",  StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "Name", ""), "", "", "", "", "", "", "", ""),  "error",  edtavResidentincompanyname_Internalname,  "true",  ""));
+            GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "",  context.GetMessage( "Name is required", ""),  "error",  edtavResidentincompanyname_Internalname,  "true",  ""));
             AV28CheckRequiredFieldsResult = false;
             AssignAttri(sPrefix, false, "AV28CheckRequiredFieldsResult", AV28CheckRequiredFieldsResult);
          }
          if ( String.IsNullOrEmpty(StringUtil.RTrim( AV16ResidentINCompanyKvkNumber)) )
          {
-            GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "",  StringUtil.Format( context.GetMessage( "WWP_RequiredAttribute", ""), context.GetMessage( "KVK Number", ""), "", "", "", "", "", "", "", ""),  "error",  edtavResidentincompanykvknumber_Internalname,  "true",  ""));
+            GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "",  context.GetMessage( "KVK Number is required", ""),  "error",  edtavResidentincompanykvknumber_Internalname,  "true",  ""));
+            AV28CheckRequiredFieldsResult = false;
+            AssignAttri(sPrefix, false, "AV28CheckRequiredFieldsResult", AV28CheckRequiredFieldsResult);
+         }
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV14ResidentINCompanyEmail)) && ! GxRegex.IsMatch(AV14ResidentINCompanyEmail,context.GetMessage( "^((\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*)|(\\s*))$", "")) )
+         {
             AV28CheckRequiredFieldsResult = false;
             AssignAttri(sPrefix, false, "AV28CheckRequiredFieldsResult", AV28CheckRequiredFieldsResult);
          }
@@ -2113,7 +2118,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2024827143024", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248281047585", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2129,7 +2134,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("createresidentstep3.js", "?2024827143024", false, true);
+         context.AddJavascriptSource("createresidentstep3.js", "?20248281047585", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/DVPaginationBar/DVPaginationBarRender.js", "", false, true);
@@ -2481,7 +2486,7 @@ namespace GeneXus.Programs {
          setEventMetadata("GRIDSPAGINATIONBAR.CHANGEPAGE",",oparms:[]}");
          setEventMetadata("GRIDSPAGINATIONBAR.CHANGEROWSPERPAGE","{handler:'E122W2',iparms:[{av:'GRIDS_nFirstRecordOnPage'},{av:'GRIDS_nEOF'},{av:'AV19ResidentINCompanySDTs',fld:'vRESIDENTINCOMPANYSDTS',grid:43,pic:''},{av:'nGXsfl_43_idx', ctrl: 'GRID', prop:'GridCurrRow', grid:43},{av:'nRC_GXsfl_43',ctrl:'GRIDS',prop:'GridRC',grid:43},{av:'subGrids_Rows',ctrl:'GRIDS',prop:'Rows'},{av:'AV10HasValidationErrors',fld:'vHASVALIDATIONERRORS',pic:'',hsh:true},{av:'sPrefix'},{av:'Gridspaginationbar_Rowsperpageselectedvalue',ctrl:'GRIDSPAGINATIONBAR',prop:'RowsPerPageSelectedValue'}]");
          setEventMetadata("GRIDSPAGINATIONBAR.CHANGEROWSPERPAGE",",oparms:[{av:'subGrids_Rows',ctrl:'GRIDS',prop:'Rows'}]}");
-         setEventMetadata("ENTER","{handler:'E192W2',iparms:[{av:'AV28CheckRequiredFieldsResult',fld:'vCHECKREQUIREDFIELDSRESULT',pic:''},{av:'AV10HasValidationErrors',fld:'vHASVALIDATIONERRORS',pic:'',hsh:true},{av:'AV17ResidentINCompanyName',fld:'vRESIDENTINCOMPANYNAME',pic:''},{av:'AV16ResidentINCompanyKvkNumber',fld:'vRESIDENTINCOMPANYKVKNUMBER',pic:''},{av:'AV21WebSessionKey',fld:'vWEBSESSIONKEY',pic:''},{av:'AV15ResidentINCompanyId',fld:'vRESIDENTINCOMPANYID',pic:'ZZZ9'},{av:'AV14ResidentINCompanyEmail',fld:'vRESIDENTINCOMPANYEMAIL',pic:''},{av:'AV18ResidentINCompanyPhone',fld:'vRESIDENTINCOMPANYPHONE',pic:''},{av:'AV19ResidentINCompanySDTs',fld:'vRESIDENTINCOMPANYSDTS',grid:43,pic:''},{av:'nGXsfl_43_idx', ctrl: 'GRID', prop:'GridCurrRow', grid:43},{av:'GRIDS_nFirstRecordOnPage'},{av:'nRC_GXsfl_43',ctrl:'GRIDS',prop:'GridRC',grid:43}]");
+         setEventMetadata("ENTER","{handler:'E192W2',iparms:[{av:'AV28CheckRequiredFieldsResult',fld:'vCHECKREQUIREDFIELDSRESULT',pic:''},{av:'AV10HasValidationErrors',fld:'vHASVALIDATIONERRORS',pic:'',hsh:true},{av:'AV17ResidentINCompanyName',fld:'vRESIDENTINCOMPANYNAME',pic:''},{av:'AV16ResidentINCompanyKvkNumber',fld:'vRESIDENTINCOMPANYKVKNUMBER',pic:''},{av:'AV14ResidentINCompanyEmail',fld:'vRESIDENTINCOMPANYEMAIL',pic:''},{av:'AV21WebSessionKey',fld:'vWEBSESSIONKEY',pic:''},{av:'AV15ResidentINCompanyId',fld:'vRESIDENTINCOMPANYID',pic:'ZZZ9'},{av:'AV18ResidentINCompanyPhone',fld:'vRESIDENTINCOMPANYPHONE',pic:''},{av:'AV19ResidentINCompanySDTs',fld:'vRESIDENTINCOMPANYSDTS',grid:43,pic:''},{av:'nGXsfl_43_idx', ctrl: 'GRID', prop:'GridCurrRow', grid:43},{av:'GRIDS_nFirstRecordOnPage'},{av:'nRC_GXsfl_43',ctrl:'GRIDS',prop:'GridRC',grid:43}]");
          setEventMetadata("ENTER",",oparms:[{av:'AV28CheckRequiredFieldsResult',fld:'vCHECKREQUIREDFIELDSRESULT',pic:''}]}");
          setEventMetadata("'WIZARDPREVIOUS'","{handler:'E132W2',iparms:[{av:'AV21WebSessionKey',fld:'vWEBSESSIONKEY',pic:''},{av:'AV15ResidentINCompanyId',fld:'vRESIDENTINCOMPANYID',pic:'ZZZ9'},{av:'AV17ResidentINCompanyName',fld:'vRESIDENTINCOMPANYNAME',pic:''},{av:'AV16ResidentINCompanyKvkNumber',fld:'vRESIDENTINCOMPANYKVKNUMBER',pic:''},{av:'AV14ResidentINCompanyEmail',fld:'vRESIDENTINCOMPANYEMAIL',pic:''},{av:'AV18ResidentINCompanyPhone',fld:'vRESIDENTINCOMPANYPHONE',pic:''},{av:'AV19ResidentINCompanySDTs',fld:'vRESIDENTINCOMPANYSDTS',grid:43,pic:''},{av:'nGXsfl_43_idx', ctrl: 'GRID', prop:'GridCurrRow', grid:43},{av:'GRIDS_nFirstRecordOnPage'},{av:'nRC_GXsfl_43',ctrl:'GRIDS',prop:'GridRC',grid:43}]");
          setEventMetadata("'WIZARDPREVIOUS'",",oparms:[]}");

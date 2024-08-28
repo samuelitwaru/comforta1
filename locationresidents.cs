@@ -468,6 +468,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_EMPOWERER_Gridinternalname", StringUtil.RTrim( Grid_empowerer_Gridinternalname));
          GxWebStd.gx_hidden_field( context, "GRID_EMPOWERER_Hastitlesettings", StringUtil.BoolToStr( Grid_empowerer_Hastitlesettings));
          GxWebStd.gx_hidden_field( context, "GRID_EMPOWERER_Hascolumnsselector", StringUtil.BoolToStr( Grid_empowerer_Hascolumnsselector));
+         GxWebStd.gx_hidden_field( context, "GRID_EMPOWERER_Fixedcolumns", StringUtil.RTrim( Grid_empowerer_Fixedcolumns));
          GxWebStd.gx_hidden_field( context, "GRID_Rows", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid_Rows), 6, 0, ".", "")));
          GxWebStd.gx_hidden_field( context, "GRIDPAGINATIONBAR_Selectedpage", StringUtil.RTrim( Gridpaginationbar_Selectedpage));
          GxWebStd.gx_hidden_field( context, "GRIDPAGINATIONBAR_Rowsperpageselectedvalue", StringUtil.LTrim( StringUtil.NToC( (decimal)(Gridpaginationbar_Rowsperpageselectedvalue), 9, 0, ".", "")));
@@ -794,6 +795,7 @@ namespace GeneXus.Programs {
             /* User Defined Control */
             ucGrid_empowerer.SetProperty("HasTitleSettings", Grid_empowerer_Hastitlesettings);
             ucGrid_empowerer.SetProperty("HasColumnsSelector", Grid_empowerer_Hascolumnsselector);
+            ucGrid_empowerer.SetProperty("FixedColumns", Grid_empowerer_Fixedcolumns);
             ucGrid_empowerer.Render(context, "wwp.gridempowerer", Grid_empowerer_Internalname, "GRID_EMPOWERERContainer");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -1115,7 +1117,7 @@ namespace GeneXus.Programs {
             if ( H003Q2_A1CustomerId[0] == new getloggedinusercustomerid(context).executeUdp( ) )
             {
                gxdynajaxctrlcodr.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(H003Q2_A18CustomerLocationId[0]), 4, 0, ".", "")));
-               gxdynajaxctrldescr.Add(H003Q2_A19CustomerLocationVisitingAddres[0]);
+               gxdynajaxctrldescr.Add(H003Q2_A134CustomerLocationName[0]);
             }
             pr_default.readNext(0);
          }
@@ -1500,6 +1502,7 @@ namespace GeneXus.Programs {
             Grid_empowerer_Gridinternalname = cgiGet( "GRID_EMPOWERER_Gridinternalname");
             Grid_empowerer_Hastitlesettings = StringUtil.StrToBool( cgiGet( "GRID_EMPOWERER_Hastitlesettings"));
             Grid_empowerer_Hascolumnsselector = StringUtil.StrToBool( cgiGet( "GRID_EMPOWERER_Hascolumnsselector"));
+            Grid_empowerer_Fixedcolumns = cgiGet( "GRID_EMPOWERER_Fixedcolumns");
             subGrid_Rows = (int)(Math.Round(context.localUtil.CToN( cgiGet( "GRID_Rows"), context.GetLanguageProperty( "decimal_point"), context.GetLanguageProperty( "thousand_sep")), 18, MidpointRounding.ToEven));
             GxWebStd.gx_hidden_field( context, "GRID_Rows", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid_Rows), 6, 0, ".", "")));
             Gridpaginationbar_Selectedpage = cgiGet( "GRIDPAGINATIONBAR_Selectedpage");
@@ -2051,7 +2054,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482714332774", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248281048428", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2067,7 +2070,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("locationresidents.js", "?202482714332775", false, true);
+         context.AddJavascriptSource("locationresidents.js", "?20248281048429", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -2188,7 +2191,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = " " + ((edtavViewqrcode_Enabled!=0)&&(edtavViewqrcode_Visible!=0) ? " onfocus=\"gx.evt.onfocus(this, 46,'',false,'"+sGXsfl_45_idx+"',45)\"" : " ");
             ROClassString = "Attribute";
-            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavViewqrcode_Internalname,StringUtil.RTrim( AV32viewQrCode),(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+((edtavViewqrcode_Enabled!=0)&&(edtavViewqrcode_Visible!=0) ? " onblur=\""+""+";gx.evt.onblur(this,46);\"" : " "),"'"+""+"'"+",false,"+"'"+"EVVIEWQRCODE.CLICK."+sGXsfl_45_idx+"'",(string)"",(string)"",(string)"",(string)"",(string)edtavViewqrcode_Jsonclick,(short)5,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWIconActionColumn",(string)"",(short)-1,(int)edtavViewqrcode_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)1,(short)45,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
+            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtavViewqrcode_Internalname,StringUtil.RTrim( AV32viewQrCode),(string)"",TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+((edtavViewqrcode_Enabled!=0)&&(edtavViewqrcode_Visible!=0) ? " onblur=\""+""+";gx.evt.onblur(this,46);\"" : " "),"'"+""+"'"+",false,"+"'"+"EVVIEWQRCODE.CLICK."+sGXsfl_45_idx+"'",(string)"",(string)"",context.GetMessage( "QR Code", ""),(string)"",(string)edtavViewqrcode_Jsonclick,(short)5,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWIconActionColumn",(string)"",(short)-1,(int)edtavViewqrcode_Enabled,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)20,(short)0,(short)1,(short)45,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
             /* Subfile cell */
             if ( GridContainer.GetWrapped() == 1 )
             {
@@ -2546,6 +2549,7 @@ namespace GeneXus.Programs {
          edtavFilterfulltext_Jsonclick = "";
          edtavFilterfulltext_Enabled = 1;
          bttBtncreateresidentaction_Visible = 1;
+         Grid_empowerer_Fixedcolumns = "L;;;;;;;;;;;";
          Grid_empowerer_Hascolumnsselector = Convert.ToBoolean( -1);
          Grid_empowerer_Hastitlesettings = Convert.ToBoolean( -1);
          Ddo_gridcolumnsselector_Titlecontrolidtoreplace = "";
@@ -2699,7 +2703,7 @@ namespace GeneXus.Programs {
          gxwrpcisep = "";
          scmdbuf = "";
          H003Q2_A18CustomerLocationId = new short[1] ;
-         H003Q2_A19CustomerLocationVisitingAddres = new string[] {""} ;
+         H003Q2_A134CustomerLocationName = new string[] {""} ;
          H003Q2_A1CustomerId = new short[1] ;
          AV16HTTPRequest = new GxHttpRequest( context);
          GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons1 = new GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons(context);
@@ -2740,7 +2744,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.locationresidents__default(),
             new Object[][] {
                 new Object[] {
-               H003Q2_A18CustomerLocationId, H003Q2_A19CustomerLocationVisitingAddres, H003Q2_A1CustomerId
+               H003Q2_A18CustomerLocationId, H003Q2_A134CustomerLocationName, H003Q2_A1CustomerId
                }
                , new Object[] {
                H003Q3_A31ResidentId, H003Q3_A82ResidentTypeId, H003Q3_A18CustomerLocationId, H003Q3_A1CustomerId, H003Q3_A39ResidentGAMGUID, H003Q3_A40ResidentBsnNumber, H003Q3_A33ResidentGivenName, H003Q3_A34ResidentLastName, H003Q3_A35ResidentInitials, H003Q3_n35ResidentInitials,
@@ -2882,6 +2886,7 @@ namespace GeneXus.Programs {
       private string Ddo_gridcolumnsselector_Gridinternalname ;
       private string Ddo_gridcolumnsselector_Titlecontrolidtoreplace ;
       private string Grid_empowerer_Gridinternalname ;
+      private string Grid_empowerer_Fixedcolumns ;
       private string GX_FocusControl ;
       private string sPrefix ;
       private string divLayoutmaintable_Internalname ;
@@ -3004,7 +3009,7 @@ namespace GeneXus.Programs {
       private GXCombobox dynavLocationoption ;
       private IDataStoreProvider pr_default ;
       private short[] H003Q2_A18CustomerLocationId ;
-      private string[] H003Q2_A19CustomerLocationVisitingAddres ;
+      private string[] H003Q2_A134CustomerLocationName ;
       private short[] H003Q2_A1CustomerId ;
       private short[] H003Q3_A31ResidentId ;
       private short[] H003Q3_A82ResidentTypeId ;
@@ -3105,7 +3110,7 @@ namespace GeneXus.Programs {
           new ParDef("AV31LocationOption",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
-              new CursorDef("H003Q2", "SELECT CustomerLocationId, CustomerLocationVisitingAddres, CustomerId FROM CustomerLocation ORDER BY CustomerLocationVisitingAddres ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003Q2,0, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("H003Q2", "SELECT CustomerLocationId, CustomerLocationName, CustomerId FROM CustomerLocation ORDER BY CustomerLocationName ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003Q2,0, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("H003Q3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003Q3,100, GxCacheFrequency.OFF ,false,false )
           };
        }

@@ -984,7 +984,7 @@ namespace GeneXus.Programs {
             if ( H002O2_A1CustomerId[0] == new getloggedinusercustomerid(context).executeUdp( ) )
             {
                gxdynajaxctrlcodr.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(H002O2_A18CustomerLocationId[0]), 4, 0, ".", "")));
-               gxdynajaxctrldescr.Add(H002O2_A19CustomerLocationVisitingAddres[0]);
+               gxdynajaxctrldescr.Add(H002O2_A134CustomerLocationName[0]);
             }
             pr_default.readNext(0);
          }
@@ -1639,7 +1639,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482714332044", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482810483955", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1655,7 +1655,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("addagbsuppliers.js", "?202482714332046", false, true);
+         context.AddJavascriptSource("addagbsuppliers.js", "?202482810483957", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -2167,7 +2167,7 @@ namespace GeneXus.Programs {
          gxwrpcisep = "";
          scmdbuf = "";
          H002O2_A18CustomerLocationId = new short[1] ;
-         H002O2_A19CustomerLocationVisitingAddres = new string[] {""} ;
+         H002O2_A134CustomerLocationName = new string[] {""} ;
          H002O2_A1CustomerId = new short[1] ;
          GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons1 = new GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons(context);
          AV13GAMSession = new GeneXus.Programs.genexussecurity.SdtGAMSession(context);
@@ -2199,7 +2199,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.addagbsuppliers__default(),
             new Object[][] {
                 new Object[] {
-               H002O2_A18CustomerLocationId, H002O2_A19CustomerLocationVisitingAddres, H002O2_A1CustomerId
+               H002O2_A18CustomerLocationId, H002O2_A134CustomerLocationName, H002O2_A1CustomerId
                }
                , new Object[] {
                H002O3_A55Supplier_AgbId, H002O3_A57Supplier_AgbName
@@ -2391,7 +2391,7 @@ namespace GeneXus.Programs {
       private GXCombobox dynavLocationoption ;
       private IDataStoreProvider pr_default ;
       private short[] H002O2_A18CustomerLocationId ;
-      private string[] H002O2_A19CustomerLocationVisitingAddres ;
+      private string[] H002O2_A134CustomerLocationName ;
       private short[] H002O2_A1CustomerId ;
       private short[] H002O3_A55Supplier_AgbId ;
       private string[] H002O3_A57Supplier_AgbName ;
@@ -2471,7 +2471,7 @@ namespace GeneXus.Programs {
         new ParDef("AV33SupplierAGBOptionsKey",GXType.Int16,4,0)
         };
         def= new CursorDef[] {
-            new CursorDef("H002O2", "SELECT CustomerLocationId, CustomerLocationVisitingAddres, CustomerId FROM CustomerLocation ORDER BY CustomerLocationVisitingAddres ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002O2,0, GxCacheFrequency.OFF ,true,false )
+            new CursorDef("H002O2", "SELECT CustomerLocationId, CustomerLocationName, CustomerId FROM CustomerLocation ORDER BY CustomerLocationName ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002O2,0, GxCacheFrequency.OFF ,true,false )
            ,new CursorDef("H002O3", "SELECT Supplier_AgbId, Supplier_AgbName FROM Supplier_AGB WHERE Supplier_AgbId = :AV33SupplierAGBOptionsKey ORDER BY Supplier_AgbId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002O3,1, GxCacheFrequency.OFF ,false,true )
         };
      }

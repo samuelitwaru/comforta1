@@ -844,7 +844,7 @@ namespace GeneXus.Programs {
             if ( H003R2_A1CustomerId[0] == new getloggedinusercustomerid(context).executeUdp( ) )
             {
                gxdynajaxctrlcodr.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(H003R2_A18CustomerLocationId[0]), 4, 0, ".", "")));
-               gxdynajaxctrldescr.Add(H003R2_A19CustomerLocationVisitingAddres[0]);
+               gxdynajaxctrldescr.Add(H003R2_A134CustomerLocationName[0]);
             }
             pr_default.readNext(0);
          }
@@ -1207,7 +1207,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248271433265", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482810482938", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1225,7 +1225,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("locationamenities.js", "?20248271433266", false, true);
+            context.AddJavascriptSource("locationamenities.js", "?202482810482938", false, true);
          }
          /* End function include_jscripts */
       }
@@ -1563,7 +1563,7 @@ namespace GeneXus.Programs {
          gxwrpcisep = "";
          scmdbuf = "";
          H003R2_A18CustomerLocationId = new short[1] ;
-         H003R2_A19CustomerLocationVisitingAddres = new string[] {""} ;
+         H003R2_A134CustomerLocationName = new string[] {""} ;
          H003R2_A1CustomerId = new short[1] ;
          AV6GAMUser = new GeneXus.Programs.genexussecurity.SdtGAMUser(context);
          GXt_SdtGAMUser1 = new GeneXus.Programs.genexussecurity.SdtGAMUser(context);
@@ -1583,7 +1583,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.locationamenities__default(),
             new Object[][] {
                 new Object[] {
-               H003R2_A18CustomerLocationId, H003R2_A19CustomerLocationVisitingAddres, H003R2_A1CustomerId
+               H003R2_A18CustomerLocationId, H003R2_A134CustomerLocationName, H003R2_A1CustomerId
                }
                , new Object[] {
                H003R3_A18CustomerLocationId, H003R3_A1CustomerId, H003R3_A107AmenitiesId, H003R3_A110AmenitiesName
@@ -1699,7 +1699,7 @@ namespace GeneXus.Programs {
       private GXCheckbox chkavLocationamenitiessdts__selected ;
       private IDataStoreProvider pr_default ;
       private short[] H003R2_A18CustomerLocationId ;
-      private string[] H003R2_A19CustomerLocationVisitingAddres ;
+      private string[] H003R2_A134CustomerLocationName ;
       private short[] H003R2_A1CustomerId ;
       private short[] H003R3_A18CustomerLocationId ;
       private short[] H003R3_A1CustomerId ;
@@ -1778,7 +1778,7 @@ namespace GeneXus.Programs {
           new ParDef("AV18LocationOption",GXType.Int16,4,0)
           };
           def= new CursorDef[] {
-              new CursorDef("H003R2", "SELECT CustomerLocationId, CustomerLocationVisitingAddres, CustomerId FROM CustomerLocation ORDER BY CustomerLocationVisitingAddres ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003R2,0, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("H003R2", "SELECT CustomerLocationId, CustomerLocationName, CustomerId FROM CustomerLocation ORDER BY CustomerLocationName ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003R2,0, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("H003R3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH003R3,100, GxCacheFrequency.OFF ,false,false )
           };
        }

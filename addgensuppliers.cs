@@ -551,8 +551,8 @@ namespace GeneXus.Programs {
             ucCombo_suppliergenoptions.SetProperty("DataListProc", Combo_suppliergenoptions_Datalistproc);
             ucCombo_suppliergenoptions.SetProperty("DataListProcParametersPrefix", Combo_suppliergenoptions_Datalistprocparametersprefix);
             ucCombo_suppliergenoptions.SetProperty("IncludeOnlySelectedOption", Combo_suppliergenoptions_Includeonlyselectedoption);
-            ucCombo_suppliergenoptions.SetProperty("EmptyItem", Combo_suppliergenoptions_Emptyitem);
             ucCombo_suppliergenoptions.SetProperty("MultipleValuesType", Combo_suppliergenoptions_Multiplevaluestype);
+            ucCombo_suppliergenoptions.SetProperty("EmptyItemText", Combo_suppliergenoptions_Emptyitemtext);
             ucCombo_suppliergenoptions.SetProperty("DropDownOptionsTitleSettingsIcons", AV13DDO_TitleSettingsIcons);
             ucCombo_suppliergenoptions.SetProperty("DropDownOptionsData", AV47SupplierGenOptions_Data);
             ucCombo_suppliergenoptions.Render(context, "dvelop.gxbootstrap.ddoextendedcombo", Combo_suppliergenoptions_Internalname, "COMBO_SUPPLIERGENOPTIONSContainer");
@@ -984,7 +984,7 @@ namespace GeneXus.Programs {
             if ( H002M2_A1CustomerId[0] == new getloggedinusercustomerid(context).executeUdp( ) )
             {
                gxdynajaxctrlcodr.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(H002M2_A18CustomerLocationId[0]), 4, 0, ".", "")));
-               gxdynajaxctrldescr.Add(H002M2_A19CustomerLocationVisitingAddres[0]);
+               gxdynajaxctrldescr.Add(H002M2_A134CustomerLocationName[0]);
             }
             pr_default.readNext(0);
          }
@@ -1629,7 +1629,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2024827143380", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482810482331", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1645,7 +1645,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("addgensuppliers.js", "?2024827143383", false, true);
+         context.AddJavascriptSource("addgensuppliers.js", "?202482810482333", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -2006,8 +2006,8 @@ namespace GeneXus.Programs {
          Btnback_Class = "BtnDefault";
          Btnback_Caption = context.GetMessage( "Cancel", "");
          Btnback_Tooltiptext = "";
+         Combo_suppliergenoptions_Emptyitemtext = "Select General Supplier to add";
          Combo_suppliergenoptions_Multiplevaluestype = "Tags";
-         Combo_suppliergenoptions_Emptyitem = Convert.ToBoolean( 0);
          Combo_suppliergenoptions_Includeonlyselectedoption = Convert.ToBoolean( -1);
          Combo_suppliergenoptions_Datalistprocparametersprefix = " \"ComboName\": \"SupplierGenOptions\"";
          Combo_suppliergenoptions_Datalistproc = "AddGenSuppliersLoadDVCombo";
@@ -2115,7 +2115,7 @@ namespace GeneXus.Programs {
          gxwrpcisep = "";
          scmdbuf = "";
          H002M2_A18CustomerLocationId = new short[1] ;
-         H002M2_A19CustomerLocationVisitingAddres = new string[] {""} ;
+         H002M2_A134CustomerLocationName = new string[] {""} ;
          H002M2_A1CustomerId = new short[1] ;
          GXt_SdtDVB_SDTDropDownOptionsTitleSettingsIcons1 = new GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons(context);
          AV15GAMSession = new GeneXus.Programs.genexussecurity.SdtGAMSession(context);
@@ -2147,7 +2147,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.addgensuppliers__default(),
             new Object[][] {
                 new Object[] {
-               H002M2_A18CustomerLocationId, H002M2_A19CustomerLocationVisitingAddres, H002M2_A1CustomerId
+               H002M2_A18CustomerLocationId, H002M2_A134CustomerLocationName, H002M2_A1CustomerId
                }
                , new Object[] {
                H002M3_A64Supplier_GenId, H002M3_A66Supplier_GenCompanyName
@@ -2252,6 +2252,7 @@ namespace GeneXus.Programs {
       private string Combo_suppliergenoptions_Datalistproc ;
       private string Combo_suppliergenoptions_Datalistprocparametersprefix ;
       private string Combo_suppliergenoptions_Multiplevaluestype ;
+      private string Combo_suppliergenoptions_Emptyitemtext ;
       private string Combo_suppliergenoptions_Internalname ;
       private string lblSpacer2_Internalname ;
       private string lblSpacer2_Jsonclick ;
@@ -2308,7 +2309,6 @@ namespace GeneXus.Programs {
       private bool wbLoad ;
       private bool Combo_suppliergenoptions_Allowmultipleselection ;
       private bool Combo_suppliergenoptions_Includeonlyselectedoption ;
-      private bool Combo_suppliergenoptions_Emptyitem ;
       private bool Rfr0gs ;
       private bool wbErr ;
       private bool gxdyncontrolsrefreshing ;
@@ -2331,7 +2331,7 @@ namespace GeneXus.Programs {
       private GXCombobox dynavLocationoption ;
       private IDataStoreProvider pr_default ;
       private short[] H002M2_A18CustomerLocationId ;
-      private string[] H002M2_A19CustomerLocationVisitingAddres ;
+      private string[] H002M2_A134CustomerLocationName ;
       private short[] H002M2_A1CustomerId ;
       private short[] H002M3_A64Supplier_GenId ;
       private string[] H002M3_A66Supplier_GenCompanyName ;
@@ -2411,7 +2411,7 @@ namespace GeneXus.Programs {
         new ParDef("AV48SupplierGenOptionsKey",GXType.Int16,4,0)
         };
         def= new CursorDef[] {
-            new CursorDef("H002M2", "SELECT CustomerLocationId, CustomerLocationVisitingAddres, CustomerId FROM CustomerLocation ORDER BY CustomerLocationVisitingAddres ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002M2,0, GxCacheFrequency.OFF ,true,false )
+            new CursorDef("H002M2", "SELECT CustomerLocationId, CustomerLocationName, CustomerId FROM CustomerLocation ORDER BY CustomerLocationName ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002M2,0, GxCacheFrequency.OFF ,true,false )
            ,new CursorDef("H002M3", "SELECT Supplier_GenId, Supplier_GenCompanyName FROM Supplier_Gen WHERE Supplier_GenId = :AV48SupplierGenOptionsKey ORDER BY Supplier_GenId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002M3,1, GxCacheFrequency.OFF ,false,true )
         };
      }
