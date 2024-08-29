@@ -22,12 +22,12 @@ type_SdtCustomerCustomization.cs
 type_SdtPage.cs
 type_SdtSupplier_Agb.cs
 type_SdtSupplier_Agb_ProductService.cs
-type_SdtSupplier_Gen.cs
-type_SdtSupplier_Gen_ProductService.cs
 type_SdtResident.cs
 type_SdtResident_INCompany.cs
 type_SdtResident_INIndividual.cs
 type_SdtResident_ProductService.cs
+type_SdtSupplier_Gen.cs
+type_SdtSupplier_Gen_ProductService.cs
 type_SdtQRCodeLibrary.cs
 wwpbaseobjects\gxdomainwwpcardsmenuoptiontype.cs
 gxdomainwwpcardsmenusize.cs

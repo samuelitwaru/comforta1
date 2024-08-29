@@ -54,7 +54,7 @@ namespace GeneXus.Programs {
             dyncall( GetNextPar( )) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_7") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_9") == 0 )
          {
             A73ProductServiceId = (short)(Math.Round(NumberUtil.Val( GetPar( "ProductServiceId"), "."), 18, MidpointRounding.ToEven));
             setAjaxCallMode();
@@ -63,10 +63,10 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_7( A73ProductServiceId) ;
+            gxLoad_9( A73ProductServiceId) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_8") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_10") == 0 )
          {
             A71ProductServiceTypeId = (short)(Math.Round(NumberUtil.Val( GetPar( "ProductServiceTypeId"), "."), 18, MidpointRounding.ToEven));
             setAjaxCallMode();
@@ -75,7 +75,7 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_8( A71ProductServiceTypeId) ;
+            gxLoad_10( A71ProductServiceTypeId) ;
             return  ;
          }
          else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxEvt") == 0 )
@@ -1286,7 +1286,7 @@ namespace GeneXus.Programs {
 
       protected void ZM049( short GX_JID )
       {
-         if ( ( GX_JID == 5 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 7 ) || ( GX_JID == 0 ) )
          {
             if ( ! IsIns( ) )
             {
@@ -1307,7 +1307,7 @@ namespace GeneXus.Programs {
                Z70Supplier_GenContactPhone = A70Supplier_GenContactPhone;
             }
          }
-         if ( GX_JID == -5 )
+         if ( GX_JID == -7 )
          {
             Z64Supplier_GenId = A64Supplier_GenId;
             Z65Supplier_GenKvKNumber = A65Supplier_GenKvKNumber;
@@ -1371,7 +1371,7 @@ namespace GeneXus.Programs {
             A70Supplier_GenContactPhone = T00048_A70Supplier_GenContactPhone[0];
             n70Supplier_GenContactPhone = T00048_n70Supplier_GenContactPhone[0];
             AssignAttri("", false, "A70Supplier_GenContactPhone", A70Supplier_GenContactPhone);
-            ZM049( -5) ;
+            ZM049( -7) ;
          }
          pr_default.close(6);
          OnLoadActions049( ) ;
@@ -1431,7 +1431,7 @@ namespace GeneXus.Programs {
          pr_default.execute(5, new Object[] {A64Supplier_GenId});
          if ( (pr_default.getStatus(5) != 101) )
          {
-            ZM049( 5) ;
+            ZM049( 7) ;
             RcdFound9 = 1;
             A64Supplier_GenId = T00047_A64Supplier_GenId[0];
             AssignAttri("", false, "A64Supplier_GenId", StringUtil.LTrimStr( (decimal)(A64Supplier_GenId), 4, 0));
@@ -2143,7 +2143,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0414( short GX_JID )
       {
-         if ( ( GX_JID == 6 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 8 ) || ( GX_JID == 0 ) )
          {
             if ( ! IsIns( ) )
             {
@@ -2152,7 +2152,7 @@ namespace GeneXus.Programs {
             {
             }
          }
-         if ( GX_JID == -6 )
+         if ( GX_JID == -8 )
          {
             Z64Supplier_GenId = A64Supplier_GenId;
             Z73ProductServiceId = A73ProductServiceId;
@@ -2168,6 +2168,10 @@ namespace GeneXus.Programs {
 
       protected void standaloneNotModal0414( )
       {
+         edtProductServiceQuantity_Enabled = 0;
+         AssignProp("", false, edtProductServiceQuantity_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceQuantity_Enabled), 5, 0), !bGXsfl_58_Refreshing);
+         edtProductServiceTypeId_Enabled = 0;
+         AssignProp("", false, edtProductServiceTypeId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceTypeId_Enabled), 5, 0), !bGXsfl_58_Refreshing);
       }
 
       protected void standaloneModal0414( )
@@ -2202,7 +2206,7 @@ namespace GeneXus.Programs {
             A77ProductServicePicture = T000418_A77ProductServicePicture[0];
             AssignProp("", false, edtProductServicePicture_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A77ProductServicePicture)) ? A40000ProductServicePicture_GXI : context.convertURL( context.PathToRelativeUrl( A77ProductServicePicture))), !bGXsfl_58_Refreshing);
             AssignProp("", false, edtProductServicePicture_Internalname, "SrcSet", context.GetImageSrcSet( A77ProductServicePicture), true);
-            ZM0414( -6) ;
+            ZM0414( -8) ;
          }
          pr_default.close(16);
          OnLoadActions0414( ) ;
@@ -2260,7 +2264,7 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void gxLoad_7( short A73ProductServiceId )
+      protected void gxLoad_9( short A73ProductServiceId )
       {
          /* Using cursor T000419 */
          pr_default.execute(17, new Object[] {A73ProductServiceId});
@@ -2295,7 +2299,7 @@ namespace GeneXus.Programs {
          pr_default.close(17);
       }
 
-      protected void gxLoad_8( short A71ProductServiceTypeId )
+      protected void gxLoad_10( short A71ProductServiceTypeId )
       {
          /* Using cursor T000420 */
          pr_default.execute(18, new Object[] {A71ProductServiceTypeId});
@@ -2340,7 +2344,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A64Supplier_GenId, A73ProductServiceId});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0414( 6) ;
+            ZM0414( 8) ;
             RcdFound14 = 1;
             InitializeNonKey0414( ) ;
             A73ProductServiceId = T00043_A73ProductServiceId[0];
@@ -2774,7 +2778,7 @@ namespace GeneXus.Programs {
          /* Subfile cell */
          /* Single line edit */
          ROClassString = "Attribute";
-         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceQuantity_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A76ProductServiceQuantity), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( ((edtProductServiceQuantity_Enabled!=0) ? context.localUtil.Format( (decimal)(A76ProductServiceQuantity), "ZZZ9") : context.localUtil.Format( (decimal)(A76ProductServiceQuantity), "ZZZ9"))),(string)" dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceQuantity_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceQuantity_Enabled,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)58,(short)0,(short)-1,(short)0,(bool)true,(string)"",(string)"end",(bool)false,(string)""});
+         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceQuantity_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A76ProductServiceQuantity), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( ((edtProductServiceQuantity_Enabled!=0) ? context.localUtil.Format( (decimal)(A76ProductServiceQuantity), "ZZZ9") : context.localUtil.Format( (decimal)(A76ProductServiceQuantity), "ZZZ9"))),(string)" dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceQuantity_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)0,(int)edtProductServiceQuantity_Enabled,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)58,(short)0,(short)-1,(short)0,(bool)true,(string)"",(string)"end",(bool)false,(string)""});
          /* Subfile cell */
          /* Static Bitmap Variable */
          ClassString = "Attribute";
@@ -2787,7 +2791,7 @@ namespace GeneXus.Programs {
          /* Subfile cell */
          /* Single line edit */
          ROClassString = "Attribute";
-         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceTypeId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A71ProductServiceTypeId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( ((edtProductServiceTypeId_Enabled!=0) ? context.localUtil.Format( (decimal)(A71ProductServiceTypeId), "ZZZ9") : context.localUtil.Format( (decimal)(A71ProductServiceTypeId), "ZZZ9"))),(string)" dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceTypeId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)-1,(int)edtProductServiceTypeId_Enabled,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)58,(short)0,(short)-1,(short)0,(bool)true,(string)"Id",(string)"end",(bool)false,(string)""});
+         Gridlevel_productserviceRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtProductServiceTypeId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A71ProductServiceTypeId), 4, 0, context.GetLanguageProperty( "decimal_point"), "")),StringUtil.LTrim( ((edtProductServiceTypeId_Enabled!=0) ? context.localUtil.Format( (decimal)(A71ProductServiceTypeId), "ZZZ9") : context.localUtil.Format( (decimal)(A71ProductServiceTypeId), "ZZZ9"))),(string)" dir=\"ltr\" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtProductServiceTypeId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"TrnColumn",(string)"",(short)0,(int)edtProductServiceTypeId_Enabled,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)58,(short)0,(short)-1,(short)0,(bool)true,(string)"Id",(string)"end",(bool)false,(string)""});
          /* Subfile cell */
          /* Single line edit */
          ROClassString = "Attribute";
@@ -2874,6 +2878,8 @@ namespace GeneXus.Programs {
 
       protected void assign_properties_default( )
       {
+         defedtProductServiceTypeId_Enabled = edtProductServiceTypeId_Enabled;
+         defedtProductServiceQuantity_Enabled = edtProductServiceQuantity_Enabled;
          defedtProductServiceId_Enabled = edtProductServiceId_Enabled;
       }
 
@@ -3210,7 +3216,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482714304431", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2024829103635", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -3226,7 +3232,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("supplier_gen.js", "?202482714304432", false, true);
+         context.AddJavascriptSource("supplier_gen.js", "?2024829103636", false, true);
          context.AddJavascriptSource("shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/rsh/rsh.js", "", false, true);
@@ -3242,6 +3248,10 @@ namespace GeneXus.Programs {
 
       protected void init_level_properties14( )
       {
+         edtProductServiceTypeId_Enabled = defedtProductServiceTypeId_Enabled;
+         AssignProp("", false, edtProductServiceTypeId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceTypeId_Enabled), 5, 0), !bGXsfl_58_Refreshing);
+         edtProductServiceQuantity_Enabled = defedtProductServiceQuantity_Enabled;
+         AssignProp("", false, edtProductServiceQuantity_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceQuantity_Enabled), 5, 0), !bGXsfl_58_Refreshing);
          edtProductServiceId_Enabled = defedtProductServiceId_Enabled;
          AssignProp("", false, edtProductServiceId_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtProductServiceId_Enabled), 5, 0), !bGXsfl_58_Refreshing);
       }
@@ -3885,6 +3895,8 @@ namespace GeneXus.Programs {
       private int Combo_productserviceid_Gxcontroltype ;
       private int subGridlevel_productservice_Backcolor ;
       private int subGridlevel_productservice_Allbackcolor ;
+      private int defedtProductServiceTypeId_Enabled ;
+      private int defedtProductServiceQuantity_Enabled ;
       private int defedtProductServiceId_Enabled ;
       private int idxLst ;
       private int subGridlevel_productservice_Selectedindex ;
