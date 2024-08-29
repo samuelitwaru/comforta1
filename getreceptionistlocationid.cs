@@ -85,10 +85,10 @@ namespace GeneXus.Programs {
          /* GeneXus formulas */
          /* Output device settings */
          new getloggedinuser(context ).execute( out  AV8GAMUser) ;
-         if ( AV8GAMUser.checkrole(context.GetMessage( "Receptionist", "")) )
+         if ( AV8GAMUser.checkrole("Receptionist") )
          {
             /* Using cursor P00312 */
-            pr_default.execute(0, new Object[] {AV8GAMUser.gxTpr_Guid, AV8GAMUser.gxTpr_Email});
+            pr_default.execute(0, new Object[] {AV8GAMUser.gxTpr_Email, AV8GAMUser.gxTpr_Guid});
             while ( (pr_default.getStatus(0) != 101) )
             {
                A27CustomerLocationReceptionistEm = P00312_A27CustomerLocationReceptionistEm[0];
@@ -175,11 +175,11 @@ namespace GeneXus.Programs {
        {
           Object[] prmP00312;
           prmP00312 = new Object[] {
-          new ParDef("AV8GAMUser__Guid",GXType.Char,40,0) ,
-          new ParDef("AV8GAMUser__Email",GXType.VarChar,100,0)
+          new ParDef("AV8GAMUser__Email",GXType.VarChar,100,0) ,
+          new ParDef("AV8GAMUser__Guid",GXType.Char,40,0)
           };
           def= new CursorDef[] {
-              new CursorDef("P00312", "SELECT CustomerLocationReceptionistEm, CustomerLocationReceptionistGA, CustomerLocationId, CustomerId, CustomerLocationReceptionistId FROM CustomerLocationReceptionist WHERE (CustomerLocationReceptionistGA = ( :AV8GAMUser__Guid)) AND (CustomerLocationReceptionistEm = ( :AV8GAMUser__Email)) ORDER BY CustomerId, CustomerLocationId, CustomerLocationReceptionistId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00312,100, GxCacheFrequency.OFF ,false,false )
+              new CursorDef("P00312", "SELECT CustomerLocationReceptionistEm, CustomerLocationReceptionistGA, CustomerLocationId, CustomerId, CustomerLocationReceptionistId FROM CustomerLocationReceptionist WHERE (LOWER(CustomerLocationReceptionistEm) = ( :AV8GAMUser__Email)) AND (CustomerLocationReceptionistGA = ( :AV8GAMUser__Guid)) ORDER BY CustomerId, CustomerLocationId, CustomerLocationReceptionistId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00312,100, GxCacheFrequency.OFF ,false,false )
           };
        }
     }

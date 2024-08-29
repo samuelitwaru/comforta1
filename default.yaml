@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: "Comforta11"
-  version: "20240828074851"
+  version: "20240829052808"
 servers:
   - url: https://comforta.yukon.software//rest
 paths:

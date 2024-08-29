@@ -89,7 +89,7 @@ namespace GeneXus.Programs {
          if ( AV14GAMUser.checkrole("Customer Manager") )
          {
             /* Using cursor P002V2 */
-            pr_default.execute(0, new Object[] {AV14GAMUser.gxTpr_Guid, AV14GAMUser.gxTpr_Email});
+            pr_default.execute(0, new Object[] {AV14GAMUser.gxTpr_Email, AV14GAMUser.gxTpr_Guid});
             while ( (pr_default.getStatus(0) != 101) )
             {
                A10CustomerManagerEmail = P002V2_A10CustomerManagerEmail[0];
@@ -104,7 +104,7 @@ namespace GeneXus.Programs {
          if ( AV14GAMUser.checkrole("Receptionist") )
          {
             /* Using cursor P002V3 */
-            pr_default.execute(1, new Object[] {AV14GAMUser.gxTpr_Guid, AV14GAMUser.gxTpr_Email});
+            pr_default.execute(1, new Object[] {AV14GAMUser.gxTpr_Email, AV14GAMUser.gxTpr_Guid});
             while ( (pr_default.getStatus(1) != 101) )
             {
                A27CustomerLocationReceptionistEm = P002V3_A27CustomerLocationReceptionistEm[0];
@@ -212,17 +212,17 @@ namespace GeneXus.Programs {
        {
           Object[] prmP002V2;
           prmP002V2 = new Object[] {
-          new ParDef("AV14GAMUser__Guid",GXType.Char,40,0) ,
-          new ParDef("AV14GAMUser__Email",GXType.VarChar,100,0)
+          new ParDef("AV14GAMUser__Email",GXType.VarChar,100,0) ,
+          new ParDef("AV14GAMUser__Guid",GXType.Char,40,0)
           };
           Object[] prmP002V3;
           prmP002V3 = new Object[] {
-          new ParDef("AV14GAMUser__Guid",GXType.Char,40,0) ,
-          new ParDef("AV14GAMUser__Email",GXType.VarChar,100,0)
+          new ParDef("AV14GAMUser__Email",GXType.VarChar,100,0) ,
+          new ParDef("AV14GAMUser__Guid",GXType.Char,40,0)
           };
           def= new CursorDef[] {
-              new CursorDef("P002V2", "SELECT CustomerManagerEmail, CustomerManagerGAMGUID, CustomerId, CustomerManagerId FROM CustomerManager WHERE (CustomerManagerGAMGUID = ( :AV14GAMUser__Guid)) AND (CustomerManagerEmail = ( :AV14GAMUser__Email)) ORDER BY CustomerId, CustomerManagerId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002V2,100, GxCacheFrequency.OFF ,false,false )
-             ,new CursorDef("P002V3", "SELECT CustomerLocationReceptionistEm, CustomerLocationReceptionistGA, CustomerId, CustomerLocationId, CustomerLocationReceptionistId FROM CustomerLocationReceptionist WHERE (CustomerLocationReceptionistGA = ( :AV14GAMUser__Guid)) AND (CustomerLocationReceptionistEm = ( :AV14GAMUser__Email)) ORDER BY CustomerId, CustomerLocationId, CustomerLocationReceptionistId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002V3,100, GxCacheFrequency.OFF ,false,false )
+              new CursorDef("P002V2", "SELECT CustomerManagerEmail, CustomerManagerGAMGUID, CustomerId, CustomerManagerId FROM CustomerManager WHERE (LOWER(CustomerManagerEmail) = ( :AV14GAMUser__Email)) AND (CustomerManagerGAMGUID = ( :AV14GAMUser__Guid)) ORDER BY CustomerId, CustomerManagerId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002V2,100, GxCacheFrequency.OFF ,false,false )
+             ,new CursorDef("P002V3", "SELECT CustomerLocationReceptionistEm, CustomerLocationReceptionistGA, CustomerId, CustomerLocationId, CustomerLocationReceptionistId FROM CustomerLocationReceptionist WHERE (LOWER(CustomerLocationReceptionistEm) = ( :AV14GAMUser__Email)) AND (CustomerLocationReceptionistGA = ( :AV14GAMUser__Guid)) ORDER BY CustomerId, CustomerLocationId, CustomerLocationReceptionistId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002V3,100, GxCacheFrequency.OFF ,false,false )
           };
        }
     }

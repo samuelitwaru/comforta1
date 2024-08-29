@@ -1375,14 +1375,14 @@ namespace GeneXus.Programs {
          GXt_SdtGAMUser3 = AV43GAMUser;
          new getloggedinuser(context ).execute( out  GXt_SdtGAMUser3) ;
          AV43GAMUser = GXt_SdtGAMUser3;
-         if ( AV43GAMUser.checkrole(context.GetMessage( "Customer Manager", "")) )
+         if ( AV43GAMUser.checkrole("Customer Manager") )
          {
             dynavLocationoption.Visible = 1;
             AssignProp("", false, dynavLocationoption_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(dynavLocationoption.Visible), 5, 0), true);
          }
          else
          {
-            if ( AV43GAMUser.checkrole(context.GetMessage( "Receptionist", "")) )
+            if ( AV43GAMUser.checkrole("Receptionist") )
             {
                GXt_int2 = AV19LocationOption;
                new getreceptionistlocationid(context ).execute( out  GXt_int2) ;
@@ -1639,7 +1639,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482810483955", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248298253464", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1655,7 +1655,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("addagbsuppliers.js", "?202482810483957", false, true);
+         context.AddJavascriptSource("addagbsuppliers.js", "?20248298253467", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);

@@ -93,7 +93,7 @@ namespace GeneXus.Programs {
          AV12GAMSession = new GeneXus.Programs.genexussecurity.SdtGAMSession(context).get(out  AV11GAMErrors);
          AV13GAMUser = AV12GAMSession.gxTpr_User;
          /* Using cursor P002Y2 */
-         pr_default.execute(0, new Object[] {AV13GAMUser.gxTpr_Guid, AV13GAMUser.gxTpr_Email});
+         pr_default.execute(0, new Object[] {AV13GAMUser.gxTpr_Email, AV13GAMUser.gxTpr_Guid});
          while ( (pr_default.getStatus(0) != 101) )
          {
             A10CustomerManagerEmail = P002Y2_A10CustomerManagerEmail[0];
@@ -183,11 +183,11 @@ namespace GeneXus.Programs {
        {
           Object[] prmP002Y2;
           prmP002Y2 = new Object[] {
-          new ParDef("AV13GAMUser__Guid",GXType.Char,40,0) ,
-          new ParDef("AV13GAMUser__Email",GXType.VarChar,100,0)
+          new ParDef("AV13GAMUser__Email",GXType.VarChar,100,0) ,
+          new ParDef("AV13GAMUser__Guid",GXType.Char,40,0)
           };
           def= new CursorDef[] {
-              new CursorDef("P002Y2", "SELECT CustomerManagerEmail, CustomerManagerGAMGUID, CustomerId, CustomerManagerId FROM CustomerManager WHERE (CustomerManagerGAMGUID = ( :AV13GAMUser__Guid)) AND (CustomerManagerEmail = ( :AV13GAMUser__Email)) ORDER BY CustomerId, CustomerManagerId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002Y2,100, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("P002Y2", "SELECT CustomerManagerEmail, CustomerManagerGAMGUID, CustomerId, CustomerManagerId FROM CustomerManager WHERE (LOWER(CustomerManagerEmail) = ( :AV13GAMUser__Email)) AND (CustomerManagerGAMGUID = ( :AV13GAMUser__Guid)) ORDER BY CustomerId, CustomerManagerId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002Y2,100, GxCacheFrequency.OFF ,true,false )
           };
        }
     }

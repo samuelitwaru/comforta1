@@ -1370,7 +1370,7 @@ namespace GeneXus.Programs {
       protected void BeforeInsert025( )
       {
          /* Before Insert Rules */
-         new createuseraccount(context ).execute(  A36ResidentEmail,  A33ResidentGivenName,  A34ResidentLastName,  context.GetMessage( "Resident", ""), out  A39ResidentGAMGUID) ;
+         new createuseraccount(context ).execute(  A36ResidentEmail,  A33ResidentGivenName,  A34ResidentLastName,  "Resident", out  A39ResidentGAMGUID) ;
       }
 
       protected void BeforeUpdate025( )

@@ -348,6 +348,7 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vCALENDAREVENTS", AV8CalendarEvents);
          }
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Filtermode", StringUtil.BoolToStr( Calendaruc_Filtermode));
+         GxWebStd.gx_hidden_field( context, "CALENDARUC_Locale", StringUtil.RTrim( Calendaruc_Locale));
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Selectable", StringUtil.BoolToStr( Calendaruc_Selectable));
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Initialview", StringUtil.RTrim( Calendaruc_Initialview));
          GxWebStd.gx_hidden_field( context, "CALENDARUC_Viewstyle", StringUtil.RTrim( Calendaruc_Viewstyle));
@@ -1112,6 +1113,7 @@ namespace GeneXus.Programs {
             AV9CalendarEventsJson = cgiGet( "vCALENDAREVENTSJSON");
             AV22DisabledDaysJson = cgiGet( "vDISABLEDDAYSJSON");
             Calendaruc_Filtermode = StringUtil.StrToBool( cgiGet( "CALENDARUC_Filtermode"));
+            Calendaruc_Locale = cgiGet( "CALENDARUC_Locale");
             Calendaruc_Selectable = StringUtil.StrToBool( cgiGet( "CALENDARUC_Selectable"));
             Calendaruc_Initialview = cgiGet( "CALENDARUC_Initialview");
             Calendaruc_Viewstyle = cgiGet( "CALENDARUC_Viewstyle");
@@ -1240,6 +1242,25 @@ namespace GeneXus.Programs {
       {
          /* Refresh Routine */
          returnInSub = false;
+         Calendaruc_Monthbuttontext = context.GetMessage( "Month", "");
+         ucCalendaruc.SendProperty(context, "", false, Calendaruc_Internalname, "MonthButtonText", Calendaruc_Monthbuttontext);
+         Calendaruc_Weekbuttontext = context.GetMessage( "Week", "");
+         ucCalendaruc.SendProperty(context, "", false, Calendaruc_Internalname, "WeekButtonText", Calendaruc_Weekbuttontext);
+         Calendaruc_Daybuttontext = context.GetMessage( "Day", "");
+         ucCalendaruc.SendProperty(context, "", false, Calendaruc_Internalname, "DayButtonText", Calendaruc_Daybuttontext);
+         Calendaruc_Todaybuttontext = context.GetMessage( "Today", "");
+         ucCalendaruc.SendProperty(context, "", false, Calendaruc_Internalname, "TodayButtonText", Calendaruc_Todaybuttontext);
+         AV38SelectedLanguage = context.GetLanguage( );
+         if ( StringUtil.StrCmp(AV38SelectedLanguage, "Dutch") == 0 )
+         {
+            Calendaruc_Locale = "nl-NL";
+            ucCalendaruc.SendProperty(context, "", false, Calendaruc_Internalname, "Locale", Calendaruc_Locale);
+         }
+         else
+         {
+            Calendaruc_Locale = "";
+            ucCalendaruc.SendProperty(context, "", false, Calendaruc_Internalname, "Locale", Calendaruc_Locale);
+         }
          /* Execute user subroutine: 'CHECKSECURITYFORACTIONS' */
          S122 ();
          if (returnInSub) return;
@@ -1774,7 +1795,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202482714331324", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20248298251479", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1790,7 +1811,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages."+StringUtil.Lower( context.GetLanguageProperty( "code"))+".js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("agendacalendar.js", "?202482714331325", false, true);
+         context.AddJavascriptSource("agendacalendar.js", "?20248298251479", false, true);
          context.AddJavascriptSource("DVelop/Calendar/index.global.min.js", "", false, true);
          context.AddJavascriptSource("DVelop/Calendar/WWPCalendarRender.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/daterangepicker/locales.js", "", false, true);
@@ -1919,6 +1940,7 @@ namespace GeneXus.Programs {
          Calendaruc_Viewstyle = "Standard";
          Calendaruc_Initialview = "Month";
          Calendaruc_Selectable = Convert.ToBoolean( -1);
+         Calendaruc_Locale = "";
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
@@ -1938,7 +1960,7 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'Calendaruc_Filtermode',ctrl:'CALENDARUC',prop:'FilterMode'},{av:'Gx_date',fld:'vTODAY',pic:'',hsh:true}]");
-         setEventMetadata("REFRESH",",oparms:[{ctrl:'BTNDUMMYDELETE',prop:'Visible'},{ctrl:'BTNUACLEAR',prop:'Visible'}]}");
+         setEventMetadata("REFRESH",",oparms:[{av:'Calendaruc_Monthbuttontext',ctrl:'CALENDARUC',prop:'MonthButtonText'},{av:'Calendaruc_Weekbuttontext',ctrl:'CALENDARUC',prop:'WeekButtonText'},{av:'Calendaruc_Daybuttontext',ctrl:'CALENDARUC',prop:'DayButtonText'},{av:'Calendaruc_Todaybuttontext',ctrl:'CALENDARUC',prop:'TodayButtonText'},{av:'Calendaruc_Locale',ctrl:'CALENDARUC',prop:'Locale'},{ctrl:'BTNDUMMYDELETE',prop:'Visible'},{ctrl:'BTNUACLEAR',prop:'Visible'}]}");
          setEventMetadata("'DODUMMYDELETE'","{handler:'E123M1',iparms:[]");
          setEventMetadata("'DODUMMYDELETE'",",oparms:[]}");
          setEventMetadata("DVELOP_CONFIRMPANEL_BTNDUMMYDELETE.CLOSE","{handler:'E173M2',iparms:[{av:'Dvelop_confirmpanel_btndummydelete_Result',ctrl:'DVELOP_CONFIRMPANEL_BTNDUMMYDELETE',prop:'Result'},{av:'AV7CalendarEventId',fld:'vCALENDAREVENTID',pic:''},{av:'AV29ForceLoadDots',fld:'vFORCELOADDOTS',pic:''},{av:'AV27EventsLoaded',fld:'vEVENTSLOADED',pic:''},{av:'AV10CalendarLoadFromDate',fld:'vCALENDARLOADFROMDATE',pic:''},{av:'AV11CalendarLoadToDate',fld:'vCALENDARLOADTODATE',pic:''},{av:'Calendaruc_Filtermode',ctrl:'CALENDARUC',prop:'FilterMode'},{av:'cmbavDatetypefilter'},{av:'AV20DateTypeFilter',fld:'vDATETYPEFILTER',pic:'ZZZ9'},{av:'Gx_date',fld:'vTODAY',pic:'',hsh:true},{av:'AV14DateFilter',fld:'vDATEFILTER',pic:''},{av:'AV15DateRangeFilter',fld:'vDATERANGEFILTER',pic:''},{av:'AV17DateRangeFilter_To',fld:'vDATERANGEFILTER_TO',pic:''},{av:'AV36TitleFilter',fld:'vTITLEFILTER',pic:''},{av:'AV19DateToSearchFrom',fld:'vDATETOSEARCHFROM',pic:''},{av:'AV18DatesToSearchTo',fld:'vDATESTOSEARCHTO',pic:''},{av:'AV13Date_ShowingDatesFrom',fld:'vDATE_SHOWINGDATESFROM',pic:''},{av:'AV31LoadedDotsFromDate',fld:'vLOADEDDOTSFROMDATE',pic:''},{av:'AV32LoadedDotsToDate',fld:'vLOADEDDOTSTODATE',pic:''},{av:'AV33LoadedFromDate',fld:'vLOADEDFROMDATE',pic:''},{av:'AV34LoadedToDate',fld:'vLOADEDTODATE',pic:''},{av:'Calendaruc_Defaulteventstyle',ctrl:'CALENDARUC',prop:'DefaultEventStyle'},{av:'AV25Events',fld:'vEVENTS',pic:''}]");
@@ -2042,6 +2064,7 @@ namespace GeneXus.Programs {
          EvtGridId = "";
          EvtRowId = "";
          sEvtType = "";
+         AV38SelectedLanguage = "";
          GXt_SdtWWP_Calendar_Events_Item2 = new GeneXus.Programs.workwithplus.SdtWWP_Calendar_Events_Item(context);
          AV28EventTitle = "";
          ucDvelop_confirmpanel_btndummydelete = new GXUserControl();
@@ -2097,6 +2120,7 @@ namespace GeneXus.Programs {
       private string bodyStyle ;
       private string GXKey ;
       private string Gx_mode ;
+      private string Calendaruc_Locale ;
       private string Calendaruc_Initialview ;
       private string Calendaruc_Viewstyle ;
       private string Calendaruc_Todaybuttonposition ;
@@ -2219,6 +2243,7 @@ namespace GeneXus.Programs {
       private string AV5ActionSelected ;
       private string AV36TitleFilter ;
       private string AV16DateRangeFilter_RangeText ;
+      private string AV38SelectedLanguage ;
       private string AV28EventTitle ;
       private GXWebComponent WebComp_Wwpaux_wc ;
       private GXUserControl ucCalendaruc ;
